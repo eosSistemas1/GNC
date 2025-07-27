@@ -76,6 +76,11 @@ namespace TalleresWeb.Logic
             return EntityDataAccess.ReadObleasRealizadas(fechaDesde, fechaHasta);
         }
 
+        public List<ObleasExtendedView> ReadObleasAVencer(DateTime fechaDesde, DateTime fechaHasta)
+        {
+            return EntityDataAccess.ReadObleasAVencer(fechaDesde, fechaHasta);
+        }
+
         public int ActualizarObleaErrorAsignada(ObleaCargaResultadosView oblea, Guid informeID, Guid idUsuario)
         {
             Obleas o = this.ReadObleaByObleaCargaResultadosView(oblea);            

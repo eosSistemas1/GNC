@@ -1,7 +1,0 @@
-C:\Source\petrolera\Source\DLL_Shared\PL.Fwk.Presentation.Web.dll
-C:\Source\petrolera\Source\DLL_Shared\PL.Fwk.Presentation.Web.pdb
-C:\Source\petrolera\Source\PL.Fwk\PL.Fwk.Presentation.Web\obj\Debug\PL.Fwk.Presentation.Web.csproj.CoreCompileInputs.cache
-C:\Source\petrolera\Source\PL.Fwk\PL.Fwk.Presentation.Web\obj\Debug\PL.Fwk.Presentation.Web.dll
-C:\Source\petrolera\Source\PL.Fwk\PL.Fwk.Presentation.Web\obj\Debug\PL.Fwk.Presentation.Web.pdb
-C:\Source\petrolera\Source\PL.Fwk\PL.Fwk.Presentation.Web\obj\Debug\PL.Fwk.Presentation.Web.csproj.AssemblyReference.cache
-C:\Source\petrolera\Source\PL.Fwk\PL.Fwk.Presentation.Web\obj\Debug\PL.Fwk.P.408A0FF4.Up2Date

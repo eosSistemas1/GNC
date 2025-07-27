@@ -460,6 +460,38 @@ namespace TalleresWeb.DataAccess
             }
         }
 
+        public List<ObleasExtendedView> ReadObleasAVencer(DateTime fechaDesde, DateTime fechaHasta)
+        {
+            using (var context = this.GetEntityContext())
+            {
+                var query = from t in context.CreateQuery<Obleas>(this.EntityName)
+                            .Where(x =>(x.FechaVencimiento >= fechaDesde) && (x.FechaVencimiento <= fechaHasta))
+                            orderby t.Talleres.Zona, t.IdTaller, t.FechaVencimiento descending
+                            select new ObleasExtendedView
+                            {
+                                ID = t.ID,
+                                Descripcion = t.Descripcion,                                
+                                FechaHabilitacion = t.FechaHabilitacion.HasValue ? t.FechaHabilitacion.Value : GetDinamyc.MinDatetime,
+                                FechaVencimiento = t.FechaVencimiento.HasValue ? t.FechaVencimiento.Value : GetDinamyc.MinDatetime,
+                                NroObleaAnterior = t.Descripcion,
+                                NroObleaNueva = t.NroObleaNueva,
+                                Dominio = t.Vehiculos.Descripcion,
+                                NombreyApellido = t.Clientes.Descripcion,
+                                Telefono = t.Clientes.TelefonoCliente,
+                                Observacion = t.ObservacionesFicha,
+                                IdTaller = t.IdTaller,
+                                Taller = t.Talleres.Descripcion + " - " + t.Talleres.RazonSocialTaller,
+                                IdEstadoFicha = t.IdEstadoFicha,
+                                IdOpreracion = t.IdOperacion,
+                                Zona = t.Talleres.Zona,
+                                FechaAlta = t.FechaRealAlta,
+                                Operacion = t.Operaciones.Descripcion,
+                                TallerEmail = t.Talleres.MailTaller
+                            };
+                return query.ToList();
+            }
+        }
+
         /// <summary>
         /// Devuelve las obleas para despachar
         /// </summary>  

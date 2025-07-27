@@ -239,6 +239,7 @@
     <Content Include="Obleas\EliminarOblea.aspx" />
     <Content Include="Obleas\ImprimirOblea.aspx" />
     <Content Include="Obleas\Informes\InformesEstadosObleas.aspx" />
+    <Content Include="Obleas\Informes\InformeObleasAVencer.aspx" />
     <Content Include="Obleas\Informes\InformesObleasRealizadas.aspx" />
     <Content Include="Obleas\ObleasAsignar.aspx" />
     <Content Include="Obleas\ObleasImprimir.aspx" />
@@ -554,6 +555,13 @@
     </Compile>
     <Compile Include="Obleas\Informes\InformesEstadosObleas.aspx.designer.cs">
       <DependentUpon>InformesEstadosObleas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Obleas\Informes\InformeObleasAVencer.aspx.cs">
+      <DependentUpon>InformeObleasAVencer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Obleas\Informes\InformeObleasAVencer.aspx.designer.cs">
+      <DependentUpon>InformeObleasAVencer.aspx</DependentUpon>
     </Compile>
     <Compile Include="Obleas\Informes\InformesObleasRealizadas.aspx.cs">
       <DependentUpon>InformesObleasRealizadas.aspx</DependentUpon>

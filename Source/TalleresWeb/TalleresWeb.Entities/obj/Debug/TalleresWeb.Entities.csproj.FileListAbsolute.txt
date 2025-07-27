@@ -1,8 +1,0 @@
-C:\Source\petrolera\SharedAssemblies\TalleresWeb.Entities.dll.config
-C:\Source\petrolera\SharedAssemblies\TalleresWeb.Entities.dll
-C:\Source\petrolera\SharedAssemblies\TalleresWeb.Entities.pdb
-C:\Source\petrolera\Source\TalleresWeb\TalleresWeb.Entities\obj\Debug\TalleresWeb.Entities.csproj.CoreCompileInputs.cache
-C:\Source\petrolera\Source\TalleresWeb\TalleresWeb.Entities\obj\Debug\TalleresWeb.Entities.dll
-C:\Source\petrolera\Source\TalleresWeb\TalleresWeb.Entities\obj\Debug\TalleresWeb.Entities.pdb
-C:\Source\petrolera\Source\TalleresWeb\TalleresWeb.Entities\obj\Debug\TalleresWeb.Entities.csproj.AssemblyReference.cache
-C:\Source\petrolera\Source\TalleresWeb\TalleresWeb.Entities\obj\Debug\Talleres.6B3E5EF1.Up2Date

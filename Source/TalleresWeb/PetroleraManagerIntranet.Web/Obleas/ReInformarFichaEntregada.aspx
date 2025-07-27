@@ -8,7 +8,7 @@
         <div id="contenido">
             <div class="row">
                 <div class="col-sm-12">
-                    <h4>REIMPRIMIR TARJETA VERDE</h4>
+                    <h4>REINFORMAR FICHA ENTREGADA</h4>
                 </div>
                 <hr>
             </div>

@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="InformesObleasRealizadas.aspx.cs" Inherits="PetroleraManager.Web.Tramites.Informes.InformesObleasRealizadas" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="InformeObleasAVencer.aspx.cs" Inherits="PetroleraManager.Web.Tramites.Informes.InformeObleasAVencer" %>
 
 <%@ Register Src="~/UserControls/MessageBoxCtrl.ascx" TagPrefix="uc1" TagName="MessageBoxCtrl" %>
 <%@ Register Src="~/UserControls/PrintBoxCtrl.ascx" TagPrefix="uc1" TagName="PrintBoxCtrl" %>
@@ -9,7 +9,7 @@
     <div id="contenido">
         <div class="row">
             <div class="col-sm-12">
-                <h4>OBLEAS REALIZADAS</h4>
+                <h4>OBLEAS A VENCER</h4>
             </div>
             <hr />
         </div>

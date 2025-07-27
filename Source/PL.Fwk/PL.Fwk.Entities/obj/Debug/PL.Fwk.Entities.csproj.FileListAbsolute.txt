@@ -1,6 +1,0 @@
-C:\Source\petrolera\Source\DLL_Shared\PL.Fwk.Entities.dll
-C:\Source\petrolera\Source\DLL_Shared\PL.Fwk.Entities.pdb
-C:\Source\petrolera\Source\PL.Fwk\PL.Fwk.Entities\obj\Debug\PL.Fwk.Entities.csproj.CoreCompileInputs.cache
-C:\Source\petrolera\Source\PL.Fwk\PL.Fwk.Entities\obj\Debug\PL.Fwk.Entities.dll
-C:\Source\petrolera\Source\PL.Fwk\PL.Fwk.Entities\obj\Debug\PL.Fwk.Entities.pdb
-C:\Source\petrolera\Source\PL.Fwk\PL.Fwk.Entities\obj\Debug\PL.Fwk.Entities.csproj.AssemblyReference.cache
