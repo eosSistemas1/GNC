@@ -3,18 +3,7 @@
 <%@ Register Src="~/UserControls/MessageBoxCtrl.ascx" TagPrefix="uc1" TagName="MessageBoxCtrl" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
-
-    <style>
-        #myTable_filter input {
-            border-radius: 5px;
-        }
-
-        .dataTables_filter {
-            margin-right: 84%;
-            width: 250px;
-        }
-    </style>
-
+  
     <script>
         $(document).ready(function () {
             $('#myTable').DataTable(

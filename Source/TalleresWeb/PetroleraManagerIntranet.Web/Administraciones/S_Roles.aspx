@@ -31,15 +31,15 @@
 
     <div id="contenido">
         <div class="row">
-            <div class="col-sm-12">
+            <div class="col-sm-10">
                 <h4>ROLES</h4>
             </div>
-            <hr />
-        </div>
 
-        <div class="no-padding" style="float: right" id="NuevoRol" runat="server">
-            <a href="S_Roles.aspx?a=A" class="btn btn-primary btn-block nn"><i class="fa fa-plus" aria-hidden="true"></i>&nbsp Nuevo</a>
-        </div>
+            <div class="col-sm-2 no-padding" style="float: right" id="NuevoRol" runat="server">
+                <a href="S_Roles.aspx?a=A" class="btn btn-primary btn-block nn"><i class="fa fa-plus" aria-hidden="true"></i>&nbsp Nuevo</a>
+            </div>
+            <hr />
+        </div>        
 
         <div id="divBuscar" runat="server" class="col-sm-12 no-padding" style="">
             <table class="table table-bordered table-hover" id='myTable'>
