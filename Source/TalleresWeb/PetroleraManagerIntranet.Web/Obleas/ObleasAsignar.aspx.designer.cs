@@ -15,15 +15,6 @@ namespace PetroleraManagerIntranet.Web.Obleas
     {
 
         /// <summary>
-        /// Control updFiltros.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.UpdatePanel updFiltros;
-
-        /// <summary>
         /// Control lblTituloPagina.
         /// </summary>
         /// <remarks>
@@ -33,6 +24,24 @@ namespace PetroleraManagerIntranet.Web.Obleas
         protected global::System.Web.UI.WebControls.Label lblTituloPagina;
 
         /// <summary>
+        /// Control calFechaD.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl calFechaD;
+
+        /// <summary>
+        /// Control calFechaH.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputGenericControl calFechaH;
+
+        /// <summary>
         /// Control cboEstadoFicha.
         /// </summary>
         /// <remarks>
@@ -40,6 +49,15 @@ namespace PetroleraManagerIntranet.Web.Obleas
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::PetroleraManagerIntranet.Web.Controls.CboEstadosFichasAsignar cboEstadoFicha;
+
+        /// <summary>
+        /// Control updFiltros.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.UpdatePanel updFiltros;
 
         /// <summary>
         /// Control Accordion1.

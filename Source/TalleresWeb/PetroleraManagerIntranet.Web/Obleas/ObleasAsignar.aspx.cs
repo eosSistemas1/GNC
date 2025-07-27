@@ -40,23 +40,41 @@ namespace PetroleraManagerIntranet.Web.Obleas
         {
             if (!IsPostBack)
             {
-                this.cboEstadoFicha.SelectedIndex = 0;
-                this.CargarGrilla();
+                calFechaD.Value = DateTime.Now.AddDays(-30).ToString("yyyy-MM-dd");
+                calFechaH.Value = DateTime.Now.ToString("yyyy-MM-dd");
 
                 chkSelected.Value = "";
-                updFiltros.Update();
-
-
-
+                //updFiltros.Update();
             }
         }
 
-        private void CargarGrilla()
+        private void Cargar()
         {
             Guid idEstadoFicha = !String.IsNullOrWhiteSpace(cboEstadoFicha.SelectedValue) ? new Guid(cboEstadoFicha.SelectedValue) : Guid.Empty;
+            DateTime? fechaDesde = !string.IsNullOrWhiteSpace(calFechaD.Value) ? DateTime.Parse(calFechaD.Value) : default(DateTime?);
+            DateTime? fechaHasta = !string.IsNullOrWhiteSpace(calFechaH.Value) ? DateTime.Parse(calFechaH.Value) : default(DateTime?);
+            bool fechaCompleta = fechaDesde != default(DateTime?) && fechaHasta != default(DateTime?);
 
-            //TODO: Mejorar!!
-            List<ObleasExtendedView> obleas = this.Logic.ReadObleasPorEstado(idEstadoFicha, default(DateTime?), default(DateTime?));
+            string mensaje = string.Empty;
+
+            if (idEstadoFicha == Guid.Empty) mensaje = "Debe seleccionar un estado";
+
+            if (idEstadoFicha == ESTADOSFICHAS.Asignada && !fechaCompleta) mensaje = "Debe seleccionar fechas para el estado seleccionado";
+
+            if (string.IsNullOrWhiteSpace(mensaje))
+            {
+                List<ObleasExtendedView> obleas = this.Logic.ReadObleasPorEstado(idEstadoFicha, fechaDesde, fechaHasta);
+
+                CargarGrilla(obleas, idEstadoFicha);
+            }
+            else
+            {
+                MessageBoxCtrl1.MessageBox(null, mensaje, MessageBoxCtrl.TipoWarning.Warning);
+            }
+        }
+
+        private void CargarGrilla(List<ObleasExtendedView> obleas, Guid idEstadoFicha)
+        {            
 
             if (idEstadoFicha == Guid.Empty)
             {
@@ -274,7 +292,7 @@ namespace PetroleraManagerIntranet.Web.Obleas
 
             lblTituloPagina.Text = String.Format("RESUMEN DE IMPORTACIÓN -  FICHAS TÉCNICAS: ({0})", contador);
 
-            this.updFiltros.Update();
+            //this.updFiltros.Update();
         }
 
         #endregion
@@ -283,7 +301,7 @@ namespace PetroleraManagerIntranet.Web.Obleas
         {
             chkSelected.Value = String.Empty;
 
-            this.CargarGrilla();
+            this.Cargar();
         }
 
         protected void cboEstadoFichaAsignar_OnSelectedIndexChange(object sender, EventArgs e)
@@ -295,7 +313,7 @@ namespace PetroleraManagerIntranet.Web.Obleas
         {
             lblTituloPagina.Text = String.Format("RESUMEN DE IMPORTACIÓN -  FICHAS TÉCNICAS: ({0})", 0);
 
-            this.CargarGrilla();
+            this.Cargar();
         }
 
         protected void btnImprimir_Click(object sender, EventArgs e)

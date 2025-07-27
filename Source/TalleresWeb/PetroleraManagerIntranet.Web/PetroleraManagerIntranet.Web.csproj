@@ -65,6 +65,9 @@
     <Reference Include="dotless.Core, Version=1.4.0.0, Culture=neutral, PublicKeyToken=96b446c9e63eae34, processorArchitecture=MSIL">
       <HintPath>..\packages\dotless.1.4.0.0\lib\dotless.Core.dll</HintPath>
     </Reference>
+    <Reference Include="DotNetZip, Version=1.15.0.0, Culture=neutral, PublicKeyToken=6583c7c814667745, processorArchitecture=MSIL">
+      <HintPath>..\packages\DotNetZip.1.15.0\lib\net40\DotNetZip.dll</HintPath>
+    </Reference>
     <Reference Include="itextsharp">
       <HintPath>..\..\TalleresWeb.Web\TalleresWeb.Web.Cross.Configuracion\dll\itextsharp.dll</HintPath>
     </Reference>
@@ -108,6 +111,8 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Data.Entity" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.IO.Compression.FileSystem" />
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Net.Http.Formatting, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.7\lib\net45\System.Net.Http.Formatting.dll</HintPath>
@@ -225,6 +230,7 @@
     <Content Include="img\Iconos\seleccionar.png" />
     <Content Include="img\Iconos\volver.png" />
     <Content Include="img\Iconos\warning.png" />
+    <Content Include="img\Iconos\zip.png" />
     <Content Include="img\logo-inv.png" />
     <Content Include="img\logo.png" />
     <Content Include="img\selloMazza.png" />

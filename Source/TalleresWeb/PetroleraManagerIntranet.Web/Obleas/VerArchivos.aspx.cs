@@ -1,11 +1,11 @@
-﻿using CrossCutting.DatosDiscretos;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.UI.WebControls;
 using TalleresWeb.Entities;
 using TalleresWeb.Web.Cross;
 using TalleresWeb.Web.Cross.Configuracion;
+using Ionic.Zip;
 
 namespace PetroleraManagerIntranet.Web.Obleas
 {
@@ -23,18 +23,32 @@ namespace PetroleraManagerIntranet.Web.Obleas
         {
             try
             {
-                String filename = e.CommandArgument.ToString();
+                string filename = e.CommandArgument.ToString();
 
                 System.Web.HttpResponse response = System.Web.HttpContext.Current.Response;
+
                 response.ClearContent();
                 response.Clear();
-                response.ContentType = "application/octet-stream";
-                response.AddHeader("Content-Disposition", "attachment; filename=" + filename + ";");
-                response.TransmitFile(filename);
+
+                if (e.CommandName == "ZIP")
+                {
+                    string compressedFileName = e.CommandArgument.ToString().Replace(".txt", ".zip");
+                   
+                    //response.BufferOutput = true;                    
+                    response.ContentType = "application/zip";
+                    response.AddHeader("content-disposition", "attachment; filename=" + compressedFileName.Split('\\').Last() + ";");
+                    response.TransmitFile(compressedFileName);                 
+                }
+
+                if (e.CommandName == "TXT")
+                {           
+                    response.ContentType = "application/octet-stream";
+                    response.AddHeader("Content-Disposition", "attachment; filename=" + filename.Split('\\').Last() + ";");
+                    response.TransmitFile(filename);
+                }                
+
                 response.Flush();
                 response.End();
-
-
             }
             catch (Exception ex)
             {

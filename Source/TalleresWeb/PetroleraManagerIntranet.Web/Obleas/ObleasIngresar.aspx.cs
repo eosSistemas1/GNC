@@ -142,6 +142,8 @@ namespace PetroleraManagerIntranet.Web.Obleas
                 ViewState["UrlReferrer"] = Request.UrlReferrer != null && this.ObleaID != Guid.Empty ? Request.UrlReferrer.OriginalString : "../default.aspx";
 
                 this.BuscarTaller1.SetFocus();
+
+                this.BuscarTaller1.SelectedValue = new ViewEntity(new Guid("37724FC6-F735-488B-B3FA-9137F54C5F0E"), "MOCCIARO GNC MOCCIARO RUBEN ALBERTO");
             }
         }
 

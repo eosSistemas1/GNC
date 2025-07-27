@@ -2,8 +2,6 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Web;
-using System.Web.UI;
 using System.Web.UI.WebControls;
 using TalleresWeb.Entities;
 using TalleresWeb.Logic;
@@ -82,20 +80,20 @@ namespace PetroleraManagerIntranet.Web.Obleas
         }
 
         protected void grdInformes_RowCommand(object sender, GridViewCommandEventArgs e)
-        {           
+        {
             GridView grd = (GridView)sender;
-            
+
             Guid informeID = new Guid(grd.DataKeys[int.Parse(e.CommandArgument.ToString())].Values["ID"].ToString());
             this.InformeSeleccionadoID = informeID;
 
             GridViewRow fila = grd.Rows[int.Parse(e.CommandArgument.ToString())];
 
-            panelArchivos.Visible = false;           
+            panelArchivos.Visible = false;
 
             if (e.CommandName == "seleccionar")
             {
                 lblTitulo.Text = String.Format("CARGAR ARCHIVOS PARA EL INFORME NUMERRO: {0} - {1}", fila.Cells[0].Text, DateTime.Parse(fila.Cells[1].Text).ToString("dd/MM/yyyy"));
-                panelArchivos.Visible = true;                
+                panelArchivos.Visible = true;
             }
 
             List<InformeDetalleBasicView> detalleObleas = null;
@@ -131,7 +129,7 @@ namespace PetroleraManagerIntranet.Web.Obleas
 
             if (e.CommandName == "eliminar")
             {
-                mpeEliminar.Show();                
+                mpeEliminar.Show();
             }
 
             if (e.CommandName == "cerrar")
@@ -234,16 +232,28 @@ namespace PetroleraManagerIntranet.Web.Obleas
 
             if (this.fuArchivoErrores.HasFile)
             {
-                StreamReader reader = new StreamReader(this.fuArchivoErrores.FileContent);
-                do
+                try
                 {
-                    String textLine = reader.ReadLine();
+                    StreamReader reader = new StreamReader(this.fuArchivoErrores.FileContent);
+                    do
+                    {
+                        String textLine = reader.ReadLine();
 
-                    Int32 ficha = this.ParsearYActualizarObleaErronea(textLine, informeID);
-                    cantidadFichasActualizadas += ficha;
+                        if (textLine.Contains("PEC NO TIENE OBLEAS DEL AÑO  PARA ASIGNAR"))
+                        {
+                            throw new Exception("EL PEC NO TIENE OBLEAS DEL AÑO  PARA ASIGNAR");
+                        }
 
-                } while (reader.Peek() != -1);
-                reader.Close();
+                        Int32 ficha = this.ParsearYActualizarObleaErronea(textLine, informeID);
+                        cantidadFichasActualizadas += ficha;
+
+                    } while (reader.Peek() != -1);
+                    reader.Close();
+                }
+                catch (Exception e)
+                {
+                    MessageBoxCtrl.MessageBox(null, $"No se puede procesar el archivo de errores : <br> {e.Message}", UserControls.MessageBoxCtrl.TipoWarning.Warning);
+                }
             }
 
             return cantidadFichasActualizadas;
@@ -280,7 +290,7 @@ namespace PetroleraManagerIntranet.Web.Obleas
 
             oblea.DescripcionError = fila[3].Remove(0, 7).Trim().ToString();
 
-            return this.ObleasLogic.ActualizarObleaErrorAsignada(oblea, informeID, this.UsuarioID);
+            return ObleasLogic.ActualizarObleaErrorAsignada(oblea, informeID, this.UsuarioID);
         }
 
         #endregion

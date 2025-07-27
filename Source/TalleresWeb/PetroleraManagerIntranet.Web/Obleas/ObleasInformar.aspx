@@ -102,23 +102,23 @@
                     </div>
                 </div>
 
-                <div class="clearfix"></div>
+                <div class="clearfix"></div>             
 
                 <div class="panel panel-default taller">
                     <div class="panel-heading" role="tab">
-                        <h4 class="panel-title" data-toggle="collapse" data-target="#divFichasFaltaInformarPH">
-                            <a href="#">FALTA INFORMAR PH<strong><asp:Label ID="lblTituloFaltaInformarPH" runat="server" Text="" ForeColor="Red"></asp:Label></strong>
+                        <h4 class="panel-title" data-toggle="collapse" data-target="#divFichasFaltanElementos">
+                            <a href="#">FALTA ALGÚN ELEMENTO DEL TRÁMITE<strong><asp:Label ID="lblTituloFaltanElementos" Text="" runat="server" ForeColor="Red" /></strong>
                                 <i class="more-less glyphicon glyphicon-plus"></i>
                             </a>
                         </h4>
                     </div>
 
-                    <div id="divFichasFaltaInformarPH" class="collapse">
+                    <div id="divFichasFaltanElementos" class="collapse">
                         <div style="overflow: auto; height: 300px; width: 100%; text-align: center;">
-                            <asp:GridView ID="grdFichasFaltaInformarPH" runat="server" AutoGenerateColumns="False" Width="98%" DataKeyNames="ID"
-                                AlternatingRowStyle-CssClass="GridAlternateRow" class="table table-bordered table-hover"
-                                OnRowCommand="grdFichasFaltaInformarPH_RowCommand"
-                                EmptyDataText="<b>No hay fichas técnicas con error</b>">
+                            <asp:GridView ID="grdFichasFaltanElementos" runat="server" AutoGenerateColumns="False" Width="98%" DataKeyNames="ID"
+                                AlternatingRowStyle-CssClass="GridAlternateRow" class="table table-bordered table-hover"                                
+                                EmptyDataText="<b>No hay fichas técnicas con error</b>"
+                                OnRowCommand="grdFichasFaltanElementos_RowCommand">
                                 <Columns>
                                     <asp:BoundField HeaderText="Taller" DataField="Taller" ItemStyle-HorizontalAlign="Left" />
                                     <asp:BoundField HeaderText="Fecha" DataField="FechaHabilitacion" DataFormatString="{0:dd/MM/yyyy}" />
@@ -142,21 +142,21 @@
                     </div>
                 </div>
 
-                <div class="panel panel-default taller">
+                <div class="panel panel-default taller" style="visibility:hidden">
                     <div class="panel-heading" role="tab">
-                        <h4 class="panel-title" data-toggle="collapse" data-target="#divFichasFaltanElementos">
-                            <a href="#">FALTA ALGÚN ELEMENTO DEL TRÁMITE<strong><asp:Label ID="lblTituloFaltanElementos" Text="" runat="server" ForeColor="Red" /></strong>
+                        <h4 class="panel-title" data-toggle="collapse" data-target="#divFichasFaltaInformarPH">
+                            <a href="#">FALTA INFORMAR PH<strong><asp:Label ID="lblTituloFaltaInformarPH" runat="server" Text="" ForeColor="Red"></asp:Label></strong>
                                 <i class="more-less glyphicon glyphicon-plus"></i>
                             </a>
                         </h4>
                     </div>
 
-                    <div id="divFichasFaltanElementos" class="collapse">
+                    <div id="divFichasFaltaInformarPH" class="collapse">
                         <div style="overflow: auto; height: 300px; width: 100%; text-align: center;">
-                            <asp:GridView ID="grdFichasFaltanElementos" runat="server" AutoGenerateColumns="False" Width="98%" DataKeyNames="ID"
-                                AlternatingRowStyle-CssClass="GridAlternateRow" class="table table-bordered table-hover"                                
-                                EmptyDataText="<b>No hay fichas técnicas con error</b>"
-                                OnRowCommand="grdFichasFaltanElementos_RowCommand">
+                            <asp:GridView ID="grdFichasFaltaInformarPH" runat="server" AutoGenerateColumns="False" Width="98%" DataKeyNames="ID"
+                                AlternatingRowStyle-CssClass="GridAlternateRow" class="table table-bordered table-hover"
+                                OnRowCommand="grdFichasFaltaInformarPH_RowCommand"
+                                EmptyDataText="<b>No hay fichas técnicas con error</b>">
                                 <Columns>
                                     <asp:BoundField HeaderText="Taller" DataField="Taller" ItemStyle-HorizontalAlign="Left" />
                                     <asp:BoundField HeaderText="Fecha" DataField="FechaHabilitacion" DataFormatString="{0:dd/MM/yyyy}" />

@@ -29,29 +29,37 @@
                 <div style="max-height: 150px; overflow: auto;">
                     <asp:GridView ID="grdArchivos" runat="server" AutoGenerateColumns="False" Width="100%"
                         class="table table-bordered table-condensed"
-                        DataKeyNames="ID" OnRowCommand="grdArchivos_RowCommand"
+                        DataKeyNames="ID" OnRowCommand="grdArchivos_RowCommand" HeaderStyle-HorizontalAlign="Center"
                         EmptyDataText="<center><strong>No se encontraron archivos.</strong></center>">
                         <Columns>
                             <asp:BoundField HeaderText="Número" DataField="NumeroInforme" ItemStyle-HorizontalAlign="Center" />
                             <asp:BoundField HeaderText="Fecha" DataField="FechaHoraInforme" ItemStyle-HorizontalAlign="Center" />
-                            <asp:TemplateField HeaderText="USR" ItemStyle-HorizontalAlign="Center">
+                            <asp:TemplateField HeaderText="USR" HeaderStyle-HorizontalAlign="Center" ItemStyle-HorizontalAlign="Center">
                                 <ItemTemplate>
-                                    <asp:ImageButton ID="lnkUsr" runat="server" AlternateText='<%# Eval("descripcionUSR") %>' CommandArgument='<%# Eval("urlUSR") %>' ImageUrl="~/img/Iconos/seleccionar.png" />
+                                    <asp:ImageButton ID="lnkUsr" runat="server" AlternateText='<%# Eval("descripcionUSR") %>' CommandArgument='<%# Eval("urlUSR") %>' CommandName="TXT" ImageUrl="~/img/Iconos/seleccionar.png" />
+                                    &nbsp;&nbsp;
+                                    <asp:ImageButton ID="lnkUsrZip" runat="server" AlternateText='<%# Eval("descripcionUSR") %>' CommandArgument='<%# Eval("urlUSR") %>' CommandName="ZIP" ImageUrl="~/img/Iconos/zip.png" />
                                 </ItemTemplate>
                             </asp:TemplateField>
-                            <asp:TemplateField HeaderText="REG" ItemStyle-HorizontalAlign="Center">
+                            <asp:TemplateField HeaderText="REG" HeaderStyle-HorizontalAlign="Center" ItemStyle-HorizontalAlign="Center">
                                 <ItemTemplate>
-                                    <asp:ImageButton ID="lnkReg" runat="server" AlternateText='<%# Eval("descripcionREG") %>' CommandArgument='<%# Eval("urlREG") %>' ImageUrl="~/img/Iconos/seleccionar.png" />
+                                    <asp:ImageButton ID="lnkReg" runat="server" AlternateText='<%# Eval("descripcionREG") %>' CommandArgument='<%# Eval("urlREG") %>' CommandName="TXT" ImageUrl="~/img/Iconos/seleccionar.png" />
+                                    &nbsp;&nbsp;
+                                    <asp:ImageButton ID="lnkRegZip" runat="server" AlternateText='<%# Eval("descripcionREG") %>' CommandArgument='<%# Eval("urlREG") %>' CommandName="ZIP" ImageUrl="~/img/Iconos/zip.png" />
                                 </ItemTemplate>
                             </asp:TemplateField>
-                            <asp:TemplateField HeaderText="CIL" ItemStyle-HorizontalAlign="Center">
+                            <asp:TemplateField HeaderText="CIL" HeaderStyle-HorizontalAlign="Center" ItemStyle-HorizontalAlign="Center">
                                 <ItemTemplate>
-                                    <asp:ImageButton ID="lnkCil" runat="server" AlternateText='<%# Eval("descripcionCIL") %>' CommandArgument='<%# Eval("urlCIL") %>' ImageUrl="~/img/Iconos/seleccionar.png" />
+                                    <asp:ImageButton ID="lnkCil" runat="server" AlternateText='<%# Eval("descripcionCIL") %>' CommandArgument='<%# Eval("urlCIL") %>' CommandName="TXT" ImageUrl="~/img/Iconos/seleccionar.png" />
+                                    &nbsp;&nbsp;
+                                    <asp:ImageButton ID="lnkCilZip" runat="server" AlternateText='<%# Eval("descripcionCIL") %>' CommandArgument='<%# Eval("urlCIL") %>' CommandName="ZIP" ImageUrl="~/img/Iconos/zip.png" />
                                 </ItemTemplate>
                             </asp:TemplateField>
-                            <asp:TemplateField HeaderText="VAL" ItemStyle-HorizontalAlign="Center">
+                            <asp:TemplateField HeaderText="VAL" HeaderStyle-HorizontalAlign="Center" ItemStyle-HorizontalAlign="Center">
                                 <ItemTemplate>
-                                    <asp:ImageButton ID="lnkVal" runat="server" AlternateText='<%# Eval("descripcionVAL") %>' CommandArgument='<%# Eval("urlVAL") %>' ImageUrl="~/img/Iconos/seleccionar.png" />
+                                    <asp:ImageButton ID="lnkVal" runat="server" AlternateText='<%# Eval("descripcionVAL") %>' CommandArgument='<%# Eval("urlVAL") %>' CommandName="TXT" ImageUrl="~/img/Iconos/seleccionar.png" />
+                                    &nbsp;&nbsp;
+                                    <asp:ImageButton ID="lnkValZip" runat="server" AlternateText='<%# Eval("descripcionVAL") %>' CommandArgument='<%# Eval("urlVAL") %>' CommandName="ZIP" ImageUrl="~/img/Iconos/zip.png" />
                                 </ItemTemplate>
                             </asp:TemplateField>
                         </Columns>

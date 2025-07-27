@@ -1,4 +1,5 @@
-﻿using PL.Fwk.DataAccess;
+﻿using CrossCutting.DatosDiscretos;
+using PL.Fwk.DataAccess;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -57,18 +58,30 @@ namespace TalleresWeb.DataAccess
             {
                 var query = from t in context.CreateQuery<Vehiculos>(this.EntityName)
                     .Where(x => x.Descripcion.Equals(pDominio))
-                            select new VehiculosExtendedView
-                            {
-                                ID = t.ID,
-                                MarcaVehiculo = t.MarcaVehiculo,
-                                ModeloVehiculo = t.ModeloVehiculo,
-                                AnioVehiculo = t.AnioVehiculo.HasValue ? t.AnioVehiculo.Value : 0,
-                                EsInyeccionVehiculo = t.EsInyeccionVehiculo.HasValue ? t.EsInyeccionVehiculo.Value : false,
-                                IdDuenioVehiculo = t.IdDuenioVehiculo.HasValue ? t.IdDuenioVehiculo.Value : Guid.Empty,
-                                IdUso = t.Obleas.FirstOrDefault().IdUso
-                            };
+                            select t;
 
-                return query.ToList();
+                var vehiculos = query.ToList();
+
+                var response = new List<VehiculosExtendedView>();
+
+                foreach (var vehiculo in vehiculos)
+                {
+                    var v = new VehiculosExtendedView()
+                    {
+                        ID = vehiculo.ID,
+                        MarcaVehiculo = vehiculo.MarcaVehiculo,
+                        ModeloVehiculo = vehiculo.ModeloVehiculo,
+                        AnioVehiculo = vehiculo.AnioVehiculo.HasValue ? vehiculo.AnioVehiculo.Value : 0,
+                        EsInyeccionVehiculo = vehiculo.EsInyeccionVehiculo.HasValue ? vehiculo.EsInyeccionVehiculo.Value : false,
+                        IdDuenioVehiculo = vehiculo.IdDuenioVehiculo.HasValue ? vehiculo.IdDuenioVehiculo.Value : Guid.Empty                        
+                    };
+
+                    v.IdUso = vehiculo.Obleas != null && vehiculo.Obleas.Any() ? vehiculo.Obleas.FirstOrDefault().IdUso : TIPOVEHICULO.Particular;
+
+                    response.Add(v);
+                }
+
+                return response;
             }
         }
 

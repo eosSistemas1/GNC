@@ -78,7 +78,7 @@ namespace TalleresWeb.Logic
 
         public int ActualizarObleaErrorAsignada(ObleaCargaResultadosView oblea, Guid informeID, Guid idUsuario)
         {
-            Obleas o = this.ReadObleaByObleaCargaResultadosView(oblea);
+            Obleas o = this.ReadObleaByObleaCargaResultadosView(oblea);            
 
             if (o != null)
             {
@@ -729,12 +729,15 @@ namespace TalleresWeb.Logic
                                                                  r.IdOperacion == MSDB.Montaje);
                 if (!cilConError) return true;
 
+                var cantValvMantiene = 0;
                 foreach (var obleaCilindro in oblea.ObleasCilindros)
                 {
-                    var valConError = obleaCilindro.ObleasValvulas.Any(r => r.IdOperacion == MSDB.Sigue ||
+                    var mantieneValvula = obleaCilindro.ObleasValvulas.Any(r => r.IdOperacion == MSDB.Sigue ||
                                                                             r.IdOperacion == MSDB.Montaje);
-                    if (!valConError) return true;
+                    if (mantieneValvula) cantValvMantiene++;
                 }
+
+                if (cantValvMantiene == 0) return true;
             }
 
             return false;

@@ -27,7 +27,7 @@ namespace PetroleraManagerIntranet.Web.Controls
                            .OrderBy(x => x.Descripcion).ToList();
 
 
-            estados.Insert(0, new PL.Fwk.Entities.ViewEntity { ID = Guid.Empty, Descripcion = "-- TODOS --" });
+            estados.Insert(0, new PL.Fwk.Entities.ViewEntity { ID = Guid.Empty, Descripcion = "-- SELECCIONE --" });
 
             this.DataTextField = "Descripcion";
             this.DataValueField = "ID";
