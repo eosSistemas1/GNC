@@ -1,0 +1,114 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="PetroleraManager.Web.SiteMaster" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head id="Head1" runat="server">
+    <title></title>
+    <link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />
+    <link href="~/Styles/menu.css" rel="stylesheet" type="text/css" />
+    <link href="~/Styles/modal.css" rel="stylesheet" type="text/css" />
+
+    <link href="~/Styles/jquery-ui.css" rel="stylesheet" type="text/css" />
+    <%--<link rel="stylesheet" href="/resources/demos/style.css" />
+    <script src="/Scripts/jquery-1.12.4.js" type="text/javascript"></script>
+    <script src="/Scripts/jquery-ui.js" type="text/javascript"></script>--%>
+
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" />
+    <%--<link rel="stylesheet" href="/resources/demos/style.css" />--%>
+    <script type="text/javascript" src="/Scripts/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body style="overflow: hidden;">
+    <form runat="server" id="frmForm">
+        <script type="text/javascript">
+            if (typeof window.event != 'undefined')
+                document.onkeydown = function () {
+                    if ((event.srcElement.tagName.toUpperCase() != 'INPUT') && (event.srcElement.tagName.toUpperCase() != 'TEXTAREA'))
+                        return (event.keyCode != 8);
+                }
+            else
+                document.onkeypress = function (e) {
+                    if ((e.target.nodeName.toUpperCase() != 'INPUT') && (e.target.nodeName.toUpperCase() != 'TEXTAREA'))
+                        return (e.keyCode != 8);
+                }
+
+
+            $(document).on("keypress", ":Text", function (e) {
+                if (e.which == 13) {
+                    return false;
+                }
+            });
+        </script>
+
+        <ajaxToolkit:ToolkitScriptManager runat="Server" ID="ScriptManager1" EnableScriptGlobalization="true" EnableScriptLocalization="true">            
+        </ajaxToolkit:ToolkitScriptManager>
+        <div class="page">
+            <div class="header">
+                <div style="width: 100%; background-color: #EEE">
+                    <PLs:PLImage ID="imgHeader" runat="server" Height="65px" />
+                </div>
+                <!-- prueba menu-->
+                <div class="background">
+                    <asp:Menu ID="NavigationMenu" CssClass="NavigationMenu" StaticDisplayLevels="2" DynamicHorizontalOffset="1"
+                        StaticSubMenuIndent="1px" MaximumDynamicDisplayLevels="4" Orientation="Horizontal"
+                        DynamicPopOutImageUrl="~/Imagenes/Menu/leftArrow.gif" StaticPopOutImageUrl="~/Imagenes/Menu/downArrow.gif"
+                        DataSourceID="MenuSource" runat="server" Height="23px">
+                        <StaticMenuItemStyle ItemSpacing="10" CssClass="staticMenuItemStyle" />
+                        <DynamicMenuItemStyle CssClass="dynamicMenuItemStyle" />
+                        <DynamicHoverStyle CssClass="menuItemMouseOver" />
+                        <DynamicMenuStyle CssClass="menuItem" />
+                        <DynamicSelectedStyle CssClass="menuItemSelected" />
+                        <DataBindings>
+                            <asp:MenuItemBinding DataMember="siteMapNode" NavigateUrlField="url" TextField="title" ToolTipField="description" />
+                        </DataBindings>
+                    </asp:Menu>
+                </div>
+                <asp:TreeView ID="NavigationTreeView" runat="server" Visible="false"
+                    DataSourceID="MenuSource" />
+                <div id="e" style="visibility: hidden">
+                    <asp:SiteMapPath ID="SiteMapPath1" runat="server" RenderCurrentNodeAsLink="true"
+                        CssClass="currentNodeStyle" PathSeparator=" >> ">
+                        <PathSeparatorStyle ForeColor="#5D7B9D" CssClass="currentNodeStyle" />
+                        <CurrentNodeStyle ForeColor="#333333" CssClass="currentNodeStyle" />
+                        <NodeStyle ForeColor="#7C6F57" CssClass="currentNodeStyle" />
+                        <RootNodeStyle ForeColor="#5D7B9D" CssClass="currentNodeStyle" />
+                    </asp:SiteMapPath>
+                </div>
+                <asp:Panel ID="AccessKeyPanel" runat="server">
+                </asp:Panel>
+                <asp:SiteMapDataSource ID="MenuSource" runat="server" StartFromCurrentNode="false"
+                    ShowStartingNode="true" />
+                <!-- fin prueba menu-->
+                <div class="main">
+
+                    <div class="left" style="width: 15%">
+                        <h3>Accesos Rápidos</h3>
+                        <hr />
+                        <div>
+                            <a href="/02.Tramites/ObleasIngresar.aspx">Ingresar ficha técnica</a>
+                            <br />
+                            <a href="/02.Tramites/ObleasReimpresionTarjetaVerde.aspx">Reimprimir Tarjeta Verde</a>
+                        </div>
+                    </div>
+
+                    <div class="left" style="width: 85%; height: 500px; overflow: auto;">
+                        <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="footer">
+            </div>
+
+        </div>
+    </form>
+</body>
+
+
+
+</html>

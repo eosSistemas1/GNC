@@ -1,0 +1,10 @@
+C:\Source\petrolera\Source\TalleresWeb\PetroleraManager.Entities\obj\Debug\PetroleraManager.Entities.csproj.CoreCompileInputs.cache
+C:\Source\petrolera\Source\TalleresWeb\PetroleraManager.Entities\bin\Debug\PetroleraManager.Entities.dll.config
+C:\Source\petrolera\Source\TalleresWeb\PetroleraManager.Entities\bin\Debug\PetroleraManager.Entities.dll
+C:\Source\petrolera\Source\TalleresWeb\PetroleraManager.Entities\bin\Debug\PetroleraManager.Entities.pdb
+C:\Source\petrolera\Source\TalleresWeb\PetroleraManager.Entities\bin\Debug\PL.Fwk.Entities.dll
+C:\Source\petrolera\Source\TalleresWeb\PetroleraManager.Entities\bin\Debug\PL.Fwk.Entities.pdb
+C:\Source\petrolera\Source\TalleresWeb\PetroleraManager.Entities\obj\Debug\PetroleraManager.Entities.csproj.CopyComplete
+C:\Source\petrolera\Source\TalleresWeb\PetroleraManager.Entities\obj\Debug\PetroleraManager.Entities.dll
+C:\Source\petrolera\Source\TalleresWeb\PetroleraManager.Entities\obj\Debug\PetroleraManager.Entities.pdb
+C:\Source\petrolera\Source\TalleresWeb\PetroleraManager.Entities\obj\Debug\PetroleraManager.Entities.csprojAssemblyReference.cache

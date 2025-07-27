@@ -1,0 +1,1929 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns="http://schemas.microsoft.com/ado/2008/09/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="DataModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
+  <EntityContainer Name="DataModelContext" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="BASEIMPONIBLE" EntityType="DataModel.BASEIMPONIBLE" />
+    <EntitySet Name="CLIENTES" EntityType="DataModel.CLIENTES" />
+    <EntitySet Name="COMPROBANTESCOMPRAS" EntityType="DataModel.COMPROBANTESCOMPRAS" />
+    <EntitySet Name="COMPROBANTESCOMPRASDETALLE" EntityType="DataModel.COMPROBANTESCOMPRASDETALLE" />
+    <EntitySet Name="COMPROBANTESCUMPLIDO" EntityType="DataModel.COMPROBANTESCUMPLIDO" />
+    <EntitySet Name="COMPROBANTESVENTAS" EntityType="DataModel.COMPROBANTESVENTAS" />
+    <EntitySet Name="COMPROBANTESVENTASDETALLE" EntityType="DataModel.COMPROBANTESVENTASDETALLE" />
+    <EntitySet Name="CONDICIONES" EntityType="DataModel.CONDICIONES" />
+    <EntitySet Name="CONTACTOS" EntityType="DataModel.CONTACTOS" />
+    <EntitySet Name="DEPOSITOS" EntityType="DataModel.DEPOSITOS" />
+    <EntitySet Name="ESTADOSCOMPROBANTES" EntityType="DataModel.ESTADOSCOMPROBANTES" />
+    <EntitySet Name="FABRICANTES" EntityType="DataModel.FABRICANTES" />
+    <EntitySet Name="IMPUESTOINTERNO" EntityType="DataModel.IMPUESTOINTERNO" />
+    <EntitySet Name="INVENTARIO" EntityType="DataModel.INVENTARIO" />
+    <EntitySet Name="INVENTARIODETALLE" EntityType="DataModel.INVENTARIODETALLE" />
+    <EntitySet Name="LOCALIDADES" EntityType="DataModel.LOCALIDADES" />
+    <EntitySet Name="MARCAS" EntityType="DataModel.MARCAS" />
+    <EntitySet Name="PERCEPCIONES" EntityType="DataModel.PERCEPCIONES" />
+    <EntitySet Name="PRODUCTOLOTE" EntityType="DataModel.PRODUCTOLOTE" />
+    <EntitySet Name="PRODUCTOS" EntityType="DataModel.PRODUCTOS" />
+    <EntitySet Name="PROVINCIAS" EntityType="DataModel.PROVINCIAS" />
+    <EntitySet Name="REGIVA" EntityType="DataModel.REGIVA" />
+    <EntitySet Name="ROLES" EntityType="DataModel.ROLES" />
+    <EntitySet Name="RUBROS" EntityType="DataModel.RUBROS" />
+    <EntitySet Name="SUCURSALES" EntityType="DataModel.SUCURSALES" />
+    <EntitySet Name="TIPOPRODUCTO" EntityType="DataModel.TIPOPRODUCTO" />
+    <EntitySet Name="TIPOSCOMPROBANTES" EntityType="DataModel.TIPOSCOMPROBANTES" />
+    <EntitySet Name="TIPOSDOCUMENTOS" EntityType="DataModel.TIPOSDOCUMENTOS" />
+    <EntitySet Name="TRANSPORTES" EntityType="DataModel.TRANSPORTES" />
+    <EntitySet Name="UNIDADES" EntityType="DataModel.UNIDADES" />
+    <EntitySet Name="USUARIOS" EntityType="DataModel.USUARIOS" />
+    <EntitySet Name="VENDEDORES" EntityType="DataModel.VENDEDORES" />
+    <EntitySet Name="ZONAS" EntityType="DataModel.ZONAS" />
+    <AssociationSet Name="FK_PRODUCTOS_BASEIMPONIBLE" Association="DataModel.FK_PRODUCTOS_BASEIMPONIBLE">
+      <End Role="BASEIMPONIBLE" EntitySet="BASEIMPONIBLE" />
+      <End Role="PRODUCTOS" EntitySet="PRODUCTOS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PRODUCTOS_BASEIMPONIBLE1" Association="DataModel.FK_PRODUCTOS_BASEIMPONIBLE1">
+      <End Role="BASEIMPONIBLE" EntitySet="BASEIMPONIBLE" />
+      <End Role="PRODUCTOS" EntitySet="PRODUCTOS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CLIENTES_CONDICIONES" Association="DataModel.FK_CLIENTES_CONDICIONES">
+      <End Role="CONDICIONES" EntitySet="CONDICIONES" />
+      <End Role="CLIENTES" EntitySet="CLIENTES" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CLIENTES_LOCALIDADES" Association="DataModel.FK_CLIENTES_LOCALIDADES">
+      <End Role="LOCALIDADES" EntitySet="LOCALIDADES" />
+      <End Role="CLIENTES" EntitySet="CLIENTES" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CLIENTES_REGIVA" Association="DataModel.FK_CLIENTES_REGIVA">
+      <End Role="REGIVA" EntitySet="REGIVA" />
+      <End Role="CLIENTES" EntitySet="CLIENTES" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CLIENTES_TRANSPORTES" Association="DataModel.FK_CLIENTES_TRANSPORTES">
+      <End Role="TRANSPORTES" EntitySet="TRANSPORTES" />
+      <End Role="CLIENTES" EntitySet="CLIENTES" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CLIENTES_ZONAS" Association="DataModel.FK_CLIENTES_ZONAS">
+      <End Role="ZONAS" EntitySet="ZONAS" />
+      <End Role="CLIENTES" EntitySet="CLIENTES" />
+    </AssociationSet>
+    <AssociationSet Name="FK_INVENTARIO_CLIENTES" Association="DataModel.FK_INVENTARIO_CLIENTES">
+      <End Role="CLIENTES" EntitySet="CLIENTES" />
+      <End Role="INVENTARIO" EntitySet="INVENTARIO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_COMPROBANTES_CONDICIONES" Association="DataModel.FK_COMPROBANTES_CONDICIONES">
+      <End Role="CONDICIONES" EntitySet="CONDICIONES" />
+      <End Role="COMPROBANTESCOMPRAS" EntitySet="COMPROBANTESCOMPRAS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_COMPROBANTES_SUCURSALES" Association="DataModel.FK_COMPROBANTES_SUCURSALES">
+      <End Role="SUCURSALES" EntitySet="SUCURSALES" />
+      <End Role="COMPROBANTESCOMPRAS" EntitySet="COMPROBANTESCOMPRAS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_COMPROBANTES_TIPOSCOMPROBANTES" Association="DataModel.FK_COMPROBANTES_TIPOSCOMPROBANTES">
+      <End Role="TIPOSCOMPROBANTES" EntitySet="TIPOSCOMPROBANTES" />
+      <End Role="COMPROBANTESCOMPRAS" EntitySet="COMPROBANTESCOMPRAS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_COMPROBANTES_TRANSPORTES" Association="DataModel.FK_COMPROBANTES_TRANSPORTES">
+      <End Role="TRANSPORTES" EntitySet="TRANSPORTES" />
+      <End Role="COMPROBANTESCOMPRAS" EntitySet="COMPROBANTESCOMPRAS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_COMPROBANTESCOMPRAS_ESTADOSCOMPROBANTES" Association="DataModel.FK_COMPROBANTESCOMPRAS_ESTADOSCOMPROBANTES">
+      <End Role="ESTADOSCOMPROBANTES" EntitySet="ESTADOSCOMPROBANTES" />
+      <End Role="COMPROBANTESCOMPRAS" EntitySet="COMPROBANTESCOMPRAS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_COMPROBANTESCOMPRAS_PERCEPCIONES" Association="DataModel.FK_COMPROBANTESCOMPRAS_PERCEPCIONES">
+      <End Role="PERCEPCIONES" EntitySet="PERCEPCIONES" />
+      <End Role="COMPROBANTESCOMPRAS" EntitySet="COMPROBANTESCOMPRAS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_COMPROBANTESCOMPRAS_PERCEPCIONES1" Association="DataModel.FK_COMPROBANTESCOMPRAS_PERCEPCIONES1">
+      <End Role="PERCEPCIONES" EntitySet="PERCEPCIONES" />
+      <End Role="COMPROBANTESCOMPRAS" EntitySet="COMPROBANTESCOMPRAS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_COMPROBANTESCOMPRAS_PERCEPCIONES2" Association="DataModel.FK_COMPROBANTESCOMPRAS_PERCEPCIONES2">
+      <End Role="PERCEPCIONES" EntitySet="PERCEPCIONES" />
+      <End Role="COMPROBANTESCOMPRAS" EntitySet="COMPROBANTESCOMPRAS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_COMPROBANTESCOMPRAS_PERCEPCIONES3" Association="DataModel.FK_COMPROBANTESCOMPRAS_PERCEPCIONES3">
+      <End Role="PERCEPCIONES" EntitySet="PERCEPCIONES" />
+      <End Role="COMPROBANTESCOMPRAS" EntitySet="COMPROBANTESCOMPRAS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_COMPROBANTESCOMPRAS_PERCEPCIONES4" Association="DataModel.FK_COMPROBANTESCOMPRAS_PERCEPCIONES4">
+      <End Role="PERCEPCIONES" EntitySet="PERCEPCIONES" />
+      <End Role="COMPROBANTESCOMPRAS" EntitySet="COMPROBANTESCOMPRAS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_COMPROBANTESCOMPRAS_USUARIOS" Association="DataModel.FK_COMPROBANTESCOMPRAS_USUARIOS">
+      <End Role="USUARIOS" EntitySet="USUARIOS" />
+      <End Role="COMPROBANTESCOMPRAS" EntitySet="COMPROBANTESCOMPRAS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_COMPROBANTESDETALLE_COMPROBANTES" Association="DataModel.FK_COMPROBANTESDETALLE_COMPROBANTES">
+      <End Role="COMPROBANTESCOMPRAS" EntitySet="COMPROBANTESCOMPRAS" />
+      <End Role="COMPROBANTESCOMPRASDETALLE" EntitySet="COMPROBANTESCOMPRASDETALLE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_COMPROBANTESCOMPRASDETALLE_PRODUCTOS" Association="DataModel.FK_COMPROBANTESCOMPRASDETALLE_PRODUCTOS">
+      <End Role="PRODUCTOS" EntitySet="PRODUCTOS" />
+      <End Role="COMPROBANTESCOMPRASDETALLE" EntitySet="COMPROBANTESCOMPRASDETALLE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_COMPROBANTESCUMPLIDO_COMPROBANTESCOMPRASDETALLE" Association="DataModel.FK_COMPROBANTESCUMPLIDO_COMPROBANTESCOMPRASDETALLE">
+      <End Role="COMPROBANTESCOMPRASDETALLE" EntitySet="COMPROBANTESCOMPRASDETALLE" />
+      <End Role="COMPROBANTESCUMPLIDO" EntitySet="COMPROBANTESCUMPLIDO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_COMPROBANTESCUMPLIDO_COMPROBANTESCOMPRASDETALLE1" Association="DataModel.FK_COMPROBANTESCUMPLIDO_COMPROBANTESCOMPRASDETALLE1">
+      <End Role="COMPROBANTESCOMPRASDETALLE" EntitySet="COMPROBANTESCOMPRASDETALLE" />
+      <End Role="COMPROBANTESCUMPLIDO" EntitySet="COMPROBANTESCUMPLIDO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_COMPROBANTESDETALLE_PRODUCTOLOTE" Association="DataModel.FK_COMPROBANTESDETALLE_PRODUCTOLOTE">
+      <End Role="PRODUCTOLOTE" EntitySet="PRODUCTOLOTE" />
+      <End Role="COMPROBANTESCOMPRASDETALLE" EntitySet="COMPROBANTESCOMPRASDETALLE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_COMPROBANTESCUMPLIDO_COMPROBANTESVENTASDETALLE" Association="DataModel.FK_COMPROBANTESCUMPLIDO_COMPROBANTESVENTASDETALLE">
+      <End Role="COMPROBANTESVENTASDETALLE" EntitySet="COMPROBANTESVENTASDETALLE" />
+      <End Role="COMPROBANTESCUMPLIDO" EntitySet="COMPROBANTESCUMPLIDO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_COMPROBANTESCUMPLIDO_COMPROBANTESVENTASDETALLE1" Association="DataModel.FK_COMPROBANTESCUMPLIDO_COMPROBANTESVENTASDETALLE1">
+      <End Role="COMPROBANTESVENTASDETALLE" EntitySet="COMPROBANTESVENTASDETALLE" />
+      <End Role="COMPROBANTESCUMPLIDO" EntitySet="COMPROBANTESCUMPLIDO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_COMPROBANTESVENTAS_CONDICIONES" Association="DataModel.FK_COMPROBANTESVENTAS_CONDICIONES">
+      <End Role="CONDICIONES" EntitySet="CONDICIONES" />
+      <End Role="COMPROBANTESVENTAS" EntitySet="COMPROBANTESVENTAS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_COMPROBANTESVENTAS_ESTADOSCOMPROBANTES" Association="DataModel.FK_COMPROBANTESVENTAS_ESTADOSCOMPROBANTES">
+      <End Role="ESTADOSCOMPROBANTES" EntitySet="ESTADOSCOMPROBANTES" />
+      <End Role="COMPROBANTESVENTAS" EntitySet="COMPROBANTESVENTAS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_COMPROBANTESVENTAS_PERCEPCIONES" Association="DataModel.FK_COMPROBANTESVENTAS_PERCEPCIONES">
+      <End Role="PERCEPCIONES" EntitySet="PERCEPCIONES" />
+      <End Role="COMPROBANTESVENTAS" EntitySet="COMPROBANTESVENTAS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_COMPROBANTESVENTAS_PERCEPCIONES1" Association="DataModel.FK_COMPROBANTESVENTAS_PERCEPCIONES1">
+      <End Role="PERCEPCIONES" EntitySet="PERCEPCIONES" />
+      <End Role="COMPROBANTESVENTAS" EntitySet="COMPROBANTESVENTAS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_COMPROBANTESVENTAS_PERCEPCIONES2" Association="DataModel.FK_COMPROBANTESVENTAS_PERCEPCIONES2">
+      <End Role="PERCEPCIONES" EntitySet="PERCEPCIONES" />
+      <End Role="COMPROBANTESVENTAS" EntitySet="COMPROBANTESVENTAS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_COMPROBANTESVENTAS_PERCEPCIONES3" Association="DataModel.FK_COMPROBANTESVENTAS_PERCEPCIONES3">
+      <End Role="PERCEPCIONES" EntitySet="PERCEPCIONES" />
+      <End Role="COMPROBANTESVENTAS" EntitySet="COMPROBANTESVENTAS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_COMPROBANTESVENTAS_PERCEPCIONES4" Association="DataModel.FK_COMPROBANTESVENTAS_PERCEPCIONES4">
+      <End Role="PERCEPCIONES" EntitySet="PERCEPCIONES" />
+      <End Role="COMPROBANTESVENTAS" EntitySet="COMPROBANTESVENTAS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_COMPROBANTESVENTAS_SUCURSALES" Association="DataModel.FK_COMPROBANTESVENTAS_SUCURSALES">
+      <End Role="SUCURSALES" EntitySet="SUCURSALES" />
+      <End Role="COMPROBANTESVENTAS" EntitySet="COMPROBANTESVENTAS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_COMPROBANTESVENTAS_TIPOSCOMPROBANTES" Association="DataModel.FK_COMPROBANTESVENTAS_TIPOSCOMPROBANTES">
+      <End Role="TIPOSCOMPROBANTES" EntitySet="TIPOSCOMPROBANTES" />
+      <End Role="COMPROBANTESVENTAS" EntitySet="COMPROBANTESVENTAS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_COMPROBANTESVENTAS_TRANSPORTES" Association="DataModel.FK_COMPROBANTESVENTAS_TRANSPORTES">
+      <End Role="TRANSPORTES" EntitySet="TRANSPORTES" />
+      <End Role="COMPROBANTESVENTAS" EntitySet="COMPROBANTESVENTAS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_COMPROBANTESVENTAS_USUARIOS" Association="DataModel.FK_COMPROBANTESVENTAS_USUARIOS">
+      <End Role="USUARIOS" EntitySet="USUARIOS" />
+      <End Role="COMPROBANTESVENTAS" EntitySet="COMPROBANTESVENTAS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_COMPROBANTESVENTAS_VENDEDORES" Association="DataModel.FK_COMPROBANTESVENTAS_VENDEDORES">
+      <End Role="VENDEDORES" EntitySet="VENDEDORES" />
+      <End Role="COMPROBANTESVENTAS" EntitySet="COMPROBANTESVENTAS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_COMPROBANTESVENTASDETALLE_COMPROBANTESVENTAS" Association="DataModel.FK_COMPROBANTESVENTASDETALLE_COMPROBANTESVENTAS">
+      <End Role="COMPROBANTESVENTAS" EntitySet="COMPROBANTESVENTAS" />
+      <End Role="COMPROBANTESVENTASDETALLE" EntitySet="COMPROBANTESVENTASDETALLE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_COMPROBANTESVENTASDETALLE_PRODUCTOLOTE" Association="DataModel.FK_COMPROBANTESVENTASDETALLE_PRODUCTOLOTE">
+      <End Role="PRODUCTOLOTE" EntitySet="PRODUCTOLOTE" />
+      <End Role="COMPROBANTESVENTASDETALLE" EntitySet="COMPROBANTESVENTASDETALLE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_COMPROBANTESVENTASDETALLE_PRODUCTOS" Association="DataModel.FK_COMPROBANTESVENTASDETALLE_PRODUCTOS">
+      <End Role="PRODUCTOS" EntitySet="PRODUCTOS" />
+      <End Role="COMPROBANTESVENTASDETALLE" EntitySet="COMPROBANTESVENTASDETALLE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_INVENTARIODETALLE_DEPOSITOS" Association="DataModel.FK_INVENTARIODETALLE_DEPOSITOS">
+      <End Role="DEPOSITOS" EntitySet="DEPOSITOS" />
+      <End Role="INVENTARIODETALLE" EntitySet="INVENTARIODETALLE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_REMITOCOMPRA_ESTADOSCOMPROBANTES" Association="DataModel.FK_REMITOCOMPRA_ESTADOSCOMPROBANTES">
+      <End Role="ESTADOSCOMPROBANTES" EntitySet="ESTADOSCOMPROBANTES" />
+      <End Role="INVENTARIO" EntitySet="INVENTARIO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PRODUCTOS_FABRICANTES" Association="DataModel.FK_PRODUCTOS_FABRICANTES">
+      <End Role="FABRICANTES" EntitySet="FABRICANTES" />
+      <End Role="PRODUCTOS" EntitySet="PRODUCTOS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PRODUCTOS_IMPUESTOINTERNO_COMPRA" Association="DataModel.FK_PRODUCTOS_IMPUESTOINTERNO_COMPRA">
+      <End Role="IMPUESTOINTERNO" EntitySet="IMPUESTOINTERNO" />
+      <End Role="PRODUCTOS" EntitySet="PRODUCTOS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PRODUCTOS_IMPUESTOINTERNO_VENTA" Association="DataModel.FK_PRODUCTOS_IMPUESTOINTERNO_VENTA">
+      <End Role="IMPUESTOINTERNO" EntitySet="IMPUESTOINTERNO" />
+      <End Role="PRODUCTOS" EntitySet="PRODUCTOS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_INVENTARIO_SUCURSALES" Association="DataModel.FK_INVENTARIO_SUCURSALES">
+      <End Role="SUCURSALES" EntitySet="SUCURSALES" />
+      <End Role="INVENTARIO" EntitySet="INVENTARIO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_INVENTARIO_TRANSPORTES" Association="DataModel.FK_INVENTARIO_TRANSPORTES">
+      <End Role="TRANSPORTES" EntitySet="TRANSPORTES" />
+      <End Role="INVENTARIO" EntitySet="INVENTARIO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_INVENTARIO_USUARIOS" Association="DataModel.FK_INVENTARIO_USUARIOS">
+      <End Role="USUARIOS" EntitySet="USUARIOS" />
+      <End Role="INVENTARIO" EntitySet="INVENTARIO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_REMITOCOMPRA_TIPOSCOMPROBANTES" Association="DataModel.FK_REMITOCOMPRA_TIPOSCOMPROBANTES">
+      <End Role="TIPOSCOMPROBANTES" EntitySet="TIPOSCOMPROBANTES" />
+      <End Role="INVENTARIO" EntitySet="INVENTARIO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_REMITOCOMPRADETALLE_REMITOCOMPRA" Association="DataModel.FK_REMITOCOMPRADETALLE_REMITOCOMPRA">
+      <End Role="INVENTARIO" EntitySet="INVENTARIO" />
+      <End Role="INVENTARIODETALLE" EntitySet="INVENTARIODETALLE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_INVENTARIODETALLE_PRODUCTOLOTE" Association="DataModel.FK_INVENTARIODETALLE_PRODUCTOLOTE">
+      <End Role="PRODUCTOLOTE" EntitySet="PRODUCTOLOTE" />
+      <End Role="INVENTARIODETALLE" EntitySet="INVENTARIODETALLE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_INVENTARIODETALLE_PRODUCTOS" Association="DataModel.FK_INVENTARIODETALLE_PRODUCTOS">
+      <End Role="PRODUCTOS" EntitySet="PRODUCTOS" />
+      <End Role="INVENTARIODETALLE" EntitySet="INVENTARIODETALLE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_REMITOCOMPRADETALLE_PRODUCTOLOTE" Association="DataModel.FK_REMITOCOMPRADETALLE_PRODUCTOLOTE">
+      <End Role="PRODUCTOLOTE" EntitySet="PRODUCTOLOTE" />
+      <End Role="INVENTARIODETALLE" EntitySet="INVENTARIODETALLE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LOCALIDADES_PROVINCIAS" Association="DataModel.FK_LOCALIDADES_PROVINCIAS">
+      <End Role="PROVINCIAS" EntitySet="PROVINCIAS" />
+      <End Role="LOCALIDADES" EntitySet="LOCALIDADES" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PRODUCTOS_MARCAS" Association="DataModel.FK_PRODUCTOS_MARCAS">
+      <End Role="MARCAS" EntitySet="MARCAS" />
+      <End Role="PRODUCTOS" EntitySet="PRODUCTOS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PRODUCTOLOTE_PRODUCTOS" Association="DataModel.FK_PRODUCTOLOTE_PRODUCTOS">
+      <End Role="PRODUCTOS" EntitySet="PRODUCTOS" />
+      <End Role="PRODUCTOLOTE" EntitySet="PRODUCTOLOTE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PRODUCTOS_RUBROS" Association="DataModel.FK_PRODUCTOS_RUBROS">
+      <End Role="RUBROS" EntitySet="RUBROS" />
+      <End Role="PRODUCTOS" EntitySet="PRODUCTOS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PRODUCTOS_TIPOPRODUCTO" Association="DataModel.FK_PRODUCTOS_TIPOPRODUCTO">
+      <End Role="TIPOPRODUCTO" EntitySet="TIPOPRODUCTO" />
+      <End Role="PRODUCTOS" EntitySet="PRODUCTOS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PRODUCTOS_UNIDADES" Association="DataModel.FK_PRODUCTOS_UNIDADES">
+      <End Role="UNIDADES" EntitySet="UNIDADES" />
+      <End Role="PRODUCTOS" EntitySet="PRODUCTOS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PRODUCTOS_UNIDADES1" Association="DataModel.FK_PRODUCTOS_UNIDADES1">
+      <End Role="UNIDADES" EntitySet="UNIDADES" />
+      <End Role="PRODUCTOS" EntitySet="PRODUCTOS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PRODUCTOS_UNIDADES2" Association="DataModel.FK_PRODUCTOS_UNIDADES2">
+      <End Role="UNIDADES" EntitySet="UNIDADES" />
+      <End Role="PRODUCTOS" EntitySet="PRODUCTOS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PRODUCTOS_USUARIOS" Association="DataModel.FK_PRODUCTOS_USUARIOS">
+      <End Role="USUARIOS" EntitySet="USUARIOS" />
+      <End Role="PRODUCTOS" EntitySet="PRODUCTOS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_USUARIOS_ROLES" Association="DataModel.FK_USUARIOS_ROLES">
+      <End Role="ROLES" EntitySet="ROLES" />
+      <End Role="USUARIOS" EntitySet="USUARIOS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_USUARIOS_TIPOSDOCUMENTOS" Association="DataModel.FK_USUARIOS_TIPOSDOCUMENTOS">
+      <End Role="TIPOSDOCUMENTOS" EntitySet="TIPOSDOCUMENTOS" />
+      <End Role="USUARIOS" EntitySet="USUARIOS" />
+    </AssociationSet>
+    <EntitySet Name="PRODUCTOSCOMPONENTES" EntityType="DataModel.PRODUCTOSCOMPONENTES" />
+    <AssociationSet Name="FK_PRODUCTOSCOMPONENTES_PRODUCTOS" Association="DataModel.FK_PRODUCTOSCOMPONENTES_PRODUCTOS">
+      <End Role="PRODUCTOS" EntitySet="PRODUCTOS" />
+      <End Role="PRODUCTOSCOMPONENTES" EntitySet="PRODUCTOSCOMPONENTES" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PRODUCTOSCOMPONENTES_PRODUCTOS1" Association="DataModel.FK_PRODUCTOSCOMPONENTES_PRODUCTOS1">
+      <End Role="PRODUCTOS" EntitySet="PRODUCTOS" />
+      <End Role="PRODUCTOSCOMPONENTES" EntitySet="PRODUCTOSCOMPONENTES" />
+    </AssociationSet>
+    <EntitySet Name="OBLEASLIBRES" EntityType="DataModel.OBLEASLIBRES" />
+    <EntitySet Name="DOCUMENTOSCLIENTES" EntityType="DataModel.DOCUMENTOSCLIENTES" />
+    <EntitySet Name="PROVEEDORES" EntityType="DataModel.PROVEEDORES" />
+    <AssociationSet Name="FK_COMPROBANTES_PROVEEDORES" Association="DataModel.FK_COMPROBANTES_PROVEEDORES">
+      <End Role="PROVEEDORES" EntitySet="PROVEEDORES" />
+      <End Role="COMPROBANTESCOMPRAS" EntitySet="COMPROBANTESCOMPRAS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CONTACTOS_PROVEEDORES" Association="DataModel.FK_CONTACTOS_PROVEEDORES">
+      <End Role="PROVEEDORES" EntitySet="PROVEEDORES" />
+      <End Role="CONTACTOS" EntitySet="CONTACTOS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PROVEEDORES_LOCALIDADES" Association="DataModel.FK_PROVEEDORES_LOCALIDADES">
+      <End Role="LOCALIDADES" EntitySet="LOCALIDADES" />
+      <End Role="PROVEEDORES" EntitySet="PROVEEDORES" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PRODUCTOLOTE_PROVEEDORES" Association="DataModel.FK_PRODUCTOLOTE_PROVEEDORES">
+      <End Role="PROVEEDORES" EntitySet="PROVEEDORES" />
+      <End Role="PRODUCTOLOTE" EntitySet="PRODUCTOLOTE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PRODUCTOS_PROVEEDORES1" Association="DataModel.FK_PRODUCTOS_PROVEEDORES1">
+      <End Role="PROVEEDORES" EntitySet="PROVEEDORES" />
+      <End Role="PRODUCTOS" EntitySet="PRODUCTOS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PROVEEDORES_REGIVA" Association="DataModel.FK_PROVEEDORES_REGIVA">
+      <End Role="REGIVA" EntitySet="REGIVA" />
+      <End Role="PROVEEDORES" EntitySet="PROVEEDORES" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PROVEEDORES_TRANSPORTES" Association="DataModel.FK_PROVEEDORES_TRANSPORTES">
+      <End Role="TRANSPORTES" EntitySet="TRANSPORTES" />
+      <End Role="PROVEEDORES" EntitySet="PROVEEDORES" />
+    </AssociationSet>
+    <AssociationSet Name="FK_COMPROBANTESVENTAS_CLIENTES" Association="DataModel.FK_COMPROBANTESVENTAS_CLIENTES">
+      <End Role="CLIENTES" EntitySet="CLIENTES" />
+      <End Role="COMPROBANTESVENTAS" EntitySet="COMPROBANTESVENTAS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_INVENTARIO_PROVEEDORES" Association="DataModel.FK_INVENTARIO_PROVEEDORES">
+      <End Role="PROVEEDORES" EntitySet="PROVEEDORES" />
+      <End Role="INVENTARIO" EntitySet="INVENTARIO" />
+    </AssociationSet>
+    <EntitySet Name="LOTES" EntityType="DataModel.LOTES" />
+    <AssociationSet Name="FK_OBLEASlIBRES_LOTES" Association="DataModel.FK_OBLEASlIBRES_LOTES">
+      <End Role="LOTES" EntitySet="LOTES" />
+      <End Role="OBLEASLIBRES" EntitySet="OBLEASLIBRES" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="BASEIMPONIBLE">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Guid" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Descripcion" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="Coeficiente" Nullable="false" Precision="18" Scale="2" />
+    <Property Type="Boolean" Name="Activo" Nullable="false" />
+    <NavigationProperty Name="PRODUCTOS" Relationship="DataModel.FK_PRODUCTOS_BASEIMPONIBLE" FromRole="BASEIMPONIBLE" ToRole="PRODUCTOS" />
+    <NavigationProperty Name="PRODUCTOS1" Relationship="DataModel.FK_PRODUCTOS_BASEIMPONIBLE1" FromRole="BASEIMPONIBLE" ToRole="PRODUCTOS" />
+  </EntityType>
+  <EntityType Name="CLIENTES">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Guid" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Descripcion" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Domicilio" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Guid" Name="LocalidadesID" />
+    <Property Type="String" Name="Telefono1" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Telefono2" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Fax" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Email" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Contacto" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CUIT" MaxLength="13" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CodigoPostal" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="Guid" Name="CondicionesID" />
+    <Property Type="Guid" Name="ZonasID" />
+    <Property Type="Guid" Name="TransporteID" />
+    <Property Type="Boolean" Name="Activo" Nullable="false" />
+    <Property Type="Guid" Name="RegIvaID" />
+    <NavigationProperty Name="CONDICIONES" Relationship="DataModel.FK_CLIENTES_CONDICIONES" FromRole="CLIENTES" ToRole="CONDICIONES" />
+    <NavigationProperty Name="LOCALIDADES" Relationship="DataModel.FK_CLIENTES_LOCALIDADES" FromRole="CLIENTES" ToRole="LOCALIDADES" />
+    <NavigationProperty Name="REGIVA" Relationship="DataModel.FK_CLIENTES_REGIVA" FromRole="CLIENTES" ToRole="REGIVA" />
+    <NavigationProperty Name="TRANSPORTES" Relationship="DataModel.FK_CLIENTES_TRANSPORTES" FromRole="CLIENTES" ToRole="TRANSPORTES" />
+    <NavigationProperty Name="ZONAS" Relationship="DataModel.FK_CLIENTES_ZONAS" FromRole="CLIENTES" ToRole="ZONAS" />
+    <NavigationProperty Name="INVENTARIO" Relationship="DataModel.FK_INVENTARIO_CLIENTES" FromRole="CLIENTES" ToRole="INVENTARIO" />
+    <Property Type="Int32" Name="Codigo" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="COMPROBANTESVENTAS" Relationship="DataModel.FK_COMPROBANTESVENTAS_CLIENTES" FromRole="CLIENTES" ToRole="COMPROBANTESVENTAS" />
+  </EntityType>
+  <EntityType Name="COMPROBANTESCOMPRAS">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Guid" Name="ID" Nullable="false" />
+    <Property Type="Guid" Name="TiposComprobantesID" Nullable="false" />
+    <Property Type="String" Name="LetraComprobante" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="NroComprobante" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Guid" Name="CondicionesID" />
+    <Property Type="Guid" Name="SucursalesID" Nullable="false" />
+    <Property Type="Guid" Name="TransportesID" />
+    <Property Type="Guid" Name="ProveedoresID" />
+    <Property Type="Decimal" Name="Bonificacion" Precision="18" Scale="4" />
+    <Property Type="DateTime" Name="FechaComprobante" Nullable="false" />
+    <Property Type="DateTime" Name="FechaContable" />
+    <Property Type="Guid" Name="EstadosComprobantesID" Nullable="false" />
+    <Property Type="Decimal" Name="MontoComprobante" Nullable="false" Precision="18" Scale="4" />
+    <Property Type="Decimal" Name="MontoDebeComprobante" Precision="18" Scale="4" />
+    <Property Type="Boolean" Name="IncluyeEnIvaCompra" />
+    <Property Type="String" Name="Observacion" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Type="Guid" Name="PercepcionesID1" />
+    <Property Type="Decimal" Name="PercepcionesMonto1" Precision="18" Scale="4" />
+    <Property Type="Guid" Name="PercepcionesID2" />
+    <Property Type="Decimal" Name="PercepcionesMonto2" Precision="18" Scale="4" />
+    <Property Type="Guid" Name="PercepcionesID3" />
+    <Property Type="Decimal" Name="PercepcionesMonto3" Precision="18" Scale="4" />
+    <Property Type="Guid" Name="PercepcionesID4" />
+    <Property Type="Decimal" Name="PercepcionesMonto4" Precision="18" Scale="4" />
+    <Property Type="Guid" Name="PercepcionesID5" />
+    <Property Type="Decimal" Name="PercepcionesMonto5" Precision="18" Scale="4" />
+    <Property Type="Guid" Name="UsuarioID" />
+    <Property Type="DateTime" Name="FechaAlta" Nullable="false" />
+    <Property Type="Boolean" Name="Activo" Nullable="false" />
+    <NavigationProperty Name="CONDICIONES" Relationship="DataModel.FK_COMPROBANTES_CONDICIONES" FromRole="COMPROBANTESCOMPRAS" ToRole="CONDICIONES" />
+    <NavigationProperty Name="SUCURSALES" Relationship="DataModel.FK_COMPROBANTES_SUCURSALES" FromRole="COMPROBANTESCOMPRAS" ToRole="SUCURSALES" />
+    <NavigationProperty Name="TIPOSCOMPROBANTES" Relationship="DataModel.FK_COMPROBANTES_TIPOSCOMPROBANTES" FromRole="COMPROBANTESCOMPRAS" ToRole="TIPOSCOMPROBANTES" />
+    <NavigationProperty Name="TRANSPORTES" Relationship="DataModel.FK_COMPROBANTES_TRANSPORTES" FromRole="COMPROBANTESCOMPRAS" ToRole="TRANSPORTES" />
+    <NavigationProperty Name="ESTADOSCOMPROBANTES" Relationship="DataModel.FK_COMPROBANTESCOMPRAS_ESTADOSCOMPROBANTES" FromRole="COMPROBANTESCOMPRAS" ToRole="ESTADOSCOMPROBANTES" />
+    <NavigationProperty Name="PERCEPCIONES" Relationship="DataModel.FK_COMPROBANTESCOMPRAS_PERCEPCIONES" FromRole="COMPROBANTESCOMPRAS" ToRole="PERCEPCIONES" />
+    <NavigationProperty Name="PERCEPCIONES1" Relationship="DataModel.FK_COMPROBANTESCOMPRAS_PERCEPCIONES1" FromRole="COMPROBANTESCOMPRAS" ToRole="PERCEPCIONES" />
+    <NavigationProperty Name="PERCEPCIONES2" Relationship="DataModel.FK_COMPROBANTESCOMPRAS_PERCEPCIONES2" FromRole="COMPROBANTESCOMPRAS" ToRole="PERCEPCIONES" />
+    <NavigationProperty Name="PERCEPCIONES3" Relationship="DataModel.FK_COMPROBANTESCOMPRAS_PERCEPCIONES3" FromRole="COMPROBANTESCOMPRAS" ToRole="PERCEPCIONES" />
+    <NavigationProperty Name="PERCEPCIONES4" Relationship="DataModel.FK_COMPROBANTESCOMPRAS_PERCEPCIONES4" FromRole="COMPROBANTESCOMPRAS" ToRole="PERCEPCIONES" />
+    <NavigationProperty Name="USUARIOS" Relationship="DataModel.FK_COMPROBANTESCOMPRAS_USUARIOS" FromRole="COMPROBANTESCOMPRAS" ToRole="USUARIOS" />
+    <NavigationProperty Name="COMPROBANTESCOMPRASDETALLE" Relationship="DataModel.FK_COMPROBANTESDETALLE_COMPROBANTES" FromRole="COMPROBANTESCOMPRAS" ToRole="COMPROBANTESCOMPRASDETALLE" />
+    <NavigationProperty Name="PROVEEDORES" Relationship="DataModel.FK_COMPROBANTES_PROVEEDORES" FromRole="COMPROBANTESCOMPRAS" ToRole="PROVEEDORES" />
+  </EntityType>
+  <EntityType Name="COMPROBANTESCOMPRASDETALLE">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Guid" Name="ID" Nullable="false" />
+    <Property Type="Guid" Name="ComprobantesID" Nullable="false" />
+    <Property Type="Guid" Name="ProductoID" />
+    <Property Type="Guid" Name="ProductoLoteID" />
+    <Property Type="Decimal" Name="Cantidad" Nullable="false" Precision="18" Scale="4" />
+    <Property Type="Decimal" Name="CantidadIngresada" Precision="18" Scale="4" />
+    <Property Type="Decimal" Name="Exento" Nullable="false" Precision="18" Scale="4" />
+    <Property Type="Decimal" Name="Gravado" Nullable="false" Precision="18" Scale="4" />
+    <Property Type="Decimal" Name="IVA" Nullable="false" Precision="18" Scale="4" />
+    <Property Type="Decimal" Name="ImpInterno" Nullable="false" Precision="18" Scale="4" />
+    <Property Type="Decimal" Name="IngBrutos" Nullable="false" Precision="18" Scale="4" />
+    <Property Type="Decimal" Name="PrecioUnitario" Nullable="false" Precision="18" Scale="4" />
+    <Property Type="Decimal" Name="Bonificacion" Nullable="false" Precision="18" Scale="4" />
+    <Property Type="DateTime" Name="FechaEntrega" />
+    <Property Type="String" Name="Observacion" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="TipoMovimientoMercaderia" MaxLength="1" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="COMPROBANTESCOMPRAS" Relationship="DataModel.FK_COMPROBANTESDETALLE_COMPROBANTES" FromRole="COMPROBANTESCOMPRASDETALLE" ToRole="COMPROBANTESCOMPRAS" />
+    <NavigationProperty Name="PRODUCTOS" Relationship="DataModel.FK_COMPROBANTESCOMPRASDETALLE_PRODUCTOS" FromRole="COMPROBANTESCOMPRASDETALLE" ToRole="PRODUCTOS" />
+    <NavigationProperty Name="COMPROBANTESCUMPLIDO" Relationship="DataModel.FK_COMPROBANTESCUMPLIDO_COMPROBANTESCOMPRASDETALLE" FromRole="COMPROBANTESCOMPRASDETALLE" ToRole="COMPROBANTESCUMPLIDO" />
+    <NavigationProperty Name="COMPROBANTESCUMPLIDO1" Relationship="DataModel.FK_COMPROBANTESCUMPLIDO_COMPROBANTESCOMPRASDETALLE1" FromRole="COMPROBANTESCOMPRASDETALLE" ToRole="COMPROBANTESCUMPLIDO" />
+    <NavigationProperty Name="PRODUCTOLOTE" Relationship="DataModel.FK_COMPROBANTESDETALLE_PRODUCTOLOTE" FromRole="COMPROBANTESCOMPRASDETALLE" ToRole="PRODUCTOLOTE" />
+  </EntityType>
+  <EntityType Name="COMPROBANTESCUMPLIDO">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Guid" Name="ID" Nullable="false" />
+    <Property Type="Guid" Name="DetalleOrigenID" Nullable="false" />
+    <Property Type="Guid" Name="DetalleDestinoID" Nullable="false" />
+    <Property Type="Decimal" Name="Cantidad" Nullable="false" Precision="18" Scale="2" />
+    <Property Type="String" Name="TipoOrigen" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="TipoDestino" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="Fecha" />
+    <NavigationProperty Name="COMPROBANTESCOMPRASDETALLE" Relationship="DataModel.FK_COMPROBANTESCUMPLIDO_COMPROBANTESCOMPRASDETALLE" FromRole="COMPROBANTESCUMPLIDO" ToRole="COMPROBANTESCOMPRASDETALLE" />
+    <NavigationProperty Name="COMPROBANTESCOMPRASDETALLE1" Relationship="DataModel.FK_COMPROBANTESCUMPLIDO_COMPROBANTESCOMPRASDETALLE1" FromRole="COMPROBANTESCUMPLIDO" ToRole="COMPROBANTESCOMPRASDETALLE" />
+    <NavigationProperty Name="COMPROBANTESVENTASDETALLE" Relationship="DataModel.FK_COMPROBANTESCUMPLIDO_COMPROBANTESVENTASDETALLE" FromRole="COMPROBANTESCUMPLIDO" ToRole="COMPROBANTESVENTASDETALLE" />
+    <NavigationProperty Name="COMPROBANTESVENTASDETALLE1" Relationship="DataModel.FK_COMPROBANTESCUMPLIDO_COMPROBANTESVENTASDETALLE1" FromRole="COMPROBANTESCUMPLIDO" ToRole="COMPROBANTESVENTASDETALLE" />
+  </EntityType>
+  <EntityType Name="COMPROBANTESVENTAS">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Guid" Name="ID" Nullable="false" />
+    <Property Type="Guid" Name="TiposComprobantesID" Nullable="false" />
+    <Property Type="String" Name="LetraComprobante" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="NroComprobante" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Guid" Name="CondicionesID" />
+    <Property Type="Guid" Name="SucursalesID" Nullable="false" />
+    <Property Type="Guid" Name="ClientesID" />
+    <Property Type="Guid" Name="TransportesID" />
+    <Property Type="Guid" Name="VendedoresID" />
+    <Property Type="Decimal" Name="ComisionVendedor" Precision="18" Scale="4" />
+    <Property Type="Decimal" Name="Bonificacion" Precision="18" Scale="4" />
+    <Property Type="DateTime" Name="FechaComprobante" Nullable="false" />
+    <Property Type="DateTime" Name="FechaContable" />
+    <Property Type="Guid" Name="EstadosComprobantesID" Nullable="false" />
+    <Property Type="Decimal" Name="MontoComprobante" Nullable="false" Precision="18" Scale="4" />
+    <Property Type="Decimal" Name="MontoDebeComprobante" Precision="18" Scale="4" />
+    <Property Type="Boolean" Name="IncluyeEnIvaCompras" />
+    <Property Type="String" Name="Observacion" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Type="Guid" Name="PercepcionesID1" />
+    <Property Type="Decimal" Name="PercepcionesMonto1" Precision="18" Scale="4" />
+    <Property Type="Guid" Name="PercepcionesID2" />
+    <Property Type="Decimal" Name="PercepcionesMonto2" Precision="18" Scale="4" />
+    <Property Type="Guid" Name="PercepcionesID3" />
+    <Property Type="Decimal" Name="PercepcionesMonto3" Precision="18" Scale="4" />
+    <Property Type="Guid" Name="PercepcionesID4" />
+    <Property Type="Decimal" Name="PercepcionesMonto4" Precision="18" Scale="4" />
+    <Property Type="Guid" Name="PercepcionesID5" />
+    <Property Type="Decimal" Name="PercepcionesMonto5" Precision="18" Scale="4" />
+    <Property Type="Guid" Name="UsuarioID" />
+    <Property Type="DateTime" Name="FechaRealAlta" Nullable="false" />
+    <Property Type="Boolean" Name="Activo" Nullable="false" />
+    <NavigationProperty Name="CONDICIONES" Relationship="DataModel.FK_COMPROBANTESVENTAS_CONDICIONES" FromRole="COMPROBANTESVENTAS" ToRole="CONDICIONES" />
+    <NavigationProperty Name="ESTADOSCOMPROBANTES" Relationship="DataModel.FK_COMPROBANTESVENTAS_ESTADOSCOMPROBANTES" FromRole="COMPROBANTESVENTAS" ToRole="ESTADOSCOMPROBANTES" />
+    <NavigationProperty Name="PERCEPCIONES" Relationship="DataModel.FK_COMPROBANTESVENTAS_PERCEPCIONES" FromRole="COMPROBANTESVENTAS" ToRole="PERCEPCIONES" />
+    <NavigationProperty Name="PERCEPCIONES1" Relationship="DataModel.FK_COMPROBANTESVENTAS_PERCEPCIONES1" FromRole="COMPROBANTESVENTAS" ToRole="PERCEPCIONES" />
+    <NavigationProperty Name="PERCEPCIONES2" Relationship="DataModel.FK_COMPROBANTESVENTAS_PERCEPCIONES2" FromRole="COMPROBANTESVENTAS" ToRole="PERCEPCIONES" />
+    <NavigationProperty Name="PERCEPCIONES3" Relationship="DataModel.FK_COMPROBANTESVENTAS_PERCEPCIONES3" FromRole="COMPROBANTESVENTAS" ToRole="PERCEPCIONES" />
+    <NavigationProperty Name="PERCEPCIONES4" Relationship="DataModel.FK_COMPROBANTESVENTAS_PERCEPCIONES4" FromRole="COMPROBANTESVENTAS" ToRole="PERCEPCIONES" />
+    <NavigationProperty Name="SUCURSALES" Relationship="DataModel.FK_COMPROBANTESVENTAS_SUCURSALES" FromRole="COMPROBANTESVENTAS" ToRole="SUCURSALES" />
+    <NavigationProperty Name="TIPOSCOMPROBANTES" Relationship="DataModel.FK_COMPROBANTESVENTAS_TIPOSCOMPROBANTES" FromRole="COMPROBANTESVENTAS" ToRole="TIPOSCOMPROBANTES" />
+    <NavigationProperty Name="TRANSPORTES" Relationship="DataModel.FK_COMPROBANTESVENTAS_TRANSPORTES" FromRole="COMPROBANTESVENTAS" ToRole="TRANSPORTES" />
+    <NavigationProperty Name="USUARIOS" Relationship="DataModel.FK_COMPROBANTESVENTAS_USUARIOS" FromRole="COMPROBANTESVENTAS" ToRole="USUARIOS" />
+    <NavigationProperty Name="VENDEDORES" Relationship="DataModel.FK_COMPROBANTESVENTAS_VENDEDORES" FromRole="COMPROBANTESVENTAS" ToRole="VENDEDORES" />
+    <NavigationProperty Name="COMPROBANTESVENTASDETALLE" Relationship="DataModel.FK_COMPROBANTESVENTASDETALLE_COMPROBANTESVENTAS" FromRole="COMPROBANTESVENTAS" ToRole="COMPROBANTESVENTASDETALLE" />
+    <NavigationProperty Name="CLIENTES" Relationship="DataModel.FK_COMPROBANTESVENTAS_CLIENTES" FromRole="COMPROBANTESVENTAS" ToRole="CLIENTES" />
+  </EntityType>
+  <EntityType Name="COMPROBANTESVENTASDETALLE">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Guid" Name="ID" Nullable="false" />
+    <Property Type="Guid" Name="ComprobantesVentasID" Nullable="false" />
+    <Property Type="Guid" Name="ProductoID" />
+    <Property Type="Guid" Name="ProductoLoteID" />
+    <Property Type="Decimal" Name="Cantidad" Nullable="false" Precision="18" Scale="4" />
+    <Property Type="Decimal" Name="CantidadCumplida" Nullable="false" Precision="18" Scale="4" />
+    <Property Type="Decimal" Name="Exento" Precision="18" Scale="4" />
+    <Property Type="Decimal" Name="Gravado" Precision="18" Scale="4" />
+    <Property Type="Decimal" Name="IVA" Precision="18" Scale="4" />
+    <Property Type="Decimal" Name="ImpInterno" Precision="18" Scale="4" />
+    <Property Type="Decimal" Name="IngBrutos" Precision="18" Scale="4" />
+    <Property Type="Decimal" Name="PrecioUnitario" Nullable="false" Precision="18" Scale="4" />
+    <Property Type="Decimal" Name="Bonificacion" Nullable="false" Precision="18" Scale="4" />
+    <Property Type="DateTime" Name="FechaEntrega" />
+    <Property Type="String" Name="Observacion" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="TipoMovimientoMercaderia" MaxLength="1" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="COMPROBANTESCUMPLIDO" Relationship="DataModel.FK_COMPROBANTESCUMPLIDO_COMPROBANTESVENTASDETALLE" FromRole="COMPROBANTESVENTASDETALLE" ToRole="COMPROBANTESCUMPLIDO" />
+    <NavigationProperty Name="COMPROBANTESCUMPLIDO1" Relationship="DataModel.FK_COMPROBANTESCUMPLIDO_COMPROBANTESVENTASDETALLE1" FromRole="COMPROBANTESVENTASDETALLE" ToRole="COMPROBANTESCUMPLIDO" />
+    <NavigationProperty Name="COMPROBANTESVENTAS" Relationship="DataModel.FK_COMPROBANTESVENTASDETALLE_COMPROBANTESVENTAS" FromRole="COMPROBANTESVENTASDETALLE" ToRole="COMPROBANTESVENTAS" />
+    <NavigationProperty Name="PRODUCTOLOTE" Relationship="DataModel.FK_COMPROBANTESVENTASDETALLE_PRODUCTOLOTE" FromRole="COMPROBANTESVENTASDETALLE" ToRole="PRODUCTOLOTE" />
+    <NavigationProperty Name="PRODUCTOS" Relationship="DataModel.FK_COMPROBANTESVENTASDETALLE_PRODUCTOS" FromRole="COMPROBANTESVENTASDETALLE" ToRole="PRODUCTOS" />
+  </EntityType>
+  <EntityType Name="CONDICIONES">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Guid" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Descripcion" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="Coeficiente" Nullable="false" Precision="18" Scale="0" />
+    <Property Type="Boolean" Name="Activo" Nullable="false" />
+    <NavigationProperty Name="CLIENTES" Relationship="DataModel.FK_CLIENTES_CONDICIONES" FromRole="CONDICIONES" ToRole="CLIENTES" />
+    <NavigationProperty Name="COMPROBANTESCOMPRAS" Relationship="DataModel.FK_COMPROBANTES_CONDICIONES" FromRole="CONDICIONES" ToRole="COMPROBANTESCOMPRAS" />
+    <NavigationProperty Name="COMPROBANTESVENTAS" Relationship="DataModel.FK_COMPROBANTESVENTAS_CONDICIONES" FromRole="CONDICIONES" ToRole="COMPROBANTESVENTAS" />
+  </EntityType>
+  <EntityType Name="CONTACTOS">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Guid" Name="ID" Nullable="false" />
+    <Property Type="Guid" Name="ProveedoresID" />
+    <Property Type="Guid" Name="ClientesID" />
+    <Property Type="String" Name="Nombre" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Descripcion" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Telefono" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Celular" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Email" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="PROVEEDORES" Relationship="DataModel.FK_CONTACTOS_PROVEEDORES" FromRole="CONTACTOS" ToRole="PROVEEDORES" />
+  </EntityType>
+  <EntityType Name="DEPOSITOS">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Guid" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Descripcion" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="INVENTARIODETALLE" Relationship="DataModel.FK_INVENTARIODETALLE_DEPOSITOS" FromRole="DEPOSITOS" ToRole="INVENTARIODETALLE" />
+  </EntityType>
+  <EntityType Name="ESTADOSCOMPROBANTES">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Guid" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Descripcion" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Guid" Name="TiposComprobantesID" Nullable="false" />
+    <NavigationProperty Name="COMPROBANTESCOMPRAS" Relationship="DataModel.FK_COMPROBANTESCOMPRAS_ESTADOSCOMPROBANTES" FromRole="ESTADOSCOMPROBANTES" ToRole="COMPROBANTESCOMPRAS" />
+    <NavigationProperty Name="COMPROBANTESVENTAS" Relationship="DataModel.FK_COMPROBANTESVENTAS_ESTADOSCOMPROBANTES" FromRole="ESTADOSCOMPROBANTES" ToRole="COMPROBANTESVENTAS" />
+    <NavigationProperty Name="INVENTARIO" Relationship="DataModel.FK_REMITOCOMPRA_ESTADOSCOMPROBANTES" FromRole="ESTADOSCOMPROBANTES" ToRole="INVENTARIO" />
+  </EntityType>
+  <EntityType Name="FABRICANTES">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Guid" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Descripcion" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Boolean" Name="Activo" Nullable="false" />
+    <NavigationProperty Name="PRODUCTOS" Relationship="DataModel.FK_PRODUCTOS_FABRICANTES" FromRole="FABRICANTES" ToRole="PRODUCTOS" />
+  </EntityType>
+  <EntityType Name="IMPUESTOINTERNO">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Guid" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Descripcion" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="Coeficiente" Nullable="false" Precision="18" Scale="2" />
+    <Property Type="Boolean" Name="Activo" Nullable="false" />
+    <NavigationProperty Name="PRODUCTOS" Relationship="DataModel.FK_PRODUCTOS_IMPUESTOINTERNO_COMPRA" FromRole="IMPUESTOINTERNO" ToRole="PRODUCTOS" />
+    <NavigationProperty Name="PRODUCTOS1" Relationship="DataModel.FK_PRODUCTOS_IMPUESTOINTERNO_VENTA" FromRole="IMPUESTOINTERNO" ToRole="PRODUCTOS" />
+  </EntityType>
+  <EntityType Name="INVENTARIO">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Guid" Name="ID" Nullable="false" />
+    <Property Type="String" Name="NroComprobante" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Guid" Name="ProveedoresID" />
+    <Property Type="Guid" Name="ClientesID" />
+    <Property Type="DateTime" Name="Fecha" Nullable="false" />
+    <Property Type="String" Name="Observaciones" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="Guid" Name="TiposComprobantesID" />
+    <Property Type="Guid" Name="EstadoComprobantesID" />
+    <Property Type="Guid" Name="TransportesID" Nullable="false" />
+    <Property Type="Guid" Name="SucursalesID" />
+    <Property Type="Guid" Name="UsuarioID" Nullable="false" />
+    <Property Type="Boolean" Name="Activo" Nullable="false" />
+    <NavigationProperty Name="CLIENTES" Relationship="DataModel.FK_INVENTARIO_CLIENTES" FromRole="INVENTARIO" ToRole="CLIENTES" />
+    <NavigationProperty Name="ESTADOSCOMPROBANTES" Relationship="DataModel.FK_REMITOCOMPRA_ESTADOSCOMPROBANTES" FromRole="INVENTARIO" ToRole="ESTADOSCOMPROBANTES" />
+    <NavigationProperty Name="SUCURSALES" Relationship="DataModel.FK_INVENTARIO_SUCURSALES" FromRole="INVENTARIO" ToRole="SUCURSALES" />
+    <NavigationProperty Name="TRANSPORTES" Relationship="DataModel.FK_INVENTARIO_TRANSPORTES" FromRole="INVENTARIO" ToRole="TRANSPORTES" />
+    <NavigationProperty Name="USUARIOS" Relationship="DataModel.FK_INVENTARIO_USUARIOS" FromRole="INVENTARIO" ToRole="USUARIOS" />
+    <NavigationProperty Name="TIPOSCOMPROBANTES" Relationship="DataModel.FK_REMITOCOMPRA_TIPOSCOMPROBANTES" FromRole="INVENTARIO" ToRole="TIPOSCOMPROBANTES" />
+    <NavigationProperty Name="INVENTARIODETALLE" Relationship="DataModel.FK_REMITOCOMPRADETALLE_REMITOCOMPRA" FromRole="INVENTARIO" ToRole="INVENTARIODETALLE" />
+    <Property Type="Decimal" Name="MontoComprobante" Precision="18" Scale="2" />
+    <NavigationProperty Name="PROVEEDORES" Relationship="DataModel.FK_INVENTARIO_PROVEEDORES" FromRole="INVENTARIO" ToRole="PROVEEDORES" />
+  </EntityType>
+  <EntityType Name="INVENTARIODETALLE">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Guid" Name="ID" Nullable="false" />
+    <Property Type="Guid" Name="InventarioID" Nullable="false" />
+    <Property Type="Guid" Name="ProductoID" />
+    <Property Type="Guid" Name="ProductoLoteID" />
+    <Property Type="String" Name="Observaciones" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="CantidadCumplida" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="Cantidad" Nullable="false" Precision="18" Scale="0" />
+    <Property Type="Guid" Name="DepositosID" />
+    <Property Type="Int32" Name="Coeficiente" />
+    <NavigationProperty Name="DEPOSITOS" Relationship="DataModel.FK_INVENTARIODETALLE_DEPOSITOS" FromRole="INVENTARIODETALLE" ToRole="DEPOSITOS" />
+    <NavigationProperty Name="INVENTARIO" Relationship="DataModel.FK_REMITOCOMPRADETALLE_REMITOCOMPRA" FromRole="INVENTARIODETALLE" ToRole="INVENTARIO" />
+    <NavigationProperty Name="PRODUCTOLOTE" Relationship="DataModel.FK_INVENTARIODETALLE_PRODUCTOLOTE" FromRole="INVENTARIODETALLE" ToRole="PRODUCTOLOTE" />
+    <NavigationProperty Name="PRODUCTOS" Relationship="DataModel.FK_INVENTARIODETALLE_PRODUCTOS" FromRole="INVENTARIODETALLE" ToRole="PRODUCTOS" />
+    <NavigationProperty Name="PRODUCTOLOTE1" Relationship="DataModel.FK_REMITOCOMPRADETALLE_PRODUCTOLOTE" FromRole="INVENTARIODETALLE" ToRole="PRODUCTOLOTE" />
+    <Property Type="Decimal" Name="PrecioUnitario" Precision="18" Scale="2" />
+  </EntityType>
+  <EntityType Name="LOCALIDADES">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Guid" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Descripcion" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CP" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Guid" Name="ProvinciasID" Nullable="false" />
+    <Property Type="Boolean" Name="Activo" Nullable="false" />
+    <NavigationProperty Name="CLIENTES" Relationship="DataModel.FK_CLIENTES_LOCALIDADES" FromRole="LOCALIDADES" ToRole="CLIENTES" />
+    <NavigationProperty Name="PROVINCIAS" Relationship="DataModel.FK_LOCALIDADES_PROVINCIAS" FromRole="LOCALIDADES" ToRole="PROVINCIAS" />
+    <NavigationProperty Name="PROVEEDORES" Relationship="DataModel.FK_PROVEEDORES_LOCALIDADES" FromRole="LOCALIDADES" ToRole="PROVEEDORES" />
+  </EntityType>
+  <EntityType Name="MARCAS">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Guid" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Descripcion" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="Boolean" Name="Activo" Nullable="false" />
+    <NavigationProperty Name="PRODUCTOS" Relationship="DataModel.FK_PRODUCTOS_MARCAS" FromRole="MARCAS" ToRole="PRODUCTOS" />
+  </EntityType>
+  <EntityType Name="PERCEPCIONES">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Guid" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Descripcion" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="Alicuota" Nullable="false" Precision="18" Scale="2" />
+    <Property Type="String" Name="Tipo" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="COMPROBANTESCOMPRAS" Relationship="DataModel.FK_COMPROBANTESCOMPRAS_PERCEPCIONES" FromRole="PERCEPCIONES" ToRole="COMPROBANTESCOMPRAS" />
+    <NavigationProperty Name="COMPROBANTESCOMPRAS1" Relationship="DataModel.FK_COMPROBANTESCOMPRAS_PERCEPCIONES1" FromRole="PERCEPCIONES" ToRole="COMPROBANTESCOMPRAS" />
+    <NavigationProperty Name="COMPROBANTESCOMPRAS2" Relationship="DataModel.FK_COMPROBANTESCOMPRAS_PERCEPCIONES2" FromRole="PERCEPCIONES" ToRole="COMPROBANTESCOMPRAS" />
+    <NavigationProperty Name="COMPROBANTESCOMPRAS3" Relationship="DataModel.FK_COMPROBANTESCOMPRAS_PERCEPCIONES3" FromRole="PERCEPCIONES" ToRole="COMPROBANTESCOMPRAS" />
+    <NavigationProperty Name="COMPROBANTESCOMPRAS4" Relationship="DataModel.FK_COMPROBANTESCOMPRAS_PERCEPCIONES4" FromRole="PERCEPCIONES" ToRole="COMPROBANTESCOMPRAS" />
+    <NavigationProperty Name="COMPROBANTESVENTAS" Relationship="DataModel.FK_COMPROBANTESVENTAS_PERCEPCIONES" FromRole="PERCEPCIONES" ToRole="COMPROBANTESVENTAS" />
+    <NavigationProperty Name="COMPROBANTESVENTAS1" Relationship="DataModel.FK_COMPROBANTESVENTAS_PERCEPCIONES1" FromRole="PERCEPCIONES" ToRole="COMPROBANTESVENTAS" />
+    <NavigationProperty Name="COMPROBANTESVENTAS2" Relationship="DataModel.FK_COMPROBANTESVENTAS_PERCEPCIONES2" FromRole="PERCEPCIONES" ToRole="COMPROBANTESVENTAS" />
+    <NavigationProperty Name="COMPROBANTESVENTAS3" Relationship="DataModel.FK_COMPROBANTESVENTAS_PERCEPCIONES3" FromRole="PERCEPCIONES" ToRole="COMPROBANTESVENTAS" />
+    <NavigationProperty Name="COMPROBANTESVENTAS4" Relationship="DataModel.FK_COMPROBANTESVENTAS_PERCEPCIONES4" FromRole="PERCEPCIONES" ToRole="COMPROBANTESVENTAS" />
+  </EntityType>
+  <EntityType Name="PRODUCTOLOTE">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Guid" Name="ID" Nullable="false" />
+    <Property Type="Guid" Name="ProductoID" Nullable="false" />
+    <Property Type="Guid" Name="ProveedoresID" />
+    <Property Type="String" Name="Descripcion" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="FechaVencimiento" />
+    <Property Type="Decimal" Name="Cantidad" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="PrecioCompra" Precision="18" Scale="4" />
+    <Property Type="DateTime" Name="FechaCompra" />
+    <Property Type="Decimal" Name="CantidadExistente" Precision="18" Scale="2" />
+    <Property Type="Boolean" Name="Activo" Nullable="false" />
+    <NavigationProperty Name="COMPROBANTESCOMPRASDETALLE" Relationship="DataModel.FK_COMPROBANTESDETALLE_PRODUCTOLOTE" FromRole="PRODUCTOLOTE" ToRole="COMPROBANTESCOMPRASDETALLE" />
+    <NavigationProperty Name="COMPROBANTESVENTASDETALLE" Relationship="DataModel.FK_COMPROBANTESVENTASDETALLE_PRODUCTOLOTE" FromRole="PRODUCTOLOTE" ToRole="COMPROBANTESVENTASDETALLE" />
+    <NavigationProperty Name="INVENTARIODETALLE" Relationship="DataModel.FK_INVENTARIODETALLE_PRODUCTOLOTE" FromRole="PRODUCTOLOTE" ToRole="INVENTARIODETALLE" />
+    <NavigationProperty Name="INVENTARIODETALLE1" Relationship="DataModel.FK_REMITOCOMPRADETALLE_PRODUCTOLOTE" FromRole="PRODUCTOLOTE" ToRole="INVENTARIODETALLE" />
+    <NavigationProperty Name="PRODUCTOS" Relationship="DataModel.FK_PRODUCTOLOTE_PRODUCTOS" FromRole="PRODUCTOLOTE" ToRole="PRODUCTOS" />
+    <NavigationProperty Name="PROVEEDORES" Relationship="DataModel.FK_PRODUCTOLOTE_PROVEEDORES" FromRole="PRODUCTOLOTE" ToRole="PROVEEDORES" />
+  </EntityType>
+  <EntityType Name="PRODUCTOS">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Guid" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Descripcion" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Codigo" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="DetalleAdicional" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CodBarra" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="Guid" Name="UnidadID" />
+    <Property Type="Guid" Name="UnidadIDCompra" />
+    <Property Type="Guid" Name="UnidadIDVenta" />
+    <Property Type="Guid" Name="MarcaID" />
+    <Property Type="Guid" Name="RubroID" />
+    <Property Type="Guid" Name="FabricanteID" />
+    <Property Type="Decimal" Name="Stock" Precision="18" Scale="0" />
+    <Property Type="Decimal" Name="StockMin" Precision="18" Scale="0" />
+    <Property Type="Decimal" Name="StockMax" Precision="18" Scale="0" />
+    <Property Type="Decimal" Name="PuntoPedido" Precision="18" Scale="0" />
+    <Property Type="DateTime" Name="FechaAlta" Nullable="false" />
+    <Property Type="Guid" Name="BaseImponibleIDVenta" />
+    <Property Type="Guid" Name="BaseImponibleIDCompra" />
+    <Property Type="Guid" Name="ImpuestoInternoIDVenta" />
+    <Property Type="Guid" Name="ImpuestoInternoIDCompra" />
+    <Property Type="Decimal" Name="MontoImpuestoInternoVenta" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="MontoImpuestoInternoCompra" Precision="18" Scale="2" />
+    <Property Type="String" Name="Certificado" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Observaciones" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="Guid" Name="TipoProductoID" Nullable="false" />
+    <Property Type="Guid" Name="UsuarioID" Nullable="false" />
+    <Property Type="Boolean" Name="UsaLote" Nullable="false" />
+    <Property Type="Boolean" Name="Activo" Nullable="false" />
+    <NavigationProperty Name="BASEIMPONIBLECOMPRAS" Relationship="DataModel.FK_PRODUCTOS_BASEIMPONIBLE" FromRole="PRODUCTOS" ToRole="BASEIMPONIBLE" />
+    <NavigationProperty Name="BASEIMPONIBLEVENTAS" Relationship="DataModel.FK_PRODUCTOS_BASEIMPONIBLE1" FromRole="PRODUCTOS" ToRole="BASEIMPONIBLE" />
+    <NavigationProperty Name="COMPROBANTESCOMPRASDETALLE" Relationship="DataModel.FK_COMPROBANTESCOMPRASDETALLE_PRODUCTOS" FromRole="PRODUCTOS" ToRole="COMPROBANTESCOMPRASDETALLE" />
+    <NavigationProperty Name="COMPROBANTESVENTASDETALLE" Relationship="DataModel.FK_COMPROBANTESVENTASDETALLE_PRODUCTOS" FromRole="PRODUCTOS" ToRole="COMPROBANTESVENTASDETALLE" />
+    <NavigationProperty Name="FABRICANTES" Relationship="DataModel.FK_PRODUCTOS_FABRICANTES" FromRole="PRODUCTOS" ToRole="FABRICANTES" />
+    <NavigationProperty Name="IMPUESTOINTERNOCOMPRAS" Relationship="DataModel.FK_PRODUCTOS_IMPUESTOINTERNO_COMPRA" FromRole="PRODUCTOS" ToRole="IMPUESTOINTERNO" />
+    <NavigationProperty Name="IMPUESTOINTERNOVENTAS" Relationship="DataModel.FK_PRODUCTOS_IMPUESTOINTERNO_VENTA" FromRole="PRODUCTOS" ToRole="IMPUESTOINTERNO" />
+    <NavigationProperty Name="INVENTARIODETALLE" Relationship="DataModel.FK_INVENTARIODETALLE_PRODUCTOS" FromRole="PRODUCTOS" ToRole="INVENTARIODETALLE" />
+    <NavigationProperty Name="MARCAS" Relationship="DataModel.FK_PRODUCTOS_MARCAS" FromRole="PRODUCTOS" ToRole="MARCAS" />
+    <NavigationProperty Name="PRODUCTOLOTE" Relationship="DataModel.FK_PRODUCTOLOTE_PRODUCTOS" FromRole="PRODUCTOS" ToRole="PRODUCTOLOTE" />
+    <NavigationProperty Name="RUBROS" Relationship="DataModel.FK_PRODUCTOS_RUBROS" FromRole="PRODUCTOS" ToRole="RUBROS" />
+    <NavigationProperty Name="TIPOPRODUCTO" Relationship="DataModel.FK_PRODUCTOS_TIPOPRODUCTO" FromRole="PRODUCTOS" ToRole="TIPOPRODUCTO" />
+    <NavigationProperty Name="UNIDADES" Relationship="DataModel.FK_PRODUCTOS_UNIDADES" FromRole="PRODUCTOS" ToRole="UNIDADES" />
+    <NavigationProperty Name="UNIDADES1" Relationship="DataModel.FK_PRODUCTOS_UNIDADES1" FromRole="PRODUCTOS" ToRole="UNIDADES" />
+    <NavigationProperty Name="UNIDADES2" Relationship="DataModel.FK_PRODUCTOS_UNIDADES2" FromRole="PRODUCTOS" ToRole="UNIDADES" />
+    <NavigationProperty Name="USUARIOS" Relationship="DataModel.FK_PRODUCTOS_USUARIOS" FromRole="PRODUCTOS" ToRole="USUARIOS" />
+    <NavigationProperty Name="PRODUCTOSCOMPONENTES" Relationship="DataModel.FK_PRODUCTOSCOMPONENTES_PRODUCTOS" FromRole="PRODUCTOS" ToRole="PRODUCTOSCOMPONENTES" />
+    <NavigationProperty Name="PRODUCTOSCOMPONENTES1" Relationship="DataModel.FK_PRODUCTOSCOMPONENTES_PRODUCTOS1" FromRole="PRODUCTOS" ToRole="PRODUCTOSCOMPONENTES" />
+    <Property Type="Decimal" Name="PrecioCompra" Precision="18" Scale="0" />
+    <Property Type="Decimal" Name="PrecioVenta" Precision="18" Scale="0" />
+    <Property Type="Decimal" Name="Porcentaje" Precision="18" Scale="0" />
+    <NavigationProperty Name="PROVEEDORES" Relationship="DataModel.FK_PRODUCTOS_PROVEEDORES1" FromRole="PRODUCTOS" ToRole="PROVEEDORES" />
+  </EntityType>
+  <EntityType Name="PROVINCIAS">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Guid" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Descripcion" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="Boolean" Name="Activo" Nullable="false" />
+    <NavigationProperty Name="LOCALIDADES" Relationship="DataModel.FK_LOCALIDADES_PROVINCIAS" FromRole="PROVINCIAS" ToRole="LOCALIDADES" />
+  </EntityType>
+  <EntityType Name="REGIVA">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Guid" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Descripcion" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Boolean" Name="Activo" Nullable="false" />
+    <NavigationProperty Name="CLIENTES" Relationship="DataModel.FK_CLIENTES_REGIVA" FromRole="REGIVA" ToRole="CLIENTES" />
+    <NavigationProperty Name="PROVEEDORES" Relationship="DataModel.FK_PROVEEDORES_REGIVA" FromRole="REGIVA" ToRole="PROVEEDORES" />
+  </EntityType>
+  <EntityType Name="ROLES">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Guid" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Descripcion" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="USUARIOS" Relationship="DataModel.FK_USUARIOS_ROLES" FromRole="ROLES" ToRole="USUARIOS" />
+    <Property Type="String" Name="ROL_ACTIVO" MaxLength="10" FixedLength="true" Unicode="true" />
+  </EntityType>
+  <EntityType Name="RUBROS">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Guid" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Descripcion" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Boolean" Name="Activo" Nullable="false" />
+    <NavigationProperty Name="PRODUCTOS" Relationship="DataModel.FK_PRODUCTOS_RUBROS" FromRole="RUBROS" ToRole="PRODUCTOS" />
+  </EntityType>
+  <EntityType Name="SUCURSALES">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Guid" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Descripcion" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="COMPROBANTESCOMPRAS" Relationship="DataModel.FK_COMPROBANTES_SUCURSALES" FromRole="SUCURSALES" ToRole="COMPROBANTESCOMPRAS" />
+    <NavigationProperty Name="COMPROBANTESVENTAS" Relationship="DataModel.FK_COMPROBANTESVENTAS_SUCURSALES" FromRole="SUCURSALES" ToRole="COMPROBANTESVENTAS" />
+    <NavigationProperty Name="INVENTARIO" Relationship="DataModel.FK_INVENTARIO_SUCURSALES" FromRole="SUCURSALES" ToRole="INVENTARIO" />
+  </EntityType>
+  <EntityType Name="TIPOPRODUCTO">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Guid" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Descripcion" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Boolean" Name="Activo" Nullable="false" />
+    <NavigationProperty Name="PRODUCTOS" Relationship="DataModel.FK_PRODUCTOS_TIPOPRODUCTO" FromRole="TIPOPRODUCTO" ToRole="PRODUCTOS" />
+  </EntityType>
+  <EntityType Name="TIPOSCOMPROBANTES">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Guid" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Descripcion" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="LetraComprobante" Nullable="false" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="NroSucursal" />
+    <Property Type="Int32" Name="UltimoNroUsado" />
+    <Property Type="String" Name="FLUJO" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="Tipo" />
+    <NavigationProperty Name="COMPROBANTESCOMPRAS" Relationship="DataModel.FK_COMPROBANTES_TIPOSCOMPROBANTES" FromRole="TIPOSCOMPROBANTES" ToRole="COMPROBANTESCOMPRAS" />
+    <NavigationProperty Name="COMPROBANTESVENTAS" Relationship="DataModel.FK_COMPROBANTESVENTAS_TIPOSCOMPROBANTES" FromRole="TIPOSCOMPROBANTES" ToRole="COMPROBANTESVENTAS" />
+    <NavigationProperty Name="INVENTARIO" Relationship="DataModel.FK_REMITOCOMPRA_TIPOSCOMPROBANTES" FromRole="TIPOSCOMPROBANTES" ToRole="INVENTARIO" />
+  </EntityType>
+  <EntityType Name="TIPOSDOCUMENTOS">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Guid" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Descripcion" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="USUARIOS" Relationship="DataModel.FK_USUARIOS_TIPOSDOCUMENTOS" FromRole="TIPOSDOCUMENTOS" ToRole="USUARIOS" />
+  </EntityType>
+  <EntityType Name="TRANSPORTES">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Guid" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Descripcion" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Domicilio" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Telefono" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Boolean" Name="Activo" Nullable="false" />
+    <NavigationProperty Name="CLIENTES" Relationship="DataModel.FK_CLIENTES_TRANSPORTES" FromRole="TRANSPORTES" ToRole="CLIENTES" />
+    <NavigationProperty Name="COMPROBANTESCOMPRAS" Relationship="DataModel.FK_COMPROBANTES_TRANSPORTES" FromRole="TRANSPORTES" ToRole="COMPROBANTESCOMPRAS" />
+    <NavigationProperty Name="COMPROBANTESVENTAS" Relationship="DataModel.FK_COMPROBANTESVENTAS_TRANSPORTES" FromRole="TRANSPORTES" ToRole="COMPROBANTESVENTAS" />
+    <NavigationProperty Name="INVENTARIO" Relationship="DataModel.FK_INVENTARIO_TRANSPORTES" FromRole="TRANSPORTES" ToRole="INVENTARIO" />
+    <NavigationProperty Name="PROVEEDORES" Relationship="DataModel.FK_PROVEEDORES_TRANSPORTES" FromRole="TRANSPORTES" ToRole="PROVEEDORES" />
+  </EntityType>
+  <EntityType Name="UNIDADES">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Guid" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Descripcion" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Decimal" Name="Coeficiente" Nullable="false" Precision="18" Scale="2" />
+    <Property Type="Boolean" Name="Activo" Nullable="false" />
+    <NavigationProperty Name="PRODUCTOS" Relationship="DataModel.FK_PRODUCTOS_UNIDADES" FromRole="UNIDADES" ToRole="PRODUCTOS" />
+    <NavigationProperty Name="PRODUCTOS1" Relationship="DataModel.FK_PRODUCTOS_UNIDADES1" FromRole="UNIDADES" ToRole="PRODUCTOS" />
+    <NavigationProperty Name="PRODUCTOS2" Relationship="DataModel.FK_PRODUCTOS_UNIDADES2" FromRole="UNIDADES" ToRole="PRODUCTOS" />
+  </EntityType>
+  <EntityType Name="USUARIOS">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Guid" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Descripcion" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Contrasenia" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="NomApe" MaxLength="70" FixedLength="false" Unicode="false" />
+    <Property Type="Guid" Name="TipoDocID" />
+    <Property Type="String" Name="NroDoc" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Email" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Guid" Name="RolID" Nullable="false" />
+    <Property Type="Boolean" Name="Activo" Nullable="false" />
+    <NavigationProperty Name="COMPROBANTESCOMPRAS" Relationship="DataModel.FK_COMPROBANTESCOMPRAS_USUARIOS" FromRole="USUARIOS" ToRole="COMPROBANTESCOMPRAS" />
+    <NavigationProperty Name="COMPROBANTESVENTAS" Relationship="DataModel.FK_COMPROBANTESVENTAS_USUARIOS" FromRole="USUARIOS" ToRole="COMPROBANTESVENTAS" />
+    <NavigationProperty Name="INVENTARIO" Relationship="DataModel.FK_INVENTARIO_USUARIOS" FromRole="USUARIOS" ToRole="INVENTARIO" />
+    <NavigationProperty Name="PRODUCTOS" Relationship="DataModel.FK_PRODUCTOS_USUARIOS" FromRole="USUARIOS" ToRole="PRODUCTOS" />
+    <NavigationProperty Name="ROLES" Relationship="DataModel.FK_USUARIOS_ROLES" FromRole="USUARIOS" ToRole="ROLES" />
+    <NavigationProperty Name="TIPOSDOCUMENTOS" Relationship="DataModel.FK_USUARIOS_TIPOSDOCUMENTOS" FromRole="USUARIOS" ToRole="TIPOSDOCUMENTOS" />
+  </EntityType>
+  <EntityType Name="VENDEDORES">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Guid" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Descripcion" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Email" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="Boolean" Name="Activo" Nullable="false" />
+    <NavigationProperty Name="COMPROBANTESVENTAS" Relationship="DataModel.FK_COMPROBANTESVENTAS_VENDEDORES" FromRole="VENDEDORES" ToRole="COMPROBANTESVENTAS" />
+  </EntityType>
+  <EntityType Name="ZONAS">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Guid" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Descripcion" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Boolean" Name="Activo" Nullable="false" />
+    <NavigationProperty Name="CLIENTES" Relationship="DataModel.FK_CLIENTES_ZONAS" FromRole="ZONAS" ToRole="CLIENTES" />
+  </EntityType>
+  <Association Name="FK_PRODUCTOS_BASEIMPONIBLE">
+    <End Type="DataModel.BASEIMPONIBLE" Role="BASEIMPONIBLE" Multiplicity="0..1" />
+    <End Type="DataModel.PRODUCTOS" Role="PRODUCTOS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BASEIMPONIBLE">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="PRODUCTOS">
+        <PropertyRef Name="BaseImponibleIDVenta" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PRODUCTOS_BASEIMPONIBLE1">
+    <End Type="DataModel.BASEIMPONIBLE" Role="BASEIMPONIBLE" Multiplicity="0..1" />
+    <End Type="DataModel.PRODUCTOS" Role="PRODUCTOS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BASEIMPONIBLE">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="PRODUCTOS">
+        <PropertyRef Name="BaseImponibleIDCompra" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CLIENTES_CONDICIONES">
+    <End Type="DataModel.CONDICIONES" Role="CONDICIONES" Multiplicity="0..1" />
+    <End Type="DataModel.CLIENTES" Role="CLIENTES" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CONDICIONES">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="CLIENTES">
+        <PropertyRef Name="CondicionesID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CLIENTES_LOCALIDADES">
+    <End Type="DataModel.LOCALIDADES" Role="LOCALIDADES" Multiplicity="0..1" />
+    <End Type="DataModel.CLIENTES" Role="CLIENTES" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LOCALIDADES">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="CLIENTES">
+        <PropertyRef Name="LocalidadesID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CLIENTES_REGIVA">
+    <End Type="DataModel.REGIVA" Role="REGIVA" Multiplicity="0..1" />
+    <End Type="DataModel.CLIENTES" Role="CLIENTES" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="REGIVA">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="CLIENTES">
+        <PropertyRef Name="RegIvaID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CLIENTES_TRANSPORTES">
+    <End Type="DataModel.TRANSPORTES" Role="TRANSPORTES" Multiplicity="0..1" />
+    <End Type="DataModel.CLIENTES" Role="CLIENTES" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TRANSPORTES">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="CLIENTES">
+        <PropertyRef Name="TransporteID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CLIENTES_ZONAS">
+    <End Type="DataModel.ZONAS" Role="ZONAS" Multiplicity="0..1" />
+    <End Type="DataModel.CLIENTES" Role="CLIENTES" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ZONAS">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="CLIENTES">
+        <PropertyRef Name="ZonasID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_INVENTARIO_CLIENTES">
+    <End Type="DataModel.CLIENTES" Role="CLIENTES" Multiplicity="0..1" />
+    <End Type="DataModel.INVENTARIO" Role="INVENTARIO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CLIENTES">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="INVENTARIO">
+        <PropertyRef Name="ClientesID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_COMPROBANTES_CONDICIONES">
+    <End Type="DataModel.CONDICIONES" Role="CONDICIONES" Multiplicity="0..1" />
+    <End Type="DataModel.COMPROBANTESCOMPRAS" Role="COMPROBANTESCOMPRAS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CONDICIONES">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="COMPROBANTESCOMPRAS">
+        <PropertyRef Name="CondicionesID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_COMPROBANTES_SUCURSALES">
+    <End Type="DataModel.SUCURSALES" Role="SUCURSALES" Multiplicity="1" />
+    <End Type="DataModel.COMPROBANTESCOMPRAS" Role="COMPROBANTESCOMPRAS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SUCURSALES">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="COMPROBANTESCOMPRAS">
+        <PropertyRef Name="SucursalesID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_COMPROBANTES_TIPOSCOMPROBANTES">
+    <End Type="DataModel.TIPOSCOMPROBANTES" Role="TIPOSCOMPROBANTES" Multiplicity="1" />
+    <End Type="DataModel.COMPROBANTESCOMPRAS" Role="COMPROBANTESCOMPRAS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TIPOSCOMPROBANTES">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="COMPROBANTESCOMPRAS">
+        <PropertyRef Name="TiposComprobantesID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_COMPROBANTES_TRANSPORTES">
+    <End Type="DataModel.TRANSPORTES" Role="TRANSPORTES" Multiplicity="0..1" />
+    <End Type="DataModel.COMPROBANTESCOMPRAS" Role="COMPROBANTESCOMPRAS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TRANSPORTES">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="COMPROBANTESCOMPRAS">
+        <PropertyRef Name="TransportesID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_COMPROBANTESCOMPRAS_ESTADOSCOMPROBANTES">
+    <End Type="DataModel.ESTADOSCOMPROBANTES" Role="ESTADOSCOMPROBANTES" Multiplicity="1" />
+    <End Type="DataModel.COMPROBANTESCOMPRAS" Role="COMPROBANTESCOMPRAS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ESTADOSCOMPROBANTES">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="COMPROBANTESCOMPRAS">
+        <PropertyRef Name="EstadosComprobantesID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_COMPROBANTESCOMPRAS_PERCEPCIONES">
+    <End Type="DataModel.PERCEPCIONES" Role="PERCEPCIONES" Multiplicity="0..1" />
+    <End Type="DataModel.COMPROBANTESCOMPRAS" Role="COMPROBANTESCOMPRAS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PERCEPCIONES">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="COMPROBANTESCOMPRAS">
+        <PropertyRef Name="PercepcionesID1" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_COMPROBANTESCOMPRAS_PERCEPCIONES1">
+    <End Type="DataModel.PERCEPCIONES" Role="PERCEPCIONES" Multiplicity="0..1" />
+    <End Type="DataModel.COMPROBANTESCOMPRAS" Role="COMPROBANTESCOMPRAS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PERCEPCIONES">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="COMPROBANTESCOMPRAS">
+        <PropertyRef Name="PercepcionesID2" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_COMPROBANTESCOMPRAS_PERCEPCIONES2">
+    <End Type="DataModel.PERCEPCIONES" Role="PERCEPCIONES" Multiplicity="0..1" />
+    <End Type="DataModel.COMPROBANTESCOMPRAS" Role="COMPROBANTESCOMPRAS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PERCEPCIONES">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="COMPROBANTESCOMPRAS">
+        <PropertyRef Name="PercepcionesID3" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_COMPROBANTESCOMPRAS_PERCEPCIONES3">
+    <End Type="DataModel.PERCEPCIONES" Role="PERCEPCIONES" Multiplicity="0..1" />
+    <End Type="DataModel.COMPROBANTESCOMPRAS" Role="COMPROBANTESCOMPRAS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PERCEPCIONES">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="COMPROBANTESCOMPRAS">
+        <PropertyRef Name="PercepcionesID4" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_COMPROBANTESCOMPRAS_PERCEPCIONES4">
+    <End Type="DataModel.PERCEPCIONES" Role="PERCEPCIONES" Multiplicity="0..1" />
+    <End Type="DataModel.COMPROBANTESCOMPRAS" Role="COMPROBANTESCOMPRAS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PERCEPCIONES">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="COMPROBANTESCOMPRAS">
+        <PropertyRef Name="PercepcionesID5" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_COMPROBANTESCOMPRAS_USUARIOS">
+    <End Type="DataModel.USUARIOS" Role="USUARIOS" Multiplicity="0..1" />
+    <End Type="DataModel.COMPROBANTESCOMPRAS" Role="COMPROBANTESCOMPRAS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="USUARIOS">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="COMPROBANTESCOMPRAS">
+        <PropertyRef Name="UsuarioID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_COMPROBANTESDETALLE_COMPROBANTES">
+    <End Type="DataModel.COMPROBANTESCOMPRAS" Role="COMPROBANTESCOMPRAS" Multiplicity="1" />
+    <End Type="DataModel.COMPROBANTESCOMPRASDETALLE" Role="COMPROBANTESCOMPRASDETALLE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="COMPROBANTESCOMPRAS">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="COMPROBANTESCOMPRASDETALLE">
+        <PropertyRef Name="ComprobantesID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_COMPROBANTESCOMPRASDETALLE_PRODUCTOS">
+    <End Type="DataModel.PRODUCTOS" Role="PRODUCTOS" Multiplicity="0..1" />
+    <End Type="DataModel.COMPROBANTESCOMPRASDETALLE" Role="COMPROBANTESCOMPRASDETALLE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PRODUCTOS">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="COMPROBANTESCOMPRASDETALLE">
+        <PropertyRef Name="ProductoID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_COMPROBANTESCUMPLIDO_COMPROBANTESCOMPRASDETALLE">
+    <End Type="DataModel.COMPROBANTESCOMPRASDETALLE" Role="COMPROBANTESCOMPRASDETALLE" Multiplicity="1" />
+    <End Type="DataModel.COMPROBANTESCUMPLIDO" Role="COMPROBANTESCUMPLIDO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="COMPROBANTESCOMPRASDETALLE">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="COMPROBANTESCUMPLIDO">
+        <PropertyRef Name="DetalleOrigenID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_COMPROBANTESCUMPLIDO_COMPROBANTESCOMPRASDETALLE1">
+    <End Type="DataModel.COMPROBANTESCOMPRASDETALLE" Role="COMPROBANTESCOMPRASDETALLE" Multiplicity="1" />
+    <End Type="DataModel.COMPROBANTESCUMPLIDO" Role="COMPROBANTESCUMPLIDO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="COMPROBANTESCOMPRASDETALLE">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="COMPROBANTESCUMPLIDO">
+        <PropertyRef Name="DetalleDestinoID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_COMPROBANTESDETALLE_PRODUCTOLOTE">
+    <End Type="DataModel.PRODUCTOLOTE" Role="PRODUCTOLOTE" Multiplicity="0..1" />
+    <End Type="DataModel.COMPROBANTESCOMPRASDETALLE" Role="COMPROBANTESCOMPRASDETALLE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PRODUCTOLOTE">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="COMPROBANTESCOMPRASDETALLE">
+        <PropertyRef Name="ProductoLoteID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_COMPROBANTESCUMPLIDO_COMPROBANTESVENTASDETALLE">
+    <End Type="DataModel.COMPROBANTESVENTASDETALLE" Role="COMPROBANTESVENTASDETALLE" Multiplicity="1" />
+    <End Type="DataModel.COMPROBANTESCUMPLIDO" Role="COMPROBANTESCUMPLIDO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="COMPROBANTESVENTASDETALLE">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="COMPROBANTESCUMPLIDO">
+        <PropertyRef Name="DetalleOrigenID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_COMPROBANTESCUMPLIDO_COMPROBANTESVENTASDETALLE1">
+    <End Type="DataModel.COMPROBANTESVENTASDETALLE" Role="COMPROBANTESVENTASDETALLE" Multiplicity="1" />
+    <End Type="DataModel.COMPROBANTESCUMPLIDO" Role="COMPROBANTESCUMPLIDO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="COMPROBANTESVENTASDETALLE">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="COMPROBANTESCUMPLIDO">
+        <PropertyRef Name="DetalleDestinoID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_COMPROBANTESVENTAS_CONDICIONES">
+    <End Type="DataModel.CONDICIONES" Role="CONDICIONES" Multiplicity="0..1" />
+    <End Type="DataModel.COMPROBANTESVENTAS" Role="COMPROBANTESVENTAS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CONDICIONES">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="COMPROBANTESVENTAS">
+        <PropertyRef Name="CondicionesID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_COMPROBANTESVENTAS_ESTADOSCOMPROBANTES">
+    <End Type="DataModel.ESTADOSCOMPROBANTES" Role="ESTADOSCOMPROBANTES" Multiplicity="1" />
+    <End Type="DataModel.COMPROBANTESVENTAS" Role="COMPROBANTESVENTAS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ESTADOSCOMPROBANTES">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="COMPROBANTESVENTAS">
+        <PropertyRef Name="EstadosComprobantesID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_COMPROBANTESVENTAS_PERCEPCIONES">
+    <End Type="DataModel.PERCEPCIONES" Role="PERCEPCIONES" Multiplicity="0..1" />
+    <End Type="DataModel.COMPROBANTESVENTAS" Role="COMPROBANTESVENTAS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PERCEPCIONES">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="COMPROBANTESVENTAS">
+        <PropertyRef Name="PercepcionesID1" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_COMPROBANTESVENTAS_PERCEPCIONES1">
+    <End Type="DataModel.PERCEPCIONES" Role="PERCEPCIONES" Multiplicity="0..1" />
+    <End Type="DataModel.COMPROBANTESVENTAS" Role="COMPROBANTESVENTAS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PERCEPCIONES">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="COMPROBANTESVENTAS">
+        <PropertyRef Name="PercepcionesID2" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_COMPROBANTESVENTAS_PERCEPCIONES2">
+    <End Type="DataModel.PERCEPCIONES" Role="PERCEPCIONES" Multiplicity="0..1" />
+    <End Type="DataModel.COMPROBANTESVENTAS" Role="COMPROBANTESVENTAS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PERCEPCIONES">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="COMPROBANTESVENTAS">
+        <PropertyRef Name="PercepcionesID3" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_COMPROBANTESVENTAS_PERCEPCIONES3">
+    <End Type="DataModel.PERCEPCIONES" Role="PERCEPCIONES" Multiplicity="0..1" />
+    <End Type="DataModel.COMPROBANTESVENTAS" Role="COMPROBANTESVENTAS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PERCEPCIONES">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="COMPROBANTESVENTAS">
+        <PropertyRef Name="PercepcionesID4" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_COMPROBANTESVENTAS_PERCEPCIONES4">
+    <End Type="DataModel.PERCEPCIONES" Role="PERCEPCIONES" Multiplicity="0..1" />
+    <End Type="DataModel.COMPROBANTESVENTAS" Role="COMPROBANTESVENTAS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PERCEPCIONES">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="COMPROBANTESVENTAS">
+        <PropertyRef Name="PercepcionesID5" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_COMPROBANTESVENTAS_SUCURSALES">
+    <End Type="DataModel.SUCURSALES" Role="SUCURSALES" Multiplicity="1" />
+    <End Type="DataModel.COMPROBANTESVENTAS" Role="COMPROBANTESVENTAS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SUCURSALES">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="COMPROBANTESVENTAS">
+        <PropertyRef Name="SucursalesID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_COMPROBANTESVENTAS_TIPOSCOMPROBANTES">
+    <End Type="DataModel.TIPOSCOMPROBANTES" Role="TIPOSCOMPROBANTES" Multiplicity="1" />
+    <End Type="DataModel.COMPROBANTESVENTAS" Role="COMPROBANTESVENTAS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TIPOSCOMPROBANTES">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="COMPROBANTESVENTAS">
+        <PropertyRef Name="TiposComprobantesID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_COMPROBANTESVENTAS_TRANSPORTES">
+    <End Type="DataModel.TRANSPORTES" Role="TRANSPORTES" Multiplicity="0..1" />
+    <End Type="DataModel.COMPROBANTESVENTAS" Role="COMPROBANTESVENTAS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TRANSPORTES">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="COMPROBANTESVENTAS">
+        <PropertyRef Name="TransportesID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_COMPROBANTESVENTAS_USUARIOS">
+    <End Type="DataModel.USUARIOS" Role="USUARIOS" Multiplicity="0..1" />
+    <End Type="DataModel.COMPROBANTESVENTAS" Role="COMPROBANTESVENTAS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="USUARIOS">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="COMPROBANTESVENTAS">
+        <PropertyRef Name="UsuarioID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_COMPROBANTESVENTAS_VENDEDORES">
+    <End Type="DataModel.VENDEDORES" Role="VENDEDORES" Multiplicity="0..1" />
+    <End Type="DataModel.COMPROBANTESVENTAS" Role="COMPROBANTESVENTAS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="VENDEDORES">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="COMPROBANTESVENTAS">
+        <PropertyRef Name="VendedoresID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_COMPROBANTESVENTASDETALLE_COMPROBANTESVENTAS">
+    <End Type="DataModel.COMPROBANTESVENTAS" Role="COMPROBANTESVENTAS" Multiplicity="1" />
+    <End Type="DataModel.COMPROBANTESVENTASDETALLE" Role="COMPROBANTESVENTASDETALLE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="COMPROBANTESVENTAS">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="COMPROBANTESVENTASDETALLE">
+        <PropertyRef Name="ComprobantesVentasID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_COMPROBANTESVENTASDETALLE_PRODUCTOLOTE">
+    <End Type="DataModel.PRODUCTOLOTE" Role="PRODUCTOLOTE" Multiplicity="0..1" />
+    <End Type="DataModel.COMPROBANTESVENTASDETALLE" Role="COMPROBANTESVENTASDETALLE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PRODUCTOLOTE">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="COMPROBANTESVENTASDETALLE">
+        <PropertyRef Name="ProductoLoteID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_COMPROBANTESVENTASDETALLE_PRODUCTOS">
+    <End Type="DataModel.PRODUCTOS" Role="PRODUCTOS" Multiplicity="0..1" />
+    <End Type="DataModel.COMPROBANTESVENTASDETALLE" Role="COMPROBANTESVENTASDETALLE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PRODUCTOS">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="COMPROBANTESVENTASDETALLE">
+        <PropertyRef Name="ProductoID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_INVENTARIODETALLE_DEPOSITOS">
+    <End Type="DataModel.DEPOSITOS" Role="DEPOSITOS" Multiplicity="0..1" />
+    <End Type="DataModel.INVENTARIODETALLE" Role="INVENTARIODETALLE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DEPOSITOS">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="INVENTARIODETALLE">
+        <PropertyRef Name="DepositosID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_REMITOCOMPRA_ESTADOSCOMPROBANTES">
+    <End Type="DataModel.ESTADOSCOMPROBANTES" Role="ESTADOSCOMPROBANTES" Multiplicity="0..1" />
+    <End Type="DataModel.INVENTARIO" Role="INVENTARIO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ESTADOSCOMPROBANTES">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="INVENTARIO">
+        <PropertyRef Name="EstadoComprobantesID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PRODUCTOS_FABRICANTES">
+    <End Type="DataModel.FABRICANTES" Role="FABRICANTES" Multiplicity="0..1" />
+    <End Type="DataModel.PRODUCTOS" Role="PRODUCTOS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FABRICANTES">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="PRODUCTOS">
+        <PropertyRef Name="FabricanteID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PRODUCTOS_IMPUESTOINTERNO_COMPRA">
+    <End Type="DataModel.IMPUESTOINTERNO" Role="IMPUESTOINTERNO" Multiplicity="0..1" />
+    <End Type="DataModel.PRODUCTOS" Role="PRODUCTOS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="IMPUESTOINTERNO">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="PRODUCTOS">
+        <PropertyRef Name="ImpuestoInternoIDCompra" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PRODUCTOS_IMPUESTOINTERNO_VENTA">
+    <End Type="DataModel.IMPUESTOINTERNO" Role="IMPUESTOINTERNO" Multiplicity="0..1" />
+    <End Type="DataModel.PRODUCTOS" Role="PRODUCTOS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="IMPUESTOINTERNO">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="PRODUCTOS">
+        <PropertyRef Name="ImpuestoInternoIDVenta" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_INVENTARIO_SUCURSALES">
+    <End Type="DataModel.SUCURSALES" Role="SUCURSALES" Multiplicity="0..1" />
+    <End Type="DataModel.INVENTARIO" Role="INVENTARIO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SUCURSALES">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="INVENTARIO">
+        <PropertyRef Name="SucursalesID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_INVENTARIO_TRANSPORTES">
+    <End Type="DataModel.TRANSPORTES" Role="TRANSPORTES" Multiplicity="1" />
+    <End Type="DataModel.INVENTARIO" Role="INVENTARIO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TRANSPORTES">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="INVENTARIO">
+        <PropertyRef Name="TransportesID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_INVENTARIO_USUARIOS">
+    <End Type="DataModel.USUARIOS" Role="USUARIOS" Multiplicity="1" />
+    <End Type="DataModel.INVENTARIO" Role="INVENTARIO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="USUARIOS">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="INVENTARIO">
+        <PropertyRef Name="UsuarioID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_REMITOCOMPRA_TIPOSCOMPROBANTES">
+    <End Type="DataModel.TIPOSCOMPROBANTES" Role="TIPOSCOMPROBANTES" Multiplicity="0..1" />
+    <End Type="DataModel.INVENTARIO" Role="INVENTARIO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TIPOSCOMPROBANTES">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="INVENTARIO">
+        <PropertyRef Name="TiposComprobantesID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_REMITOCOMPRADETALLE_REMITOCOMPRA">
+    <End Type="DataModel.INVENTARIO" Role="INVENTARIO" Multiplicity="1" />
+    <End Type="DataModel.INVENTARIODETALLE" Role="INVENTARIODETALLE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="INVENTARIO">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="INVENTARIODETALLE">
+        <PropertyRef Name="InventarioID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_INVENTARIODETALLE_PRODUCTOLOTE">
+    <End Type="DataModel.PRODUCTOLOTE" Role="PRODUCTOLOTE" Multiplicity="0..1" />
+    <End Type="DataModel.INVENTARIODETALLE" Role="INVENTARIODETALLE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PRODUCTOLOTE">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="INVENTARIODETALLE">
+        <PropertyRef Name="ProductoLoteID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_INVENTARIODETALLE_PRODUCTOS">
+    <End Type="DataModel.PRODUCTOS" Role="PRODUCTOS" Multiplicity="0..1" />
+    <End Type="DataModel.INVENTARIODETALLE" Role="INVENTARIODETALLE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PRODUCTOS">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="INVENTARIODETALLE">
+        <PropertyRef Name="ProductoID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_REMITOCOMPRADETALLE_PRODUCTOLOTE">
+    <End Type="DataModel.PRODUCTOLOTE" Role="PRODUCTOLOTE" Multiplicity="0..1" />
+    <End Type="DataModel.INVENTARIODETALLE" Role="INVENTARIODETALLE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PRODUCTOLOTE">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="INVENTARIODETALLE">
+        <PropertyRef Name="ProductoLoteID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LOCALIDADES_PROVINCIAS">
+    <End Type="DataModel.PROVINCIAS" Role="PROVINCIAS" Multiplicity="1" />
+    <End Type="DataModel.LOCALIDADES" Role="LOCALIDADES" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PROVINCIAS">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="LOCALIDADES">
+        <PropertyRef Name="ProvinciasID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PRODUCTOS_MARCAS">
+    <End Type="DataModel.MARCAS" Role="MARCAS" Multiplicity="0..1" />
+    <End Type="DataModel.PRODUCTOS" Role="PRODUCTOS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MARCAS">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="PRODUCTOS">
+        <PropertyRef Name="MarcaID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PRODUCTOLOTE_PRODUCTOS">
+    <End Type="DataModel.PRODUCTOS" Role="PRODUCTOS" Multiplicity="1" />
+    <End Type="DataModel.PRODUCTOLOTE" Role="PRODUCTOLOTE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PRODUCTOS">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="PRODUCTOLOTE">
+        <PropertyRef Name="ProductoID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PRODUCTOS_RUBROS">
+    <End Type="DataModel.RUBROS" Role="RUBROS" Multiplicity="0..1" />
+    <End Type="DataModel.PRODUCTOS" Role="PRODUCTOS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RUBROS">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="PRODUCTOS">
+        <PropertyRef Name="RubroID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PRODUCTOS_TIPOPRODUCTO">
+    <End Type="DataModel.TIPOPRODUCTO" Role="TIPOPRODUCTO" Multiplicity="1" />
+    <End Type="DataModel.PRODUCTOS" Role="PRODUCTOS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TIPOPRODUCTO">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="PRODUCTOS">
+        <PropertyRef Name="TipoProductoID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PRODUCTOS_UNIDADES">
+    <End Type="DataModel.UNIDADES" Role="UNIDADES" Multiplicity="0..1" />
+    <End Type="DataModel.PRODUCTOS" Role="PRODUCTOS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UNIDADES">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="PRODUCTOS">
+        <PropertyRef Name="UnidadID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PRODUCTOS_UNIDADES1">
+    <End Type="DataModel.UNIDADES" Role="UNIDADES" Multiplicity="0..1" />
+    <End Type="DataModel.PRODUCTOS" Role="PRODUCTOS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UNIDADES">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="PRODUCTOS">
+        <PropertyRef Name="UnidadIDCompra" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PRODUCTOS_UNIDADES2">
+    <End Type="DataModel.UNIDADES" Role="UNIDADES" Multiplicity="0..1" />
+    <End Type="DataModel.PRODUCTOS" Role="PRODUCTOS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UNIDADES">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="PRODUCTOS">
+        <PropertyRef Name="UnidadIDVenta" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PRODUCTOS_USUARIOS">
+    <End Type="DataModel.USUARIOS" Role="USUARIOS" Multiplicity="1" />
+    <End Type="DataModel.PRODUCTOS" Role="PRODUCTOS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="USUARIOS">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="PRODUCTOS">
+        <PropertyRef Name="UsuarioID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_USUARIOS_ROLES">
+    <End Type="DataModel.ROLES" Role="ROLES" Multiplicity="1" />
+    <End Type="DataModel.USUARIOS" Role="USUARIOS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ROLES">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="USUARIOS">
+        <PropertyRef Name="RolID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_USUARIOS_TIPOSDOCUMENTOS">
+    <End Type="DataModel.TIPOSDOCUMENTOS" Role="TIPOSDOCUMENTOS" Multiplicity="0..1" />
+    <End Type="DataModel.USUARIOS" Role="USUARIOS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TIPOSDOCUMENTOS">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="USUARIOS">
+        <PropertyRef Name="TipoDocID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="PRODUCTOSCOMPONENTES">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Guid" Name="ID" Nullable="false" />
+    <Property Type="Guid" Name="IDProductoCompuesto" Nullable="false" />
+    <Property Type="Guid" Name="IDProductoCompone" Nullable="false" />
+    <Property Type="Decimal" Name="Cantidad" Nullable="false" Precision="18" Scale="2" />
+    <NavigationProperty Name="PRODUCTOS" Relationship="DataModel.FK_PRODUCTOSCOMPONENTES_PRODUCTOS" FromRole="PRODUCTOSCOMPONENTES" ToRole="PRODUCTOS" />
+    <NavigationProperty Name="PRODUCTOS1" Relationship="DataModel.FK_PRODUCTOSCOMPONENTES_PRODUCTOS1" FromRole="PRODUCTOSCOMPONENTES" ToRole="PRODUCTOS" />
+  </EntityType>
+  <Association Name="FK_PRODUCTOSCOMPONENTES_PRODUCTOS">
+    <End Type="DataModel.PRODUCTOS" Role="PRODUCTOS" Multiplicity="1" />
+    <End Type="DataModel.PRODUCTOSCOMPONENTES" Role="PRODUCTOSCOMPONENTES" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PRODUCTOS">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="PRODUCTOSCOMPONENTES">
+        <PropertyRef Name="IDProductoCompuesto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PRODUCTOSCOMPONENTES_PRODUCTOS1">
+    <End Type="DataModel.PRODUCTOS" Role="PRODUCTOS" Multiplicity="1" />
+    <End Type="DataModel.PRODUCTOSCOMPONENTES" Role="PRODUCTOSCOMPONENTES" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PRODUCTOS">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="PRODUCTOSCOMPONENTES">
+        <PropertyRef Name="IDProductoCompone" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="OBLEASLIBRES">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Guid" Name="ID" Nullable="false" />
+    <Property Type="Guid" Name="LoteID" Nullable="false" />
+    <Property Type="String" Name="Descripcion" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="LOTES" Relationship="DataModel.FK_OBLEASlIBRES_LOTES" FromRole="OBLEASLIBRES" ToRole="LOTES" />
+  </EntityType>
+  <EntityType Name="DOCUMENTOSCLIENTES">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Guid" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Descripcion" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="PROVEEDORES">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Guid" Name="ID" Nullable="false" />
+    <Property Type="Int32" Name="Codigo" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Descripcion" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Domicilio" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Guid" Name="LocalidadesID" />
+    <Property Type="String" Name="CodigoPostal" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Guid" Name="ProvinciasID" />
+    <Property Type="String" Name="Telefono1" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Telefono2" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Fax" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Email" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Contacto" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Cuit" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Cbu" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="IngresosBrutos" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="RubroComercial" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="FormaPago" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="PaginaWeb" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Guid" Name="RegIvaID" />
+    <Property Type="String" Name="Observaciones" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="Guid" Name="TransportesID" />
+    <Property Type="Boolean" Name="Activo" Nullable="false" />
+    <NavigationProperty Name="COMPROBANTESCOMPRAS" Relationship="DataModel.FK_COMPROBANTES_PROVEEDORES" FromRole="PROVEEDORES" ToRole="COMPROBANTESCOMPRAS" />
+    <NavigationProperty Name="CONTACTOS" Relationship="DataModel.FK_CONTACTOS_PROVEEDORES" FromRole="PROVEEDORES" ToRole="CONTACTOS" />
+    <NavigationProperty Name="LOCALIDADES" Relationship="DataModel.FK_PROVEEDORES_LOCALIDADES" FromRole="PROVEEDORES" ToRole="LOCALIDADES" />
+    <NavigationProperty Name="PRODUCTOLOTE" Relationship="DataModel.FK_PRODUCTOLOTE_PROVEEDORES" FromRole="PROVEEDORES" ToRole="PRODUCTOLOTE" />
+    <NavigationProperty Name="PRODUCTOS" Relationship="DataModel.FK_PRODUCTOS_PROVEEDORES1" FromRole="PROVEEDORES" ToRole="PRODUCTOS" />
+    <NavigationProperty Name="REGIVA" Relationship="DataModel.FK_PROVEEDORES_REGIVA" FromRole="PROVEEDORES" ToRole="REGIVA" />
+    <NavigationProperty Name="TRANSPORTES" Relationship="DataModel.FK_PROVEEDORES_TRANSPORTES" FromRole="PROVEEDORES" ToRole="TRANSPORTES" />
+    <NavigationProperty Name="INVENTARIO" Relationship="DataModel.FK_INVENTARIO_PROVEEDORES" FromRole="PROVEEDORES" ToRole="INVENTARIO" />
+  </EntityType>
+  <Association Name="FK_COMPROBANTES_PROVEEDORES">
+    <End Type="DataModel.PROVEEDORES" Role="PROVEEDORES" Multiplicity="0..1" />
+    <End Type="DataModel.COMPROBANTESCOMPRAS" Role="COMPROBANTESCOMPRAS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PROVEEDORES">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="COMPROBANTESCOMPRAS">
+        <PropertyRef Name="ProveedoresID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CONTACTOS_PROVEEDORES">
+    <End Type="DataModel.PROVEEDORES" Role="PROVEEDORES" Multiplicity="0..1" />
+    <End Type="DataModel.CONTACTOS" Role="CONTACTOS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PROVEEDORES">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="CONTACTOS">
+        <PropertyRef Name="ProveedoresID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PROVEEDORES_LOCALIDADES">
+    <End Type="DataModel.LOCALIDADES" Role="LOCALIDADES" Multiplicity="0..1" />
+    <End Type="DataModel.PROVEEDORES" Role="PROVEEDORES" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LOCALIDADES">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="PROVEEDORES">
+        <PropertyRef Name="LocalidadesID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PRODUCTOLOTE_PROVEEDORES">
+    <End Type="DataModel.PROVEEDORES" Role="PROVEEDORES" Multiplicity="0..1" />
+    <End Type="DataModel.PRODUCTOLOTE" Role="PRODUCTOLOTE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PROVEEDORES">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="PRODUCTOLOTE">
+        <PropertyRef Name="ProveedoresID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PRODUCTOS_PROVEEDORES1">
+    <End Type="DataModel.PROVEEDORES" Role="PROVEEDORES" Multiplicity="0..1" />
+    <End Type="DataModel.PRODUCTOS" Role="PRODUCTOS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PROVEEDORES">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="PRODUCTOS">
+        <PropertyRef Name="FabricanteID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PROVEEDORES_REGIVA">
+    <End Type="DataModel.REGIVA" Role="REGIVA" Multiplicity="0..1" />
+    <End Type="DataModel.PROVEEDORES" Role="PROVEEDORES" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="REGIVA">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="PROVEEDORES">
+        <PropertyRef Name="RegIvaID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PROVEEDORES_TRANSPORTES">
+    <End Type="DataModel.TRANSPORTES" Role="TRANSPORTES" Multiplicity="0..1" />
+    <End Type="DataModel.PROVEEDORES" Role="PROVEEDORES" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TRANSPORTES">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="PROVEEDORES">
+        <PropertyRef Name="TransportesID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_COMPROBANTESVENTAS_CLIENTES">
+    <End Type="DataModel.CLIENTES" Role="CLIENTES" Multiplicity="0..1" />
+    <End Type="DataModel.COMPROBANTESVENTAS" Role="COMPROBANTESVENTAS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CLIENTES">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="COMPROBANTESVENTAS">
+        <PropertyRef Name="ClientesID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_INVENTARIO_PROVEEDORES">
+    <End Type="DataModel.PROVEEDORES" Role="PROVEEDORES" Multiplicity="0..1" />
+    <End Type="DataModel.INVENTARIO" Role="INVENTARIO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PROVEEDORES">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="INVENTARIO">
+        <PropertyRef Name="ProveedoresID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="LOTES">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Guid" Name="ID" Nullable="false" />
+    <Property Type="DateTime" Name="FechaAlta" />
+    <Property Type="Decimal" Name="NroObleaDesde" Nullable="false" Precision="18" Scale="0" />
+    <Property Type="Decimal" Name="NroObleaHasta" Nullable="false" Precision="18" Scale="0" />
+    <Property Type="Decimal" Name="NroUltimaObleaUsada" Precision="18" Scale="0" />
+    <Property Type="Decimal" Name="AnioLote" Nullable="false" Precision="18" Scale="0" />
+    <Property Type="Decimal" Name="CantObleasLote" Nullable="false" Precision="18" Scale="0" />
+    <Property Type="Boolean" Name="LoteActivo" Nullable="false" />
+    <NavigationProperty Name="OBLEASLIBRES" Relationship="DataModel.FK_OBLEASlIBRES_LOTES" FromRole="LOTES" ToRole="OBLEASLIBRES" />
+  </EntityType>
+  <Association Name="FK_OBLEASlIBRES_LOTES">
+    <End Type="DataModel.LOTES" Role="LOTES" Multiplicity="1" />
+    <End Type="DataModel.OBLEASLIBRES" Role="OBLEASLIBRES" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LOTES">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="OBLEASLIBRES">
+        <PropertyRef Name="LoteID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

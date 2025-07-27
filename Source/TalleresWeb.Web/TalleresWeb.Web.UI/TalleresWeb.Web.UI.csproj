@@ -1,0 +1,652 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7D7CE73D-6A92-43B2-9810-8504714D1776}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TalleresWeb.Web.UI</RootNamespace>
+    <AssemblyName>TalleresWeb.Web.UI</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <UseGlobalApplicationHostFile />
+    <Use64BitIISExpress />
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=4.1.50731.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <HintPath>..\packages\AjaxControlToolkit.4.1.50731\lib\40\AjaxControlToolkit.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="itextsharp, Version=4.0.5.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\TalleresWeb.Web.Cross.Configuracion\dll\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="SanitizerProviders, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\AjaxControlToolkit.4.1.50731\lib\40\SanitizerProviders\SanitizerProviders.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Net.Http.Formatting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Net.Http">
+      <HintPath>..\packages\Microsoft.Net.Http.2.0.20710.0\lib\net40\System.Net.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+      <HintPath>..\packages\Microsoft.Net.Http.2.0.20710.0\lib\net40\System.Net.Http.WebRequest.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="css\autocomplete.css" />
+    <Content Include="css\creative.min.css" />
+    <Content Include="css\pearCSS.css" />
+    <Content Include="css\wizard.css" />
+    <Content Include="Account\DatosTaller.aspx" />
+    <Content Include="Account\Login.aspx" />
+    <Content Include="Account\LogOut.aspx" />
+    <Content Include="css\creative.css" />
+    <Content Include="Error\404.html" />
+    <Content Include="Error\503.html" />
+    <Content Include="Error\error.html" />
+    <Content Include="Images\logoEos.png" />
+    <Content Include="img\bg-contacto.jpg" />
+    <Content Include="img\bg-gnc.gif" />
+    <Content Include="img\bg-header.jpg" />
+    <Content Include="img\bg-talleres.gif" />
+    <Content Include="img\bg-talleres.jpg" />
+    <Content Include="img\camara\cedula-dorso-foto-no.gif" />
+    <Content Include="img\camara\cedula-dorso-foto-si.gif" />
+    <Content Include="img\camara\cedula-frente-foto-no.gif" />
+    <Content Include="img\camara\cedula-frente-foto-si.gif" />
+    <Content Include="img\camara\dni-dorso-foto-no.gif" />
+    <Content Include="img\camara\dni-dorso-foto-si.gif" />
+    <Content Include="img\camara\dni-frente-foto-no.gif" />
+    <Content Include="img\camara\dni-frente-foto-si.gif" />
+    <Content Include="img\cedula-dorso.gif" />
+    <Content Include="img\cedula-frente.gif" />
+    <Content Include="img\dni-dorso.gif" />
+    <Content Include="img\dni-frente.gif" />
+    <Content Include="img\favicon.ico" />
+    <Content Include="img\favicon114.png" />
+    <Content Include="img\favicon144.png" />
+    <Content Include="img\favicon57.png" />
+    <Content Include="img\favicon72.png" />
+    <Content Include="img\ico-asistencia.png" />
+    <Content Include="img\ico-garantias.png" />
+    <Content Include="img\ico-renovacion.png" />
+    <Content Include="img\ico-revision.png" />
+    <Content Include="img\ico-venta.png" />
+    <Content Include="img\icono-intro.png" />
+    <Content Include="img\logo-footer.gif" />
+    <Content Include="img\logo-inv.png" />
+    <Content Include="img\logo.png" />
+    <Content Include="img\scanner\cedula-dorso-foto-no.gif" />
+    <Content Include="img\scanner\cedula-dorso-foto-si.gif" />
+    <Content Include="img\scanner\cedula-frente-foto-no.gif" />
+    <Content Include="img\scanner\cedula-frente-foto-si.gif" />
+    <Content Include="img\scanner\dni-dorso-foto-no.gif" />
+    <Content Include="img\scanner\dni-dorso-foto-si.gif" />
+    <Content Include="img\scanner\dni-frente-foto-no.gif" />
+    <Content Include="img\scanner\dni-frente-foto-si.gif" />
+    <Content Include="img\ventajas-economicas.jpg" />
+    <Content Include="img\ventajas-medio-ambientales.jpg" />
+    <Content Include="img\ventajas-seguridad.jpg" />
+    <Content Include="index.aspx" />
+    <Content Include="js\creative.js" />
+    <Content Include="js\creative.min.js" />
+    <Content Include="js\form.js" />
+    <Content Include="Tramites\EstadosTramites.aspx" />
+    <Content Include="Tramites\Obleas\FotosCapturar.aspx" />
+    <Content Include="Tramites\Obleas\FotosImprimir.aspx" />
+    <Content Include="Tramites\Obleas\ObleasConsultar.aspx" />
+    <Content Include="Tramites\PH\Default.aspx" />
+    <Content Include="Tramites\PH\ImprimirPH.aspx" />
+    <Content Include="UserControls\SubirFotos.ascx" />
+    <Content Include="UserControls\Fotos.ascx" />
+    <Content Include="UserControls\CilindrosPH.ascx" />
+    <Content Include="vendor\bootstrap.css" />
+    <Content Include="vendor\bootstrap.min.css" />
+    <Content Include="vendor\bootstrap\css\bootstrap.min.css" />
+    <Content Include="vendor\bootstrap\js\bootstrap.min.js" />
+    <Content Include="vendor\font-awesome\css\font-awesome.css" />
+    <Content Include="vendor\font-awesome\css\font-awesome.min.css" />
+    <Content Include="vendor\font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="vendor\jQuery\jquery.js" />
+    <Content Include="vendor\jQuery\jquery.min.js" />
+    <Content Include="vendor\magnific-popup\jquery.magnific-popup.js" />
+    <Content Include="vendor\magnific-popup\jquery.magnific-popup.min.js" />
+    <Content Include="vendor\magnific-popup\magnific-popup.css" />
+    <Content Include="vendor\scrollreveal\scrollreveal.js" />
+    <Content Include="vendor\scrollreveal\scrollreveal.min.js" />
+    <Content Include="vendor\Site.css" />
+    <Content Include="vendor\styleWeb.css" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Images\Iconos\agregar.png" />
+    <Content Include="Images\Iconos\amarillo.gif" />
+    <Content Include="Images\Iconos\buscar.png" />
+    <Content Include="Images\Iconos\calendario.png" />
+    <Content Include="Images\Iconos\cancelar.png" />
+    <Content Include="Images\Iconos\eliminar.png" />
+    <Content Include="Images\Iconos\gris.gif" />
+    <Content Include="Images\Iconos\modificar.png" />
+    <Content Include="Images\Iconos\permisoDenegado.gif" />
+    <Content Include="Images\Iconos\rojo.gif" />
+    <Content Include="Images\Iconos\seleccionar.png" />
+    <Content Include="Images\Iconos\verde.gif" />
+    <Content Include="Images\iso.png" />
+    <Content Include="Images\logo.png" />
+    <Content Include="Images\Iconos\bloqueada.png" />
+    <Content Include="Images\Iconos\correcta.png" />
+    <Content Include="Images\Iconos\info.png" />
+    <Content Include="Images\Iconos\warning.png" />
+    <Content Include="Default.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="Images\Web\acceso-talleristas.jpg" />
+    <Content Include="Images\Web\banner-bdt.jpg" />
+    <Content Include="Images\Web\banner-vdg.jpg" />
+    <Content Include="Images\Web\header.gif" />
+    <Content Include="Images\Web\icon-ayuda.gif" />
+    <Content Include="Images\Web\icon-home.gif" />
+    <Content Include="Images\Web\icon-mapa.gif" />
+    <Content Include="Images\Web\icon-obs.gif" />
+    <Content Include="Images\Web\icono-eliminar.gif" />
+    <Content Include="Images\Web\icono-modificar.jpg" />
+    <Content Include="Images\Web\icons-azul.png" />
+    <Content Include="Images\Web\icons-naranja.png" />
+    <Content Include="Images\Web\img-1.jpg" />
+    <Content Include="Images\Web\img-10.jpg" />
+    <Content Include="Images\Web\img-11.jpg" />
+    <Content Include="Images\Web\img-2.jpg" />
+    <Content Include="Images\Web\img-3.jpg" />
+    <Content Include="Images\Web\img-4.jpg" />
+    <Content Include="Images\Web\img-5.jpg" />
+    <Content Include="Images\Web\img-6.jpg" />
+    <Content Include="Images\Web\img-7.jpg" />
+    <Content Include="Images\Web\img-8.jpg" />
+    <Content Include="Images\Web\img-9.jpg" />
+    <Content Include="Images\Web\info.png" />
+    <Content Include="Images\Web\item.png" />
+    <Content Include="Images\Web\logo.png" />
+    <Content Include="Images\Web\mailing.png" />
+    <Content Include="Images\Web\miCuenta.png" />
+    <Content Include="Images\Web\nav-naranja.jpg" />
+    <Content Include="Images\Web\nav-sidebar-li.gif" />
+    <Content Include="Images\Web\nav-sidebar.jpg" />
+    <Content Include="Images\Web\novedades.png" />
+    <Content Include="Images\Web\promociones-bottom.jpg" />
+    <Content Include="Images\Web\promociones-top.jpg" />
+    <Content Include="Images\Web\rojo.jpg" />
+    <Content Include="Images\Web\splash-small.gif" />
+    <Content Include="Images\Web\tramites.png" />
+    <Content Include="Images\Web\verde.jpg" />
+    <Content Include="Images\Web\wrap.gif" />
+    <Content Include="img\bg-login.gif" />
+    <Content Include="packages.config" />
+    <Content Include="vendor\font-awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="vendor\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="vendor\font-awesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="vendor\font-awesome\fonts\FontAwesome.otf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Blank.Master" />
+    <Content Include="Scripts\jquery.blockUI.js" />
+    <Content Include="Tramites\Obleas\ObleasImprimir.aspx" />
+    <Content Include="Tramites\Obleas\Default.aspx" />
+    <Content Include="UserControls\PrintBoxCtrl.ascx" />
+    <Content Include="UserControls\Reguladores.ascx" />
+    <Content Include="UserControls\CilindrosValvulas.ascx" />
+    <Content Include="Webcam_Plugin\jquery.webcam.js" />
+    <Content Include="Webcam_Plugin\jscam.swf" />
+    <Content Include="Webcam_Plugin\jscam_canvas_only.swf" />
+    <Content Include="WebService1.asmx" />
+    <Content Include="less\creative.less" />
+    <Content Include="less\mixins.less" />
+    <Content Include="less\variables.less" />
+    <Content Include="web\css\creative.css" />
+    <Content Include="web\css\creative.min.css" />
+    <Content Include="web\img\bg-contacto.jpg" />
+    <Content Include="web\img\bg-gnc.gif" />
+    <Content Include="web\img\bg-header.jpg" />
+    <Content Include="web\img\bg-login.gif" />
+    <Content Include="web\img\bg-talleres.gif" />
+    <Content Include="web\img\bg-talleres.jpg" />
+    <Content Include="web\img\cedula-dorso.gif" />
+    <Content Include="web\img\cedula-frente.gif" />
+    <Content Include="web\img\dni-dorso.gif" />
+    <Content Include="web\img\dni-frente.gif" />
+    <Content Include="web\img\favicon.ico" />
+    <Content Include="web\img\favicon114.png" />
+    <Content Include="web\img\favicon144.png" />
+    <Content Include="web\img\favicon57.png" />
+    <Content Include="web\img\favicon72.png" />
+    <Content Include="web\img\ico-asistencia.png" />
+    <Content Include="web\img\ico-garantias.png" />
+    <Content Include="web\img\ico-renovacion.png" />
+    <Content Include="web\img\ico-revision.png" />
+    <Content Include="web\img\ico-venta.png" />
+    <Content Include="web\img\icono-intro.png" />
+    <Content Include="web\img\logo-footer.gif" />
+    <Content Include="web\img\logo-inv.png" />
+    <Content Include="web\img\logo.png" />
+    <Content Include="web\img\ventajas-economicas.jpg" />
+    <Content Include="web\img\ventajas-medio-ambientales.jpg" />
+    <Content Include="web\img\ventajas-seguridad.jpg" />
+    <Content Include="web\js\creative.js" />
+    <Content Include="web\js\creative.min.js" />
+    <Content Include="web\js\form.js" />
+    <Content Include="web\vendor\bootstrap.css" />
+    <Content Include="web\vendor\bootstrap.min.css" />
+    <Content Include="web\vendor\bootstrap\css\bootstrap.css" />
+    <Content Include="web\vendor\bootstrap\css\bootstrap.min.css" />
+    <Content Include="web\vendor\bootstrap\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="web\vendor\bootstrap\js\bootstrap.js" />
+    <Content Include="web\vendor\bootstrap\js\bootstrap.min.js" />
+    <Content Include="web\vendor\font-awesome\css\font-awesome.css" />
+    <Content Include="web\vendor\font-awesome\css\font-awesome.min.css" />
+    <Content Include="web\vendor\font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="web\vendor\jQuery\jquery.js" />
+    <Content Include="web\vendor\jQuery\jquery.min.js" />
+    <Content Include="web\vendor\magnific-popup\jquery.magnific-popup.js" />
+    <Content Include="web\vendor\magnific-popup\jquery.magnific-popup.min.js" />
+    <Content Include="web\vendor\magnific-popup\magnific-popup.css" />
+    <Content Include="web\vendor\scrollreveal\scrollreveal.js" />
+    <Content Include="web\vendor\scrollreveal\scrollreveal.min.js" />
+    <Content Include="web\vendor\Site.css" />
+    <Content Include="web\vendor\styleWeb.css" />
+    <None Include="Properties\PublishProfiles\PublishWeb.pubxml" />
+    <None Include="Scripts\jquery-1.8.2.intellisense.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\jquery-1.8.2.js" />
+    <Content Include="Scripts\jquery-1.8.2.min.js" />
+    <Content Include="Scripts\jquery-ui-1.8.24.js" />
+    <Content Include="Scripts\jquery-ui-1.8.24.min.js" />
+    <Content Include="Scripts\jquery.numeric.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="UserControls\FiltrosFechas.ascx" />
+    <Content Include="UserControls\MessageBoxCtrl.ascx" />
+    <Content Include="ViewSwitcher.ascx" />
+    <Content Include="Web.config" />
+    <Content Include="web\less\creative.less" />
+    <Content Include="web\less\mixins.less" />
+    <Content Include="web\less\variables.less" />
+    <Content Include="web\vendor\bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="web\vendor\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="web\vendor\bootstrap\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="web\vendor\bootstrap\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="web\vendor\font-awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="web\vendor\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="web\vendor\font-awesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="web\vendor\font-awesome\fonts\fontawesome-webfont.woff2" />
+    <Content Include="web\vendor\font-awesome\fonts\FontAwesome.otf" />
+    <Content Include="web\vendor\font-awesome\less\animated.less" />
+    <Content Include="web\vendor\font-awesome\less\bordered-pulled.less" />
+    <Content Include="web\vendor\font-awesome\less\core.less" />
+    <Content Include="web\vendor\font-awesome\less\fixed-width.less" />
+    <Content Include="web\vendor\font-awesome\less\font-awesome.less" />
+    <Content Include="web\vendor\font-awesome\less\icons.less" />
+    <Content Include="web\vendor\font-awesome\less\larger.less" />
+    <Content Include="web\vendor\font-awesome\less\list.less" />
+    <Content Include="web\vendor\font-awesome\less\mixins.less" />
+    <Content Include="web\vendor\font-awesome\less\path.less" />
+    <Content Include="web\vendor\font-awesome\less\rotated-flipped.less" />
+    <Content Include="web\vendor\font-awesome\less\screen-reader.less" />
+    <Content Include="web\vendor\font-awesome\less\stacked.less" />
+    <Content Include="web\vendor\font-awesome\less\variables.less" />
+    <Content Include="web\vendor\font-awesome\scss\font-awesome.scss" />
+    <Content Include="web\vendor\font-awesome\scss\_animated.scss" />
+    <Content Include="web\vendor\font-awesome\scss\_bordered-pulled.scss" />
+    <Content Include="web\vendor\font-awesome\scss\_core.scss" />
+    <Content Include="web\vendor\font-awesome\scss\_fixed-width.scss" />
+    <Content Include="web\vendor\font-awesome\scss\_icons.scss" />
+    <Content Include="web\vendor\font-awesome\scss\_larger.scss" />
+    <Content Include="web\vendor\font-awesome\scss\_list.scss" />
+    <Content Include="web\vendor\font-awesome\scss\_mixins.scss" />
+    <Content Include="web\vendor\font-awesome\scss\_path.scss" />
+    <Content Include="web\vendor\font-awesome\scss\_rotated-flipped.scss" />
+    <Content Include="web\vendor\font-awesome\scss\_screen-reader.scss" />
+    <Content Include="web\vendor\font-awesome\scss\_stacked.scss" />
+    <Content Include="web\vendor\font-awesome\scss\_variables.scss" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Scripts\_references.js" />
+    <Content Include="Site.Mobile.Master" />
+    <Content Include="settings.config" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Account\DatosTaller.aspx.cs">
+      <DependentUpon>DatosTaller.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\DatosTaller.aspx.designer.cs">
+      <DependentUpon>DatosTaller.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\LogOut.aspx.cs">
+      <DependentUpon>LogOut.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\LogOut.aspx.designer.cs">
+      <DependentUpon>LogOut.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Seguridad.cs" />
+    <Compile Include="Blank.Master.cs">
+      <DependentUpon>Blank.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Blank.Master.designer.cs">
+      <DependentUpon>Blank.Master</DependentUpon>
+    </Compile>
+    <Compile Include="App_Start\AuthConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controls\Buttons\BtnDefault.cs" />
+    <Compile Include="Controls\Buttons\BtnInfo.cs" />
+    <Compile Include="Controls\Buttons\BtnAceptar.cs" />
+    <Compile Include="Controls\Buttons\BtnCancelar.cs" />
+    <Compile Include="Controls\Combos\CboAnio.cs" />
+    <Compile Include="Controls\Combos\CboPEC.cs" />
+    <Compile Include="Controls\Combos\CboCRPC.cs" />
+    <Compile Include="Controls\Combos\CboMes.cs" />
+    <Compile Include="Controls\Combos\CboMSDB.cs" />
+    <Compile Include="Controls\Combos\CboQuincenas.cs" />
+    <Compile Include="Controls\Combos\CboRegIva.cs" />
+    <Compile Include="Controls\Combos\CboCantidadAVisualizar.cs" />
+    <Compile Include="Controls\Combos\CboLocalidad.cs" />
+    <Compile Include="Controls\Combos\CboTipoDocumento.cs" />
+    <Compile Include="Controls\Combos\CboTransportes.cs" />
+    <Compile Include="Controls\Combos\ComboBase.cs" />
+    <Compile Include="Controls\Controls\DateControl.cs" />
+    <Compile Include="Controls\Controls\NumericControl.cs" />
+    <Compile Include="Controls\Controls\TextBoxMasked.cs" />
+    <Compile Include="Controls\Controls\TxtCantidad.cs" />
+    <Compile Include="Controls\Controls\TxtImportes.cs" />
+    <Compile Include="Controls\Controls\TxtPorcentajes.cs" />
+    <Compile Include="Controls\ImageButtons\BtnCancel.cs" />
+    <Compile Include="Controls\ImageButtons\BtnAgregar.cs" />
+    <Compile Include="Controls\ImageButtons\BtnEliminar.cs" />
+    <Compile Include="Controls\ImageButtons\BtnModificar.cs" />
+    <Compile Include="Controls\ImageButtons\BtnSearch.cs" />
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Genericos\Comprobante.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PageBase.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Mobile.Master.cs">
+      <DependentUpon>Site.Mobile.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Mobile.Master.designer.cs">
+      <DependentUpon>Site.Mobile.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Tramites\EstadosTramites.aspx.cs">
+      <DependentUpon>EstadosTramites.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tramites\EstadosTramites.aspx.designer.cs">
+      <DependentUpon>EstadosTramites.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tramites\Obleas\FotosCapturar.aspx.cs">
+      <DependentUpon>FotosCapturar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tramites\Obleas\FotosCapturar.aspx.designer.cs">
+      <DependentUpon>FotosCapturar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tramites\Obleas\FotosImprimir.aspx.cs">
+      <DependentUpon>FotosImprimir.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tramites\Obleas\FotosImprimir.aspx.designer.cs">
+      <DependentUpon>FotosImprimir.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tramites\Obleas\ObleasConsultar.aspx.cs">
+      <DependentUpon>ObleasConsultar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tramites\Obleas\ObleasConsultar.aspx.designer.cs">
+      <DependentUpon>ObleasConsultar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tramites\Obleas\ObleasImprimir.aspx.cs">
+      <DependentUpon>ObleasImprimir.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tramites\Obleas\ObleasImprimir.aspx.designer.cs">
+      <DependentUpon>ObleasImprimir.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tramites\Obleas\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tramites\Obleas\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tramites\PH\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tramites\PH\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tramites\PH\ImprimirPH.cs" />
+    <Compile Include="Tramites\PH\ImprimirPH.aspx.cs">
+      <DependentUpon>ImprimirPH.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tramites\PH\ImprimirPH.aspx.designer.cs">
+      <DependentUpon>ImprimirPH.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\FiltrosFechas.ascx.cs">
+      <DependentUpon>FiltrosFechas.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\FiltrosFechas.ascx.designer.cs">
+      <DependentUpon>FiltrosFechas.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\SubirFotos.ascx.cs">
+      <DependentUpon>SubirFotos.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\SubirFotos.ascx.designer.cs">
+      <DependentUpon>SubirFotos.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Fotos.ascx.cs">
+      <DependentUpon>Fotos.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\Fotos.ascx.designer.cs">
+      <DependentUpon>Fotos.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\MessageBoxCtrl.ascx.cs">
+      <DependentUpon>MessageBoxCtrl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\MessageBoxCtrl.ascx.designer.cs">
+      <DependentUpon>MessageBoxCtrl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\PrintBoxCtrl.ascx.cs">
+      <DependentUpon>PrintBoxCtrl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\PrintBoxCtrl.ascx.designer.cs">
+      <DependentUpon>PrintBoxCtrl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\CilindrosPH.ascx.cs">
+      <DependentUpon>CilindrosPH.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\CilindrosPH.ascx.designer.cs">
+      <DependentUpon>CilindrosPH.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Reguladores.ascx.cs">
+      <DependentUpon>Reguladores.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\Reguladores.ascx.designer.cs">
+      <DependentUpon>Reguladores.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\CilindrosValvulas.ascx.cs">
+      <DependentUpon>CilindrosValvulas.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\CilindrosValvulas.ascx.designer.cs">
+      <DependentUpon>CilindrosValvulas.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewSwitcher.ascx.cs">
+      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewSwitcher.ascx.designer.cs">
+      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebApi\WebApi.cs" />
+    <Compile Include="WebService1.asmx.cs">
+      <DependentUpon>WebService1.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Captures\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Site.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\PL.Fwk\PL.Fwk.Entities\PL.Fwk.Entities.csproj">
+      <Project>{df7307ae-2c26-427b-b58d-c15d06010ee7}</Project>
+      <Name>PL.Fwk.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\TalleresWeb\TalleresWeb.Entities\TalleresWeb.Entities.csproj">
+      <Project>{4b4d1687-3d23-464e-bafb-764c678892ab}</Project>
+      <Name>TalleresWeb.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TalleresWeb.Web.Cross.Configuracion\TalleresWeb.Web.Cross.Configuracion.csproj">
+      <Project>{6b0b928b-b9b7-4e03-aacd-482f8745ebf3}</Project>
+      <Name>TalleresWeb.Web.Cross.Configuracion</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TalleresWeb.Web.Logic\TalleresWeb.Web.Logic.csproj">
+      <Project>{c0dfc164-8756-486e-81b5-141e75de6cc8}</Project>
+      <Name>TalleresWeb.Web.Logic</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>49314</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:49314/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

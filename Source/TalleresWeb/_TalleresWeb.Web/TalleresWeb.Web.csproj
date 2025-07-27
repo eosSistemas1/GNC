@@ -1,0 +1,333 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E609BAAA-3959-47A9-81A8-ACDB9CF92F08}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TalleresWeb.Web</RootNamespace>
+    <AssemblyName>TalleresWeb.Web</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit">
+      <HintPath>..\..\DLL_Shared\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp">
+      <HintPath>..\..\DLL_Shared\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="PL.Fwk.BusinessLogic">
+      <HintPath>..\..\DLL_Shared\PL.Fwk.BusinessLogic.dll</HintPath>
+    </Reference>
+    <Reference Include="PL.Fwk.DataAccess">
+      <HintPath>..\..\DLL_Shared\PL.Fwk.DataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="PL.Fwk.Entities">
+      <HintPath>..\..\DLL_Shared\PL.Fwk.Entities.dll</HintPath>
+    </Reference>
+    <Reference Include="PL.Fwk.Presentation.Web">
+      <HintPath>..\..\DLL_Shared\PL.Fwk.Presentation.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="css\styleTalleres.css" />
+    <Content Include="Core\logoff.aspx" />
+    <Content Include="css\style.css" />
+    <Content Include="Images\accept.png" />
+    <Content Include="Images\acceso-talleristas-in.jpg" />
+    <Content Include="Images\acceso-talleristas.jpg" />
+    <Content Include="Images\add.png" />
+    <Content Include="Images\arrow-right.gif" />
+    <Content Include="Images\banner-bdt.jpg" />
+    <Content Include="Images\banner-vdg.jpg" />
+    <Content Include="Images\bg.gif" />
+    <Content Include="Images\bottom.gif" />
+    <Content Include="Images\calendario.gif" />
+    <Content Include="Images\calendario.png" />
+    <Content Include="Images\cargando.gif" />
+    <Content Include="Images\consultaClientes.png" />
+    <Content Include="Images\estadisticas.png" />
+    <Content Include="Images\exclamation.png" />
+    <Content Include="Images\favicon.ico" />
+    <Content Include="Images\header.gif" />
+    <Content Include="Images\icon-ayuda.gif" />
+    <Content Include="Images\icon-home.gif" />
+    <Content Include="Images\icon-mapa.gif" />
+    <Content Include="Images\icon-obs.gif" />
+    <Content Include="Images\icono-eliminar.gif" />
+    <Content Include="Images\icono-modificar.jpg" />
+    <Content Include="Images\iconos\adelanto.png" />
+    <Content Include="Images\iconos\agregar.png" />
+    <Content Include="Images\iconos\agregarError.png" />
+    <Content Include="Images\iconos\amarillo.gif" />
+    <Content Include="Images\iconos\bloqueada.png" />
+    <Content Include="Images\iconos\buscar.png" />
+    <Content Include="Images\iconos\calcular.png" />
+    <Content Include="Images\iconos\calendario.png" />
+    <Content Include="Images\iconos\cancelarPago.png" />
+    <Content Include="Images\iconos\correcta.png" />
+    <Content Include="Images\iconos\eliminar.png" />
+    <Content Include="Images\iconos\eliminar2.png" />
+    <Content Include="Images\iconos\imprimir.png" />
+    <Content Include="Images\iconos\info.png" />
+    <Content Include="Images\iconos\modificar.png" />
+    <Content Include="Images\iconos\modificar2.png" />
+    <Content Include="Images\iconos\observaciones.png" />
+    <Content Include="Images\iconos\pendienterevision.png" />
+    <Content Include="Images\iconos\permisoDenegado.gif" />
+    <Content Include="Images\iconos\rojo.gif" />
+    <Content Include="Images\iconos\seleccionar.png" />
+    <Content Include="Images\iconos\verde.gif" />
+    <Content Include="Images\iconos\volver.png" />
+    <Content Include="Images\iconos\warning.png" />
+    <Content Include="Images\icons-azul.png" />
+    <Content Include="Images\icons-naranja.png" />
+    <Content Include="Images\img-1.jpg" />
+    <Content Include="Images\img-10.jpg" />
+    <Content Include="Images\img-11.jpg" />
+    <Content Include="Images\img-2.jpg" />
+    <Content Include="Images\img-3.jpg" />
+    <Content Include="Images\img-4.jpg" />
+    <Content Include="Images\img-5.jpg" />
+    <Content Include="Images\img-6.jpg" />
+    <Content Include="Images\img-7.jpg" />
+    <Content Include="Images\img-8.jpg" />
+    <Content Include="Images\img-9.jpg" />
+    <Content Include="Images\info.png" />
+    <Content Include="Images\item.png" />
+    <Content Include="Images\logo.png" />
+    <Content Include="Images\mailing.png" />
+    <Content Include="Images\miCuenta.png" />
+    <Content Include="Images\nav-naranja.jpg" />
+    <Content Include="Images\nav-sidebar-li.gif" />
+    <Content Include="Images\nav-sidebar.jpg" />
+    <Content Include="Images\novedades.png" />
+    <Content Include="Images\promociones-bottom.jpg" />
+    <Content Include="Images\promociones-top.jpg" />
+    <Content Include="Images\rojo.jpg" />
+    <Content Include="Images\splash-small.gif" />
+    <Content Include="Images\tramites.png" />
+    <Content Include="Images\verde.jpg" />
+    <Content Include="Images\wrap.gif" />
+    <Content Include="index.aspx" />
+    <Content Include="login.aspx" />
+    <Content Include="MiCuenta\Usuario.aspx" />
+    <Content Include="UserControls\MessageBoxCtrl.ascx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controls\CboAnio.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controls\CboMarcasCIL.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controls\CboCRPC.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controls\CboLocalidades.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controls\CboMes.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controls\CboMSDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controls\CboMarcasREG.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controls\CboTiposDocumentos.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controls\CboMarcasVAL.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controls\CboZonas.cs" />
+    <Compile Include="Controls\CboTiposOperaciones.cs" />
+    <Compile Include="Controls\CboUso.cs" />
+    <Compile Include="Core\logoff.aspx.cs">
+      <DependentUpon>logoff.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Core\logoff.aspx.designer.cs">
+      <DependentUpon>logoff.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Genericos.cs" />
+    <Compile Include="index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MasterTalleres.Master.cs">
+      <DependentUpon>MasterTalleres.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterTalleres.Master.designer.cs">
+      <DependentUpon>MasterTalleres.Master</DependentUpon>
+    </Compile>
+    <Compile Include="MiCuenta\Usuario.aspx.cs">
+      <DependentUpon>Usuario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MiCuenta\Usuario.aspx.designer.cs">
+      <DependentUpon>Usuario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PageBase.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PopUpMaster.Master.cs">
+      <DependentUpon>PopUpMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PopUpMaster.Master.designer.cs">
+      <DependentUpon>PopUpMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\MessageBoxCtrl.ascx.cs">
+      <DependentUpon>MessageBoxCtrl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\MessageBoxCtrl.ascx.designer.cs">
+      <DependentUpon>MessageBoxCtrl.ascx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="MasterTalleres.Master" />
+    <Content Include="PopUpMaster.Master" />
+    <Content Include="settings.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Site.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TalleresWeb.DataAccess\TalleresWeb.DataAccess.csproj">
+      <Project>{5871B99A-DEDF-4B44-8157-F4F47A4670A5}</Project>
+      <Name>TalleresWeb.DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TalleresWeb.Entities\TalleresWeb.Entities.csproj">
+      <Project>{4B4D1687-3D23-464E-BAFB-764C678892AB}</Project>
+      <Name>TalleresWeb.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TalleresWeb.Logic\TalleresWeb.Logic.csproj">
+      <Project>{D50A2519-8838-40B1-AD05-40747CC16B7D}</Project>
+      <Name>TalleresWeb.Logic</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="AppCode\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>7134</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

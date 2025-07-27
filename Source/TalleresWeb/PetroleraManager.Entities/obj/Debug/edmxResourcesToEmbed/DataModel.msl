@@ -1,0 +1,545 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs" Space="C-S">
+  <Alias Key="Model" Value="DataModel" />
+  <Alias Key="Target" Value="DataModel.Store" />
+  <EntityContainerMapping CdmEntityContainer="DataModelContext" StorageEntityContainer="DataModelStoreContainer">
+    <EntitySetMapping Name="BASEIMPONIBLE">
+      <EntityTypeMapping TypeName="DataModel.BASEIMPONIBLE">
+        <MappingFragment StoreEntitySet="BASEIMPONIBLE">
+          <ScalarProperty Name="Activo" ColumnName="BASEIMPONIBLE_ACTIVO" />
+          <ScalarProperty Name="Coeficiente" ColumnName="BASEIMPONIBLE_COEFICIENTE" />
+          <ScalarProperty Name="Descripcion" ColumnName="BASEIMPONIBLE_DESCRIPCION" />
+          <ScalarProperty Name="ID" ColumnName="BASEIMPONIBLE_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CLIENTES">
+      <EntityTypeMapping TypeName="DataModel.CLIENTES">
+        <MappingFragment StoreEntitySet="CLIENTES">
+          <ScalarProperty Name="Codigo" ColumnName="CLIENTES_CODIGO" />
+          <ScalarProperty Name="RegIvaID" ColumnName="REGIVA_ID" />
+          <ScalarProperty Name="Activo" ColumnName="CLIENTES_ACTIVO" />
+          <ScalarProperty Name="TransporteID" ColumnName="TRANSPORTES_ID" />
+          <ScalarProperty Name="ZonasID" ColumnName="ZONAS_ID" />
+          <ScalarProperty Name="CondicionesID" ColumnName="CONDICIONES_ID" />
+          <ScalarProperty Name="CodigoPostal" ColumnName="CLIENTES_CODPOSTAL" />
+          <ScalarProperty Name="CUIT" ColumnName="CLIENTES_CUIT" />
+          <ScalarProperty Name="Contacto" ColumnName="CLIENTES_PERSONACONTACTO" />
+          <ScalarProperty Name="Email" ColumnName="CLIENTES_EMAIL" />
+          <ScalarProperty Name="Fax" ColumnName="CLIENTES_FAX" />
+          <ScalarProperty Name="Telefono2" ColumnName="CLIENTES_TELEFONO2" />
+          <ScalarProperty Name="Telefono1" ColumnName="CLIENTES_TELEFONO1" />
+          <ScalarProperty Name="LocalidadesID" ColumnName="LOCALIDADES_ID" />
+          <ScalarProperty Name="Domicilio" ColumnName="CLIENTES_DOMICILIO" />
+          <ScalarProperty Name="Descripcion" ColumnName="CLIENTES_DESCRIPCION" />
+          <ScalarProperty Name="ID" ColumnName="CLIENTES_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="COMPROBANTESCOMPRAS">
+      <EntityTypeMapping TypeName="DataModel.COMPROBANTESCOMPRAS">
+        <MappingFragment StoreEntitySet="COMPROBANTESCOMPRAS">
+          <ScalarProperty Name="Activo" ColumnName="ACTIVO" />
+          <ScalarProperty Name="FechaAlta" ColumnName="COMPROBANTESCOMPRAS_FECHAREALALTA" />
+          <ScalarProperty Name="UsuarioID" ColumnName="USUARIO_ID" />
+          <ScalarProperty Name="PercepcionesMonto5" ColumnName="PERCEPCIONESMONTO5" />
+          <ScalarProperty Name="PercepcionesID5" ColumnName="PERCEPCIONESID5" />
+          <ScalarProperty Name="PercepcionesMonto4" ColumnName="PERCEPCIONESMONTO4" />
+          <ScalarProperty Name="PercepcionesID4" ColumnName="PERCEPCIONESID4" />
+          <ScalarProperty Name="PercepcionesMonto3" ColumnName="PERCEPCIONESMONTO3" />
+          <ScalarProperty Name="PercepcionesID3" ColumnName="PERCEPCIONESID3" />
+          <ScalarProperty Name="PercepcionesMonto2" ColumnName="PERCEPCIONESMONTO2" />
+          <ScalarProperty Name="PercepcionesID2" ColumnName="PERCEPCIONESID2" />
+          <ScalarProperty Name="PercepcionesMonto1" ColumnName="PERCEPCIONESMONTO1" />
+          <ScalarProperty Name="PercepcionesID1" ColumnName="PERCEPCIONESID1" />
+          <ScalarProperty Name="Observacion" ColumnName="COMPROBANTESCOMPRAS_OBSERVACION" />
+          <ScalarProperty Name="IncluyeEnIvaCompra" ColumnName="COMPROBANTESCOMPRAS_INCLUYEENIVACOMPRA" />
+          <ScalarProperty Name="MontoDebeComprobante" ColumnName="COMPROBANTESCOMPRAS_MONTODEBECOMPROBANTE" />
+          <ScalarProperty Name="MontoComprobante" ColumnName="COMPROBANTESCOMPRAS_MONTOCOMPROBANTE" />
+          <ScalarProperty Name="EstadosComprobantesID" ColumnName="ESTADOSCOMPROBANTES_ID" />
+          <ScalarProperty Name="FechaContable" ColumnName="COMPROBANTESCOMPRAS_FECHACONTABLE" />
+          <ScalarProperty Name="FechaComprobante" ColumnName="COMPROBANTESCOMPRAS_FECHACOMPROBANTE" />
+          <ScalarProperty Name="Bonificacion" ColumnName="COMPROBANTESCOMPRAS_BONIFICACION" />
+          <ScalarProperty Name="ProveedoresID" ColumnName="PROVEEDORES_ID" />
+          <ScalarProperty Name="TransportesID" ColumnName="TRANSPORTES_ID" />
+          <ScalarProperty Name="SucursalesID" ColumnName="SUCURSALES_ID" />
+          <ScalarProperty Name="CondicionesID" ColumnName="CONDICIONES_ID" />
+          <ScalarProperty Name="NroComprobante" ColumnName="COMPROBANTESCOMPRAS_NROCOMPROBANTE" />
+          <ScalarProperty Name="LetraComprobante" ColumnName="COMPROBANTESCOMPRAS_LETRACOMPROBANTE" />
+          <ScalarProperty Name="TiposComprobantesID" ColumnName="TIPOSCOMPROBANTES_ID" />
+          <ScalarProperty Name="ID" ColumnName="Comprobantes_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="COMPROBANTESCOMPRASDETALLE">
+      <EntityTypeMapping TypeName="DataModel.COMPROBANTESCOMPRASDETALLE">
+        <MappingFragment StoreEntitySet="COMPROBANTESCOMPRASDETALLE">
+          <ScalarProperty Name="TipoMovimientoMercaderia" ColumnName="COMPROBANTESDETALLE_TIPOMOVIMIENTOMERCADERIA" />
+          <ScalarProperty Name="Observacion" ColumnName="COMPROBANTESDETALLE_OBSERVACION" />
+          <ScalarProperty Name="FechaEntrega" ColumnName="COMPROBANTESDETALLE_FECHAENTREGA" />
+          <ScalarProperty Name="Bonificacion" ColumnName="COMPROBANTESDETALLE_BONIFICACION" />
+          <ScalarProperty Name="PrecioUnitario" ColumnName="COMPROBANTESDETALLE_PRECIOUNITARIO" />
+          <ScalarProperty Name="IngBrutos" ColumnName="COMPROBANTESVENTASDETALLE_INGBRUTOS" />
+          <ScalarProperty Name="ImpInterno" ColumnName="COMPROBANTESVENTASDETALLE_IMPINTERNO" />
+          <ScalarProperty Name="IVA" ColumnName="COMPROBANTESVENTASDETALLE_IVA" />
+          <ScalarProperty Name="Gravado" ColumnName="COMPROBANTESVENTASDETALLE_GRAVADO" />
+          <ScalarProperty Name="Exento" ColumnName="COMPROBANTESVENTASDETALLE_EXENTO" />
+          <ScalarProperty Name="CantidadIngresada" ColumnName="COMPROBANTESDETALLE_CANTIDADiNGRESADA" />
+          <ScalarProperty Name="Cantidad" ColumnName="COMPROBANTESDETALLE_CANTIDAD" />
+          <ScalarProperty Name="ProductoLoteID" ColumnName="PRODUCTOLOTE_ID" />
+          <ScalarProperty Name="ProductoID" ColumnName="PRODUCTO_ID" />
+          <ScalarProperty Name="ComprobantesID" ColumnName="COMPROBANTES_ID" />
+          <ScalarProperty Name="ID" ColumnName="COMPROBANTESDETALLE_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="COMPROBANTESCUMPLIDO">
+      <EntityTypeMapping TypeName="DataModel.COMPROBANTESCUMPLIDO">
+        <MappingFragment StoreEntitySet="COMPROBANTESCUMPLIDO">
+          <ScalarProperty Name="Fecha" ColumnName="COMPROBANTESCOMPRASCUMPLIDO_FECHA" />
+          <ScalarProperty Name="TipoDestino" ColumnName="COMPROBANTESCOMPRASCUMPLIDO_TIPODESTINO" />
+          <ScalarProperty Name="TipoOrigen" ColumnName="COMPROBANTESCOMPRASCUMPLIDO_TIPOORIGEN" />
+          <ScalarProperty Name="Cantidad" ColumnName="COMPROBANTESCOMPRASCUMPLIDO_CANTIDAD" />
+          <ScalarProperty Name="DetalleDestinoID" ColumnName="DETALLEDESTINO_ID" />
+          <ScalarProperty Name="DetalleOrigenID" ColumnName="DETALLEORIGEN_ID" />
+          <ScalarProperty Name="ID" ColumnName="COMPROBANTESCOMPRASCUMPLIDO_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="COMPROBANTESVENTAS">
+      <EntityTypeMapping TypeName="DataModel.COMPROBANTESVENTAS">
+        <MappingFragment StoreEntitySet="COMPROBANTESVENTAS">
+          <ScalarProperty Name="Activo" ColumnName="ACTIVO" />
+          <ScalarProperty Name="FechaRealAlta" ColumnName="COMPROBANTESVENTAS_FECHAREALALTA" />
+          <ScalarProperty Name="UsuarioID" ColumnName="USUARIO_ID" />
+          <ScalarProperty Name="PercepcionesMonto5" ColumnName="PERCEPCIONESMONTO5" />
+          <ScalarProperty Name="PercepcionesID5" ColumnName="PERCEPCIONESID5" />
+          <ScalarProperty Name="PercepcionesMonto4" ColumnName="PERCEPCIONESMONTO4" />
+          <ScalarProperty Name="PercepcionesID4" ColumnName="PERCEPCIONESID4" />
+          <ScalarProperty Name="PercepcionesMonto3" ColumnName="PERCEPCIONESMONTO3" />
+          <ScalarProperty Name="PercepcionesID3" ColumnName="PERCEPCIONESID3" />
+          <ScalarProperty Name="PercepcionesMonto2" ColumnName="PERCEPCIONESMONTO2" />
+          <ScalarProperty Name="PercepcionesID2" ColumnName="PERCEPCIONESID2" />
+          <ScalarProperty Name="PercepcionesMonto1" ColumnName="PERCEPCIONESMONTO1" />
+          <ScalarProperty Name="PercepcionesID1" ColumnName="PERCEPCIONESID1" />
+          <ScalarProperty Name="Observacion" ColumnName="COMPROBANTESVENTAS_OBSERVACION" />
+          <ScalarProperty Name="IncluyeEnIvaCompras" ColumnName="COMPROBANTESVENTAS_INCLUYEENIVACOMPRAS" />
+          <ScalarProperty Name="MontoDebeComprobante" ColumnName="COMPROBANTESVENTAS_MONTODEBECOMPROBANTE" />
+          <ScalarProperty Name="MontoComprobante" ColumnName="COMPROBANTESVENTAS_MONTOCOMPROBANTE" />
+          <ScalarProperty Name="EstadosComprobantesID" ColumnName="ESTADOSCOMPROBANTES_ID" />
+          <ScalarProperty Name="FechaContable" ColumnName="COMPROBANTESVENTAS_FECHACONTABLE" />
+          <ScalarProperty Name="FechaComprobante" ColumnName="COMPROBANTESVENTAS_FECHACOMPROBANTE" />
+          <ScalarProperty Name="Bonificacion" ColumnName="COMPROBANTESVENTAS_BONIFICACION" />
+          <ScalarProperty Name="ComisionVendedor" ColumnName="COMPROBANTESVENTAS_COMISIONVENDEDOR" />
+          <ScalarProperty Name="VendedoresID" ColumnName="VENDEDORES_ID" />
+          <ScalarProperty Name="TransportesID" ColumnName="TRANSPORTES_ID" />
+          <ScalarProperty Name="ClientesID" ColumnName="CLIENTES_ID" />
+          <ScalarProperty Name="SucursalesID" ColumnName="SUCURSALES_ID" />
+          <ScalarProperty Name="CondicionesID" ColumnName="CONDICIONES_ID" />
+          <ScalarProperty Name="NroComprobante" ColumnName="COMPROBANTESVENTAS_NROCOMPROBANTE" />
+          <ScalarProperty Name="LetraComprobante" ColumnName="COMPROBANTESVENTAS_LETRACOMPROBANTE" />
+          <ScalarProperty Name="TiposComprobantesID" ColumnName="TIPOSCOMPROBANTES_ID" />
+          <ScalarProperty Name="ID" ColumnName="COMPROBANTESVENTAS_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="COMPROBANTESVENTASDETALLE">
+      <EntityTypeMapping TypeName="DataModel.COMPROBANTESVENTASDETALLE">
+        <MappingFragment StoreEntitySet="COMPROBANTESVENTASDETALLE">
+          <ScalarProperty Name="TipoMovimientoMercaderia" ColumnName="COMPROBANTESDETALLE_TIPOMOVIMIENTOMERCADERIA" />
+          <ScalarProperty Name="Observacion" ColumnName="COMPROBANTESDETALLE_OBSERVACION" />
+          <ScalarProperty Name="FechaEntrega" ColumnName="COMPROBANTESDETALLE_FECHAENTREGA" />
+          <ScalarProperty Name="Bonificacion" ColumnName="COMPROBANTESDETALLE_BONIFICACION" />
+          <ScalarProperty Name="PrecioUnitario" ColumnName="COMPROBANTESDETALLE_PRECIOUNITARIO" />
+          <ScalarProperty Name="IngBrutos" ColumnName="COMPROBANTESVENTASDETALLE_INGBRUTOS" />
+          <ScalarProperty Name="ImpInterno" ColumnName="COMPROBANTESVENTASDETALLE_IMPINTERNO" />
+          <ScalarProperty Name="IVA" ColumnName="COMPROBANTESVENTASDETALLE_IVA" />
+          <ScalarProperty Name="Gravado" ColumnName="COMPROBANTESVENTASDETALLE_GRAVADO" />
+          <ScalarProperty Name="Exento" ColumnName="COMPROBANTESVENTASDETALLE_EXENTO" />
+          <ScalarProperty Name="CantidadCumplida" ColumnName="COMPROBANTESVENTASDETALLE_CANTIDADCUMPLIDA" />
+          <ScalarProperty Name="Cantidad" ColumnName="COMPROBANTESVENTASDETALLE_CANTIDAD" />
+          <ScalarProperty Name="ProductoLoteID" ColumnName="PRODUCTOLOTE_ID" />
+          <ScalarProperty Name="ProductoID" ColumnName="PRODUCTO_ID" />
+          <ScalarProperty Name="ComprobantesVentasID" ColumnName="COMPROBANTESVENTAS_ID" />
+          <ScalarProperty Name="ID" ColumnName="COMPROBANTESVENTASDETALLE_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CONDICIONES">
+      <EntityTypeMapping TypeName="DataModel.CONDICIONES">
+        <MappingFragment StoreEntitySet="CONDICIONES">
+          <ScalarProperty Name="Activo" ColumnName="CONDICIONES_ACTIVO" />
+          <ScalarProperty Name="Coeficiente" ColumnName="CONDICIONES_COEFICIENTE" />
+          <ScalarProperty Name="Descripcion" ColumnName="CONDICIONES_DESCRIPCION" />
+          <ScalarProperty Name="ID" ColumnName="CONDICIONES_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CONTACTOS">
+      <EntityTypeMapping TypeName="DataModel.CONTACTOS">
+        <MappingFragment StoreEntitySet="CONTACTOS">
+          <ScalarProperty Name="Email" ColumnName="CONTACTO_EMAIL" />
+          <ScalarProperty Name="Celular" ColumnName="CONTACTO_CELULAR" />
+          <ScalarProperty Name="Telefono" ColumnName="CONTACTO_TELEFONO" />
+          <ScalarProperty Name="Descripcion" ColumnName="CONTACTO_DESCRIPCION" />
+          <ScalarProperty Name="Nombre" ColumnName="CONTACTO_NOMBRE" />
+          <ScalarProperty Name="ClientesID" ColumnName="CLIENTES_ID" />
+          <ScalarProperty Name="ProveedoresID" ColumnName="PROVEEDORES_ID" />
+          <ScalarProperty Name="ID" ColumnName="CONTACTO_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DEPOSITOS">
+      <EntityTypeMapping TypeName="DataModel.DEPOSITOS">
+        <MappingFragment StoreEntitySet="DEPOSITOS">
+          <ScalarProperty Name="Descripcion" ColumnName="DEPOSITOS_DESCRIPCION" />
+          <ScalarProperty Name="ID" ColumnName="DEPOSITOS_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ESTADOSCOMPROBANTES">
+      <EntityTypeMapping TypeName="DataModel.ESTADOSCOMPROBANTES">
+        <MappingFragment StoreEntitySet="ESTADOSCOMPROBANTES">
+          <ScalarProperty Name="TiposComprobantesID" ColumnName="TiposComprobantes_ID" />
+          <ScalarProperty Name="Descripcion" ColumnName="EstadoComprobante_Descripcion" />
+          <ScalarProperty Name="ID" ColumnName="EstadoComprobante_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FABRICANTES">
+      <EntityTypeMapping TypeName="DataModel.FABRICANTES">
+        <MappingFragment StoreEntitySet="FABRICANTES">
+          <ScalarProperty Name="Activo" ColumnName="FABRICANTE_ACTIVO" />
+          <ScalarProperty Name="Descripcion" ColumnName="FABRICANTE_DESCRIPCION" />
+          <ScalarProperty Name="ID" ColumnName="FABRICANTE_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="IMPUESTOINTERNO">
+      <EntityTypeMapping TypeName="DataModel.IMPUESTOINTERNO">
+        <MappingFragment StoreEntitySet="IMPUESTOINTERNO">
+          <ScalarProperty Name="Activo" ColumnName="IMPUESTOINTERNO_ACTIVO" />
+          <ScalarProperty Name="Coeficiente" ColumnName="IMPUESTOINTERNO_COEFICIENTE" />
+          <ScalarProperty Name="Descripcion" ColumnName="IMPUESTOINTERNO_DESCRIPCION" />
+          <ScalarProperty Name="ID" ColumnName="IMPUESTOINTERNO_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="INVENTARIO">
+      <EntityTypeMapping TypeName="DataModel.INVENTARIO">
+        <MappingFragment StoreEntitySet="INVENTARIO">
+          <ScalarProperty Name="MontoComprobante" ColumnName="INVENTARIO_MONTOCOMPROBANTE" />
+          <ScalarProperty Name="Activo" ColumnName="ACTIVO" />
+          <ScalarProperty Name="UsuarioID" ColumnName="USUARIO_ID" />
+          <ScalarProperty Name="SucursalesID" ColumnName="SUCURSALES_ID" />
+          <ScalarProperty Name="TransportesID" ColumnName="TRANSPORTES_ID" />
+          <ScalarProperty Name="EstadoComprobantesID" ColumnName="ESTADOSCOMPROBANTES_ID" />
+          <ScalarProperty Name="TiposComprobantesID" ColumnName="TIPOSCOMPROBANTES_ID" />
+          <ScalarProperty Name="Observaciones" ColumnName="INVENTARIO_OBSERVACIONES" />
+          <ScalarProperty Name="Fecha" ColumnName="INVENTARIO_FECHA" />
+          <ScalarProperty Name="ClientesID" ColumnName="CLIENTES_ID" />
+          <ScalarProperty Name="ProveedoresID" ColumnName="PROVEEDORES_ID" />
+          <ScalarProperty Name="NroComprobante" ColumnName="INVENTARIO_NROCOMPROBANTE" />
+          <ScalarProperty Name="ID" ColumnName="INVENTARIO_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="INVENTARIODETALLE">
+      <EntityTypeMapping TypeName="DataModel.INVENTARIODETALLE">
+        <MappingFragment StoreEntitySet="INVENTARIODETALLE">
+          <ScalarProperty Name="PrecioUnitario" ColumnName="INVENTARIODETALLE_PRECIOUNITARIO" />
+          <ScalarProperty Name="Coeficiente" ColumnName="INVENTARIODETALLE_COEFICIENTE" />
+          <ScalarProperty Name="DepositosID" ColumnName="DEPOSITOS_ID" />
+          <ScalarProperty Name="Cantidad" ColumnName="INVENTARIODETALLE_CANTIDAD" />
+          <ScalarProperty Name="CantidadCumplida" ColumnName="INVENTARIODETALLE_CANTIDADCUMPLIDA" />
+          <ScalarProperty Name="Observaciones" ColumnName="INVENTARIODETALLE_OBSERVACIONES" />
+          <ScalarProperty Name="ProductoLoteID" ColumnName="PRODUCTOLOTE_ID" />
+          <ScalarProperty Name="ProductoID" ColumnName="PRODUCTO_ID" />
+          <ScalarProperty Name="InventarioID" ColumnName="INVENTARIO_ID" />
+          <ScalarProperty Name="ID" ColumnName="INVENTARIODETALLE_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LOCALIDADES">
+      <EntityTypeMapping TypeName="DataModel.LOCALIDADES">
+        <MappingFragment StoreEntitySet="LOCALIDADES">
+          <ScalarProperty Name="Activo" ColumnName="LOCALIDADES_ACTIVO" />
+          <ScalarProperty Name="ProvinciasID" ColumnName="PROVINCIAS_ID" />
+          <ScalarProperty Name="CP" ColumnName="LOCALIDADES_CP" />
+          <ScalarProperty Name="Descripcion" ColumnName="LOCALIDADES_DESCRIPCION" />
+          <ScalarProperty Name="ID" ColumnName="LOCALIDADES_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MARCAS">
+      <EntityTypeMapping TypeName="DataModel.MARCAS">
+        <MappingFragment StoreEntitySet="MARCAS">
+          <ScalarProperty Name="Activo" ColumnName="MARCA_ACTIVO" />
+          <ScalarProperty Name="Descripcion" ColumnName="MARCA_DESCRIPCION" />
+          <ScalarProperty Name="ID" ColumnName="MARCA_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PERCEPCIONES">
+      <EntityTypeMapping TypeName="DataModel.PERCEPCIONES">
+        <MappingFragment StoreEntitySet="PERCEPCIONES">
+          <ScalarProperty Name="Tipo" ColumnName="PERCEPCIONES_TIPO" />
+          <ScalarProperty Name="Alicuota" ColumnName="PERCEPCIONES_ALICUOTA" />
+          <ScalarProperty Name="Descripcion" ColumnName="PERCEPCIONES_DESCRIPCION" />
+          <ScalarProperty Name="ID" ColumnName="PERCEPCIONES_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PRODUCTOLOTE">
+      <EntityTypeMapping TypeName="DataModel.PRODUCTOLOTE">
+        <MappingFragment StoreEntitySet="PRODUCTOLOTE">
+          <ScalarProperty Name="Activo" ColumnName="PRODUCTOLOTE_ACTIVO" />
+          <ScalarProperty Name="CantidadExistente" ColumnName="PRODUCTOLOTE_CANTIDADEXISTENTE" />
+          <ScalarProperty Name="FechaCompra" ColumnName="PRODUCTOLOTE_FECHACOMPRA" />
+          <ScalarProperty Name="PrecioCompra" ColumnName="PRODUCTOLOTE_PRECIOCOMPRA" />
+          <ScalarProperty Name="Cantidad" ColumnName="PRODUCTOLOTE_CANTIDAD" />
+          <ScalarProperty Name="FechaVencimiento" ColumnName="PRODUCTOLOTE_FECHAVENCIMIENTO" />
+          <ScalarProperty Name="Descripcion" ColumnName="PRODUCTOLOTE_DESCRIPCION" />
+          <ScalarProperty Name="ProveedoresID" ColumnName="PROVEEDORES_ID" />
+          <ScalarProperty Name="ProductoID" ColumnName="PRODUCTO_ID" />
+          <ScalarProperty Name="ID" ColumnName="PRODUCTOLOTE_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PRODUCTOS">
+      <EntityTypeMapping TypeName="DataModel.PRODUCTOS">
+        <MappingFragment StoreEntitySet="PRODUCTOS">
+          <ScalarProperty Name="Porcentaje" ColumnName="PRODUCTO_PORCENTAJE" />
+          <ScalarProperty Name="PrecioVenta" ColumnName="PRODUCTO_PRECIOVENTA" />
+          <ScalarProperty Name="PrecioCompra" ColumnName="PRODUCTO_PRECIOCOMPRA" />
+          <ScalarProperty Name="Activo" ColumnName="PRODUCTO_ACTIO" />
+          <ScalarProperty Name="UsaLote" ColumnName="PRODUCTO_USALOTE" />
+          <ScalarProperty Name="UsuarioID" ColumnName="USUARIO_ID" />
+          <ScalarProperty Name="TipoProductoID" ColumnName="TIPOPRODUCTO_ID" />
+          <ScalarProperty Name="Observaciones" ColumnName="PRODUCTO_OBSERVACIONES" />
+          <ScalarProperty Name="Certificado" ColumnName="PRODUCTO_CERTIFICADO" />
+          <ScalarProperty Name="MontoImpuestoInternoCompra" ColumnName="MONTOIMPUESTOINTERNOCOMPRA" />
+          <ScalarProperty Name="MontoImpuestoInternoVenta" ColumnName="MONTOIMPUESTOINTERNOVENTA" />
+          <ScalarProperty Name="ImpuestoInternoIDCompra" ColumnName="IMPUESTOINTERNO_IDCOMPRA" />
+          <ScalarProperty Name="ImpuestoInternoIDVenta" ColumnName="IMPUESTOINTERNO_IDVENTA" />
+          <ScalarProperty Name="BaseImponibleIDCompra" ColumnName="BASEIMPONIBLE_IDCOMPRA" />
+          <ScalarProperty Name="BaseImponibleIDVenta" ColumnName="BASEIMPONIBLE_IDVENTA" />
+          <ScalarProperty Name="FechaAlta" ColumnName="PRODUCTO_FECHAALTA" />
+          <ScalarProperty Name="PuntoPedido" ColumnName="PRODUCTO_PUNTOPEDIDO" />
+          <ScalarProperty Name="StockMax" ColumnName="PRODUCTO_STOCKMAX" />
+          <ScalarProperty Name="StockMin" ColumnName="PRODUCTO_STOCKMIN" />
+          <ScalarProperty Name="Stock" ColumnName="PRODUCTO_STOCK" />
+          <ScalarProperty Name="FabricanteID" ColumnName="FABRICANTE_ID" />
+          <ScalarProperty Name="RubroID" ColumnName="RUBRO_ID" />
+          <ScalarProperty Name="MarcaID" ColumnName="MARCA_ID" />
+          <ScalarProperty Name="UnidadIDVenta" ColumnName="UNIDAD_IDVENTA" />
+          <ScalarProperty Name="UnidadIDCompra" ColumnName="UNIDAD_IDCOMPRA" />
+          <ScalarProperty Name="UnidadID" ColumnName="UNIDAD_ID" />
+          <ScalarProperty Name="CodBarra" ColumnName="PRODUCTO_CODBARRA" />
+          <ScalarProperty Name="DetalleAdicional" ColumnName="PRODUCTO_DETALLEADIC" />
+          <ScalarProperty Name="Codigo" ColumnName="PRODUCTO_CODIGO" />
+          <ScalarProperty Name="Descripcion" ColumnName="PRODUCTO_DESCRIPCION" />
+          <ScalarProperty Name="ID" ColumnName="PRODUCTO_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PROVINCIAS">
+      <EntityTypeMapping TypeName="DataModel.PROVINCIAS">
+        <MappingFragment StoreEntitySet="PROVINCIAS">
+          <ScalarProperty Name="Activo" ColumnName="PROVINCIAS_ACTIVO" />
+          <ScalarProperty Name="Descripcion" ColumnName="PROVINCIAS_DESCRIPCION" />
+          <ScalarProperty Name="ID" ColumnName="PROVINCIAS_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="REGIVA">
+      <EntityTypeMapping TypeName="DataModel.REGIVA">
+        <MappingFragment StoreEntitySet="REGIVA">
+          <ScalarProperty Name="Activo" ColumnName="REGIVA_ACTIVO" />
+          <ScalarProperty Name="Descripcion" ColumnName="REGIVA_DESCRIPCION" />
+          <ScalarProperty Name="ID" ColumnName="REGIVA_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ROLES">
+      <EntityTypeMapping TypeName="DataModel.ROLES">
+        <MappingFragment StoreEntitySet="ROLES">
+          <ScalarProperty Name="ROL_ACTIVO" ColumnName="ROL_ACTIVO" />
+          <ScalarProperty Name="Descripcion" ColumnName="ROL_DESCRIPCION" />
+          <ScalarProperty Name="ID" ColumnName="ROL_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RUBROS">
+      <EntityTypeMapping TypeName="DataModel.RUBROS">
+        <MappingFragment StoreEntitySet="RUBROS">
+          <ScalarProperty Name="Activo" ColumnName="RUBRO_ACTIVO" />
+          <ScalarProperty Name="Descripcion" ColumnName="RUBRO_DESCRIPCION" />
+          <ScalarProperty Name="ID" ColumnName="RUBRO_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SUCURSALES">
+      <EntityTypeMapping TypeName="DataModel.SUCURSALES">
+        <MappingFragment StoreEntitySet="SUCURSALES">
+          <ScalarProperty Name="Descripcion" ColumnName="Sucursales_Descripcion" />
+          <ScalarProperty Name="ID" ColumnName="Sucursales_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TIPOPRODUCTO">
+      <EntityTypeMapping TypeName="DataModel.TIPOPRODUCTO">
+        <MappingFragment StoreEntitySet="TIPOPRODUCTO">
+          <ScalarProperty Name="Activo" ColumnName="TIPOPRODUCTO_ACTIVO" />
+          <ScalarProperty Name="Descripcion" ColumnName="TIPOPRODUCTO_DESCRIPCION" />
+          <ScalarProperty Name="ID" ColumnName="TIPOPRODUCTO_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TIPOSCOMPROBANTES">
+      <EntityTypeMapping TypeName="DataModel.TIPOSCOMPROBANTES">
+        <MappingFragment StoreEntitySet="TIPOSCOMPROBANTES">
+          <ScalarProperty Name="Tipo" ColumnName="TiposComprobantes_Tipo" />
+          <ScalarProperty Name="FLUJO" ColumnName="TiposComprobantes_FLUJO" />
+          <ScalarProperty Name="UltimoNroUsado" ColumnName="TiposComprobantes_UltimiNroUsado" />
+          <ScalarProperty Name="NroSucursal" ColumnName="TiposComprobantes_NroSucursal" />
+          <ScalarProperty Name="LetraComprobante" ColumnName="TiposComprobantes_LetraComprobante" />
+          <ScalarProperty Name="Descripcion" ColumnName="TiposComprobantes_Descripcion" />
+          <ScalarProperty Name="ID" ColumnName="TiposComprobantes_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TIPOSDOCUMENTOS">
+      <EntityTypeMapping TypeName="DataModel.TIPOSDOCUMENTOS">
+        <MappingFragment StoreEntitySet="TIPOSDOCUMENTOS">
+          <ScalarProperty Name="Descripcion" ColumnName="TIPODOC_DESCRIPCION" />
+          <ScalarProperty Name="ID" ColumnName="TIPODOC_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TRANSPORTES">
+      <EntityTypeMapping TypeName="DataModel.TRANSPORTES">
+        <MappingFragment StoreEntitySet="TRANSPORTES">
+          <ScalarProperty Name="Activo" ColumnName="TRANSPORTES_ACTIVO" />
+          <ScalarProperty Name="Telefono" ColumnName="TRANSPORTES_TELEFONO" />
+          <ScalarProperty Name="Domicilio" ColumnName="TRANSPORTES_DOMICILIO" />
+          <ScalarProperty Name="Descripcion" ColumnName="TRANSPORTES_DESCRIPCION" />
+          <ScalarProperty Name="ID" ColumnName="TRANSPORTES_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UNIDADES">
+      <EntityTypeMapping TypeName="DataModel.UNIDADES">
+        <MappingFragment StoreEntitySet="UNIDADES">
+          <ScalarProperty Name="Activo" ColumnName="UNIDAD_ACTIVO" />
+          <ScalarProperty Name="Coeficiente" ColumnName="UNIDAD_COEFICIENTE" />
+          <ScalarProperty Name="Descripcion" ColumnName="UNIDAD_DESCRIPCION" />
+          <ScalarProperty Name="ID" ColumnName="UNIDAD_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="USUARIOS">
+      <EntityTypeMapping TypeName="DataModel.USUARIOS">
+        <MappingFragment StoreEntitySet="USUARIOS">
+          <ScalarProperty Name="Activo" ColumnName="USUARIO_ACTIVO" />
+          <ScalarProperty Name="RolID" ColumnName="ROL_ID" />
+          <ScalarProperty Name="Email" ColumnName="USUARIO_EMAIL" />
+          <ScalarProperty Name="NroDoc" ColumnName="USUARIO_NRODOC" />
+          <ScalarProperty Name="TipoDocID" ColumnName="TIPODOC_ID" />
+          <ScalarProperty Name="NomApe" ColumnName="USUARIO_NOMAPE" />
+          <ScalarProperty Name="Contrasenia" ColumnName="USUARIO_CONTRASENIA" />
+          <ScalarProperty Name="Descripcion" ColumnName="USUARIO_DESCRIPCION" />
+          <ScalarProperty Name="ID" ColumnName="USUARIO_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VENDEDORES">
+      <EntityTypeMapping TypeName="DataModel.VENDEDORES">
+        <MappingFragment StoreEntitySet="VENDEDORES">
+          <ScalarProperty Name="Activo" ColumnName="VENDEDORES_ACTIVO" />
+          <ScalarProperty Name="Email" ColumnName="VENDEDORES_EMAIL" />
+          <ScalarProperty Name="Descripcion" ColumnName="VENDEDORES_DESCRIPCION" />
+          <ScalarProperty Name="ID" ColumnName="VENDEDORES_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ZONAS">
+      <EntityTypeMapping TypeName="DataModel.ZONAS">
+        <MappingFragment StoreEntitySet="ZONAS">
+          <ScalarProperty Name="Activo" ColumnName="ZONAS_ACTIVO" />
+          <ScalarProperty Name="Descripcion" ColumnName="ZONAS_DESCRIPCION" />
+          <ScalarProperty Name="ID" ColumnName="ZONAS_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PRODUCTOSCOMPONENTES">
+      <EntityTypeMapping TypeName="DataModel.PRODUCTOSCOMPONENTES">
+        <MappingFragment StoreEntitySet="PRODUCTOSCOMPONENTES">
+          <ScalarProperty Name="Cantidad" ColumnName="Cantidad" />
+          <ScalarProperty Name="IDProductoCompone" ColumnName="IDProductoCompone" />
+          <ScalarProperty Name="IDProductoCompuesto" ColumnName="IDProductoCompuesto" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OBLEASLIBRES">
+      <EntityTypeMapping TypeName="DataModel.OBLEASLIBRES">
+        <MappingFragment StoreEntitySet="OBLEASLIBRES">
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="LoteID" ColumnName="LoteID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DOCUMENTOSCLIENTES">
+      <EntityTypeMapping TypeName="DataModel.DOCUMENTOSCLIENTES">
+        <MappingFragment StoreEntitySet="DOCUMENTOSCLIENTES">
+          <ScalarProperty Name="Descripcion" ColumnName="TIPOSDOCUMENTOS_DESCRIPCION" />
+          <ScalarProperty Name="ID" ColumnName="TIPOSDOCUMENTOS_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PROVEEDORES">
+      <EntityTypeMapping TypeName="DataModel.PROVEEDORES">
+        <MappingFragment StoreEntitySet="PROVEEDORES">
+          <ScalarProperty Name="Activo" ColumnName="PROVEEDORES_ACTIVO" />
+          <ScalarProperty Name="TransportesID" ColumnName="TRANSPORTES_ID" />
+          <ScalarProperty Name="Observaciones" ColumnName="PROVEEDORES_OBSERVACIONES" />
+          <ScalarProperty Name="RegIvaID" ColumnName="REGIVA_ID" />
+          <ScalarProperty Name="PaginaWeb" ColumnName="PROVEEDORES_PAGINAWEB" />
+          <ScalarProperty Name="FormaPago" ColumnName="PROVEEDORES_FORMAPAGO" />
+          <ScalarProperty Name="RubroComercial" ColumnName="PROVEEDORES_RUBROCOMERCIAL" />
+          <ScalarProperty Name="IngresosBrutos" ColumnName="PROVEEDORES_INGRESOSBRUTOS" />
+          <ScalarProperty Name="Cbu" ColumnName="PROVEEDORES_CBU" />
+          <ScalarProperty Name="Cuit" ColumnName="PROVEEDORES_CUIT" />
+          <ScalarProperty Name="Contacto" ColumnName="PROVEEDORES_CONTACTO" />
+          <ScalarProperty Name="Email" ColumnName="PROVEEDORES_EMAIL" />
+          <ScalarProperty Name="Fax" ColumnName="PROVEEDORES_FAX" />
+          <ScalarProperty Name="Telefono2" ColumnName="PROVEEDORES_TELEFONO2" />
+          <ScalarProperty Name="Telefono1" ColumnName="PROVEEDORES_TELEFONO1" />
+          <ScalarProperty Name="ProvinciasID" ColumnName="PROVINCIAS_ID" />
+          <ScalarProperty Name="CodigoPostal" ColumnName="PROVEEDORES_CODIGOPOSTAL" />
+          <ScalarProperty Name="LocalidadesID" ColumnName="LOCALIDADES_ID" />
+          <ScalarProperty Name="Domicilio" ColumnName="PROVEEDORESDOMICILIO" />
+          <ScalarProperty Name="Descripcion" ColumnName="PROVEEDORES_RAZONSOCIAL" />
+          <ScalarProperty Name="Codigo" ColumnName="PROVEEDORES_CODIGO" />
+          <ScalarProperty Name="ID" ColumnName="PROVEEDORES_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LOTES">
+      <EntityTypeMapping TypeName="DataModel.LOTES">
+        <MappingFragment StoreEntitySet="LOTES">
+          <ScalarProperty Name="LoteActivo" ColumnName="LoteActivo" />
+          <ScalarProperty Name="CantObleasLote" ColumnName="CantObleasLote" />
+          <ScalarProperty Name="AnioLote" ColumnName="AnioLote" />
+          <ScalarProperty Name="NroUltimaObleaUsada" ColumnName="NroUltimaObleaUsada" />
+          <ScalarProperty Name="NroObleaHasta" ColumnName="NroObleaHasta" />
+          <ScalarProperty Name="NroObleaDesde" ColumnName="NroObleaDesde" />
+          <ScalarProperty Name="FechaAlta" ColumnName="FechaAlta" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

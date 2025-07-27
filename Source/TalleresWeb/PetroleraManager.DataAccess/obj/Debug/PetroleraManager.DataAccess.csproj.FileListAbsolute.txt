@@ -1,0 +1,14 @@
+C:\Source\petrolera\Source\TalleresWeb\PetroleraManager.DataAccess\obj\Debug\PetroleraManager.DataAccess.csprojAssemblyReference.cache
+C:\Source\petrolera\Source\TalleresWeb\PetroleraManager.DataAccess\obj\Debug\PetroleraManager.DataAccess.csproj.CoreCompileInputs.cache
+C:\Source\petrolera\Source\TalleresWeb\PetroleraManager.DataAccess\bin\Debug\PetroleraManager.DataAccess.dll
+C:\Source\petrolera\Source\TalleresWeb\PetroleraManager.DataAccess\bin\Debug\PetroleraManager.DataAccess.pdb
+C:\Source\petrolera\Source\TalleresWeb\PetroleraManager.DataAccess\bin\Debug\PetroleraManager.Entities.dll
+C:\Source\petrolera\Source\TalleresWeb\PetroleraManager.DataAccess\bin\Debug\PL.Fwk.DataAccess.dll
+C:\Source\petrolera\Source\TalleresWeb\PetroleraManager.DataAccess\bin\Debug\PL.Fwk.Entities.dll
+C:\Source\petrolera\Source\TalleresWeb\PetroleraManager.DataAccess\bin\Debug\PetroleraManager.Entities.pdb
+C:\Source\petrolera\Source\TalleresWeb\PetroleraManager.DataAccess\bin\Debug\PetroleraManager.Entities.dll.config
+C:\Source\petrolera\Source\TalleresWeb\PetroleraManager.DataAccess\bin\Debug\PL.Fwk.DataAccess.pdb
+C:\Source\petrolera\Source\TalleresWeb\PetroleraManager.DataAccess\bin\Debug\PL.Fwk.Entities.pdb
+C:\Source\petrolera\Source\TalleresWeb\PetroleraManager.DataAccess\obj\Debug\PetroleraManager.DataAccess.csproj.CopyComplete
+C:\Source\petrolera\Source\TalleresWeb\PetroleraManager.DataAccess\obj\Debug\PetroleraManager.DataAccess.dll
+C:\Source\petrolera\Source\TalleresWeb\PetroleraManager.DataAccess\obj\Debug\PetroleraManager.DataAccess.pdb

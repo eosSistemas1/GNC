@@ -1,0 +1,85 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UI", "UI", "{C6220C81-9077-4B98-B0B8-4EF6234F153A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Cross", "Cross", "{671EE094-2BD1-41CE-8E4C-E10E2363B390}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Logic", "Logic", "{215D7E45-EF0C-438F-8D21-1EBDF2CC1253}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TalleresWeb.Web.UI", "TalleresWeb.Web.UI\TalleresWeb.Web.UI.csproj", "{7D7CE73D-6A92-43B2-9810-8504714D1776}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TalleresWeb.Web.Logic", "TalleresWeb.Web.Logic\TalleresWeb.Web.Logic.csproj", "{C0DFC164-8756-486E-81B5-141E75DE6CC8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TalleresWeb.Web.Cross.Configuracion", "TalleresWeb.Web.Cross.Configuracion\TalleresWeb.Web.Cross.Configuracion.csproj", "{6B0B928B-B9B7-4E03-AACD-482F8745EBF3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PL.Fwk.Entities", "..\PL.Fwk\PL.Fwk.Entities\PL.Fwk.Entities.csproj", "{DF7307AE-2C26-427B-B58D-C15D06010EE7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TalleresWeb.Entities", "..\TalleresWeb\TalleresWeb.Entities\TalleresWeb.Entities.csproj", "{4B4D1687-3D23-464E-BAFB-764C678892AB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7D7CE73D-6A92-43B2-9810-8504714D1776}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D7CE73D-6A92-43B2-9810-8504714D1776}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D7CE73D-6A92-43B2-9810-8504714D1776}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D7CE73D-6A92-43B2-9810-8504714D1776}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C0DFC164-8756-486E-81B5-141E75DE6CC8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0DFC164-8756-486E-81B5-141E75DE6CC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0DFC164-8756-486E-81B5-141E75DE6CC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0DFC164-8756-486E-81B5-141E75DE6CC8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6B0B928B-B9B7-4E03-AACD-482F8745EBF3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B0B928B-B9B7-4E03-AACD-482F8745EBF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B0B928B-B9B7-4E03-AACD-482F8745EBF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B0B928B-B9B7-4E03-AACD-482F8745EBF3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DF7307AE-2C26-427B-B58D-C15D06010EE7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF7307AE-2C26-427B-B58D-C15D06010EE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF7307AE-2C26-427B-B58D-C15D06010EE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF7307AE-2C26-427B-B58D-C15D06010EE7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4B4D1687-3D23-464E-BAFB-764C678892AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4B4D1687-3D23-464E-BAFB-764C678892AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4B4D1687-3D23-464E-BAFB-764C678892AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4B4D1687-3D23-464E-BAFB-764C678892AB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{7D7CE73D-6A92-43B2-9810-8504714D1776} = {C6220C81-9077-4B98-B0B8-4EF6234F153A}
+		{C0DFC164-8756-486E-81B5-141E75DE6CC8} = {215D7E45-EF0C-438F-8D21-1EBDF2CC1253}
+		{6B0B928B-B9B7-4E03-AACD-482F8745EBF3} = {671EE094-2BD1-41CE-8E4C-E10E2363B390}
+		{DF7307AE-2C26-427B-B58D-C15D06010EE7} = {671EE094-2BD1-41CE-8E4C-E10E2363B390}
+		{4B4D1687-3D23-464E-BAFB-764C678892AB} = {671EE094-2BD1-41CE-8E4C-E10E2363B390}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 6
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://federicomuller.visualstudio.com/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = TalleresWeb.Web.UI\\TalleresWeb.Web.UI.csproj
+		SccProjectTopLevelParentUniqueName1 = TalleresWeb.Web.sln
+		SccProjectName1 = TalleresWeb.Web.UI
+		SccLocalPath1 = TalleresWeb.Web.UI
+		SccProjectUniqueName2 = TalleresWeb.Web.Logic\\TalleresWeb.Web.Logic.csproj
+		SccProjectTopLevelParentUniqueName2 = TalleresWeb.Web.sln
+		SccProjectName2 = TalleresWeb.Web.Logic
+		SccLocalPath2 = TalleresWeb.Web.Logic
+		SccProjectUniqueName3 = TalleresWeb.Web.Cross.Configuracion\\TalleresWeb.Web.Cross.Configuracion.csproj
+		SccProjectTopLevelParentUniqueName3 = TalleresWeb.Web.sln
+		SccProjectName3 = TalleresWeb.Web.Cross.Configuracion
+		SccLocalPath3 = TalleresWeb.Web.Cross.Configuracion
+		SccProjectUniqueName4 = ..\\PL.Fwk\\PL.Fwk.Entities\\PL.Fwk.Entities.csproj
+		SccProjectTopLevelParentUniqueName4 = TalleresWeb.Web.sln
+		SccProjectName4 = ../PL.Fwk/PL.Fwk.Entities
+		SccLocalPath4 = ..\\PL.Fwk\\PL.Fwk.Entities
+		SccProjectUniqueName5 = ..\\TalleresWeb\\TalleresWeb.Entities\\TalleresWeb.Entities.csproj
+		SccProjectTopLevelParentUniqueName5 = TalleresWeb.Web.sln
+		SccProjectName5 = ../TalleresWeb/TalleresWeb.Entities
+		SccLocalPath5 = ..\\TalleresWeb\\TalleresWeb.Entities
+	EndGlobalSection
+EndGlobal

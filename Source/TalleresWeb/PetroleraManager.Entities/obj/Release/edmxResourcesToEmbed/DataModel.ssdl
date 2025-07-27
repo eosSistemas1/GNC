@@ -1,0 +1,1759 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DataModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2005" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="DataModelStoreContainer">
+    <EntitySet Name="BASEIMPONIBLE" EntityType="DataModel.Store.BASEIMPONIBLE" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="CLIENTES" EntityType="DataModel.Store.CLIENTES" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="COMPROBANTESCOMPRAS" EntityType="DataModel.Store.COMPROBANTESCOMPRAS" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="COMPROBANTESCOMPRASDETALLE" EntityType="DataModel.Store.COMPROBANTESCOMPRASDETALLE" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="COMPROBANTESCUMPLIDO" EntityType="DataModel.Store.COMPROBANTESCUMPLIDO" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="COMPROBANTESVENTAS" EntityType="DataModel.Store.COMPROBANTESVENTAS" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="COMPROBANTESVENTASDETALLE" EntityType="DataModel.Store.COMPROBANTESVENTASDETALLE" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="CONDICIONES" EntityType="DataModel.Store.CONDICIONES" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="CONTACTOS" EntityType="DataModel.Store.CONTACTOS" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="DEPOSITOS" EntityType="DataModel.Store.DEPOSITOS" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="DOCUMENTOSCLIENTES" EntityType="DataModel.Store.DOCUMENTOSCLIENTES" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ESTADOSCOMPROBANTES" EntityType="DataModel.Store.ESTADOSCOMPROBANTES" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="FABRICANTES" EntityType="DataModel.Store.FABRICANTES" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="IMPUESTOINTERNO" EntityType="DataModel.Store.IMPUESTOINTERNO" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="INVENTARIO" EntityType="DataModel.Store.INVENTARIO" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="INVENTARIODETALLE" EntityType="DataModel.Store.INVENTARIODETALLE" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="LOCALIDADES" EntityType="DataModel.Store.LOCALIDADES" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="LOTES" EntityType="DataModel.Store.LOTES" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="MARCAS" EntityType="DataModel.Store.MARCAS" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="OBLEASLIBRES" EntityType="DataModel.Store.OBLEASLIBRES" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PERCEPCIONES" EntityType="DataModel.Store.PERCEPCIONES" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PRODUCTOLOTE" EntityType="DataModel.Store.PRODUCTOLOTE" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PRODUCTOS" EntityType="DataModel.Store.PRODUCTOS" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PRODUCTOSCOMPONENTES" EntityType="DataModel.Store.PRODUCTOSCOMPONENTES" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PROVEEDORES" EntityType="DataModel.Store.PROVEEDORES" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PROVINCIAS" EntityType="DataModel.Store.PROVINCIAS" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="REGIVA" EntityType="DataModel.Store.REGIVA" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ROLES" EntityType="DataModel.Store.ROLES" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="RUBROS" EntityType="DataModel.Store.RUBROS" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="SUCURSALES" EntityType="DataModel.Store.SUCURSALES" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TIPOPRODUCTO" EntityType="DataModel.Store.TIPOPRODUCTO" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TIPOSCOMPROBANTES" EntityType="DataModel.Store.TIPOSCOMPROBANTES" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TIPOSDOCUMENTOS" EntityType="DataModel.Store.TIPOSDOCUMENTOS" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TRANSPORTES" EntityType="DataModel.Store.TRANSPORTES" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="UNIDADES" EntityType="DataModel.Store.UNIDADES" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="USUARIOS" EntityType="DataModel.Store.USUARIOS" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="VENDEDORES" EntityType="DataModel.Store.VENDEDORES" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ZONAS" EntityType="DataModel.Store.ZONAS" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_CLIENTES_CONDICIONES" Association="DataModel.Store.FK_CLIENTES_CONDICIONES">
+      <End Role="CONDICIONES" EntitySet="CONDICIONES" />
+      <End Role="CLIENTES" EntitySet="CLIENTES" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CLIENTES_LOCALIDADES" Association="DataModel.Store.FK_CLIENTES_LOCALIDADES">
+      <End Role="LOCALIDADES" EntitySet="LOCALIDADES" />
+      <End Role="CLIENTES" EntitySet="CLIENTES" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CLIENTES_REGIVA" Association="DataModel.Store.FK_CLIENTES_REGIVA">
+      <End Role="REGIVA" EntitySet="REGIVA" />
+      <End Role="CLIENTES" EntitySet="CLIENTES" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CLIENTES_TRANSPORTES" Association="DataModel.Store.FK_CLIENTES_TRANSPORTES">
+      <End Role="TRANSPORTES" EntitySet="TRANSPORTES" />
+      <End Role="CLIENTES" EntitySet="CLIENTES" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CLIENTES_ZONAS" Association="DataModel.Store.FK_CLIENTES_ZONAS">
+      <End Role="ZONAS" EntitySet="ZONAS" />
+      <End Role="CLIENTES" EntitySet="CLIENTES" />
+    </AssociationSet>
+    <AssociationSet Name="FK_COMPROBANTES_CONDICIONES" Association="DataModel.Store.FK_COMPROBANTES_CONDICIONES">
+      <End Role="CONDICIONES" EntitySet="CONDICIONES" />
+      <End Role="COMPROBANTESCOMPRAS" EntitySet="COMPROBANTESCOMPRAS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_COMPROBANTES_PROVEEDORES" Association="DataModel.Store.FK_COMPROBANTES_PROVEEDORES">
+      <End Role="PROVEEDORES" EntitySet="PROVEEDORES" />
+      <End Role="COMPROBANTESCOMPRAS" EntitySet="COMPROBANTESCOMPRAS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_COMPROBANTES_SUCURSALES" Association="DataModel.Store.FK_COMPROBANTES_SUCURSALES">
+      <End Role="SUCURSALES" EntitySet="SUCURSALES" />
+      <End Role="COMPROBANTESCOMPRAS" EntitySet="COMPROBANTESCOMPRAS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_COMPROBANTES_TIPOSCOMPROBANTES" Association="DataModel.Store.FK_COMPROBANTES_TIPOSCOMPROBANTES">
+      <End Role="TIPOSCOMPROBANTES" EntitySet="TIPOSCOMPROBANTES" />
+      <End Role="COMPROBANTESCOMPRAS" EntitySet="COMPROBANTESCOMPRAS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_COMPROBANTES_TRANSPORTES" Association="DataModel.Store.FK_COMPROBANTES_TRANSPORTES">
+      <End Role="TRANSPORTES" EntitySet="TRANSPORTES" />
+      <End Role="COMPROBANTESCOMPRAS" EntitySet="COMPROBANTESCOMPRAS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_COMPROBANTESCOMPRAS_ESTADOSCOMPROBANTES" Association="DataModel.Store.FK_COMPROBANTESCOMPRAS_ESTADOSCOMPROBANTES">
+      <End Role="ESTADOSCOMPROBANTES" EntitySet="ESTADOSCOMPROBANTES" />
+      <End Role="COMPROBANTESCOMPRAS" EntitySet="COMPROBANTESCOMPRAS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_COMPROBANTESCOMPRAS_PERCEPCIONES" Association="DataModel.Store.FK_COMPROBANTESCOMPRAS_PERCEPCIONES">
+      <End Role="PERCEPCIONES" EntitySet="PERCEPCIONES" />
+      <End Role="COMPROBANTESCOMPRAS" EntitySet="COMPROBANTESCOMPRAS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_COMPROBANTESCOMPRAS_PERCEPCIONES1" Association="DataModel.Store.FK_COMPROBANTESCOMPRAS_PERCEPCIONES1">
+      <End Role="PERCEPCIONES" EntitySet="PERCEPCIONES" />
+      <End Role="COMPROBANTESCOMPRAS" EntitySet="COMPROBANTESCOMPRAS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_COMPROBANTESCOMPRAS_PERCEPCIONES2" Association="DataModel.Store.FK_COMPROBANTESCOMPRAS_PERCEPCIONES2">
+      <End Role="PERCEPCIONES" EntitySet="PERCEPCIONES" />
+      <End Role="COMPROBANTESCOMPRAS" EntitySet="COMPROBANTESCOMPRAS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_COMPROBANTESCOMPRAS_PERCEPCIONES3" Association="DataModel.Store.FK_COMPROBANTESCOMPRAS_PERCEPCIONES3">
+      <End Role="PERCEPCIONES" EntitySet="PERCEPCIONES" />
+      <End Role="COMPROBANTESCOMPRAS" EntitySet="COMPROBANTESCOMPRAS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_COMPROBANTESCOMPRAS_PERCEPCIONES4" Association="DataModel.Store.FK_COMPROBANTESCOMPRAS_PERCEPCIONES4">
+      <End Role="PERCEPCIONES" EntitySet="PERCEPCIONES" />
+      <End Role="COMPROBANTESCOMPRAS" EntitySet="COMPROBANTESCOMPRAS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_COMPROBANTESCOMPRAS_USUARIOS" Association="DataModel.Store.FK_COMPROBANTESCOMPRAS_USUARIOS">
+      <End Role="USUARIOS" EntitySet="USUARIOS" />
+      <End Role="COMPROBANTESCOMPRAS" EntitySet="COMPROBANTESCOMPRAS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_COMPROBANTESCOMPRASDETALLE_PRODUCTOS" Association="DataModel.Store.FK_COMPROBANTESCOMPRASDETALLE_PRODUCTOS">
+      <End Role="PRODUCTOS" EntitySet="PRODUCTOS" />
+      <End Role="COMPROBANTESCOMPRASDETALLE" EntitySet="COMPROBANTESCOMPRASDETALLE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_COMPROBANTESCUMPLIDO_COMPROBANTESCOMPRASDETALLE" Association="DataModel.Store.FK_COMPROBANTESCUMPLIDO_COMPROBANTESCOMPRASDETALLE">
+      <End Role="COMPROBANTESCOMPRASDETALLE" EntitySet="COMPROBANTESCOMPRASDETALLE" />
+      <End Role="COMPROBANTESCUMPLIDO" EntitySet="COMPROBANTESCUMPLIDO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_COMPROBANTESCUMPLIDO_COMPROBANTESCOMPRASDETALLE1" Association="DataModel.Store.FK_COMPROBANTESCUMPLIDO_COMPROBANTESCOMPRASDETALLE1">
+      <End Role="COMPROBANTESCOMPRASDETALLE" EntitySet="COMPROBANTESCOMPRASDETALLE" />
+      <End Role="COMPROBANTESCUMPLIDO" EntitySet="COMPROBANTESCUMPLIDO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_COMPROBANTESCUMPLIDO_COMPROBANTESVENTASDETALLE" Association="DataModel.Store.FK_COMPROBANTESCUMPLIDO_COMPROBANTESVENTASDETALLE">
+      <End Role="COMPROBANTESVENTASDETALLE" EntitySet="COMPROBANTESVENTASDETALLE" />
+      <End Role="COMPROBANTESCUMPLIDO" EntitySet="COMPROBANTESCUMPLIDO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_COMPROBANTESCUMPLIDO_COMPROBANTESVENTASDETALLE1" Association="DataModel.Store.FK_COMPROBANTESCUMPLIDO_COMPROBANTESVENTASDETALLE1">
+      <End Role="COMPROBANTESVENTASDETALLE" EntitySet="COMPROBANTESVENTASDETALLE" />
+      <End Role="COMPROBANTESCUMPLIDO" EntitySet="COMPROBANTESCUMPLIDO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_COMPROBANTESDETALLE_COMPROBANTES" Association="DataModel.Store.FK_COMPROBANTESDETALLE_COMPROBANTES">
+      <End Role="COMPROBANTESCOMPRAS" EntitySet="COMPROBANTESCOMPRAS" />
+      <End Role="COMPROBANTESCOMPRASDETALLE" EntitySet="COMPROBANTESCOMPRASDETALLE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_COMPROBANTESDETALLE_PRODUCTOLOTE" Association="DataModel.Store.FK_COMPROBANTESDETALLE_PRODUCTOLOTE">
+      <End Role="PRODUCTOLOTE" EntitySet="PRODUCTOLOTE" />
+      <End Role="COMPROBANTESCOMPRASDETALLE" EntitySet="COMPROBANTESCOMPRASDETALLE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_COMPROBANTESVENTAS_CLIENTES" Association="DataModel.Store.FK_COMPROBANTESVENTAS_CLIENTES">
+      <End Role="CLIENTES" EntitySet="CLIENTES" />
+      <End Role="COMPROBANTESVENTAS" EntitySet="COMPROBANTESVENTAS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_COMPROBANTESVENTAS_CONDICIONES" Association="DataModel.Store.FK_COMPROBANTESVENTAS_CONDICIONES">
+      <End Role="CONDICIONES" EntitySet="CONDICIONES" />
+      <End Role="COMPROBANTESVENTAS" EntitySet="COMPROBANTESVENTAS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_COMPROBANTESVENTAS_ESTADOSCOMPROBANTES" Association="DataModel.Store.FK_COMPROBANTESVENTAS_ESTADOSCOMPROBANTES">
+      <End Role="ESTADOSCOMPROBANTES" EntitySet="ESTADOSCOMPROBANTES" />
+      <End Role="COMPROBANTESVENTAS" EntitySet="COMPROBANTESVENTAS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_COMPROBANTESVENTAS_PERCEPCIONES" Association="DataModel.Store.FK_COMPROBANTESVENTAS_PERCEPCIONES">
+      <End Role="PERCEPCIONES" EntitySet="PERCEPCIONES" />
+      <End Role="COMPROBANTESVENTAS" EntitySet="COMPROBANTESVENTAS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_COMPROBANTESVENTAS_PERCEPCIONES1" Association="DataModel.Store.FK_COMPROBANTESVENTAS_PERCEPCIONES1">
+      <End Role="PERCEPCIONES" EntitySet="PERCEPCIONES" />
+      <End Role="COMPROBANTESVENTAS" EntitySet="COMPROBANTESVENTAS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_COMPROBANTESVENTAS_PERCEPCIONES2" Association="DataModel.Store.FK_COMPROBANTESVENTAS_PERCEPCIONES2">
+      <End Role="PERCEPCIONES" EntitySet="PERCEPCIONES" />
+      <End Role="COMPROBANTESVENTAS" EntitySet="COMPROBANTESVENTAS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_COMPROBANTESVENTAS_PERCEPCIONES3" Association="DataModel.Store.FK_COMPROBANTESVENTAS_PERCEPCIONES3">
+      <End Role="PERCEPCIONES" EntitySet="PERCEPCIONES" />
+      <End Role="COMPROBANTESVENTAS" EntitySet="COMPROBANTESVENTAS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_COMPROBANTESVENTAS_PERCEPCIONES4" Association="DataModel.Store.FK_COMPROBANTESVENTAS_PERCEPCIONES4">
+      <End Role="PERCEPCIONES" EntitySet="PERCEPCIONES" />
+      <End Role="COMPROBANTESVENTAS" EntitySet="COMPROBANTESVENTAS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_COMPROBANTESVENTAS_SUCURSALES" Association="DataModel.Store.FK_COMPROBANTESVENTAS_SUCURSALES">
+      <End Role="SUCURSALES" EntitySet="SUCURSALES" />
+      <End Role="COMPROBANTESVENTAS" EntitySet="COMPROBANTESVENTAS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_COMPROBANTESVENTAS_TIPOSCOMPROBANTES" Association="DataModel.Store.FK_COMPROBANTESVENTAS_TIPOSCOMPROBANTES">
+      <End Role="TIPOSCOMPROBANTES" EntitySet="TIPOSCOMPROBANTES" />
+      <End Role="COMPROBANTESVENTAS" EntitySet="COMPROBANTESVENTAS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_COMPROBANTESVENTAS_TRANSPORTES" Association="DataModel.Store.FK_COMPROBANTESVENTAS_TRANSPORTES">
+      <End Role="TRANSPORTES" EntitySet="TRANSPORTES" />
+      <End Role="COMPROBANTESVENTAS" EntitySet="COMPROBANTESVENTAS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_COMPROBANTESVENTAS_USUARIOS" Association="DataModel.Store.FK_COMPROBANTESVENTAS_USUARIOS">
+      <End Role="USUARIOS" EntitySet="USUARIOS" />
+      <End Role="COMPROBANTESVENTAS" EntitySet="COMPROBANTESVENTAS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_COMPROBANTESVENTAS_VENDEDORES" Association="DataModel.Store.FK_COMPROBANTESVENTAS_VENDEDORES">
+      <End Role="VENDEDORES" EntitySet="VENDEDORES" />
+      <End Role="COMPROBANTESVENTAS" EntitySet="COMPROBANTESVENTAS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_COMPROBANTESVENTASDETALLE_COMPROBANTESVENTAS" Association="DataModel.Store.FK_COMPROBANTESVENTASDETALLE_COMPROBANTESVENTAS">
+      <End Role="COMPROBANTESVENTAS" EntitySet="COMPROBANTESVENTAS" />
+      <End Role="COMPROBANTESVENTASDETALLE" EntitySet="COMPROBANTESVENTASDETALLE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_COMPROBANTESVENTASDETALLE_PRODUCTOLOTE" Association="DataModel.Store.FK_COMPROBANTESVENTASDETALLE_PRODUCTOLOTE">
+      <End Role="PRODUCTOLOTE" EntitySet="PRODUCTOLOTE" />
+      <End Role="COMPROBANTESVENTASDETALLE" EntitySet="COMPROBANTESVENTASDETALLE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_COMPROBANTESVENTASDETALLE_PRODUCTOS" Association="DataModel.Store.FK_COMPROBANTESVENTASDETALLE_PRODUCTOS">
+      <End Role="PRODUCTOS" EntitySet="PRODUCTOS" />
+      <End Role="COMPROBANTESVENTASDETALLE" EntitySet="COMPROBANTESVENTASDETALLE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CONTACTOS_PROVEEDORES" Association="DataModel.Store.FK_CONTACTOS_PROVEEDORES">
+      <End Role="PROVEEDORES" EntitySet="PROVEEDORES" />
+      <End Role="CONTACTOS" EntitySet="CONTACTOS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_INVENTARIO_CLIENTES" Association="DataModel.Store.FK_INVENTARIO_CLIENTES">
+      <End Role="CLIENTES" EntitySet="CLIENTES" />
+      <End Role="INVENTARIO" EntitySet="INVENTARIO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_INVENTARIO_PROVEEDORES" Association="DataModel.Store.FK_INVENTARIO_PROVEEDORES">
+      <End Role="PROVEEDORES" EntitySet="PROVEEDORES" />
+      <End Role="INVENTARIO" EntitySet="INVENTARIO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_INVENTARIO_SUCURSALES" Association="DataModel.Store.FK_INVENTARIO_SUCURSALES">
+      <End Role="SUCURSALES" EntitySet="SUCURSALES" />
+      <End Role="INVENTARIO" EntitySet="INVENTARIO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_INVENTARIO_TRANSPORTES" Association="DataModel.Store.FK_INVENTARIO_TRANSPORTES">
+      <End Role="TRANSPORTES" EntitySet="TRANSPORTES" />
+      <End Role="INVENTARIO" EntitySet="INVENTARIO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_INVENTARIO_USUARIOS" Association="DataModel.Store.FK_INVENTARIO_USUARIOS">
+      <End Role="USUARIOS" EntitySet="USUARIOS" />
+      <End Role="INVENTARIO" EntitySet="INVENTARIO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_INVENTARIODETALLE_DEPOSITOS" Association="DataModel.Store.FK_INVENTARIODETALLE_DEPOSITOS">
+      <End Role="DEPOSITOS" EntitySet="DEPOSITOS" />
+      <End Role="INVENTARIODETALLE" EntitySet="INVENTARIODETALLE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_INVENTARIODETALLE_PRODUCTOLOTE" Association="DataModel.Store.FK_INVENTARIODETALLE_PRODUCTOLOTE">
+      <End Role="PRODUCTOLOTE" EntitySet="PRODUCTOLOTE" />
+      <End Role="INVENTARIODETALLE" EntitySet="INVENTARIODETALLE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_INVENTARIODETALLE_PRODUCTOS" Association="DataModel.Store.FK_INVENTARIODETALLE_PRODUCTOS">
+      <End Role="PRODUCTOS" EntitySet="PRODUCTOS" />
+      <End Role="INVENTARIODETALLE" EntitySet="INVENTARIODETALLE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LOCALIDADES_PROVINCIAS" Association="DataModel.Store.FK_LOCALIDADES_PROVINCIAS">
+      <End Role="PROVINCIAS" EntitySet="PROVINCIAS" />
+      <End Role="LOCALIDADES" EntitySet="LOCALIDADES" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OBLEASlIBRES_LOTES" Association="DataModel.Store.FK_OBLEASlIBRES_LOTES">
+      <End Role="LOTES" EntitySet="LOTES" />
+      <End Role="OBLEASLIBRES" EntitySet="OBLEASLIBRES" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PRODUCTOLOTE_PRODUCTOS" Association="DataModel.Store.FK_PRODUCTOLOTE_PRODUCTOS">
+      <End Role="PRODUCTOS" EntitySet="PRODUCTOS" />
+      <End Role="PRODUCTOLOTE" EntitySet="PRODUCTOLOTE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PRODUCTOLOTE_PROVEEDORES" Association="DataModel.Store.FK_PRODUCTOLOTE_PROVEEDORES">
+      <End Role="PROVEEDORES" EntitySet="PROVEEDORES" />
+      <End Role="PRODUCTOLOTE" EntitySet="PRODUCTOLOTE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PRODUCTOS_BASEIMPONIBLE" Association="DataModel.Store.FK_PRODUCTOS_BASEIMPONIBLE">
+      <End Role="BASEIMPONIBLE" EntitySet="BASEIMPONIBLE" />
+      <End Role="PRODUCTOS" EntitySet="PRODUCTOS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PRODUCTOS_BASEIMPONIBLE1" Association="DataModel.Store.FK_PRODUCTOS_BASEIMPONIBLE1">
+      <End Role="BASEIMPONIBLE" EntitySet="BASEIMPONIBLE" />
+      <End Role="PRODUCTOS" EntitySet="PRODUCTOS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PRODUCTOS_IMPUESTOINTERNO_COMPRA" Association="DataModel.Store.FK_PRODUCTOS_IMPUESTOINTERNO_COMPRA">
+      <End Role="IMPUESTOINTERNO" EntitySet="IMPUESTOINTERNO" />
+      <End Role="PRODUCTOS" EntitySet="PRODUCTOS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PRODUCTOS_IMPUESTOINTERNO_VENTA" Association="DataModel.Store.FK_PRODUCTOS_IMPUESTOINTERNO_VENTA">
+      <End Role="IMPUESTOINTERNO" EntitySet="IMPUESTOINTERNO" />
+      <End Role="PRODUCTOS" EntitySet="PRODUCTOS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PRODUCTOS_MARCAS" Association="DataModel.Store.FK_PRODUCTOS_MARCAS">
+      <End Role="MARCAS" EntitySet="MARCAS" />
+      <End Role="PRODUCTOS" EntitySet="PRODUCTOS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PRODUCTOS_PROVEEDORES1" Association="DataModel.Store.FK_PRODUCTOS_PROVEEDORES1">
+      <End Role="PROVEEDORES" EntitySet="PROVEEDORES" />
+      <End Role="PRODUCTOS" EntitySet="PRODUCTOS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PRODUCTOS_RUBROS" Association="DataModel.Store.FK_PRODUCTOS_RUBROS">
+      <End Role="RUBROS" EntitySet="RUBROS" />
+      <End Role="PRODUCTOS" EntitySet="PRODUCTOS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PRODUCTOS_TIPOPRODUCTO" Association="DataModel.Store.FK_PRODUCTOS_TIPOPRODUCTO">
+      <End Role="TIPOPRODUCTO" EntitySet="TIPOPRODUCTO" />
+      <End Role="PRODUCTOS" EntitySet="PRODUCTOS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PRODUCTOS_UNIDADES" Association="DataModel.Store.FK_PRODUCTOS_UNIDADES">
+      <End Role="UNIDADES" EntitySet="UNIDADES" />
+      <End Role="PRODUCTOS" EntitySet="PRODUCTOS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PRODUCTOS_UNIDADES1" Association="DataModel.Store.FK_PRODUCTOS_UNIDADES1">
+      <End Role="UNIDADES" EntitySet="UNIDADES" />
+      <End Role="PRODUCTOS" EntitySet="PRODUCTOS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PRODUCTOS_UNIDADES2" Association="DataModel.Store.FK_PRODUCTOS_UNIDADES2">
+      <End Role="UNIDADES" EntitySet="UNIDADES" />
+      <End Role="PRODUCTOS" EntitySet="PRODUCTOS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PRODUCTOS_USUARIOS" Association="DataModel.Store.FK_PRODUCTOS_USUARIOS">
+      <End Role="USUARIOS" EntitySet="USUARIOS" />
+      <End Role="PRODUCTOS" EntitySet="PRODUCTOS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PRODUCTOSCOMPONENTES_PRODUCTOS" Association="DataModel.Store.FK_PRODUCTOSCOMPONENTES_PRODUCTOS">
+      <End Role="PRODUCTOS" EntitySet="PRODUCTOS" />
+      <End Role="PRODUCTOSCOMPONENTES" EntitySet="PRODUCTOSCOMPONENTES" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PRODUCTOSCOMPONENTES_PRODUCTOS1" Association="DataModel.Store.FK_PRODUCTOSCOMPONENTES_PRODUCTOS1">
+      <End Role="PRODUCTOS" EntitySet="PRODUCTOS" />
+      <End Role="PRODUCTOSCOMPONENTES" EntitySet="PRODUCTOSCOMPONENTES" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PROVEEDORES_LOCALIDADES" Association="DataModel.Store.FK_PROVEEDORES_LOCALIDADES">
+      <End Role="LOCALIDADES" EntitySet="LOCALIDADES" />
+      <End Role="PROVEEDORES" EntitySet="PROVEEDORES" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PROVEEDORES_REGIVA" Association="DataModel.Store.FK_PROVEEDORES_REGIVA">
+      <End Role="REGIVA" EntitySet="REGIVA" />
+      <End Role="PROVEEDORES" EntitySet="PROVEEDORES" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PROVEEDORES_TRANSPORTES" Association="DataModel.Store.FK_PROVEEDORES_TRANSPORTES">
+      <End Role="TRANSPORTES" EntitySet="TRANSPORTES" />
+      <End Role="PROVEEDORES" EntitySet="PROVEEDORES" />
+    </AssociationSet>
+    <AssociationSet Name="FK_REMITOCOMPRA_ESTADOSCOMPROBANTES" Association="DataModel.Store.FK_REMITOCOMPRA_ESTADOSCOMPROBANTES">
+      <End Role="ESTADOSCOMPROBANTES" EntitySet="ESTADOSCOMPROBANTES" />
+      <End Role="INVENTARIO" EntitySet="INVENTARIO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_REMITOCOMPRA_TIPOSCOMPROBANTES" Association="DataModel.Store.FK_REMITOCOMPRA_TIPOSCOMPROBANTES">
+      <End Role="TIPOSCOMPROBANTES" EntitySet="TIPOSCOMPROBANTES" />
+      <End Role="INVENTARIO" EntitySet="INVENTARIO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_REMITOCOMPRADETALLE_PRODUCTOLOTE" Association="DataModel.Store.FK_REMITOCOMPRADETALLE_PRODUCTOLOTE">
+      <End Role="PRODUCTOLOTE" EntitySet="PRODUCTOLOTE" />
+      <End Role="INVENTARIODETALLE" EntitySet="INVENTARIODETALLE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_REMITOCOMPRADETALLE_REMITOCOMPRA" Association="DataModel.Store.FK_REMITOCOMPRADETALLE_REMITOCOMPRA">
+      <End Role="INVENTARIO" EntitySet="INVENTARIO" />
+      <End Role="INVENTARIODETALLE" EntitySet="INVENTARIODETALLE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_USUARIOS_ROLES" Association="DataModel.Store.FK_USUARIOS_ROLES">
+      <End Role="ROLES" EntitySet="ROLES" />
+      <End Role="USUARIOS" EntitySet="USUARIOS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_USUARIOS_TIPOSDOCUMENTOS" Association="DataModel.Store.FK_USUARIOS_TIPOSDOCUMENTOS">
+      <End Role="TIPOSDOCUMENTOS" EntitySet="TIPOSDOCUMENTOS" />
+      <End Role="USUARIOS" EntitySet="USUARIOS" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="BASEIMPONIBLE">
+    <Key>
+      <PropertyRef Name="BASEIMPONIBLE_ID" />
+    </Key>
+    <Property Name="BASEIMPONIBLE_ID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="BASEIMPONIBLE_DESCRIPCION" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="BASEIMPONIBLE_COEFICIENTE" Type="decimal" Nullable="false" Scale="2" />
+    <Property Name="BASEIMPONIBLE_ACTIVO" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CLIENTES">
+    <Key>
+      <PropertyRef Name="CLIENTES_ID" />
+    </Key>
+    <Property Name="CLIENTES_ID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="CLIENTES_CODIGO" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="CLIENTES_DESCRIPCION" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="CLIENTES_DOMICILIO" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="LOCALIDADES_ID" Type="uniqueidentifier" />
+    <Property Name="CLIENTES_TELEFONO1" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="CLIENTES_TELEFONO2" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="CLIENTES_FAX" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="CLIENTES_EMAIL" Type="varchar" MaxLength="50" />
+    <Property Name="CLIENTES_PERSONACONTACTO" Type="varchar" MaxLength="50" />
+    <Property Name="CLIENTES_CUIT" Type="varchar" MaxLength="13" />
+    <Property Name="CLIENTES_CODPOSTAL" Type="varchar" MaxLength="10" />
+    <Property Name="CONDICIONES_ID" Type="uniqueidentifier" />
+    <Property Name="ZONAS_ID" Type="uniqueidentifier" />
+    <Property Name="TRANSPORTES_ID" Type="uniqueidentifier" />
+    <Property Name="CLIENTES_ACTIVO" Type="bit" Nullable="false" />
+    <Property Name="REGIVA_ID" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="COMPROBANTESCOMPRAS">
+    <Key>
+      <PropertyRef Name="Comprobantes_ID" />
+    </Key>
+    <Property Name="Comprobantes_ID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="TIPOSCOMPROBANTES_ID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="COMPROBANTESCOMPRAS_LETRACOMPROBANTE" Type="varchar" MaxLength="1" />
+    <Property Name="COMPROBANTESCOMPRAS_NROCOMPROBANTE" Type="varchar" MaxLength="50" />
+    <Property Name="CONDICIONES_ID" Type="uniqueidentifier" />
+    <Property Name="SUCURSALES_ID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="TRANSPORTES_ID" Type="uniqueidentifier" />
+    <Property Name="PROVEEDORES_ID" Type="uniqueidentifier" />
+    <Property Name="COMPROBANTESCOMPRAS_BONIFICACION" Type="decimal" Scale="4" />
+    <Property Name="COMPROBANTESCOMPRAS_FECHACOMPROBANTE" Type="datetime" Nullable="false" />
+    <Property Name="COMPROBANTESCOMPRAS_FECHACONTABLE" Type="datetime" />
+    <Property Name="ESTADOSCOMPROBANTES_ID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="COMPROBANTESCOMPRAS_MONTOCOMPROBANTE" Type="decimal" Nullable="false" Scale="4" />
+    <Property Name="COMPROBANTESCOMPRAS_MONTODEBECOMPROBANTE" Type="decimal" Scale="4" />
+    <Property Name="COMPROBANTESCOMPRAS_INCLUYEENIVACOMPRA" Type="bit" />
+    <Property Name="COMPROBANTESCOMPRAS_OBSERVACION" Type="varchar" MaxLength="255" />
+    <Property Name="PERCEPCIONESID1" Type="uniqueidentifier" />
+    <Property Name="PERCEPCIONESMONTO1" Type="decimal" Scale="4" />
+    <Property Name="PERCEPCIONESID2" Type="uniqueidentifier" />
+    <Property Name="PERCEPCIONESMONTO2" Type="decimal" Scale="4" />
+    <Property Name="PERCEPCIONESID3" Type="uniqueidentifier" />
+    <Property Name="PERCEPCIONESMONTO3" Type="decimal" Scale="4" />
+    <Property Name="PERCEPCIONESID4" Type="uniqueidentifier" />
+    <Property Name="PERCEPCIONESMONTO4" Type="decimal" Scale="4" />
+    <Property Name="PERCEPCIONESID5" Type="uniqueidentifier" />
+    <Property Name="PERCEPCIONESMONTO5" Type="decimal" Scale="4" />
+    <Property Name="USUARIO_ID" Type="uniqueidentifier" />
+    <Property Name="COMPROBANTESCOMPRAS_FECHAREALALTA" Type="datetime" Nullable="false" />
+    <Property Name="ACTIVO" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="COMPROBANTESCOMPRASDETALLE">
+    <Key>
+      <PropertyRef Name="COMPROBANTESDETALLE_ID" />
+    </Key>
+    <Property Name="COMPROBANTESDETALLE_ID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="COMPROBANTES_ID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="PRODUCTO_ID" Type="uniqueidentifier" />
+    <Property Name="PRODUCTOLOTE_ID" Type="uniqueidentifier" />
+    <Property Name="COMPROBANTESDETALLE_CANTIDAD" Type="decimal" Nullable="false" Scale="4" />
+    <Property Name="COMPROBANTESDETALLE_CANTIDADiNGRESADA" Type="decimal" Scale="4" />
+    <Property Name="COMPROBANTESVENTASDETALLE_EXENTO" Type="decimal" Nullable="false" Scale="4" />
+    <Property Name="COMPROBANTESVENTASDETALLE_GRAVADO" Type="decimal" Nullable="false" Scale="4" />
+    <Property Name="COMPROBANTESVENTASDETALLE_IVA" Type="decimal" Nullable="false" Scale="4" />
+    <Property Name="COMPROBANTESVENTASDETALLE_IMPINTERNO" Type="decimal" Nullable="false" Scale="4" />
+    <Property Name="COMPROBANTESVENTASDETALLE_INGBRUTOS" Type="decimal" Nullable="false" Scale="4" />
+    <Property Name="COMPROBANTESDETALLE_PRECIOUNITARIO" Type="decimal" Nullable="false" Scale="4" />
+    <Property Name="COMPROBANTESDETALLE_BONIFICACION" Type="decimal" Nullable="false" Scale="4" />
+    <Property Name="COMPROBANTESDETALLE_FECHAENTREGA" Type="datetime" />
+    <Property Name="COMPROBANTESDETALLE_OBSERVACION" Type="varchar" MaxLength="250" />
+    <Property Name="COMPROBANTESDETALLE_TIPOMOVIMIENTOMERCADERIA" Type="varchar" MaxLength="1" />
+  </EntityType>
+  <EntityType Name="COMPROBANTESCUMPLIDO">
+    <Key>
+      <PropertyRef Name="COMPROBANTESCOMPRASCUMPLIDO_ID" />
+    </Key>
+    <Property Name="COMPROBANTESCOMPRASCUMPLIDO_ID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="DETALLEORIGEN_ID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="DETALLEDESTINO_ID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="COMPROBANTESCOMPRASCUMPLIDO_CANTIDAD" Type="decimal" Nullable="false" Scale="2" />
+    <Property Name="COMPROBANTESCOMPRASCUMPLIDO_TIPOORIGEN" Type="varchar" MaxLength="1" />
+    <Property Name="COMPROBANTESCOMPRASCUMPLIDO_TIPODESTINO" Type="varchar" MaxLength="1" />
+    <Property Name="COMPROBANTESCOMPRASCUMPLIDO_FECHA" Type="datetime" />
+  </EntityType>
+  <EntityType Name="COMPROBANTESVENTAS">
+    <Key>
+      <PropertyRef Name="COMPROBANTESVENTAS_ID" />
+    </Key>
+    <Property Name="COMPROBANTESVENTAS_ID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="TIPOSCOMPROBANTES_ID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="COMPROBANTESVENTAS_LETRACOMPROBANTE" Type="varchar" MaxLength="1" />
+    <Property Name="COMPROBANTESVENTAS_NROCOMPROBANTE" Type="varchar" MaxLength="50" />
+    <Property Name="CONDICIONES_ID" Type="uniqueidentifier" />
+    <Property Name="SUCURSALES_ID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="CLIENTES_ID" Type="uniqueidentifier" />
+    <Property Name="TRANSPORTES_ID" Type="uniqueidentifier" />
+    <Property Name="VENDEDORES_ID" Type="uniqueidentifier" />
+    <Property Name="COMPROBANTESVENTAS_COMISIONVENDEDOR" Type="decimal" Scale="4" />
+    <Property Name="COMPROBANTESVENTAS_BONIFICACION" Type="decimal" Scale="4" />
+    <Property Name="COMPROBANTESVENTAS_FECHACOMPROBANTE" Type="datetime" Nullable="false" />
+    <Property Name="COMPROBANTESVENTAS_FECHACONTABLE" Type="datetime" />
+    <Property Name="ESTADOSCOMPROBANTES_ID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="COMPROBANTESVENTAS_MONTOCOMPROBANTE" Type="decimal" Nullable="false" Scale="4" />
+    <Property Name="COMPROBANTESVENTAS_MONTODEBECOMPROBANTE" Type="decimal" Scale="4" />
+    <Property Name="COMPROBANTESVENTAS_INCLUYEENIVACOMPRAS" Type="bit" />
+    <Property Name="COMPROBANTESVENTAS_OBSERVACION" Type="varchar" MaxLength="255" />
+    <Property Name="PERCEPCIONESID1" Type="uniqueidentifier" />
+    <Property Name="PERCEPCIONESMONTO1" Type="decimal" Scale="4" />
+    <Property Name="PERCEPCIONESID2" Type="uniqueidentifier" />
+    <Property Name="PERCEPCIONESMONTO2" Type="decimal" Scale="4" />
+    <Property Name="PERCEPCIONESID3" Type="uniqueidentifier" />
+    <Property Name="PERCEPCIONESMONTO3" Type="decimal" Scale="4" />
+    <Property Name="PERCEPCIONESID4" Type="uniqueidentifier" />
+    <Property Name="PERCEPCIONESMONTO4" Type="decimal" Scale="4" />
+    <Property Name="PERCEPCIONESID5" Type="uniqueidentifier" />
+    <Property Name="PERCEPCIONESMONTO5" Type="decimal" Scale="4" />
+    <Property Name="USUARIO_ID" Type="uniqueidentifier" />
+    <Property Name="COMPROBANTESVENTAS_FECHAREALALTA" Type="datetime" Nullable="false" />
+    <Property Name="ACTIVO" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="COMPROBANTESVENTASDETALLE">
+    <Key>
+      <PropertyRef Name="COMPROBANTESVENTASDETALLE_ID" />
+    </Key>
+    <Property Name="COMPROBANTESVENTASDETALLE_ID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="COMPROBANTESVENTAS_ID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="PRODUCTO_ID" Type="uniqueidentifier" />
+    <Property Name="PRODUCTOLOTE_ID" Type="uniqueidentifier" />
+    <Property Name="COMPROBANTESVENTASDETALLE_CANTIDAD" Type="decimal" Nullable="false" Scale="4" />
+    <Property Name="COMPROBANTESVENTASDETALLE_CANTIDADCUMPLIDA" Type="decimal" Nullable="false" Scale="4" />
+    <Property Name="COMPROBANTESVENTASDETALLE_EXENTO" Type="decimal" Scale="4" />
+    <Property Name="COMPROBANTESVENTASDETALLE_GRAVADO" Type="decimal" Scale="4" />
+    <Property Name="COMPROBANTESVENTASDETALLE_IVA" Type="decimal" Scale="4" />
+    <Property Name="COMPROBANTESVENTASDETALLE_IMPINTERNO" Type="decimal" Scale="4" />
+    <Property Name="COMPROBANTESVENTASDETALLE_INGBRUTOS" Type="decimal" Scale="4" />
+    <Property Name="COMPROBANTESDETALLE_PRECIOUNITARIO" Type="decimal" Nullable="false" Scale="4" />
+    <Property Name="COMPROBANTESDETALLE_BONIFICACION" Type="decimal" Nullable="false" Scale="4" />
+    <Property Name="COMPROBANTESDETALLE_FECHAENTREGA" Type="datetime" />
+    <Property Name="COMPROBANTESDETALLE_OBSERVACION" Type="varchar" MaxLength="250" />
+    <Property Name="COMPROBANTESDETALLE_TIPOMOVIMIENTOMERCADERIA" Type="varchar" MaxLength="1" />
+  </EntityType>
+  <EntityType Name="CONDICIONES">
+    <Key>
+      <PropertyRef Name="CONDICIONES_ID" />
+    </Key>
+    <Property Name="CONDICIONES_ID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="CONDICIONES_DESCRIPCION" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="CONDICIONES_COEFICIENTE" Type="decimal" Nullable="false" />
+    <Property Name="CONDICIONES_ACTIVO" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CONTACTOS">
+    <Key>
+      <PropertyRef Name="CONTACTO_ID" />
+    </Key>
+    <Property Name="CONTACTO_ID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="PROVEEDORES_ID" Type="uniqueidentifier" />
+    <Property Name="CLIENTES_ID" Type="uniqueidentifier" />
+    <Property Name="CONTACTO_NOMBRE" Type="varchar" MaxLength="100" />
+    <Property Name="CONTACTO_DESCRIPCION" Type="varchar" MaxLength="100" />
+    <Property Name="CONTACTO_TELEFONO" Type="varchar" MaxLength="50" />
+    <Property Name="CONTACTO_CELULAR" Type="varchar" MaxLength="50" />
+    <Property Name="CONTACTO_EMAIL" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="DEPOSITOS">
+    <Key>
+      <PropertyRef Name="DEPOSITOS_ID" />
+    </Key>
+    <Property Name="DEPOSITOS_ID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="DEPOSITOS_DESCRIPCION" Type="varchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="DOCUMENTOSCLIENTES">
+    <Key>
+      <PropertyRef Name="TIPOSDOCUMENTOS_ID" />
+    </Key>
+    <Property Name="TIPOSDOCUMENTOS_ID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="TIPOSDOCUMENTOS_DESCRIPCION" Type="varchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="ESTADOSCOMPROBANTES">
+    <Key>
+      <PropertyRef Name="EstadoComprobante_ID" />
+    </Key>
+    <Property Name="EstadoComprobante_ID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="EstadoComprobante_Descripcion" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="TiposComprobantes_ID" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="FABRICANTES">
+    <Key>
+      <PropertyRef Name="FABRICANTE_ID" />
+    </Key>
+    <Property Name="FABRICANTE_ID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="FABRICANTE_DESCRIPCION" Type="varchar" MaxLength="50" />
+    <Property Name="FABRICANTE_ACTIVO" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="IMPUESTOINTERNO">
+    <Key>
+      <PropertyRef Name="IMPUESTOINTERNO_ID" />
+    </Key>
+    <Property Name="IMPUESTOINTERNO_ID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="IMPUESTOINTERNO_DESCRIPCION" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="IMPUESTOINTERNO_COEFICIENTE" Type="decimal" Nullable="false" Scale="2" />
+    <Property Name="IMPUESTOINTERNO_ACTIVO" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="INVENTARIO">
+    <Key>
+      <PropertyRef Name="INVENTARIO_ID" />
+    </Key>
+    <Property Name="INVENTARIO_ID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="INVENTARIO_NROCOMPROBANTE" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="PROVEEDORES_ID" Type="uniqueidentifier" />
+    <Property Name="CLIENTES_ID" Type="uniqueidentifier" />
+    <Property Name="INVENTARIO_FECHA" Type="datetime" Nullable="false" />
+    <Property Name="INVENTARIO_MONTOCOMPROBANTE" Type="decimal" Scale="2" />
+    <Property Name="INVENTARIO_OBSERVACIONES" Type="text" />
+    <Property Name="TIPOSCOMPROBANTES_ID" Type="uniqueidentifier" />
+    <Property Name="ESTADOSCOMPROBANTES_ID" Type="uniqueidentifier" />
+    <Property Name="TRANSPORTES_ID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="SUCURSALES_ID" Type="uniqueidentifier" />
+    <Property Name="USUARIO_ID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="ACTIVO" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="INVENTARIODETALLE">
+    <Key>
+      <PropertyRef Name="INVENTARIODETALLE_ID" />
+    </Key>
+    <Property Name="INVENTARIODETALLE_ID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="INVENTARIO_ID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="PRODUCTO_ID" Type="uniqueidentifier" />
+    <Property Name="PRODUCTOLOTE_ID" Type="uniqueidentifier" />
+    <Property Name="INVENTARIODETALLE_OBSERVACIONES" Type="text" />
+    <Property Name="INVENTARIODETALLE_CANTIDADCUMPLIDA" Type="decimal" Scale="2" />
+    <Property Name="INVENTARIODETALLE_CANTIDAD" Type="decimal" Nullable="false" />
+    <Property Name="DEPOSITOS_ID" Type="uniqueidentifier" />
+    <Property Name="INVENTARIODETALLE_COEFICIENTE" Type="int" />
+    <Property Name="INVENTARIODETALLE_PRECIOUNITARIO" Type="decimal" Scale="2" />
+  </EntityType>
+  <EntityType Name="LOCALIDADES">
+    <Key>
+      <PropertyRef Name="LOCALIDADES_ID" />
+    </Key>
+    <Property Name="LOCALIDADES_ID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="LOCALIDADES_DESCRIPCION" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="LOCALIDADES_CP" Type="varchar" MaxLength="50" />
+    <Property Name="PROVINCIAS_ID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="LOCALIDADES_ACTIVO" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="LOTES">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="FechaAlta" Type="datetime" />
+    <Property Name="NroObleaDesde" Type="decimal" Nullable="false" />
+    <Property Name="NroObleaHasta" Type="decimal" Nullable="false" />
+    <Property Name="NroUltimaObleaUsada" Type="decimal" />
+    <Property Name="AnioLote" Type="decimal" Nullable="false" />
+    <Property Name="CantObleasLote" Type="decimal" Nullable="false" />
+    <Property Name="LoteActivo" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MARCAS">
+    <Key>
+      <PropertyRef Name="MARCA_ID" />
+    </Key>
+    <Property Name="MARCA_ID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="MARCA_DESCRIPCION" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="MARCA_ACTIVO" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="OBLEASLIBRES">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="LoteID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Descripcion" Type="varchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="PERCEPCIONES">
+    <Key>
+      <PropertyRef Name="PERCEPCIONES_ID" />
+    </Key>
+    <Property Name="PERCEPCIONES_ID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="PERCEPCIONES_DESCRIPCION" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="PERCEPCIONES_ALICUOTA" Type="decimal" Nullable="false" Scale="2" />
+    <Property Name="PERCEPCIONES_TIPO" Type="varchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="PRODUCTOLOTE">
+    <Key>
+      <PropertyRef Name="PRODUCTOLOTE_ID" />
+    </Key>
+    <Property Name="PRODUCTOLOTE_ID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="PRODUCTO_ID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="PROVEEDORES_ID" Type="uniqueidentifier" />
+    <Property Name="PRODUCTOLOTE_DESCRIPCION" Type="varchar" MaxLength="50" />
+    <Property Name="PRODUCTOLOTE_FECHAVENCIMIENTO" Type="datetime" />
+    <Property Name="PRODUCTOLOTE_CANTIDAD" Type="decimal" Scale="2" />
+    <Property Name="PRODUCTOLOTE_PRECIOCOMPRA" Type="decimal" Scale="4" />
+    <Property Name="PRODUCTOLOTE_FECHACOMPRA" Type="datetime" />
+    <Property Name="PRODUCTOLOTE_CANTIDADEXISTENTE" Type="decimal" Scale="2" />
+    <Property Name="PRODUCTOLOTE_ACTIVO" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PRODUCTOS">
+    <Key>
+      <PropertyRef Name="PRODUCTO_ID" />
+    </Key>
+    <Property Name="PRODUCTO_ID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="PRODUCTO_DESCRIPCION" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="PRODUCTO_CODIGO" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="PRODUCTO_DETALLEADIC" Type="varchar" MaxLength="100" />
+    <Property Name="PRODUCTO_CODBARRA" Type="varchar" MaxLength="100" />
+    <Property Name="UNIDAD_ID" Type="uniqueidentifier" />
+    <Property Name="UNIDAD_IDCOMPRA" Type="uniqueidentifier" />
+    <Property Name="UNIDAD_IDVENTA" Type="uniqueidentifier" />
+    <Property Name="MARCA_ID" Type="uniqueidentifier" />
+    <Property Name="RUBRO_ID" Type="uniqueidentifier" />
+    <Property Name="FABRICANTE_ID" Type="uniqueidentifier" />
+    <Property Name="PRODUCTO_STOCK" Type="decimal" />
+    <Property Name="PRODUCTO_STOCKMIN" Type="decimal" />
+    <Property Name="PRODUCTO_STOCKMAX" Type="decimal" />
+    <Property Name="PRODUCTO_PRECIOCOMPRA" Type="decimal" />
+    <Property Name="PRODUCTO_PRECIOVENTA" Type="decimal" />
+    <Property Name="PRODUCTO_PORCENTAJE" Type="decimal" />
+    <Property Name="PRODUCTO_PUNTOPEDIDO" Type="decimal" />
+    <Property Name="PRODUCTO_FECHAALTA" Type="datetime" Nullable="false" />
+    <Property Name="BASEIMPONIBLE_IDVENTA" Type="uniqueidentifier" />
+    <Property Name="BASEIMPONIBLE_IDCOMPRA" Type="uniqueidentifier" />
+    <Property Name="IMPUESTOINTERNO_IDVENTA" Type="uniqueidentifier" />
+    <Property Name="IMPUESTOINTERNO_IDCOMPRA" Type="uniqueidentifier" />
+    <Property Name="MONTOIMPUESTOINTERNOVENTA" Type="decimal" Scale="2" />
+    <Property Name="MONTOIMPUESTOINTERNOCOMPRA" Type="decimal" Scale="2" />
+    <Property Name="PRODUCTO_CERTIFICADO" Type="varchar" MaxLength="50" />
+    <Property Name="PRODUCTO_OBSERVACIONES" Type="text" />
+    <Property Name="TIPOPRODUCTO_ID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="USUARIO_ID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="PRODUCTO_USALOTE" Type="bit" Nullable="false" />
+    <Property Name="PRODUCTO_ACTIO" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PRODUCTOSCOMPONENTES">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="IDProductoCompuesto" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="IDProductoCompone" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Cantidad" Type="decimal" Nullable="false" Scale="2" />
+  </EntityType>
+  <EntityType Name="PROVEEDORES">
+    <Key>
+      <PropertyRef Name="PROVEEDORES_ID" />
+    </Key>
+    <Property Name="PROVEEDORES_ID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="PROVEEDORES_CODIGO" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="PROVEEDORES_RAZONSOCIAL" Type="varchar" MaxLength="50" />
+    <Property Name="PROVEEDORESDOMICILIO" Type="varchar" MaxLength="50" />
+    <Property Name="LOCALIDADES_ID" Type="uniqueidentifier" />
+    <Property Name="PROVEEDORES_CODIGOPOSTAL" Type="varchar" MaxLength="50" />
+    <Property Name="PROVINCIAS_ID" Type="uniqueidentifier" />
+    <Property Name="PROVEEDORES_TELEFONO1" Type="varchar" MaxLength="50" />
+    <Property Name="PROVEEDORES_TELEFONO2" Type="varchar" MaxLength="50" />
+    <Property Name="PROVEEDORES_FAX" Type="varchar" MaxLength="50" />
+    <Property Name="PROVEEDORES_EMAIL" Type="varchar" MaxLength="50" />
+    <Property Name="PROVEEDORES_CONTACTO" Type="varchar" MaxLength="50" />
+    <Property Name="PROVEEDORES_CUIT" Type="varchar" MaxLength="50" />
+    <Property Name="PROVEEDORES_CBU" Type="varchar" MaxLength="50" />
+    <Property Name="PROVEEDORES_INGRESOSBRUTOS" Type="varchar" MaxLength="50" />
+    <Property Name="PROVEEDORES_RUBROCOMERCIAL" Type="varchar" MaxLength="50" />
+    <Property Name="PROVEEDORES_FORMAPAGO" Type="varchar" MaxLength="50" />
+    <Property Name="PROVEEDORES_PAGINAWEB" Type="varchar" MaxLength="50" />
+    <Property Name="REGIVA_ID" Type="uniqueidentifier" />
+    <Property Name="PROVEEDORES_OBSERVACIONES" Type="text" />
+    <Property Name="TRANSPORTES_ID" Type="uniqueidentifier" />
+    <Property Name="PROVEEDORES_ACTIVO" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PROVINCIAS">
+    <Key>
+      <PropertyRef Name="PROVINCIAS_ID" />
+    </Key>
+    <Property Name="PROVINCIAS_ID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="PROVINCIAS_DESCRIPCION" Type="varchar" MaxLength="100" />
+    <Property Name="PROVINCIAS_ACTIVO" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="REGIVA">
+    <Key>
+      <PropertyRef Name="REGIVA_ID" />
+    </Key>
+    <Property Name="REGIVA_ID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="REGIVA_DESCRIPCION" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="REGIVA_ACTIVO" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ROLES">
+    <Key>
+      <PropertyRef Name="ROL_ID" />
+    </Key>
+    <Property Name="ROL_ID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="ROL_ACTIVO" Type="nchar" MaxLength="10" />
+    <Property Name="ROL_DESCRIPCION" Type="varchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="RUBROS">
+    <Key>
+      <PropertyRef Name="RUBRO_ID" />
+    </Key>
+    <Property Name="RUBRO_ID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="RUBRO_DESCRIPCION" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="RUBRO_ACTIVO" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SUCURSALES">
+    <Key>
+      <PropertyRef Name="Sucursales_ID" />
+    </Key>
+    <Property Name="Sucursales_ID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Sucursales_Descripcion" Type="varchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="TIPOPRODUCTO">
+    <Key>
+      <PropertyRef Name="TIPOPRODUCTO_ID" />
+    </Key>
+    <Property Name="TIPOPRODUCTO_ID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="TIPOPRODUCTO_DESCRIPCION" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="TIPOPRODUCTO_ACTIVO" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TIPOSCOMPROBANTES">
+    <Key>
+      <PropertyRef Name="TiposComprobantes_ID" />
+    </Key>
+    <Property Name="TiposComprobantes_ID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="TiposComprobantes_Descripcion" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="TiposComprobantes_LetraComprobante" Type="varchar" Nullable="false" MaxLength="1" />
+    <Property Name="TiposComprobantes_NroSucursal" Type="int" />
+    <Property Name="TiposComprobantes_UltimiNroUsado" Type="int" />
+    <Property Name="TiposComprobantes_FLUJO" Type="varchar" MaxLength="1" />
+    <Property Name="TiposComprobantes_Tipo" Type="int" />
+  </EntityType>
+  <EntityType Name="TIPOSDOCUMENTOS">
+    <Key>
+      <PropertyRef Name="TIPODOC_ID" />
+    </Key>
+    <Property Name="TIPODOC_ID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="TIPODOC_DESCRIPCION" Type="varchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="TRANSPORTES">
+    <Key>
+      <PropertyRef Name="TRANSPORTES_ID" />
+    </Key>
+    <Property Name="TRANSPORTES_ID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="TRANSPORTES_DESCRIPCION" Type="varchar" Nullable="false" MaxLength="100" />
+    <Property Name="TRANSPORTES_DOMICILIO" Type="varchar" MaxLength="100" />
+    <Property Name="TRANSPORTES_TELEFONO" Type="varchar" MaxLength="50" />
+    <Property Name="TRANSPORTES_ACTIVO" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="UNIDADES">
+    <Key>
+      <PropertyRef Name="UNIDAD_ID" />
+    </Key>
+    <Property Name="UNIDAD_ID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="UNIDAD_DESCRIPCION" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="UNIDAD_COEFICIENTE" Type="decimal" Nullable="false" Scale="2" />
+    <Property Name="UNIDAD_ACTIVO" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="USUARIOS">
+    <Key>
+      <PropertyRef Name="USUARIO_ID" />
+    </Key>
+    <Property Name="USUARIO_ID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="USUARIO_DESCRIPCION" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="USUARIO_CONTRASENIA" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="USUARIO_NOMAPE" Type="varchar" MaxLength="70" />
+    <Property Name="TIPODOC_ID" Type="uniqueidentifier" />
+    <Property Name="USUARIO_NRODOC" Type="varchar" MaxLength="10" />
+    <Property Name="USUARIO_EMAIL" Type="varchar" MaxLength="50" />
+    <Property Name="ROL_ID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="USUARIO_ACTIVO" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="VENDEDORES">
+    <Key>
+      <PropertyRef Name="VENDEDORES_ID" />
+    </Key>
+    <Property Name="VENDEDORES_ID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="VENDEDORES_DESCRIPCION" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="VENDEDORES_EMAIL" Type="varchar" MaxLength="100" />
+    <Property Name="VENDEDORES_ACTIVO" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ZONAS">
+    <Key>
+      <PropertyRef Name="ZONAS_ID" />
+    </Key>
+    <Property Name="ZONAS_ID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="ZONAS_DESCRIPCION" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="ZONAS_ACTIVO" Type="bit" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_CLIENTES_CONDICIONES">
+    <End Role="CONDICIONES" Type="DataModel.Store.CONDICIONES" Multiplicity="0..1" />
+    <End Role="CLIENTES" Type="DataModel.Store.CLIENTES" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CONDICIONES">
+        <PropertyRef Name="CONDICIONES_ID" />
+      </Principal>
+      <Dependent Role="CLIENTES">
+        <PropertyRef Name="CONDICIONES_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CLIENTES_LOCALIDADES">
+    <End Role="LOCALIDADES" Type="DataModel.Store.LOCALIDADES" Multiplicity="0..1" />
+    <End Role="CLIENTES" Type="DataModel.Store.CLIENTES" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LOCALIDADES">
+        <PropertyRef Name="LOCALIDADES_ID" />
+      </Principal>
+      <Dependent Role="CLIENTES">
+        <PropertyRef Name="LOCALIDADES_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CLIENTES_REGIVA">
+    <End Role="REGIVA" Type="DataModel.Store.REGIVA" Multiplicity="0..1" />
+    <End Role="CLIENTES" Type="DataModel.Store.CLIENTES" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="REGIVA">
+        <PropertyRef Name="REGIVA_ID" />
+      </Principal>
+      <Dependent Role="CLIENTES">
+        <PropertyRef Name="REGIVA_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CLIENTES_TRANSPORTES">
+    <End Role="TRANSPORTES" Type="DataModel.Store.TRANSPORTES" Multiplicity="0..1" />
+    <End Role="CLIENTES" Type="DataModel.Store.CLIENTES" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TRANSPORTES">
+        <PropertyRef Name="TRANSPORTES_ID" />
+      </Principal>
+      <Dependent Role="CLIENTES">
+        <PropertyRef Name="TRANSPORTES_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CLIENTES_ZONAS">
+    <End Role="ZONAS" Type="DataModel.Store.ZONAS" Multiplicity="0..1" />
+    <End Role="CLIENTES" Type="DataModel.Store.CLIENTES" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ZONAS">
+        <PropertyRef Name="ZONAS_ID" />
+      </Principal>
+      <Dependent Role="CLIENTES">
+        <PropertyRef Name="ZONAS_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_COMPROBANTES_CONDICIONES">
+    <End Role="CONDICIONES" Type="DataModel.Store.CONDICIONES" Multiplicity="0..1" />
+    <End Role="COMPROBANTESCOMPRAS" Type="DataModel.Store.COMPROBANTESCOMPRAS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CONDICIONES">
+        <PropertyRef Name="CONDICIONES_ID" />
+      </Principal>
+      <Dependent Role="COMPROBANTESCOMPRAS">
+        <PropertyRef Name="CONDICIONES_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_COMPROBANTES_PROVEEDORES">
+    <End Role="PROVEEDORES" Type="DataModel.Store.PROVEEDORES" Multiplicity="0..1" />
+    <End Role="COMPROBANTESCOMPRAS" Type="DataModel.Store.COMPROBANTESCOMPRAS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PROVEEDORES">
+        <PropertyRef Name="PROVEEDORES_ID" />
+      </Principal>
+      <Dependent Role="COMPROBANTESCOMPRAS">
+        <PropertyRef Name="PROVEEDORES_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_COMPROBANTES_SUCURSALES">
+    <End Role="SUCURSALES" Type="DataModel.Store.SUCURSALES" Multiplicity="1" />
+    <End Role="COMPROBANTESCOMPRAS" Type="DataModel.Store.COMPROBANTESCOMPRAS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SUCURSALES">
+        <PropertyRef Name="Sucursales_ID" />
+      </Principal>
+      <Dependent Role="COMPROBANTESCOMPRAS">
+        <PropertyRef Name="SUCURSALES_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_COMPROBANTES_TIPOSCOMPROBANTES">
+    <End Role="TIPOSCOMPROBANTES" Type="DataModel.Store.TIPOSCOMPROBANTES" Multiplicity="1" />
+    <End Role="COMPROBANTESCOMPRAS" Type="DataModel.Store.COMPROBANTESCOMPRAS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TIPOSCOMPROBANTES">
+        <PropertyRef Name="TiposComprobantes_ID" />
+      </Principal>
+      <Dependent Role="COMPROBANTESCOMPRAS">
+        <PropertyRef Name="TIPOSCOMPROBANTES_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_COMPROBANTES_TRANSPORTES">
+    <End Role="TRANSPORTES" Type="DataModel.Store.TRANSPORTES" Multiplicity="0..1" />
+    <End Role="COMPROBANTESCOMPRAS" Type="DataModel.Store.COMPROBANTESCOMPRAS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TRANSPORTES">
+        <PropertyRef Name="TRANSPORTES_ID" />
+      </Principal>
+      <Dependent Role="COMPROBANTESCOMPRAS">
+        <PropertyRef Name="TRANSPORTES_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_COMPROBANTESCOMPRAS_ESTADOSCOMPROBANTES">
+    <End Role="ESTADOSCOMPROBANTES" Type="DataModel.Store.ESTADOSCOMPROBANTES" Multiplicity="1" />
+    <End Role="COMPROBANTESCOMPRAS" Type="DataModel.Store.COMPROBANTESCOMPRAS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ESTADOSCOMPROBANTES">
+        <PropertyRef Name="EstadoComprobante_ID" />
+      </Principal>
+      <Dependent Role="COMPROBANTESCOMPRAS">
+        <PropertyRef Name="ESTADOSCOMPROBANTES_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_COMPROBANTESCOMPRAS_PERCEPCIONES">
+    <End Role="PERCEPCIONES" Type="DataModel.Store.PERCEPCIONES" Multiplicity="0..1" />
+    <End Role="COMPROBANTESCOMPRAS" Type="DataModel.Store.COMPROBANTESCOMPRAS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PERCEPCIONES">
+        <PropertyRef Name="PERCEPCIONES_ID" />
+      </Principal>
+      <Dependent Role="COMPROBANTESCOMPRAS">
+        <PropertyRef Name="PERCEPCIONESID1" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_COMPROBANTESCOMPRAS_PERCEPCIONES1">
+    <End Role="PERCEPCIONES" Type="DataModel.Store.PERCEPCIONES" Multiplicity="0..1" />
+    <End Role="COMPROBANTESCOMPRAS" Type="DataModel.Store.COMPROBANTESCOMPRAS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PERCEPCIONES">
+        <PropertyRef Name="PERCEPCIONES_ID" />
+      </Principal>
+      <Dependent Role="COMPROBANTESCOMPRAS">
+        <PropertyRef Name="PERCEPCIONESID2" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_COMPROBANTESCOMPRAS_PERCEPCIONES2">
+    <End Role="PERCEPCIONES" Type="DataModel.Store.PERCEPCIONES" Multiplicity="0..1" />
+    <End Role="COMPROBANTESCOMPRAS" Type="DataModel.Store.COMPROBANTESCOMPRAS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PERCEPCIONES">
+        <PropertyRef Name="PERCEPCIONES_ID" />
+      </Principal>
+      <Dependent Role="COMPROBANTESCOMPRAS">
+        <PropertyRef Name="PERCEPCIONESID3" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_COMPROBANTESCOMPRAS_PERCEPCIONES3">
+    <End Role="PERCEPCIONES" Type="DataModel.Store.PERCEPCIONES" Multiplicity="0..1" />
+    <End Role="COMPROBANTESCOMPRAS" Type="DataModel.Store.COMPROBANTESCOMPRAS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PERCEPCIONES">
+        <PropertyRef Name="PERCEPCIONES_ID" />
+      </Principal>
+      <Dependent Role="COMPROBANTESCOMPRAS">
+        <PropertyRef Name="PERCEPCIONESID4" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_COMPROBANTESCOMPRAS_PERCEPCIONES4">
+    <End Role="PERCEPCIONES" Type="DataModel.Store.PERCEPCIONES" Multiplicity="0..1" />
+    <End Role="COMPROBANTESCOMPRAS" Type="DataModel.Store.COMPROBANTESCOMPRAS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PERCEPCIONES">
+        <PropertyRef Name="PERCEPCIONES_ID" />
+      </Principal>
+      <Dependent Role="COMPROBANTESCOMPRAS">
+        <PropertyRef Name="PERCEPCIONESID5" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_COMPROBANTESCOMPRAS_USUARIOS">
+    <End Role="USUARIOS" Type="DataModel.Store.USUARIOS" Multiplicity="0..1" />
+    <End Role="COMPROBANTESCOMPRAS" Type="DataModel.Store.COMPROBANTESCOMPRAS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="USUARIOS">
+        <PropertyRef Name="USUARIO_ID" />
+      </Principal>
+      <Dependent Role="COMPROBANTESCOMPRAS">
+        <PropertyRef Name="USUARIO_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_COMPROBANTESCOMPRASDETALLE_PRODUCTOS">
+    <End Role="PRODUCTOS" Type="DataModel.Store.PRODUCTOS" Multiplicity="0..1" />
+    <End Role="COMPROBANTESCOMPRASDETALLE" Type="DataModel.Store.COMPROBANTESCOMPRASDETALLE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PRODUCTOS">
+        <PropertyRef Name="PRODUCTO_ID" />
+      </Principal>
+      <Dependent Role="COMPROBANTESCOMPRASDETALLE">
+        <PropertyRef Name="PRODUCTO_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_COMPROBANTESCUMPLIDO_COMPROBANTESCOMPRASDETALLE">
+    <End Role="COMPROBANTESCOMPRASDETALLE" Type="DataModel.Store.COMPROBANTESCOMPRASDETALLE" Multiplicity="1" />
+    <End Role="COMPROBANTESCUMPLIDO" Type="DataModel.Store.COMPROBANTESCUMPLIDO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="COMPROBANTESCOMPRASDETALLE">
+        <PropertyRef Name="COMPROBANTESDETALLE_ID" />
+      </Principal>
+      <Dependent Role="COMPROBANTESCUMPLIDO">
+        <PropertyRef Name="DETALLEORIGEN_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_COMPROBANTESCUMPLIDO_COMPROBANTESCOMPRASDETALLE1">
+    <End Role="COMPROBANTESCOMPRASDETALLE" Type="DataModel.Store.COMPROBANTESCOMPRASDETALLE" Multiplicity="1" />
+    <End Role="COMPROBANTESCUMPLIDO" Type="DataModel.Store.COMPROBANTESCUMPLIDO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="COMPROBANTESCOMPRASDETALLE">
+        <PropertyRef Name="COMPROBANTESDETALLE_ID" />
+      </Principal>
+      <Dependent Role="COMPROBANTESCUMPLIDO">
+        <PropertyRef Name="DETALLEDESTINO_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_COMPROBANTESCUMPLIDO_COMPROBANTESVENTASDETALLE">
+    <End Role="COMPROBANTESVENTASDETALLE" Type="DataModel.Store.COMPROBANTESVENTASDETALLE" Multiplicity="1" />
+    <End Role="COMPROBANTESCUMPLIDO" Type="DataModel.Store.COMPROBANTESCUMPLIDO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="COMPROBANTESVENTASDETALLE">
+        <PropertyRef Name="COMPROBANTESVENTASDETALLE_ID" />
+      </Principal>
+      <Dependent Role="COMPROBANTESCUMPLIDO">
+        <PropertyRef Name="DETALLEORIGEN_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_COMPROBANTESCUMPLIDO_COMPROBANTESVENTASDETALLE1">
+    <End Role="COMPROBANTESVENTASDETALLE" Type="DataModel.Store.COMPROBANTESVENTASDETALLE" Multiplicity="1" />
+    <End Role="COMPROBANTESCUMPLIDO" Type="DataModel.Store.COMPROBANTESCUMPLIDO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="COMPROBANTESVENTASDETALLE">
+        <PropertyRef Name="COMPROBANTESVENTASDETALLE_ID" />
+      </Principal>
+      <Dependent Role="COMPROBANTESCUMPLIDO">
+        <PropertyRef Name="DETALLEDESTINO_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_COMPROBANTESDETALLE_COMPROBANTES">
+    <End Role="COMPROBANTESCOMPRAS" Type="DataModel.Store.COMPROBANTESCOMPRAS" Multiplicity="1" />
+    <End Role="COMPROBANTESCOMPRASDETALLE" Type="DataModel.Store.COMPROBANTESCOMPRASDETALLE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="COMPROBANTESCOMPRAS">
+        <PropertyRef Name="Comprobantes_ID" />
+      </Principal>
+      <Dependent Role="COMPROBANTESCOMPRASDETALLE">
+        <PropertyRef Name="COMPROBANTES_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_COMPROBANTESDETALLE_PRODUCTOLOTE">
+    <End Role="PRODUCTOLOTE" Type="DataModel.Store.PRODUCTOLOTE" Multiplicity="0..1" />
+    <End Role="COMPROBANTESCOMPRASDETALLE" Type="DataModel.Store.COMPROBANTESCOMPRASDETALLE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PRODUCTOLOTE">
+        <PropertyRef Name="PRODUCTOLOTE_ID" />
+      </Principal>
+      <Dependent Role="COMPROBANTESCOMPRASDETALLE">
+        <PropertyRef Name="PRODUCTOLOTE_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_COMPROBANTESVENTAS_CLIENTES">
+    <End Role="CLIENTES" Type="DataModel.Store.CLIENTES" Multiplicity="0..1" />
+    <End Role="COMPROBANTESVENTAS" Type="DataModel.Store.COMPROBANTESVENTAS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CLIENTES">
+        <PropertyRef Name="CLIENTES_ID" />
+      </Principal>
+      <Dependent Role="COMPROBANTESVENTAS">
+        <PropertyRef Name="CLIENTES_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_COMPROBANTESVENTAS_CONDICIONES">
+    <End Role="CONDICIONES" Type="DataModel.Store.CONDICIONES" Multiplicity="0..1" />
+    <End Role="COMPROBANTESVENTAS" Type="DataModel.Store.COMPROBANTESVENTAS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CONDICIONES">
+        <PropertyRef Name="CONDICIONES_ID" />
+      </Principal>
+      <Dependent Role="COMPROBANTESVENTAS">
+        <PropertyRef Name="CONDICIONES_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_COMPROBANTESVENTAS_ESTADOSCOMPROBANTES">
+    <End Role="ESTADOSCOMPROBANTES" Type="DataModel.Store.ESTADOSCOMPROBANTES" Multiplicity="1" />
+    <End Role="COMPROBANTESVENTAS" Type="DataModel.Store.COMPROBANTESVENTAS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ESTADOSCOMPROBANTES">
+        <PropertyRef Name="EstadoComprobante_ID" />
+      </Principal>
+      <Dependent Role="COMPROBANTESVENTAS">
+        <PropertyRef Name="ESTADOSCOMPROBANTES_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_COMPROBANTESVENTAS_PERCEPCIONES">
+    <End Role="PERCEPCIONES" Type="DataModel.Store.PERCEPCIONES" Multiplicity="0..1" />
+    <End Role="COMPROBANTESVENTAS" Type="DataModel.Store.COMPROBANTESVENTAS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PERCEPCIONES">
+        <PropertyRef Name="PERCEPCIONES_ID" />
+      </Principal>
+      <Dependent Role="COMPROBANTESVENTAS">
+        <PropertyRef Name="PERCEPCIONESID1" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_COMPROBANTESVENTAS_PERCEPCIONES1">
+    <End Role="PERCEPCIONES" Type="DataModel.Store.PERCEPCIONES" Multiplicity="0..1" />
+    <End Role="COMPROBANTESVENTAS" Type="DataModel.Store.COMPROBANTESVENTAS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PERCEPCIONES">
+        <PropertyRef Name="PERCEPCIONES_ID" />
+      </Principal>
+      <Dependent Role="COMPROBANTESVENTAS">
+        <PropertyRef Name="PERCEPCIONESID2" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_COMPROBANTESVENTAS_PERCEPCIONES2">
+    <End Role="PERCEPCIONES" Type="DataModel.Store.PERCEPCIONES" Multiplicity="0..1" />
+    <End Role="COMPROBANTESVENTAS" Type="DataModel.Store.COMPROBANTESVENTAS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PERCEPCIONES">
+        <PropertyRef Name="PERCEPCIONES_ID" />
+      </Principal>
+      <Dependent Role="COMPROBANTESVENTAS">
+        <PropertyRef Name="PERCEPCIONESID3" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_COMPROBANTESVENTAS_PERCEPCIONES3">
+    <End Role="PERCEPCIONES" Type="DataModel.Store.PERCEPCIONES" Multiplicity="0..1" />
+    <End Role="COMPROBANTESVENTAS" Type="DataModel.Store.COMPROBANTESVENTAS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PERCEPCIONES">
+        <PropertyRef Name="PERCEPCIONES_ID" />
+      </Principal>
+      <Dependent Role="COMPROBANTESVENTAS">
+        <PropertyRef Name="PERCEPCIONESID4" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_COMPROBANTESVENTAS_PERCEPCIONES4">
+    <End Role="PERCEPCIONES" Type="DataModel.Store.PERCEPCIONES" Multiplicity="0..1" />
+    <End Role="COMPROBANTESVENTAS" Type="DataModel.Store.COMPROBANTESVENTAS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PERCEPCIONES">
+        <PropertyRef Name="PERCEPCIONES_ID" />
+      </Principal>
+      <Dependent Role="COMPROBANTESVENTAS">
+        <PropertyRef Name="PERCEPCIONESID5" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_COMPROBANTESVENTAS_SUCURSALES">
+    <End Role="SUCURSALES" Type="DataModel.Store.SUCURSALES" Multiplicity="1" />
+    <End Role="COMPROBANTESVENTAS" Type="DataModel.Store.COMPROBANTESVENTAS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SUCURSALES">
+        <PropertyRef Name="Sucursales_ID" />
+      </Principal>
+      <Dependent Role="COMPROBANTESVENTAS">
+        <PropertyRef Name="SUCURSALES_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_COMPROBANTESVENTAS_TIPOSCOMPROBANTES">
+    <End Role="TIPOSCOMPROBANTES" Type="DataModel.Store.TIPOSCOMPROBANTES" Multiplicity="1" />
+    <End Role="COMPROBANTESVENTAS" Type="DataModel.Store.COMPROBANTESVENTAS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TIPOSCOMPROBANTES">
+        <PropertyRef Name="TiposComprobantes_ID" />
+      </Principal>
+      <Dependent Role="COMPROBANTESVENTAS">
+        <PropertyRef Name="TIPOSCOMPROBANTES_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_COMPROBANTESVENTAS_TRANSPORTES">
+    <End Role="TRANSPORTES" Type="DataModel.Store.TRANSPORTES" Multiplicity="0..1" />
+    <End Role="COMPROBANTESVENTAS" Type="DataModel.Store.COMPROBANTESVENTAS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TRANSPORTES">
+        <PropertyRef Name="TRANSPORTES_ID" />
+      </Principal>
+      <Dependent Role="COMPROBANTESVENTAS">
+        <PropertyRef Name="TRANSPORTES_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_COMPROBANTESVENTAS_USUARIOS">
+    <End Role="USUARIOS" Type="DataModel.Store.USUARIOS" Multiplicity="0..1" />
+    <End Role="COMPROBANTESVENTAS" Type="DataModel.Store.COMPROBANTESVENTAS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="USUARIOS">
+        <PropertyRef Name="USUARIO_ID" />
+      </Principal>
+      <Dependent Role="COMPROBANTESVENTAS">
+        <PropertyRef Name="USUARIO_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_COMPROBANTESVENTAS_VENDEDORES">
+    <End Role="VENDEDORES" Type="DataModel.Store.VENDEDORES" Multiplicity="0..1" />
+    <End Role="COMPROBANTESVENTAS" Type="DataModel.Store.COMPROBANTESVENTAS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="VENDEDORES">
+        <PropertyRef Name="VENDEDORES_ID" />
+      </Principal>
+      <Dependent Role="COMPROBANTESVENTAS">
+        <PropertyRef Name="VENDEDORES_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_COMPROBANTESVENTASDETALLE_COMPROBANTESVENTAS">
+    <End Role="COMPROBANTESVENTAS" Type="DataModel.Store.COMPROBANTESVENTAS" Multiplicity="1" />
+    <End Role="COMPROBANTESVENTASDETALLE" Type="DataModel.Store.COMPROBANTESVENTASDETALLE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="COMPROBANTESVENTAS">
+        <PropertyRef Name="COMPROBANTESVENTAS_ID" />
+      </Principal>
+      <Dependent Role="COMPROBANTESVENTASDETALLE">
+        <PropertyRef Name="COMPROBANTESVENTAS_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_COMPROBANTESVENTASDETALLE_PRODUCTOLOTE">
+    <End Role="PRODUCTOLOTE" Type="DataModel.Store.PRODUCTOLOTE" Multiplicity="0..1" />
+    <End Role="COMPROBANTESVENTASDETALLE" Type="DataModel.Store.COMPROBANTESVENTASDETALLE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PRODUCTOLOTE">
+        <PropertyRef Name="PRODUCTOLOTE_ID" />
+      </Principal>
+      <Dependent Role="COMPROBANTESVENTASDETALLE">
+        <PropertyRef Name="PRODUCTOLOTE_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_COMPROBANTESVENTASDETALLE_PRODUCTOS">
+    <End Role="PRODUCTOS" Type="DataModel.Store.PRODUCTOS" Multiplicity="0..1" />
+    <End Role="COMPROBANTESVENTASDETALLE" Type="DataModel.Store.COMPROBANTESVENTASDETALLE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PRODUCTOS">
+        <PropertyRef Name="PRODUCTO_ID" />
+      </Principal>
+      <Dependent Role="COMPROBANTESVENTASDETALLE">
+        <PropertyRef Name="PRODUCTO_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CONTACTOS_PROVEEDORES">
+    <End Role="PROVEEDORES" Type="DataModel.Store.PROVEEDORES" Multiplicity="0..1" />
+    <End Role="CONTACTOS" Type="DataModel.Store.CONTACTOS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PROVEEDORES">
+        <PropertyRef Name="PROVEEDORES_ID" />
+      </Principal>
+      <Dependent Role="CONTACTOS">
+        <PropertyRef Name="PROVEEDORES_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_INVENTARIO_CLIENTES">
+    <End Role="CLIENTES" Type="DataModel.Store.CLIENTES" Multiplicity="0..1" />
+    <End Role="INVENTARIO" Type="DataModel.Store.INVENTARIO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CLIENTES">
+        <PropertyRef Name="CLIENTES_ID" />
+      </Principal>
+      <Dependent Role="INVENTARIO">
+        <PropertyRef Name="CLIENTES_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_INVENTARIO_PROVEEDORES">
+    <End Role="PROVEEDORES" Type="DataModel.Store.PROVEEDORES" Multiplicity="0..1" />
+    <End Role="INVENTARIO" Type="DataModel.Store.INVENTARIO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PROVEEDORES">
+        <PropertyRef Name="PROVEEDORES_ID" />
+      </Principal>
+      <Dependent Role="INVENTARIO">
+        <PropertyRef Name="PROVEEDORES_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_INVENTARIO_SUCURSALES">
+    <End Role="SUCURSALES" Type="DataModel.Store.SUCURSALES" Multiplicity="0..1" />
+    <End Role="INVENTARIO" Type="DataModel.Store.INVENTARIO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SUCURSALES">
+        <PropertyRef Name="Sucursales_ID" />
+      </Principal>
+      <Dependent Role="INVENTARIO">
+        <PropertyRef Name="SUCURSALES_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_INVENTARIO_TRANSPORTES">
+    <End Role="TRANSPORTES" Type="DataModel.Store.TRANSPORTES" Multiplicity="1" />
+    <End Role="INVENTARIO" Type="DataModel.Store.INVENTARIO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TRANSPORTES">
+        <PropertyRef Name="TRANSPORTES_ID" />
+      </Principal>
+      <Dependent Role="INVENTARIO">
+        <PropertyRef Name="TRANSPORTES_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_INVENTARIO_USUARIOS">
+    <End Role="USUARIOS" Type="DataModel.Store.USUARIOS" Multiplicity="1" />
+    <End Role="INVENTARIO" Type="DataModel.Store.INVENTARIO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="USUARIOS">
+        <PropertyRef Name="USUARIO_ID" />
+      </Principal>
+      <Dependent Role="INVENTARIO">
+        <PropertyRef Name="USUARIO_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_INVENTARIODETALLE_DEPOSITOS">
+    <End Role="DEPOSITOS" Type="DataModel.Store.DEPOSITOS" Multiplicity="0..1" />
+    <End Role="INVENTARIODETALLE" Type="DataModel.Store.INVENTARIODETALLE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DEPOSITOS">
+        <PropertyRef Name="DEPOSITOS_ID" />
+      </Principal>
+      <Dependent Role="INVENTARIODETALLE">
+        <PropertyRef Name="DEPOSITOS_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_INVENTARIODETALLE_PRODUCTOLOTE">
+    <End Role="PRODUCTOLOTE" Type="DataModel.Store.PRODUCTOLOTE" Multiplicity="0..1" />
+    <End Role="INVENTARIODETALLE" Type="DataModel.Store.INVENTARIODETALLE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PRODUCTOLOTE">
+        <PropertyRef Name="PRODUCTOLOTE_ID" />
+      </Principal>
+      <Dependent Role="INVENTARIODETALLE">
+        <PropertyRef Name="PRODUCTOLOTE_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_INVENTARIODETALLE_PRODUCTOS">
+    <End Role="PRODUCTOS" Type="DataModel.Store.PRODUCTOS" Multiplicity="0..1" />
+    <End Role="INVENTARIODETALLE" Type="DataModel.Store.INVENTARIODETALLE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PRODUCTOS">
+        <PropertyRef Name="PRODUCTO_ID" />
+      </Principal>
+      <Dependent Role="INVENTARIODETALLE">
+        <PropertyRef Name="PRODUCTO_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LOCALIDADES_PROVINCIAS">
+    <End Role="PROVINCIAS" Type="DataModel.Store.PROVINCIAS" Multiplicity="1" />
+    <End Role="LOCALIDADES" Type="DataModel.Store.LOCALIDADES" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PROVINCIAS">
+        <PropertyRef Name="PROVINCIAS_ID" />
+      </Principal>
+      <Dependent Role="LOCALIDADES">
+        <PropertyRef Name="PROVINCIAS_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OBLEASlIBRES_LOTES">
+    <End Role="LOTES" Type="DataModel.Store.LOTES" Multiplicity="1" />
+    <End Role="OBLEASLIBRES" Type="DataModel.Store.OBLEASLIBRES" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LOTES">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="OBLEASLIBRES">
+        <PropertyRef Name="LoteID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PRODUCTOLOTE_PRODUCTOS">
+    <End Role="PRODUCTOS" Type="DataModel.Store.PRODUCTOS" Multiplicity="1" />
+    <End Role="PRODUCTOLOTE" Type="DataModel.Store.PRODUCTOLOTE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PRODUCTOS">
+        <PropertyRef Name="PRODUCTO_ID" />
+      </Principal>
+      <Dependent Role="PRODUCTOLOTE">
+        <PropertyRef Name="PRODUCTO_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PRODUCTOLOTE_PROVEEDORES">
+    <End Role="PROVEEDORES" Type="DataModel.Store.PROVEEDORES" Multiplicity="0..1" />
+    <End Role="PRODUCTOLOTE" Type="DataModel.Store.PRODUCTOLOTE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PROVEEDORES">
+        <PropertyRef Name="PROVEEDORES_ID" />
+      </Principal>
+      <Dependent Role="PRODUCTOLOTE">
+        <PropertyRef Name="PROVEEDORES_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PRODUCTOS_BASEIMPONIBLE">
+    <End Role="BASEIMPONIBLE" Type="DataModel.Store.BASEIMPONIBLE" Multiplicity="0..1" />
+    <End Role="PRODUCTOS" Type="DataModel.Store.PRODUCTOS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BASEIMPONIBLE">
+        <PropertyRef Name="BASEIMPONIBLE_ID" />
+      </Principal>
+      <Dependent Role="PRODUCTOS">
+        <PropertyRef Name="BASEIMPONIBLE_IDVENTA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PRODUCTOS_BASEIMPONIBLE1">
+    <End Role="BASEIMPONIBLE" Type="DataModel.Store.BASEIMPONIBLE" Multiplicity="0..1" />
+    <End Role="PRODUCTOS" Type="DataModel.Store.PRODUCTOS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BASEIMPONIBLE">
+        <PropertyRef Name="BASEIMPONIBLE_ID" />
+      </Principal>
+      <Dependent Role="PRODUCTOS">
+        <PropertyRef Name="BASEIMPONIBLE_IDCOMPRA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PRODUCTOS_IMPUESTOINTERNO_COMPRA">
+    <End Role="IMPUESTOINTERNO" Type="DataModel.Store.IMPUESTOINTERNO" Multiplicity="0..1" />
+    <End Role="PRODUCTOS" Type="DataModel.Store.PRODUCTOS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="IMPUESTOINTERNO">
+        <PropertyRef Name="IMPUESTOINTERNO_ID" />
+      </Principal>
+      <Dependent Role="PRODUCTOS">
+        <PropertyRef Name="IMPUESTOINTERNO_IDCOMPRA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PRODUCTOS_IMPUESTOINTERNO_VENTA">
+    <End Role="IMPUESTOINTERNO" Type="DataModel.Store.IMPUESTOINTERNO" Multiplicity="0..1" />
+    <End Role="PRODUCTOS" Type="DataModel.Store.PRODUCTOS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="IMPUESTOINTERNO">
+        <PropertyRef Name="IMPUESTOINTERNO_ID" />
+      </Principal>
+      <Dependent Role="PRODUCTOS">
+        <PropertyRef Name="IMPUESTOINTERNO_IDVENTA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PRODUCTOS_MARCAS">
+    <End Role="MARCAS" Type="DataModel.Store.MARCAS" Multiplicity="0..1" />
+    <End Role="PRODUCTOS" Type="DataModel.Store.PRODUCTOS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MARCAS">
+        <PropertyRef Name="MARCA_ID" />
+      </Principal>
+      <Dependent Role="PRODUCTOS">
+        <PropertyRef Name="MARCA_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PRODUCTOS_PROVEEDORES1">
+    <End Role="PROVEEDORES" Type="DataModel.Store.PROVEEDORES" Multiplicity="0..1" />
+    <End Role="PRODUCTOS" Type="DataModel.Store.PRODUCTOS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PROVEEDORES">
+        <PropertyRef Name="PROVEEDORES_ID" />
+      </Principal>
+      <Dependent Role="PRODUCTOS">
+        <PropertyRef Name="FABRICANTE_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PRODUCTOS_RUBROS">
+    <End Role="RUBROS" Type="DataModel.Store.RUBROS" Multiplicity="0..1" />
+    <End Role="PRODUCTOS" Type="DataModel.Store.PRODUCTOS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RUBROS">
+        <PropertyRef Name="RUBRO_ID" />
+      </Principal>
+      <Dependent Role="PRODUCTOS">
+        <PropertyRef Name="RUBRO_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PRODUCTOS_TIPOPRODUCTO">
+    <End Role="TIPOPRODUCTO" Type="DataModel.Store.TIPOPRODUCTO" Multiplicity="1" />
+    <End Role="PRODUCTOS" Type="DataModel.Store.PRODUCTOS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TIPOPRODUCTO">
+        <PropertyRef Name="TIPOPRODUCTO_ID" />
+      </Principal>
+      <Dependent Role="PRODUCTOS">
+        <PropertyRef Name="TIPOPRODUCTO_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PRODUCTOS_UNIDADES">
+    <End Role="UNIDADES" Type="DataModel.Store.UNIDADES" Multiplicity="0..1" />
+    <End Role="PRODUCTOS" Type="DataModel.Store.PRODUCTOS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UNIDADES">
+        <PropertyRef Name="UNIDAD_ID" />
+      </Principal>
+      <Dependent Role="PRODUCTOS">
+        <PropertyRef Name="UNIDAD_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PRODUCTOS_UNIDADES1">
+    <End Role="UNIDADES" Type="DataModel.Store.UNIDADES" Multiplicity="0..1" />
+    <End Role="PRODUCTOS" Type="DataModel.Store.PRODUCTOS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UNIDADES">
+        <PropertyRef Name="UNIDAD_ID" />
+      </Principal>
+      <Dependent Role="PRODUCTOS">
+        <PropertyRef Name="UNIDAD_IDCOMPRA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PRODUCTOS_UNIDADES2">
+    <End Role="UNIDADES" Type="DataModel.Store.UNIDADES" Multiplicity="0..1" />
+    <End Role="PRODUCTOS" Type="DataModel.Store.PRODUCTOS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UNIDADES">
+        <PropertyRef Name="UNIDAD_ID" />
+      </Principal>
+      <Dependent Role="PRODUCTOS">
+        <PropertyRef Name="UNIDAD_IDVENTA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PRODUCTOS_USUARIOS">
+    <End Role="USUARIOS" Type="DataModel.Store.USUARIOS" Multiplicity="1" />
+    <End Role="PRODUCTOS" Type="DataModel.Store.PRODUCTOS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="USUARIOS">
+        <PropertyRef Name="USUARIO_ID" />
+      </Principal>
+      <Dependent Role="PRODUCTOS">
+        <PropertyRef Name="USUARIO_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PRODUCTOSCOMPONENTES_PRODUCTOS">
+    <End Role="PRODUCTOS" Type="DataModel.Store.PRODUCTOS" Multiplicity="1" />
+    <End Role="PRODUCTOSCOMPONENTES" Type="DataModel.Store.PRODUCTOSCOMPONENTES" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PRODUCTOS">
+        <PropertyRef Name="PRODUCTO_ID" />
+      </Principal>
+      <Dependent Role="PRODUCTOSCOMPONENTES">
+        <PropertyRef Name="IDProductoCompuesto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PRODUCTOSCOMPONENTES_PRODUCTOS1">
+    <End Role="PRODUCTOS" Type="DataModel.Store.PRODUCTOS" Multiplicity="1" />
+    <End Role="PRODUCTOSCOMPONENTES" Type="DataModel.Store.PRODUCTOSCOMPONENTES" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PRODUCTOS">
+        <PropertyRef Name="PRODUCTO_ID" />
+      </Principal>
+      <Dependent Role="PRODUCTOSCOMPONENTES">
+        <PropertyRef Name="IDProductoCompone" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PROVEEDORES_LOCALIDADES">
+    <End Role="LOCALIDADES" Type="DataModel.Store.LOCALIDADES" Multiplicity="0..1" />
+    <End Role="PROVEEDORES" Type="DataModel.Store.PROVEEDORES" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LOCALIDADES">
+        <PropertyRef Name="LOCALIDADES_ID" />
+      </Principal>
+      <Dependent Role="PROVEEDORES">
+        <PropertyRef Name="LOCALIDADES_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PROVEEDORES_REGIVA">
+    <End Role="REGIVA" Type="DataModel.Store.REGIVA" Multiplicity="0..1" />
+    <End Role="PROVEEDORES" Type="DataModel.Store.PROVEEDORES" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="REGIVA">
+        <PropertyRef Name="REGIVA_ID" />
+      </Principal>
+      <Dependent Role="PROVEEDORES">
+        <PropertyRef Name="REGIVA_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PROVEEDORES_TRANSPORTES">
+    <End Role="TRANSPORTES" Type="DataModel.Store.TRANSPORTES" Multiplicity="0..1" />
+    <End Role="PROVEEDORES" Type="DataModel.Store.PROVEEDORES" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TRANSPORTES">
+        <PropertyRef Name="TRANSPORTES_ID" />
+      </Principal>
+      <Dependent Role="PROVEEDORES">
+        <PropertyRef Name="TRANSPORTES_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_REMITOCOMPRA_ESTADOSCOMPROBANTES">
+    <End Role="ESTADOSCOMPROBANTES" Type="DataModel.Store.ESTADOSCOMPROBANTES" Multiplicity="0..1" />
+    <End Role="INVENTARIO" Type="DataModel.Store.INVENTARIO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ESTADOSCOMPROBANTES">
+        <PropertyRef Name="EstadoComprobante_ID" />
+      </Principal>
+      <Dependent Role="INVENTARIO">
+        <PropertyRef Name="ESTADOSCOMPROBANTES_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_REMITOCOMPRA_TIPOSCOMPROBANTES">
+    <End Role="TIPOSCOMPROBANTES" Type="DataModel.Store.TIPOSCOMPROBANTES" Multiplicity="0..1" />
+    <End Role="INVENTARIO" Type="DataModel.Store.INVENTARIO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TIPOSCOMPROBANTES">
+        <PropertyRef Name="TiposComprobantes_ID" />
+      </Principal>
+      <Dependent Role="INVENTARIO">
+        <PropertyRef Name="TIPOSCOMPROBANTES_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_REMITOCOMPRADETALLE_PRODUCTOLOTE">
+    <End Role="PRODUCTOLOTE" Type="DataModel.Store.PRODUCTOLOTE" Multiplicity="0..1" />
+    <End Role="INVENTARIODETALLE" Type="DataModel.Store.INVENTARIODETALLE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PRODUCTOLOTE">
+        <PropertyRef Name="PRODUCTOLOTE_ID" />
+      </Principal>
+      <Dependent Role="INVENTARIODETALLE">
+        <PropertyRef Name="PRODUCTOLOTE_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_REMITOCOMPRADETALLE_REMITOCOMPRA">
+    <End Role="INVENTARIO" Type="DataModel.Store.INVENTARIO" Multiplicity="1" />
+    <End Role="INVENTARIODETALLE" Type="DataModel.Store.INVENTARIODETALLE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="INVENTARIO">
+        <PropertyRef Name="INVENTARIO_ID" />
+      </Principal>
+      <Dependent Role="INVENTARIODETALLE">
+        <PropertyRef Name="INVENTARIO_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_USUARIOS_ROLES">
+    <End Role="ROLES" Type="DataModel.Store.ROLES" Multiplicity="1" />
+    <End Role="USUARIOS" Type="DataModel.Store.USUARIOS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ROLES">
+        <PropertyRef Name="ROL_ID" />
+      </Principal>
+      <Dependent Role="USUARIOS">
+        <PropertyRef Name="ROL_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_USUARIOS_TIPOSDOCUMENTOS">
+    <End Role="TIPOSDOCUMENTOS" Type="DataModel.Store.TIPOSDOCUMENTOS" Multiplicity="0..1" />
+    <End Role="USUARIOS" Type="DataModel.Store.USUARIOS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TIPOSDOCUMENTOS">
+        <PropertyRef Name="TIPODOC_ID" />
+      </Principal>
+      <Dependent Role="USUARIOS">
+        <PropertyRef Name="TIPODOC_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

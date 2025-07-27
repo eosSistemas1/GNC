@@ -1,0 +1,327 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="DataModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2005" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="DataModelStoreContainer">
+          <EntitySet Name="ROLES" EntityType="DataModel.Store.ROLES" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="T_MENU" EntityType="DataModel.Store.T_MENU" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="T_ROLESSERVICIOS" EntityType="DataModel.Store.T_ROLESSERVICIOS" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="T_SERVICIOS" EntityType="DataModel.Store.T_SERVICIOS" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="USUARIOS" EntityType="DataModel.Store.USUARIOS" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK_t_fwk_Services_t_fwk_Menu" Association="DataModel.Store.FK_t_fwk_Services_t_fwk_Menu">
+            <End Role="T_MENU" EntitySet="T_MENU" />
+            <End Role="T_SERVICIOS" EntitySet="T_SERVICIOS" />
+          </AssociationSet>
+          <AssociationSet Name="FK_t_RoleService_ROLES" Association="DataModel.Store.FK_t_RoleService_ROLES">
+            <End Role="ROLES" EntitySet="ROLES" />
+            <End Role="T_ROLESSERVICIOS" EntitySet="T_ROLESSERVICIOS" />
+          </AssociationSet>
+          <AssociationSet Name="FK_t_RoleService_t_Service" Association="DataModel.Store.FK_t_RoleService_t_Service">
+            <End Role="T_SERVICIOS" EntitySet="T_SERVICIOS" />
+            <End Role="T_ROLESSERVICIOS" EntitySet="T_ROLESSERVICIOS" />
+          </AssociationSet>
+          <AssociationSet Name="FK_USUARIOS_ROLES" Association="DataModel.Store.FK_USUARIOS_ROLES">
+            <End Role="ROLES" EntitySet="ROLES" />
+            <End Role="USUARIOS" EntitySet="USUARIOS" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="ROLES">
+          <Key>
+            <PropertyRef Name="ROL_ID" />
+          </Key>
+          <Property Name="ROL_ID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="ROL_ACTIVO" Type="nchar" MaxLength="10" />
+          <Property Name="ROL_DESCRIPCION" Type="varchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="T_MENU">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="DESCRIPCION" Type="nvarchar" MaxLength="50" />
+          <Property Name="ACTVO" Type="bit" />
+        </EntityType>
+        <EntityType Name="T_ROLESSERVICIOS">
+          <Key>
+            <PropertyRef Name="SERVICES_ID" />
+            <PropertyRef Name="ROLE_ID" />
+          </Key>
+          <Property Name="SERVICES_ID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="ROLE_ID" Type="uniqueidentifier" Nullable="false" />
+        </EntityType>
+        <EntityType Name="T_SERVICIOS">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="MENUID" Type="uniqueidentifier" />
+          <Property Name="DESCRIPCION" Type="nvarchar" MaxLength="150" />
+          <Property Name="URL" Type="varchar" MaxLength="50" />
+          <Property Name="ACTIVO" Type="bit" />
+          <Property Name="TEXTO" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="USUARIOS">
+          <Key>
+            <PropertyRef Name="USUARIO_ID" />
+          </Key>
+          <Property Name="USUARIO_ID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="USUARIO_DESCRIPCION" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="USUARIO_CONTRASENIA" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="USUARIO_NOMAPE" Type="varchar" MaxLength="70" />
+          <Property Name="TIPODOC_ID" Type="uniqueidentifier" />
+          <Property Name="USUARIO_NRODOC" Type="varchar" MaxLength="10" />
+          <Property Name="USUARIO_EMAIL" Type="varchar" MaxLength="50" />
+          <Property Name="ROL_ID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="USUARIO_ACTIVO" Type="bit" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_t_fwk_Services_t_fwk_Menu">
+          <End Role="T_MENU" Type="DataModel.Store.T_MENU" Multiplicity="0..1" />
+          <End Role="T_SERVICIOS" Type="DataModel.Store.T_SERVICIOS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T_MENU">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="T_SERVICIOS">
+              <PropertyRef Name="MENUID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_t_RoleService_ROLES">
+          <End Role="ROLES" Type="DataModel.Store.ROLES" Multiplicity="1" />
+          <End Role="T_ROLESSERVICIOS" Type="DataModel.Store.T_ROLESSERVICIOS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ROLES">
+              <PropertyRef Name="ROL_ID" />
+            </Principal>
+            <Dependent Role="T_ROLESSERVICIOS">
+              <PropertyRef Name="ROLE_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_t_RoleService_t_Service">
+          <End Role="T_SERVICIOS" Type="DataModel.Store.T_SERVICIOS" Multiplicity="1" />
+          <End Role="T_ROLESSERVICIOS" Type="DataModel.Store.T_ROLESSERVICIOS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T_SERVICIOS">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="T_ROLESSERVICIOS">
+              <PropertyRef Name="SERVICES_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_USUARIOS_ROLES">
+          <End Role="ROLES" Type="DataModel.Store.ROLES" Multiplicity="1" />
+          <End Role="USUARIOS" Type="DataModel.Store.USUARIOS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ROLES">
+              <PropertyRef Name="ROL_ID" />
+            </Principal>
+            <Dependent Role="USUARIOS">
+              <PropertyRef Name="ROL_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema xmlns="http://schemas.microsoft.com/ado/2008/09/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="DataModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
+        <EntityContainer Name="ServicesContext" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="ROLES" EntityType="DataModel.ROLES" />
+          <EntitySet Name="T_MENU" EntityType="DataModel.T_MENU" />
+          <EntitySet Name="T_SERVICIOS" EntityType="DataModel.T_SERVICIOS" />
+          <EntitySet Name="USUARIOS" EntityType="DataModel.USUARIOS" />
+          <AssociationSet Name="FK_USUARIOS_ROLES" Association="DataModel.FK_USUARIOS_ROLES">
+            <End Role="ROLES" EntitySet="ROLES" />
+            <End Role="USUARIOS" EntitySet="USUARIOS" />
+          </AssociationSet>
+          <AssociationSet Name="FK_t_fwk_Services_t_fwk_Menu" Association="DataModel.FK_t_fwk_Services_t_fwk_Menu">
+            <End Role="T_MENU" EntitySet="T_MENU" />
+            <End Role="T_SERVICIOS" EntitySet="T_SERVICIOS" />
+          </AssociationSet>
+          <AssociationSet Name="T_ROLESSERVICIOS" Association="DataModel.T_ROLESSERVICIOS">
+            <End Role="ROLES" EntitySet="ROLES" />
+            <End Role="T_SERVICIOS" EntitySet="T_SERVICIOS" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="ROLES">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Guid" Name="ID" Nullable="false" />
+          <Property Type="String" Name="Activo" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Type="String" Name="Descripcion" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="USUARIOS" Relationship="DataModel.FK_USUARIOS_ROLES" FromRole="ROLES" ToRole="USUARIOS" />
+          <NavigationProperty Name="T_SERVICIOS" Relationship="DataModel.T_ROLESSERVICIOS" FromRole="ROLES" ToRole="T_SERVICIOS" />
+        </EntityType>
+        <EntityType Name="T_MENU">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Guid" Name="ID" Nullable="false" />
+          <Property Type="String" Name="Descripcion" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Boolean" Name="Activo" />
+          <NavigationProperty Name="T_SERVICIOS" Relationship="DataModel.FK_t_fwk_Services_t_fwk_Menu" FromRole="T_MENU" ToRole="T_SERVICIOS" />
+        </EntityType>
+        <EntityType Name="T_SERVICIOS">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Guid" Name="ID" Nullable="false" />
+          <Property Type="Guid" Name="MenuID" />
+          <Property Type="String" Name="Descripcion" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Url" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Boolean" Name="Activo" />
+          <Property Type="String" Name="Texto" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="T_MENU" Relationship="DataModel.FK_t_fwk_Services_t_fwk_Menu" FromRole="T_SERVICIOS" ToRole="T_MENU" />
+          <NavigationProperty Name="ROLES" Relationship="DataModel.T_ROLESSERVICIOS" FromRole="T_SERVICIOS" ToRole="ROLES" />
+        </EntityType>
+        <EntityType Name="USUARIOS">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Guid" Name="ID" Nullable="false" />
+          <Property Type="String" Name="Descripcion" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Password" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="NombreYApellido" MaxLength="70" FixedLength="false" Unicode="false" />
+          <Property Type="Guid" Name="TipoDocID" />
+          <Property Type="String" Name="NroDocumento" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Email" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="Guid" Name="RolID" Nullable="false" />
+          <Property Type="Boolean" Name="Activo" Nullable="false" />
+          <NavigationProperty Name="ROLES" Relationship="DataModel.FK_USUARIOS_ROLES" FromRole="USUARIOS" ToRole="ROLES" />
+        </EntityType>
+        <Association Name="FK_USUARIOS_ROLES">
+          <End Type="DataModel.ROLES" Role="ROLES" Multiplicity="1" />
+          <End Type="DataModel.USUARIOS" Role="USUARIOS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ROLES">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="USUARIOS">
+              <PropertyRef Name="RolID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_t_fwk_Services_t_fwk_Menu">
+          <End Type="DataModel.T_MENU" Role="T_MENU" Multiplicity="0..1" />
+          <End Type="DataModel.T_SERVICIOS" Role="T_SERVICIOS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T_MENU">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="T_SERVICIOS">
+              <PropertyRef Name="MenuID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="T_ROLESSERVICIOS">
+          <End Type="DataModel.ROLES" Role="ROLES" Multiplicity="*" />
+          <End Type="DataModel.T_SERVICIOS" Role="T_SERVICIOS" Multiplicity="*" />
+        </Association>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs" Space="C-S">
+        <Alias Key="Model" Value="DataModel" />
+        <Alias Key="Target" Value="DataModel.Store" />
+        <EntityContainerMapping CdmEntityContainer="ServicesContext" StorageEntityContainer="DataModelStoreContainer">
+          <EntitySetMapping Name="ROLES">
+            <EntityTypeMapping TypeName="DataModel.ROLES">
+              <MappingFragment StoreEntitySet="ROLES">
+                <ScalarProperty Name="Descripcion" ColumnName="ROL_DESCRIPCION" />
+                <ScalarProperty Name="Activo" ColumnName="ROL_ACTIVO" />
+                <ScalarProperty Name="ID" ColumnName="ROL_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="T_MENU">
+            <EntityTypeMapping TypeName="DataModel.T_MENU">
+              <MappingFragment StoreEntitySet="T_MENU">
+                <ScalarProperty Name="Activo" ColumnName="ACTVO" />
+                <ScalarProperty Name="Descripcion" ColumnName="DESCRIPCION" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="T_SERVICIOS">
+            <EntityTypeMapping TypeName="DataModel.T_SERVICIOS">
+              <MappingFragment StoreEntitySet="T_SERVICIOS">
+                <ScalarProperty Name="Texto" ColumnName="TEXTO" />
+                <ScalarProperty Name="Activo" ColumnName="ACTIVO" />
+                <ScalarProperty Name="Url" ColumnName="URL" />
+                <ScalarProperty Name="Descripcion" ColumnName="DESCRIPCION" />
+                <ScalarProperty Name="MenuID" ColumnName="MENUID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="USUARIOS">
+            <EntityTypeMapping TypeName="DataModel.USUARIOS">
+              <MappingFragment StoreEntitySet="USUARIOS">
+                <ScalarProperty Name="Activo" ColumnName="USUARIO_ACTIVO" />
+                <ScalarProperty Name="RolID" ColumnName="ROL_ID" />
+                <ScalarProperty Name="Email" ColumnName="USUARIO_EMAIL" />
+                <ScalarProperty Name="NroDocumento" ColumnName="USUARIO_NRODOC" />
+                <ScalarProperty Name="TipoDocID" ColumnName="TIPODOC_ID" />
+                <ScalarProperty Name="NombreYApellido" ColumnName="USUARIO_NOMAPE" />
+                <ScalarProperty Name="Password" ColumnName="USUARIO_CONTRASENIA" />
+                <ScalarProperty Name="Descripcion" ColumnName="USUARIO_DESCRIPCION" />
+                <ScalarProperty Name="ID" ColumnName="USUARIO_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <AssociationSetMapping Name="T_ROLESSERVICIOS" TypeName="DataModel.T_ROLESSERVICIOS" StoreEntitySet="T_ROLESSERVICIOS">
+            <EndProperty Name="T_SERVICIOS">
+              <ScalarProperty Name="ID" ColumnName="SERVICES_ID" />
+            </EndProperty>
+            <EndProperty Name="ROLES">
+              <ScalarProperty Name="ID" ColumnName="ROLE_ID" />
+            </EndProperty>
+          </AssociationSetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <edmx:Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </edmx:Connection>
+    <edmx:Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </edmx:Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram Name="DataModel" ShowGrid="true" >
+        <EntityTypeShape EntityType="DataModel.ROLES" Width="1.5" PointX="4.75" PointY="1.25" Height="1.9802864583333322" />
+        <EntityTypeShape EntityType="DataModel.T_MENU" Width="1.5" PointX="10.25" PointY="0.875" Height="1.7879850260416665" />
+        <EntityTypeShape EntityType="DataModel.T_SERVICIOS" Width="1.5" PointX="7.5" PointY="2.75" Height="2.5571907552083322" />
+        <EntityTypeShape EntityType="DataModel.USUARIOS" Width="1.5" PointX="2.125" PointY="1.5" Height="2.9417936197916656" />
+        <AssociationConnector Association="DataModel.FK_USUARIOS_ROLES" >
+          <ConnectorPoint PointX="4.75" PointY="2.3651432291666659" />
+          <ConnectorPoint PointX="3.625" PointY="2.3651432291666659" />
+        </AssociationConnector>
+        <AssociationConnector Association="DataModel.FK_t_fwk_Services_t_fwk_Menu" >
+          <ConnectorPoint PointX="10.25" PointY="1.7689925130208333" />
+          <ConnectorPoint PointX="8.25" PointY="1.7689925130208333" />
+          <ConnectorPoint PointX="8.25" PointY="2.75" />
+        </AssociationConnector>
+        <AssociationConnector Association="DataModel.T_ROLESSERVICIOS" >
+          <ConnectorPoint PointX="6.25" PointY="2.9901432291666659" />
+          <ConnectorPoint PointX="7.5" PointY="2.9901432291666659" />
+        </AssociationConnector>
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

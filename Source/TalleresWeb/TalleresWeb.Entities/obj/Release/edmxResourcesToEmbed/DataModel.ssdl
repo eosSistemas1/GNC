@@ -1,0 +1,1759 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TalleresWebModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2005" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityType Name="Cilindros">
+    <Key>
+      <PropertyRef Name="IdCilindro" />
+    </Key>
+    <Property Name="IdCilindro" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="CodHomologacinCil" Type="nvarchar" MaxLength="4" Nullable="false" />
+    <Property Name="CapacidadCil" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="IdMarcaCilindro" Type="uniqueidentifier" />
+    <Property Name="MatriculaOCCil" Type="nvarchar" MaxLength="50" />
+    <Property Name="ModeloCilindro" Type="nvarchar" MaxLength="50" />
+    <Property Name="EspesorAdmisibleCil" Type="float" />
+    <Property Name="DiametroCilindro" Type="float" />
+    <Property Name="LargoCilindro" Type="float" />
+    <Property Name="RoturaCilindro" Type="nvarchar" MaxLength="50" />
+    <Property Name="MaterialCilindro" Type="nvarchar" MaxLength="50" />
+    <Property Name="NormaFabCilindro" Type="nvarchar" MaxLength="50" />
+    <Property Name="Activo" Type="bit" />
+    <Property Name="Fluencia" Type="varchar" MaxLength="10" />
+    <Property Name="Dureza" Type="varchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="CilindrosUnidad">
+    <Key>
+      <PropertyRef Name="IdCilindroUnidad" />
+    </Key>
+    <Property Name="IdCilindroUnidad" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="IdCilindro" Type="uniqueidentifier" />
+    <Property Name="NroSerieCilindro" Type="nchar" MaxLength="25" Nullable="false" />
+    <Property Name="MesFabCilindro" Type="int" />
+    <Property Name="AnioFabCilindro" Type="int" />
+  </EntityType>
+  <EntityType Name="Clientes">
+    <Key>
+      <PropertyRef Name="IdCliente" />
+    </Key>
+    <Property Name="IdCliente" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="NombreApellidoCliente" Type="nvarchar" MaxLength="34" />
+    <Property Name="CalleCliente" Type="varchar" MaxLength="50" />
+    <Property Name="NroCalleCliente" Type="varchar" MaxLength="10" />
+    <Property Name="PisoDptoCliente" Type="varchar" MaxLength="50" />
+    <Property Name="IdTipoDniCliente" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="NroDniCliente" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="TelefonoCliente" Type="varchar" MaxLength="20" />
+    <Property Name="IdLocalidad" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="CelularCliente" Type="varchar" MaxLength="20" />
+    <Property Name="MailCliente" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Conductores">
+    <Key>
+      <PropertyRef Name="IdConductor" />
+    </Key>
+    <Property Name="IdConductor" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="DescripcionConductor" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="ActivoConductor" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CRPC">
+    <Key>
+      <PropertyRef Name="IdCRPC" />
+    </Key>
+    <Property Name="IdCRPC" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="MatriculaCRPC" Type="varchar" MaxLength="50" />
+    <Property Name="SiglasCRPC" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="RazonSocialCRPC" Type="nchar" MaxLength="20" />
+    <Property Name="TelefonoACRPC" Type="varchar" MaxLength="20" />
+    <Property Name="TelefonoB_CRPC" Type="varchar" MaxLength="20" />
+    <Property Name="MailACRPC" Type="varchar" MaxLength="50" />
+    <Property Name="MailBCRPC" Type="varchar" MaxLength="50" />
+    <Property Name="DomicilioCRPC" Type="varchar" MaxLength="20" />
+    <Property Name="CpaCRPC" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="DESPACHO">
+    <Key>
+      <PropertyRef Name="IdDespacho" />
+    </Key>
+    <Property Name="IdDespacho" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="NumeroDespacho" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FechaDespacho" Type="datetime" Nullable="false" />
+    <Property Name="IdUsuario" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="IdFlete" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="IdChofer" Type="uniqueidentifier" />
+    <Property Name="FechaHoraSalidaDespacho" Type="datetime" />
+    <Property Name="FechaHoraLlegadaDespacho" Type="datetime" />
+    <Property Name="ActivoDespacho" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DESPACHODETALLE">
+    <Key>
+      <PropertyRef Name="IdDespachoDetalle" />
+    </Key>
+    <Property Name="IdDespachoDetalle" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="IdDespacho" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="IdTaller" Type="uniqueidentifier" />
+    <Property Name="IdOblea" Type="uniqueidentifier" />
+    <Property Name="IdPHCilindro" Type="uniqueidentifier" />
+    <Property Name="IdPedido" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="DocumentosClientes">
+    <Key>
+      <PropertyRef Name="IdDocumentosClientes" />
+    </Key>
+    <Property Name="IdDocumentosClientes" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="DocumentosClientes" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="EstadosFichas">
+    <Key>
+      <PropertyRef Name="IdEstadoFicha" />
+    </Key>
+    <Property Name="IdEstadoFicha" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="EstadoFicha" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ESTADOSPH">
+    <Key>
+      <PropertyRef Name="IDEstadoPH" />
+    </Key>
+    <Property Name="IDEstadoPH" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Descripcion" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="FLETE">
+    <Key>
+      <PropertyRef Name="IdFlete" />
+    </Key>
+    <Property Name="IdFlete" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Descripcion" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="EsFletePropio" Type="bit" Nullable="false" />
+    <Property Name="ValorHora" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="ConductorHabitualID" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="INFORME">
+    <Key>
+      <PropertyRef Name="IdInforme" />
+    </Key>
+    <Property Name="IdInforme" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="FechaHoraInforme" Type="datetime" Nullable="false" />
+    <Property Name="EstadoInforme" Type="bit" Nullable="false" />
+    <Property Name="CantidadObleasEnviadas" Type="int" Nullable="false" />
+    <Property Name="CantidadObleasAsignadas" Type="int" Nullable="false" />
+    <Property Name="CantidadObleasRechazadas" Type="int" Nullable="false" />
+    <Property Name="NumeroInforme" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ActivoInforme" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="INFORMEOBLEAS">
+    <Key>
+      <PropertyRef Name="IdInformeObleas" />
+    </Key>
+    <Property Name="IdInformeObleas" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="IdInforme" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="idOblea" Type="uniqueidentifier" />
+    <Property Name="Descripcion" Type="varchar(max)" Nullable="false" />
+    <Property Name="IdEstadoOblea" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="Inspecciones">
+    <Key>
+      <PropertyRef Name="IdInspeccion" />
+    </Key>
+    <Property Name="IdInspeccion" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Inspeccion" Type="varchar" MaxLength="50" />
+    <Property Name="IdInspeccionTipo" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="InspeccionesPH">
+    <Key>
+      <PropertyRef Name="IdInspeccionPH" />
+    </Key>
+    <Property Name="IdInspeccionPH" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="IdPHCilndro" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="IdInspeccion" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="ObservacionesInspeccion" Type="text" />
+    <Property Name="ValorInspeccion" Type="bit" />
+  </EntityType>
+  <EntityType Name="InspeccionTipo">
+    <Key>
+      <PropertyRef Name="IdInspeccionTipo" />
+    </Key>
+    <Property Name="IdInspeccionTipo" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Descripcion" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Localidades">
+    <Key>
+      <PropertyRef Name="Idlocalidad" />
+    </Key>
+    <Property Name="Idlocalidad" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Localidad" Type="char" MaxLength="18" Nullable="false" />
+    <Property Name="CodigoPostal" Type="nchar" MaxLength="10" />
+    <Property Name="IdProvincia" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="LOTES">
+    <Key>
+      <PropertyRef Name="ID_LOTE" />
+    </Key>
+    <Property Name="ID_LOTE" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="FECHAINGRESO_LOTE" Type="datetime" Nullable="false" />
+    <Property Name="NUMEROOBLEADESDE_LOTE" Type="int" Nullable="false" />
+    <Property Name="NUMEROOBLEAHASTA_LOTE" Type="int" Nullable="false" />
+    <Property Name="ANIOVENCIMIENTO_LOTE" Type="int" Nullable="false" />
+    <Property Name="ENUSO_LOTE" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MarcasCilindros">
+    <Key>
+      <PropertyRef Name="IdMarcaCilindro" />
+    </Key>
+    <Property Name="IdMarcaCilindro" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="MarcaCilindro" Type="varchar" MaxLength="50" />
+    <Property Name="Codigo" Type="varchar" MaxLength="2" />
+  </EntityType>
+  <EntityType Name="MarcasRegulador">
+    <Key>
+      <PropertyRef Name="IdMarcaRegulador" />
+    </Key>
+    <Property Name="IdMarcaRegulador" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="MarcaRegulador" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Codigo" Type="varchar" MaxLength="2" />
+  </EntityType>
+  <EntityType Name="MarcasValvulas">
+    <Key>
+      <PropertyRef Name="IdMarcaValvula" />
+    </Key>
+    <Property Name="IdMarcaValvula" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="MarcaValvula" Type="varchar" MaxLength="50" />
+    <Property Name="Codigo" Type="varchar" MaxLength="2" />
+  </EntityType>
+  <EntityType Name="ObleaErrorDetalle">
+    <Key>
+      <PropertyRef Name="ID_ObleaErrorDetalle" />
+    </Key>
+    <Property Name="ID_ObleaErrorDetalle" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="ID_ObleaHistoricoEstado" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="ID_ObleaErrorTipo" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Correccion_ObleaErrorDetalle" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="ID_ObjetoCorregido" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Solucionado" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ObleaErrorTipo">
+    <Key>
+      <PropertyRef Name="ID_ObleaErrorTipo" />
+    </Key>
+    <Property Name="ID_ObleaErrorTipo" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Descripcion_ObleaErrorTipo" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ObleaHistoricoEstado">
+    <Key>
+      <PropertyRef Name="ID_ObleaHistoricoEstado" />
+    </Key>
+    <Property Name="ID_ObleaHistoricoEstado" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="ID_Oblea" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="ID_EstadoOblea" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Descripcion" Type="varchar(max)" Nullable="false" />
+    <Property Name="FechaHoraEstado" Type="datetime" Nullable="false" />
+    <Property Name="ID_Usuario" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Obleas">
+    <Key>
+      <PropertyRef Name="IdOblea" />
+    </Key>
+    <Property Name="IdOblea" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="IdVehiculo" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="FechaHabilitacion" Type="datetime" />
+    <Property Name="FechaVencimiento" Type="datetime" />
+    <Property Name="NroObleaAnterior" Type="nvarchar" MaxLength="20" />
+    <Property Name="NroObleaNueva" Type="nvarchar" MaxLength="20" />
+    <Property Name="IdUso" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="IdOperacion" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="IdEstadoFicha" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="ObservacionesFicha" Type="text" />
+    <Property Name="NroIntOperacTP" Type="int" />
+    <Property Name="IdPEC" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="MotivoBajaFicha" Type="text" />
+    <Property Name="IdTaller" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="IdNroFichaTecnica" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdCliente" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="IdTitular" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="IdUsuarioAlta" Type="uniqueidentifier" />
+    <Property Name="FechaRealAlta" Type="datetime" Nullable="false" />
+    <Property Name="IdTallerRT" Type="uniqueidentifier" />
+    <Property Name="IdRTPEC" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="ObleasCilindros">
+    <Key>
+      <PropertyRef Name="IdObleaCilindro" />
+    </Key>
+    <Property Name="IdObleaCilindro" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="IdOblea" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="IdCilindroUnidad" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="MesUltimaRevisionCil" Type="int" Nullable="false" />
+    <Property Name="AnioUltimaRevisionCil" Type="int" Nullable="false" />
+    <Property Name="NroCertificadoPH" Type="varchar" MaxLength="50" />
+    <Property Name="IdCRPC" Type="uniqueidentifier" />
+    <Property Name="IdOperacion" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ObleasReguladores">
+    <Key>
+      <PropertyRef Name="IdObleaRegulador" />
+    </Key>
+    <Property Name="IdObleaRegulador" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="IdOblea" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="IdReguladorUnidad" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="IdOperacion" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ObleasValvulas">
+    <Key>
+      <PropertyRef Name="IdObleaValvula" />
+    </Key>
+    <Property Name="IdObleaValvula" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="IdObleaCilindro" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="IdValvulaUnidad" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="IdOperacion" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Operaciones">
+    <Key>
+      <PropertyRef Name="IdOperacion" />
+    </Key>
+    <Property Name="IdOperacion" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Operacion" Type="char" MaxLength="15" />
+    <Property Name="CodigoGestionEnte" Type="char" MaxLength="2" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PEC">
+    <Key>
+      <PropertyRef Name="IdPEC" />
+    </Key>
+    <Property Name="IdPEC" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="MatriculaPEC" Type="nvarchar" MaxLength="4" Nullable="false" />
+    <Property Name="RazonSocialPEC" Type="varchar" MaxLength="50" />
+    <Property Name="DomicilioPEC" Type="varchar" MaxLength="50" />
+    <Property Name="TelefonoAPEC" Type="varchar" MaxLength="30" />
+    <Property Name="TelefonoBPEC" Type="varchar" MaxLength="30" />
+    <Property Name="MailAPEC" Type="varchar" MaxLength="50" />
+    <Property Name="MailBPEC" Type="varchar" MaxLength="50" />
+    <Property Name="IdLocalidad" Type="uniqueidentifier" />
+  </EntityType>
+  <EntityType Name="PH">
+    <Key>
+      <PropertyRef Name="IdPH" />
+    </Key>
+    <Property Name="IdPH" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="IdTaller" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="IdNroCartaTaller" Type="uniqueidentifier" />
+    <Property Name="IDVehiculo" Type="uniqueidentifier" />
+    <Property Name="IDCliente" Type="uniqueidentifier" />
+    <Property Name="IdPEC" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="NroObleaHabilitante" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="FechaOperacion" Type="datetime" Nullable="false" />
+    <Property Name="IdCRPC" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PhCilindroHistoricoEstado">
+    <Key>
+      <PropertyRef Name="ID_PHCilindroHistoricoEstado" />
+    </Key>
+    <Property Name="ID_PHCilindroHistoricoEstado" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="ID_PHCilindro" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="ID_EstadoPHCilindro" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Descripcion" Type="varchar(max)" Nullable="false" />
+    <Property Name="FechaHoraEstado" Type="datetime" Nullable="false" />
+    <Property Name="ID_Usuario" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PHCilindros">
+    <Key>
+      <PropertyRef Name="IdPHCilindro" />
+    </Key>
+    <Property Name="IdPHCilindro" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="IdPH" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="IdCilindroUnidad" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="IdValvulaUnidad" Type="uniqueidentifier" />
+    <Property Name="ObservacionValvulaCiindrol" Type="text" />
+    <Property Name="NroOperacionCRPC" Type="int" />
+    <Property Name="NroCertificadoPH" Type="varchar" MaxLength="10" />
+    <Property Name="IdPEC" Type="uniqueidentifier" />
+    <Property Name="InspeccionVisualCorrecta" Type="bit" Nullable="true" />
+    <Property Name="Rechazado" Type="bit" />
+    <Property Name="FuncValvula" Type="nchar" MaxLength="10" />
+    <Property Name="RoscaValvula" Type="nchar" MaxLength="10" />
+    <Property Name="ObservacionValvula" Type="text" />
+    <Property Name="PesoMarcadoCilindro" Type="float" />
+    <Property Name="PesoVacioCilindro" Type="float" />
+    <Property Name="PesoAguaCilindro" Type="float" />
+    <Property Name="LecturaAParedCiindrol" Type="float" />
+    <Property Name="LecturaBParedCilindro" Type="float" />
+    <Property Name="LecturaCPaedCilindro" Type="float" />
+    <Property Name="LecturaAFondoCilindro" Type="float" />
+    <Property Name="LecturaBFondoCilindro" Type="float" />
+    <Property Name="TipoFondoCilindro" Type="nchar" MaxLength="10" />
+    <Property Name="PresionPruebaCilindro" Type="float" />
+    <Property Name="NroBureta" Type="int" />
+    <Property Name="LecturaMinBureta" Type="float" />
+    <Property Name="LecturaMaxBureta" Type="float" />
+    <Property Name="ObservacionPH" Type="text" />
+    <Property Name="IdEstadoPH" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="TemperaturaAmbiente" Type="float" />
+    <Property Name="PesoCilinroLleno" Type="float" />
+    <Property Name="NivelAguAPresionPruebaCilindro" Type="float" />
+  </EntityType>
+  <EntityType Name="Provincias">
+    <Key>
+      <PropertyRef Name="IdProvincia" />
+    </Key>
+    <Property Name="IdProvincia" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Provincia" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Reguladores">
+    <Key>
+      <PropertyRef Name="IdRegulador" />
+    </Key>
+    <Property Name="IdRegulador" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="CodigoHomologacionRegulador" Type="nchar" MaxLength="4" Nullable="false" />
+    <Property Name="IdMarcaRegulador" Type="uniqueidentifier" />
+    <Property Name="Modelo" Type="nchar" MaxLength="10" />
+    <Property Name="MatriculaOC" Type="nchar" MaxLength="10" />
+    <Property Name="Caudal" Type="float" />
+    <Property Name="Etrapas" Type="int" />
+    <Property Name="Tipo" Type="nchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="ReguladoresUnidad">
+    <Key>
+      <PropertyRef Name="IdReguladorUnidad" />
+    </Key>
+    <Property Name="IdReguladorUnidad" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="IdRegulador" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="NroSerieRegulador" Type="nvarchar" MaxLength="25" Nullable="false" />
+  </EntityType>
+  <EntityType Name="RT">
+    <Key>
+      <PropertyRef Name="IdRT" />
+    </Key>
+    <Property Name="IdRT" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="IdTipoDniRT" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="NroDniRT" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="NombreApellidoRT" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="MatriculaRT" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="TituloRT" Type="varchar" MaxLength="50" />
+    <Property Name="ActivoRT" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="RT_CRPC">
+    <Key>
+      <PropertyRef Name="IdRTCRPC" />
+    </Key>
+    <Property Name="IdRTCRPC" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="IdRT" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="IdCRPC" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="FechaDesde" Type="datetime" />
+    <Property Name="FechaHastaRTCRPC" Type="datetime" />
+  </EntityType>
+  <EntityType Name="RT_PEC">
+    <Key>
+      <PropertyRef Name="IdRTPEC" />
+    </Key>
+    <Property Name="IdRTPEC" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="IdRT" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="IdPEC" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="FechaHasta" Type="datetime" />
+    <Property Name="FechaDesde" Type="datetime" />
+  </EntityType>
+  <EntityType Name="S_ACCESOSCU">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="IdAccesosCU" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdCU" Type="int" />
+    <Property Name="IdRol" Type="int" />
+    <Property Name="Permitido" Type="bit" />
+  </EntityType>
+  <EntityType Name="S_CASOSDEUSO">
+    <Key>
+      <PropertyRef Name="IdCU" />
+    </Key>
+    <Property Name="ID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="IdCU" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DescCU" Type="varchar" MaxLength="100" />
+    <Property Name="CodigoCU" Type="varchar" MaxLength="50" />
+    <Property Name="IdPadre" Type="int" />
+    <Property Name="Url" Type="varchar" MaxLength="200" />
+    <Property Name="UrlImagen" Type="varchar" MaxLength="200" />
+    <Property Name="AbrirEnVentanaNueva" Type="bit" />
+  </EntityType>
+  <EntityType Name="S_ROLES">
+    <Key>
+      <PropertyRef Name="IdRol" />
+    </Key>
+    <Property Name="ID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="IdRol" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DescRol" Type="varchar" MaxLength="50" />
+    <Property Name="CodigoRol" Type="char" MaxLength="10" />
+    <Property Name="HoraInicioSemanaM" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="HoraFinSemanaM" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="HoraInicioSemanaT" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="HoraFinSemanaT" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="HoraInicioSabado" Type="numeric" Precision="18" Scale="0" />
+    <Property Name="HoraFinSabado" Type="numeric" Precision="18" Scale="0" />
+  </EntityType>
+  <EntityType Name="Talleres">
+    <Key>
+      <PropertyRef Name="IdTaller" />
+    </Key>
+    <Property Name="IdTaller" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="MatriculaTaller" Type="nchar" MaxLength="7" Nullable="false" />
+    <Property Name="RazonSocialTaller" Type="nvarchar" MaxLength="50" />
+    <Property Name="DomicilioTaller" Type="nvarchar" MaxLength="50" />
+    <Property Name="CuitTaller" Type="char" MaxLength="13" />
+    <Property Name="IdCiudad" Type="uniqueidentifier" />
+    <Property Name="TelefonoTaller" Type="varchar" MaxLength="30" />
+    <Property Name="FaxTaller" Type="varchar" MaxLength="30" />
+    <Property Name="MailTaller" Type="nvarchar" MaxLength="50" />
+    <Property Name="ContactoTaller" Type="nchar" MaxLength="10" />
+    <Property Name="FechaVencContrato" Type="datetime" />
+    <Property Name="ActivoTaller" Type="bit" />
+    <Property Name="Zona" Type="varchar" MaxLength="50" />
+    <Property Name="HorarioDeAtencion" Type="varchar" MaxLength="50" />
+    <Property Name="CPATaller" Type="uniqueidentifier" />
+    <Property Name="UltimoNroIntOperacion" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TalleresRT">
+    <Key>
+      <PropertyRef Name="IdTallerRT" />
+    </Key>
+    <Property Name="IdTallerRT" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="IdTaller" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="IdRT" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="FechaDesdeRTT" Type="datetime" Nullable="false" />
+    <Property Name="FechaHastaRTT" Type="datetime" />
+    <Property Name="RT_Principal" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Uso">
+    <Key>
+      <PropertyRef Name="IdUso" />
+    </Key>
+    <Property Name="IdUso" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="TipoUso" Type="char" MaxLength="20" Nullable="false" />
+    <Property Name="CodigoUsoEnte" Type="char" MaxLength="1" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Usuario">
+    <Key>
+      <PropertyRef Name="IdUsuario" />
+    </Key>
+    <Property Name="IdUsuario" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Usuario" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Contrasenia" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="NombreYApellidoUsuario" Type="varchar" MaxLength="70" />
+    <Property Name="IdTipoDoc" Type="uniqueidentifier" />
+    <Property Name="NroDocumento" Type="varchar" MaxLength="10" />
+    <Property Name="IdTaller" Type="uniqueidentifier" />
+    <Property Name="EmailUsuario" Type="varchar" MaxLength="50" />
+    <Property Name="IdRol" Type="int" Nullable="false" />
+    <Property Name="Activo" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Valvula">
+    <Key>
+      <PropertyRef Name="IdValvula" />
+    </Key>
+    <Property Name="IdValvula" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="IdMarcaValvula" Type="uniqueidentifier" />
+    <Property Name="CodHomologacionValvula" Type="nvarchar" MaxLength="4" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Valvula_Unidad">
+    <Key>
+      <PropertyRef Name="IdValvulaUnidad" />
+    </Key>
+    <Property Name="IdValvulaUnidad" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="IdValvula" Type="uniqueidentifier" />
+    <Property Name="IdSerieValvula" Type="nvarchar" MaxLength="30" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Vehiculos">
+    <Key>
+      <PropertyRef Name="IdVehiculo" />
+    </Key>
+    <Property Name="IdVehiculo" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="MarcaVehiculo" Type="varchar" MaxLength="20" />
+    <Property Name="ModeloVehiculo" Type="varchar" MaxLength="20" />
+    <Property Name="DominioVehiculo" Type="varchar" MaxLength="10" />
+    <Property Name="AnioVehiculo" Type="int" />
+    <Property Name="IdDuenioVehiculo" Type="uniqueidentifier" />
+    <Property Name="EsInyeccionVehiculo" Type="bit" />
+    <Property Name="RA" Type="bit" />
+    <Property Name="NumeroRA" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <Association Name="FK_Cilindros_MarcasCilindros">
+    <End Role="MarcasCilindros" Type="Self.MarcasCilindros" Multiplicity="0..1" />
+    <End Role="Cilindros" Type="Self.Cilindros" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MarcasCilindros">
+        <PropertyRef Name="IdMarcaCilindro" />
+      </Principal>
+      <Dependent Role="Cilindros">
+        <PropertyRef Name="IdMarcaCilindro" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CilindrosUnidad_Cilindros">
+    <End Role="Cilindros" Type="Self.Cilindros" Multiplicity="0..1" />
+    <End Role="CilindrosUnidad" Type="Self.CilindrosUnidad" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cilindros">
+        <PropertyRef Name="IdCilindro" />
+      </Principal>
+      <Dependent Role="CilindrosUnidad">
+        <PropertyRef Name="IdCilindro" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Clientes_DocumentosClientes">
+    <End Role="DocumentosClientes" Type="Self.DocumentosClientes" Multiplicity="1" />
+    <End Role="Clientes" Type="Self.Clientes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DocumentosClientes">
+        <PropertyRef Name="IdDocumentosClientes" />
+      </Principal>
+      <Dependent Role="Clientes">
+        <PropertyRef Name="IdTipoDniCliente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Clientes_Localidades1">
+    <End Role="Localidades" Type="Self.Localidades" Multiplicity="1" />
+    <End Role="Clientes" Type="Self.Clientes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Localidades">
+        <PropertyRef Name="Idlocalidad" />
+      </Principal>
+      <Dependent Role="Clientes">
+        <PropertyRef Name="IdLocalidad" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DESPACHO_FLETE">
+    <End Role="FLETE" Type="Self.FLETE" Multiplicity="1" />
+    <End Role="DESPACHO" Type="Self.DESPACHO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FLETE">
+        <PropertyRef Name="IdFlete" />
+      </Principal>
+      <Dependent Role="DESPACHO">
+        <PropertyRef Name="IdFlete" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DESPACHO_Usuario">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="1" />
+    <End Role="DESPACHO" Type="Self.DESPACHO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="IdUsuario" />
+      </Principal>
+      <Dependent Role="DESPACHO">
+        <PropertyRef Name="IdUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DESPACHODETALLE_DESPACHO">
+    <End Role="DESPACHO" Type="Self.DESPACHO" Multiplicity="1" />
+    <End Role="DESPACHODETALLE" Type="Self.DESPACHODETALLE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DESPACHO">
+        <PropertyRef Name="IdDespacho" />
+      </Principal>
+      <Dependent Role="DESPACHODETALLE">
+        <PropertyRef Name="IdDespacho" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DESPACHODETALLE_Obleas">
+    <End Role="Obleas" Type="Self.Obleas" Multiplicity="0..1" />
+    <End Role="DESPACHODETALLE" Type="Self.DESPACHODETALLE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Obleas">
+        <PropertyRef Name="IdOblea" />
+      </Principal>
+      <Dependent Role="DESPACHODETALLE">
+        <PropertyRef Name="IdOblea" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DESPACHODETALLE_PHCilindros">
+    <End Role="PHCilindros" Type="Self.PHCilindros" Multiplicity="0..1" />
+    <End Role="DESPACHODETALLE" Type="Self.DESPACHODETALLE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PHCilindros">
+        <PropertyRef Name="IdPHCilindro" />
+      </Principal>
+      <Dependent Role="DESPACHODETALLE">
+        <PropertyRef Name="IdPHCilindro" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DESPACHODETALLE_Talleres">
+    <End Role="Talleres" Type="Self.Talleres" Multiplicity="0..1" />
+    <End Role="DESPACHODETALLE" Type="Self.DESPACHODETALLE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Talleres">
+        <PropertyRef Name="IdTaller" />
+      </Principal>
+      <Dependent Role="DESPACHODETALLE">
+        <PropertyRef Name="IdTaller" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FLETE_Conductores">
+    <End Role="Conductores" Type="Self.Conductores" Multiplicity="0..1" />
+    <End Role="FLETE" Type="Self.FLETE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Conductores">
+        <PropertyRef Name="IdConductor" />
+      </Principal>
+      <Dependent Role="FLETE">
+        <PropertyRef Name="ConductorHabitualID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_INFORMEOBLEAS_INFORME">
+    <End Role="INFORME" Type="Self.INFORME" Multiplicity="1" />
+    <End Role="INFORMEOBLEAS" Type="Self.INFORMEOBLEAS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="INFORME">
+        <PropertyRef Name="IdInforme" />
+      </Principal>
+      <Dependent Role="INFORMEOBLEAS">
+        <PropertyRef Name="IdInforme" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_INFORMEOBLEAS_Obleas">
+    <End Role="Obleas" Type="Self.Obleas" Multiplicity="0..1" />
+    <End Role="INFORMEOBLEAS" Type="Self.INFORMEOBLEAS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Obleas">
+        <PropertyRef Name="IdOblea" />
+      </Principal>
+      <Dependent Role="INFORMEOBLEAS">
+        <PropertyRef Name="idOblea" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Inspecciones_InspeccionTipo">
+    <End Role="InspeccionTipo" Type="Self.InspeccionTipo" Multiplicity="1" />
+    <End Role="Inspecciones" Type="Self.Inspecciones" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="InspeccionTipo">
+        <PropertyRef Name="IdInspeccionTipo" />
+      </Principal>
+      <Dependent Role="Inspecciones">
+        <PropertyRef Name="IdInspeccionTipo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_InspeccionesPH_Inspecciones">
+    <End Role="Inspecciones" Type="Self.Inspecciones" Multiplicity="1" />
+    <End Role="InspeccionesPH" Type="Self.InspeccionesPH" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Inspecciones">
+        <PropertyRef Name="IdInspeccion" />
+      </Principal>
+      <Dependent Role="InspeccionesPH">
+        <PropertyRef Name="IdInspeccion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_InspeccionesPH_PHCilindros">
+    <End Role="PHCilindros" Type="Self.PHCilindros" Multiplicity="1" />
+    <End Role="InspeccionesPH" Type="Self.InspeccionesPH" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PHCilindros">
+        <PropertyRef Name="IdPHCilindro" />
+      </Principal>
+      <Dependent Role="InspeccionesPH">
+        <PropertyRef Name="IdPHCilndro" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Localidades_Provincias">
+    <End Role="Provincias" Type="Self.Provincias" Multiplicity="1" />
+    <End Role="Localidades" Type="Self.Localidades" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Provincias">
+        <PropertyRef Name="IdProvincia" />
+      </Principal>
+      <Dependent Role="Localidades">
+        <PropertyRef Name="IdProvincia" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ObleaErrorDetalle_ObleaErrorTipo">
+    <End Role="ObleaErrorTipo" Type="Self.ObleaErrorTipo" Multiplicity="1" />
+    <End Role="ObleaErrorDetalle" Type="Self.ObleaErrorDetalle" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ObleaErrorTipo">
+        <PropertyRef Name="ID_ObleaErrorTipo" />
+      </Principal>
+      <Dependent Role="ObleaErrorDetalle">
+        <PropertyRef Name="ID_ObleaErrorTipo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ObleaErrorDetalle_ObleaHistoricoEstado">
+    <End Role="ObleaHistoricoEstado" Type="Self.ObleaHistoricoEstado" Multiplicity="1" />
+    <End Role="ObleaErrorDetalle" Type="Self.ObleaErrorDetalle" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ObleaHistoricoEstado">
+        <PropertyRef Name="ID_ObleaHistoricoEstado" />
+      </Principal>
+      <Dependent Role="ObleaErrorDetalle">
+        <PropertyRef Name="ID_ObleaHistoricoEstado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ObleaHistoricoEstado_EstadosFichas">
+    <End Role="EstadosFichas" Type="Self.EstadosFichas" Multiplicity="1" />
+    <End Role="ObleaHistoricoEstado" Type="Self.ObleaHistoricoEstado" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EstadosFichas">
+        <PropertyRef Name="IdEstadoFicha" />
+      </Principal>
+      <Dependent Role="ObleaHistoricoEstado">
+        <PropertyRef Name="ID_EstadoOblea" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ObleaHistoricoEstado_Obleas">
+    <End Role="Obleas" Type="Self.Obleas" Multiplicity="1" />
+    <End Role="ObleaHistoricoEstado" Type="Self.ObleaHistoricoEstado" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Obleas">
+        <PropertyRef Name="IdOblea" />
+      </Principal>
+      <Dependent Role="ObleaHistoricoEstado">
+        <PropertyRef Name="ID_Oblea" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ObleaHistoricoEstado_Usuarios">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="1" />
+    <End Role="ObleaHistoricoEstado" Type="Self.ObleaHistoricoEstado" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="IdUsuario" />
+      </Principal>
+      <Dependent Role="ObleaHistoricoEstado">
+        <PropertyRef Name="ID_Usuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Obleas_Clientes">
+    <End Role="Clientes" Type="Self.Clientes" Multiplicity="1" />
+    <End Role="Obleas" Type="Self.Obleas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Clientes">
+        <PropertyRef Name="IdCliente" />
+      </Principal>
+      <Dependent Role="Obleas">
+        <PropertyRef Name="IdCliente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Obleas_EstadosFichas">
+    <End Role="EstadosFichas" Type="Self.EstadosFichas" Multiplicity="1" />
+    <End Role="Obleas" Type="Self.Obleas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EstadosFichas">
+        <PropertyRef Name="IdEstadoFicha" />
+      </Principal>
+      <Dependent Role="Obleas">
+        <PropertyRef Name="IdEstadoFicha" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Obleas_Operaciones">
+    <End Role="Operaciones" Type="Self.Operaciones" Multiplicity="1" />
+    <End Role="Obleas" Type="Self.Obleas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Operaciones">
+        <PropertyRef Name="IdOperacion" />
+      </Principal>
+      <Dependent Role="Obleas">
+        <PropertyRef Name="IdOperacion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Obleas_PEC">
+    <End Role="PEC" Type="Self.PEC" Multiplicity="1" />
+    <End Role="Obleas" Type="Self.Obleas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PEC">
+        <PropertyRef Name="IdPEC" />
+      </Principal>
+      <Dependent Role="Obleas">
+        <PropertyRef Name="IdPEC" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Obleas_RT_PEC">
+    <End Role="RT_PEC" Type="Self.RT_PEC" Multiplicity="0..1" />
+    <End Role="Obleas" Type="Self.Obleas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RT_PEC">
+        <PropertyRef Name="IdRTPEC" />
+      </Principal>
+      <Dependent Role="Obleas">
+        <PropertyRef Name="IdRTPEC" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Obleas_Talleres">
+    <End Role="Talleres" Type="Self.Talleres" Multiplicity="1" />
+    <End Role="Obleas" Type="Self.Obleas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Talleres">
+        <PropertyRef Name="IdTaller" />
+      </Principal>
+      <Dependent Role="Obleas">
+        <PropertyRef Name="IdTaller" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Obleas_TalleresRT">
+    <End Role="TalleresRT" Type="Self.TalleresRT" Multiplicity="0..1" />
+    <End Role="Obleas" Type="Self.Obleas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TalleresRT">
+        <PropertyRef Name="IdTallerRT" />
+      </Principal>
+      <Dependent Role="Obleas">
+        <PropertyRef Name="IdTallerRT" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Obleas_Uso">
+    <End Role="Uso" Type="Self.Uso" Multiplicity="1" />
+    <End Role="Obleas" Type="Self.Obleas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Uso">
+        <PropertyRef Name="IdUso" />
+      </Principal>
+      <Dependent Role="Obleas">
+        <PropertyRef Name="IdUso" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Obleas_Vehiculos">
+    <End Role="Vehiculos" Type="Self.Vehiculos" Multiplicity="1" />
+    <End Role="Obleas" Type="Self.Obleas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Vehiculos">
+        <PropertyRef Name="IdVehiculo" />
+      </Principal>
+      <Dependent Role="Obleas">
+        <PropertyRef Name="IdVehiculo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ObleasCilindros_CilindrosUnidad">
+    <End Role="CilindrosUnidad" Type="Self.CilindrosUnidad" Multiplicity="1" />
+    <End Role="ObleasCilindros" Type="Self.ObleasCilindros" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CilindrosUnidad">
+        <PropertyRef Name="IdCilindroUnidad" />
+      </Principal>
+      <Dependent Role="ObleasCilindros">
+        <PropertyRef Name="IdCilindroUnidad" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ObleasCilindros_CRPC">
+    <End Role="CRPC" Type="Self.CRPC" Multiplicity="0..1" />
+    <End Role="ObleasCilindros" Type="Self.ObleasCilindros" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CRPC">
+        <PropertyRef Name="IdCRPC" />
+      </Principal>
+      <Dependent Role="ObleasCilindros">
+        <PropertyRef Name="IdCRPC" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ObleasCilindros_Obleas">
+    <End Role="Obleas" Type="Self.Obleas" Multiplicity="1" />
+    <End Role="ObleasCilindros" Type="Self.ObleasCilindros" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Obleas">
+        <PropertyRef Name="IdOblea" />
+      </Principal>
+      <Dependent Role="ObleasCilindros">
+        <PropertyRef Name="IdOblea" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ObleasCilindros_Operaciones">
+    <End Role="Operaciones" Type="Self.Operaciones" Multiplicity="1" />
+    <End Role="ObleasCilindros" Type="Self.ObleasCilindros" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Operaciones">
+        <PropertyRef Name="IdOperacion" />
+      </Principal>
+      <Dependent Role="ObleasCilindros">
+        <PropertyRef Name="IdOperacion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ObleasReguladores_Obleas">
+    <End Role="Obleas" Type="Self.Obleas" Multiplicity="1" />
+    <End Role="ObleasReguladores" Type="Self.ObleasReguladores" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Obleas">
+        <PropertyRef Name="IdOblea" />
+      </Principal>
+      <Dependent Role="ObleasReguladores">
+        <PropertyRef Name="IdOblea" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ObleasReguladores_Operaciones">
+    <End Role="Operaciones" Type="Self.Operaciones" Multiplicity="1" />
+    <End Role="ObleasReguladores" Type="Self.ObleasReguladores" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Operaciones">
+        <PropertyRef Name="IdOperacion" />
+      </Principal>
+      <Dependent Role="ObleasReguladores">
+        <PropertyRef Name="IdOperacion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ObleasReguladores_ReguladoresUnidad">
+    <End Role="ReguladoresUnidad" Type="Self.ReguladoresUnidad" Multiplicity="1" />
+    <End Role="ObleasReguladores" Type="Self.ObleasReguladores" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ReguladoresUnidad">
+        <PropertyRef Name="IdReguladorUnidad" />
+      </Principal>
+      <Dependent Role="ObleasReguladores">
+        <PropertyRef Name="IdReguladorUnidad" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ObleasValvulas_ObleasCilindros">
+    <End Role="ObleasCilindros" Type="Self.ObleasCilindros" Multiplicity="1" />
+    <End Role="ObleasValvulas" Type="Self.ObleasValvulas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ObleasCilindros">
+        <PropertyRef Name="IdObleaCilindro" />
+      </Principal>
+      <Dependent Role="ObleasValvulas">
+        <PropertyRef Name="IdObleaCilindro" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ObleasValvulas_Operaciones">
+    <End Role="Operaciones" Type="Self.Operaciones" Multiplicity="1" />
+    <End Role="ObleasValvulas" Type="Self.ObleasValvulas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Operaciones">
+        <PropertyRef Name="IdOperacion" />
+      </Principal>
+      <Dependent Role="ObleasValvulas">
+        <PropertyRef Name="IdOperacion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ObleasValvulas_Valvula_Unidad">
+    <End Role="Valvula_Unidad" Type="Self.Valvula_Unidad" Multiplicity="1" />
+    <End Role="ObleasValvulas" Type="Self.ObleasValvulas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Valvula_Unidad">
+        <PropertyRef Name="IdValvulaUnidad" />
+      </Principal>
+      <Dependent Role="ObleasValvulas">
+        <PropertyRef Name="IdValvulaUnidad" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PEC_Localidades">
+    <End Role="Localidades" Type="Self.Localidades" Multiplicity="0..1" />
+    <End Role="PEC" Type="Self.PEC" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Localidades">
+        <PropertyRef Name="Idlocalidad" />
+      </Principal>
+      <Dependent Role="PEC">
+        <PropertyRef Name="IdLocalidad" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PH_Clientes">
+    <End Role="Clientes" Type="Self.Clientes" Multiplicity="0..1" />
+    <End Role="PH" Type="Self.PH" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Clientes">
+        <PropertyRef Name="IdCliente" />
+      </Principal>
+      <Dependent Role="PH">
+        <PropertyRef Name="IDCliente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PH_CRPC">
+    <End Role="CRPC" Type="Self.CRPC" Multiplicity="1" />
+    <End Role="PH" Type="Self.PH" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CRPC">
+        <PropertyRef Name="IdCRPC" />
+      </Principal>
+      <Dependent Role="PH">
+        <PropertyRef Name="IdCRPC" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PH_PEC">
+    <End Role="PEC" Type="Self.PEC" Multiplicity="1" />
+    <End Role="PH" Type="Self.PH" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PEC">
+        <PropertyRef Name="IdPEC" />
+      </Principal>
+      <Dependent Role="PH">
+        <PropertyRef Name="IdPEC" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PH_Talleres">
+    <End Role="Talleres" Type="Self.Talleres" Multiplicity="1" />
+    <End Role="PH" Type="Self.PH" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Talleres">
+        <PropertyRef Name="IdTaller" />
+      </Principal>
+      <Dependent Role="PH">
+        <PropertyRef Name="IdTaller" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PH_Vehiculos">
+    <End Role="Vehiculos" Type="Self.Vehiculos" Multiplicity="0..1" />
+    <End Role="PH" Type="Self.PH" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Vehiculos">
+        <PropertyRef Name="IdVehiculo" />
+      </Principal>
+      <Dependent Role="PH">
+        <PropertyRef Name="IDVehiculo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PhCilindroHistoricoEstado_ESTADOSPH">
+    <End Role="ESTADOSPH" Type="Self.ESTADOSPH" Multiplicity="1" />
+    <End Role="PhCilindroHistoricoEstado" Type="Self.PhCilindroHistoricoEstado" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ESTADOSPH">
+        <PropertyRef Name="IDEstadoPH" />
+      </Principal>
+      <Dependent Role="PhCilindroHistoricoEstado">
+        <PropertyRef Name="ID_EstadoPHCilindro" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PhCilindroHistoricoEstado_PHCilindros">
+    <End Role="PHCilindros" Type="Self.PHCilindros" Multiplicity="1" />
+    <End Role="PhCilindroHistoricoEstado" Type="Self.PhCilindroHistoricoEstado" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PHCilindros">
+        <PropertyRef Name="IdPHCilindro" />
+      </Principal>
+      <Dependent Role="PhCilindroHistoricoEstado">
+        <PropertyRef Name="ID_PHCilindro" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PhCilindroHistoricoEstado_Usuario">
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="1" />
+    <End Role="PhCilindroHistoricoEstado" Type="Self.PhCilindroHistoricoEstado" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="IdUsuario" />
+      </Principal>
+      <Dependent Role="PhCilindroHistoricoEstado">
+        <PropertyRef Name="ID_Usuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PHCilindros_CilindrosUnidad1">
+    <End Role="CilindrosUnidad" Type="Self.CilindrosUnidad" Multiplicity="1" />
+    <End Role="PHCilindros" Type="Self.PHCilindros" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CilindrosUnidad">
+        <PropertyRef Name="IdCilindroUnidad" />
+      </Principal>
+      <Dependent Role="PHCilindros">
+        <PropertyRef Name="IdCilindroUnidad" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PHCilindros_ESTADOSPH">
+    <End Role="ESTADOSPH" Type="Self.ESTADOSPH" Multiplicity="1" />
+    <End Role="PHCilindros" Type="Self.PHCilindros" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ESTADOSPH">
+        <PropertyRef Name="IDEstadoPH" />
+      </Principal>
+      <Dependent Role="PHCilindros">
+        <PropertyRef Name="IdEstadoPH" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PHCilindros_PEC">
+    <End Role="PEC" Type="Self.PEC" Multiplicity="0..1" />
+    <End Role="PHCilindros" Type="Self.PHCilindros" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PEC">
+        <PropertyRef Name="IdPEC" />
+      </Principal>
+      <Dependent Role="PHCilindros">
+        <PropertyRef Name="IdPEC" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PHCilindros_PH1">
+    <End Role="PH" Type="Self.PH" Multiplicity="1" />
+    <End Role="PHCilindros" Type="Self.PHCilindros" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PH">
+        <PropertyRef Name="IdPH" />
+      </Principal>
+      <Dependent Role="PHCilindros">
+        <PropertyRef Name="IdPH" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PHCilindros_Valvula_Unidad">
+    <End Role="Valvula_Unidad" Type="Self.Valvula_Unidad" Multiplicity="0..1" />
+    <End Role="PHCilindros" Type="Self.PHCilindros" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Valvula_Unidad">
+        <PropertyRef Name="IdValvulaUnidad" />
+      </Principal>
+      <Dependent Role="PHCilindros">
+        <PropertyRef Name="IdValvulaUnidad" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Reguladores_MarcasRegulador">
+    <End Role="MarcasRegulador" Type="Self.MarcasRegulador" Multiplicity="0..1" />
+    <End Role="Reguladores" Type="Self.Reguladores" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MarcasRegulador">
+        <PropertyRef Name="IdMarcaRegulador" />
+      </Principal>
+      <Dependent Role="Reguladores">
+        <PropertyRef Name="IdMarcaRegulador" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ReguladoresUnidad_Reguladores">
+    <End Role="Reguladores" Type="Self.Reguladores" Multiplicity="1" />
+    <End Role="ReguladoresUnidad" Type="Self.ReguladoresUnidad" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Reguladores">
+        <PropertyRef Name="IdRegulador" />
+      </Principal>
+      <Dependent Role="ReguladoresUnidad">
+        <PropertyRef Name="IdRegulador" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RT_CRPC_CRPC">
+    <End Role="CRPC" Type="Self.CRPC" Multiplicity="1" />
+    <End Role="RT_CRPC" Type="Self.RT_CRPC" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CRPC">
+        <PropertyRef Name="IdCRPC" />
+      </Principal>
+      <Dependent Role="RT_CRPC">
+        <PropertyRef Name="IdCRPC" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RT_CRPC_RT">
+    <End Role="RT" Type="Self.RT" Multiplicity="1" />
+    <End Role="RT_CRPC" Type="Self.RT_CRPC" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RT">
+        <PropertyRef Name="IdRT" />
+      </Principal>
+      <Dependent Role="RT_CRPC">
+        <PropertyRef Name="IdRT" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RT_DocumentosClientes">
+    <End Role="DocumentosClientes" Type="Self.DocumentosClientes" Multiplicity="1" />
+    <End Role="RT" Type="Self.RT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DocumentosClientes">
+        <PropertyRef Name="IdDocumentosClientes" />
+      </Principal>
+      <Dependent Role="RT">
+        <PropertyRef Name="IdTipoDniRT" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RT_PEC_PEC">
+    <End Role="PEC" Type="Self.PEC" Multiplicity="1" />
+    <End Role="RT_PEC" Type="Self.RT_PEC" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PEC">
+        <PropertyRef Name="IdPEC" />
+      </Principal>
+      <Dependent Role="RT_PEC">
+        <PropertyRef Name="IdPEC" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RT_PEC_RT">
+    <End Role="RT" Type="Self.RT" Multiplicity="1" />
+    <End Role="RT_PEC" Type="Self.RT_PEC" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RT">
+        <PropertyRef Name="IdRT" />
+      </Principal>
+      <Dependent Role="RT_PEC">
+        <PropertyRef Name="IdRT" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_S_ACCESOSCU_S_CASOSDEUSO1">
+    <End Role="S_CASOSDEUSO" Type="Self.S_CASOSDEUSO" Multiplicity="0..1" />
+    <End Role="S_ACCESOSCU" Type="Self.S_ACCESOSCU" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="S_CASOSDEUSO">
+        <PropertyRef Name="IdCU" />
+      </Principal>
+      <Dependent Role="S_ACCESOSCU">
+        <PropertyRef Name="IdCU" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_S_ACCESOSCU_S_ROLES1">
+    <End Role="S_ROLES" Type="Self.S_ROLES" Multiplicity="0..1" />
+    <End Role="S_ACCESOSCU" Type="Self.S_ACCESOSCU" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="S_ROLES">
+        <PropertyRef Name="IdRol" />
+      </Principal>
+      <Dependent Role="S_ACCESOSCU">
+        <PropertyRef Name="IdRol" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TalleresRT_RT">
+    <End Role="RT" Type="Self.RT" Multiplicity="1" />
+    <End Role="TalleresRT" Type="Self.TalleresRT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RT">
+        <PropertyRef Name="IdRT" />
+      </Principal>
+      <Dependent Role="TalleresRT">
+        <PropertyRef Name="IdRT" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TalleresRT_Talleres">
+    <End Role="Talleres" Type="Self.Talleres" Multiplicity="1" />
+    <End Role="TalleresRT" Type="Self.TalleresRT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Talleres">
+        <PropertyRef Name="IdTaller" />
+      </Principal>
+      <Dependent Role="TalleresRT">
+        <PropertyRef Name="IdTaller" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Usuario_DocumentosClientes">
+    <End Role="DocumentosClientes" Type="Self.DocumentosClientes" Multiplicity="0..1" />
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DocumentosClientes">
+        <PropertyRef Name="IdDocumentosClientes" />
+      </Principal>
+      <Dependent Role="Usuario">
+        <PropertyRef Name="IdTipoDoc" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Usuario_S_ROLES1">
+    <End Role="S_ROLES" Type="Self.S_ROLES" Multiplicity="1" />
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="S_ROLES">
+        <PropertyRef Name="IdRol" />
+      </Principal>
+      <Dependent Role="Usuario">
+        <PropertyRef Name="IdRol" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Usuario_Talleres">
+    <End Role="Talleres" Type="Self.Talleres" Multiplicity="0..1" />
+    <End Role="Usuario" Type="Self.Usuario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Talleres">
+        <PropertyRef Name="IdTaller" />
+      </Principal>
+      <Dependent Role="Usuario">
+        <PropertyRef Name="IdTaller" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Valvula_MarcasValvulas">
+    <End Role="MarcasValvulas" Type="Self.MarcasValvulas" Multiplicity="0..1" />
+    <End Role="Valvula" Type="Self.Valvula" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MarcasValvulas">
+        <PropertyRef Name="IdMarcaValvula" />
+      </Principal>
+      <Dependent Role="Valvula">
+        <PropertyRef Name="IdMarcaValvula" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Valvula_Unidad_Valvula">
+    <End Role="Valvula" Type="Self.Valvula" Multiplicity="0..1" />
+    <End Role="Valvula_Unidad" Type="Self.Valvula_Unidad" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Valvula">
+        <PropertyRef Name="IdValvula" />
+      </Principal>
+      <Dependent Role="Valvula_Unidad">
+        <PropertyRef Name="IdValvula" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="TalleresWebModelStoreContainer">
+    <EntitySet Name="Cilindros" EntityType="Self.Cilindros" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CilindrosUnidad" EntityType="Self.CilindrosUnidad" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Clientes" EntityType="Self.Clientes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Conductores" EntityType="Self.Conductores" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CRPC" EntityType="Self.CRPC" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DESPACHO" EntityType="Self.DESPACHO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DESPACHODETALLE" EntityType="Self.DESPACHODETALLE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DocumentosClientes" EntityType="Self.DocumentosClientes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EstadosFichas" EntityType="Self.EstadosFichas" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ESTADOSPH" EntityType="Self.ESTADOSPH" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="FLETE" EntityType="Self.FLETE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="INFORME" EntityType="Self.INFORME" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="INFORMEOBLEAS" EntityType="Self.INFORMEOBLEAS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Inspecciones" EntityType="Self.Inspecciones" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="InspeccionesPH" EntityType="Self.InspeccionesPH" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="InspeccionTipo" EntityType="Self.InspeccionTipo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Localidades" EntityType="Self.Localidades" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LOTES" EntityType="Self.LOTES" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MarcasCilindros" EntityType="Self.MarcasCilindros" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MarcasRegulador" EntityType="Self.MarcasRegulador" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MarcasValvulas" EntityType="Self.MarcasValvulas" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ObleaErrorDetalle" EntityType="Self.ObleaErrorDetalle" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ObleaErrorTipo" EntityType="Self.ObleaErrorTipo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ObleaHistoricoEstado" EntityType="Self.ObleaHistoricoEstado" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Obleas" EntityType="Self.Obleas" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ObleasCilindros" EntityType="Self.ObleasCilindros" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ObleasReguladores" EntityType="Self.ObleasReguladores" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ObleasValvulas" EntityType="Self.ObleasValvulas" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Operaciones" EntityType="Self.Operaciones" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PEC" EntityType="Self.PEC" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PH" EntityType="Self.PH" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PhCilindroHistoricoEstado" EntityType="Self.PhCilindroHistoricoEstado" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PHCilindros" EntityType="Self.PHCilindros" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Provincias" EntityType="Self.Provincias" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Reguladores" EntityType="Self.Reguladores" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ReguladoresUnidad" EntityType="Self.ReguladoresUnidad" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RT" EntityType="Self.RT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RT_CRPC" EntityType="Self.RT_CRPC" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RT_PEC" EntityType="Self.RT_PEC" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="S_ACCESOSCU" EntityType="Self.S_ACCESOSCU" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="S_CASOSDEUSO" EntityType="Self.S_CASOSDEUSO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="S_ROLES" EntityType="Self.S_ROLES" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Talleres" EntityType="Self.Talleres" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TalleresRT" EntityType="Self.TalleresRT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Uso" EntityType="Self.Uso" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Usuario" EntityType="Self.Usuario" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Valvula" EntityType="Self.Valvula" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Valvula_Unidad" EntityType="Self.Valvula_Unidad" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Vehiculos" EntityType="Self.Vehiculos" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Cilindros_MarcasCilindros" Association="Self.FK_Cilindros_MarcasCilindros">
+      <End Role="MarcasCilindros" EntitySet="MarcasCilindros" />
+      <End Role="Cilindros" EntitySet="Cilindros" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CilindrosUnidad_Cilindros" Association="Self.FK_CilindrosUnidad_Cilindros">
+      <End Role="Cilindros" EntitySet="Cilindros" />
+      <End Role="CilindrosUnidad" EntitySet="CilindrosUnidad" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Clientes_DocumentosClientes" Association="Self.FK_Clientes_DocumentosClientes">
+      <End Role="DocumentosClientes" EntitySet="DocumentosClientes" />
+      <End Role="Clientes" EntitySet="Clientes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Clientes_Localidades1" Association="Self.FK_Clientes_Localidades1">
+      <End Role="Localidades" EntitySet="Localidades" />
+      <End Role="Clientes" EntitySet="Clientes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DESPACHO_FLETE" Association="Self.FK_DESPACHO_FLETE">
+      <End Role="FLETE" EntitySet="FLETE" />
+      <End Role="DESPACHO" EntitySet="DESPACHO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DESPACHO_Usuario" Association="Self.FK_DESPACHO_Usuario">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="DESPACHO" EntitySet="DESPACHO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DESPACHODETALLE_DESPACHO" Association="Self.FK_DESPACHODETALLE_DESPACHO">
+      <End Role="DESPACHO" EntitySet="DESPACHO" />
+      <End Role="DESPACHODETALLE" EntitySet="DESPACHODETALLE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DESPACHODETALLE_Obleas" Association="Self.FK_DESPACHODETALLE_Obleas">
+      <End Role="Obleas" EntitySet="Obleas" />
+      <End Role="DESPACHODETALLE" EntitySet="DESPACHODETALLE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DESPACHODETALLE_PHCilindros" Association="Self.FK_DESPACHODETALLE_PHCilindros">
+      <End Role="PHCilindros" EntitySet="PHCilindros" />
+      <End Role="DESPACHODETALLE" EntitySet="DESPACHODETALLE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DESPACHODETALLE_Talleres" Association="Self.FK_DESPACHODETALLE_Talleres">
+      <End Role="Talleres" EntitySet="Talleres" />
+      <End Role="DESPACHODETALLE" EntitySet="DESPACHODETALLE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FLETE_Conductores" Association="Self.FK_FLETE_Conductores">
+      <End Role="Conductores" EntitySet="Conductores" />
+      <End Role="FLETE" EntitySet="FLETE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_INFORMEOBLEAS_INFORME" Association="Self.FK_INFORMEOBLEAS_INFORME">
+      <End Role="INFORME" EntitySet="INFORME" />
+      <End Role="INFORMEOBLEAS" EntitySet="INFORMEOBLEAS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_INFORMEOBLEAS_Obleas" Association="Self.FK_INFORMEOBLEAS_Obleas">
+      <End Role="Obleas" EntitySet="Obleas" />
+      <End Role="INFORMEOBLEAS" EntitySet="INFORMEOBLEAS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Inspecciones_InspeccionTipo" Association="Self.FK_Inspecciones_InspeccionTipo">
+      <End Role="InspeccionTipo" EntitySet="InspeccionTipo" />
+      <End Role="Inspecciones" EntitySet="Inspecciones" />
+    </AssociationSet>
+    <AssociationSet Name="FK_InspeccionesPH_Inspecciones" Association="Self.FK_InspeccionesPH_Inspecciones">
+      <End Role="Inspecciones" EntitySet="Inspecciones" />
+      <End Role="InspeccionesPH" EntitySet="InspeccionesPH" />
+    </AssociationSet>
+    <AssociationSet Name="FK_InspeccionesPH_PHCilindros" Association="Self.FK_InspeccionesPH_PHCilindros">
+      <End Role="PHCilindros" EntitySet="PHCilindros" />
+      <End Role="InspeccionesPH" EntitySet="InspeccionesPH" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Localidades_Provincias" Association="Self.FK_Localidades_Provincias">
+      <End Role="Provincias" EntitySet="Provincias" />
+      <End Role="Localidades" EntitySet="Localidades" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ObleaErrorDetalle_ObleaErrorTipo" Association="Self.FK_ObleaErrorDetalle_ObleaErrorTipo">
+      <End Role="ObleaErrorTipo" EntitySet="ObleaErrorTipo" />
+      <End Role="ObleaErrorDetalle" EntitySet="ObleaErrorDetalle" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ObleaErrorDetalle_ObleaHistoricoEstado" Association="Self.FK_ObleaErrorDetalle_ObleaHistoricoEstado">
+      <End Role="ObleaHistoricoEstado" EntitySet="ObleaHistoricoEstado" />
+      <End Role="ObleaErrorDetalle" EntitySet="ObleaErrorDetalle" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ObleaHistoricoEstado_EstadosFichas" Association="Self.FK_ObleaHistoricoEstado_EstadosFichas">
+      <End Role="EstadosFichas" EntitySet="EstadosFichas" />
+      <End Role="ObleaHistoricoEstado" EntitySet="ObleaHistoricoEstado" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ObleaHistoricoEstado_Obleas" Association="Self.FK_ObleaHistoricoEstado_Obleas">
+      <End Role="Obleas" EntitySet="Obleas" />
+      <End Role="ObleaHistoricoEstado" EntitySet="ObleaHistoricoEstado" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ObleaHistoricoEstado_Usuarios" Association="Self.FK_ObleaHistoricoEstado_Usuarios">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="ObleaHistoricoEstado" EntitySet="ObleaHistoricoEstado" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Obleas_Clientes" Association="Self.FK_Obleas_Clientes">
+      <End Role="Clientes" EntitySet="Clientes" />
+      <End Role="Obleas" EntitySet="Obleas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Obleas_EstadosFichas" Association="Self.FK_Obleas_EstadosFichas">
+      <End Role="EstadosFichas" EntitySet="EstadosFichas" />
+      <End Role="Obleas" EntitySet="Obleas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Obleas_Operaciones" Association="Self.FK_Obleas_Operaciones">
+      <End Role="Operaciones" EntitySet="Operaciones" />
+      <End Role="Obleas" EntitySet="Obleas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Obleas_PEC" Association="Self.FK_Obleas_PEC">
+      <End Role="PEC" EntitySet="PEC" />
+      <End Role="Obleas" EntitySet="Obleas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Obleas_RT_PEC" Association="Self.FK_Obleas_RT_PEC">
+      <End Role="RT_PEC" EntitySet="RT_PEC" />
+      <End Role="Obleas" EntitySet="Obleas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Obleas_Talleres" Association="Self.FK_Obleas_Talleres">
+      <End Role="Talleres" EntitySet="Talleres" />
+      <End Role="Obleas" EntitySet="Obleas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Obleas_TalleresRT" Association="Self.FK_Obleas_TalleresRT">
+      <End Role="TalleresRT" EntitySet="TalleresRT" />
+      <End Role="Obleas" EntitySet="Obleas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Obleas_Uso" Association="Self.FK_Obleas_Uso">
+      <End Role="Uso" EntitySet="Uso" />
+      <End Role="Obleas" EntitySet="Obleas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Obleas_Vehiculos" Association="Self.FK_Obleas_Vehiculos">
+      <End Role="Vehiculos" EntitySet="Vehiculos" />
+      <End Role="Obleas" EntitySet="Obleas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ObleasCilindros_CilindrosUnidad" Association="Self.FK_ObleasCilindros_CilindrosUnidad">
+      <End Role="CilindrosUnidad" EntitySet="CilindrosUnidad" />
+      <End Role="ObleasCilindros" EntitySet="ObleasCilindros" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ObleasCilindros_CRPC" Association="Self.FK_ObleasCilindros_CRPC">
+      <End Role="CRPC" EntitySet="CRPC" />
+      <End Role="ObleasCilindros" EntitySet="ObleasCilindros" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ObleasCilindros_Obleas" Association="Self.FK_ObleasCilindros_Obleas">
+      <End Role="Obleas" EntitySet="Obleas" />
+      <End Role="ObleasCilindros" EntitySet="ObleasCilindros" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ObleasCilindros_Operaciones" Association="Self.FK_ObleasCilindros_Operaciones">
+      <End Role="Operaciones" EntitySet="Operaciones" />
+      <End Role="ObleasCilindros" EntitySet="ObleasCilindros" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ObleasReguladores_Obleas" Association="Self.FK_ObleasReguladores_Obleas">
+      <End Role="Obleas" EntitySet="Obleas" />
+      <End Role="ObleasReguladores" EntitySet="ObleasReguladores" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ObleasReguladores_Operaciones" Association="Self.FK_ObleasReguladores_Operaciones">
+      <End Role="Operaciones" EntitySet="Operaciones" />
+      <End Role="ObleasReguladores" EntitySet="ObleasReguladores" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ObleasReguladores_ReguladoresUnidad" Association="Self.FK_ObleasReguladores_ReguladoresUnidad">
+      <End Role="ReguladoresUnidad" EntitySet="ReguladoresUnidad" />
+      <End Role="ObleasReguladores" EntitySet="ObleasReguladores" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ObleasValvulas_ObleasCilindros" Association="Self.FK_ObleasValvulas_ObleasCilindros">
+      <End Role="ObleasCilindros" EntitySet="ObleasCilindros" />
+      <End Role="ObleasValvulas" EntitySet="ObleasValvulas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ObleasValvulas_Operaciones" Association="Self.FK_ObleasValvulas_Operaciones">
+      <End Role="Operaciones" EntitySet="Operaciones" />
+      <End Role="ObleasValvulas" EntitySet="ObleasValvulas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ObleasValvulas_Valvula_Unidad" Association="Self.FK_ObleasValvulas_Valvula_Unidad">
+      <End Role="Valvula_Unidad" EntitySet="Valvula_Unidad" />
+      <End Role="ObleasValvulas" EntitySet="ObleasValvulas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PEC_Localidades" Association="Self.FK_PEC_Localidades">
+      <End Role="Localidades" EntitySet="Localidades" />
+      <End Role="PEC" EntitySet="PEC" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PH_Clientes" Association="Self.FK_PH_Clientes">
+      <End Role="Clientes" EntitySet="Clientes" />
+      <End Role="PH" EntitySet="PH" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PH_CRPC" Association="Self.FK_PH_CRPC">
+      <End Role="CRPC" EntitySet="CRPC" />
+      <End Role="PH" EntitySet="PH" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PH_PEC" Association="Self.FK_PH_PEC">
+      <End Role="PEC" EntitySet="PEC" />
+      <End Role="PH" EntitySet="PH" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PH_Talleres" Association="Self.FK_PH_Talleres">
+      <End Role="Talleres" EntitySet="Talleres" />
+      <End Role="PH" EntitySet="PH" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PH_Vehiculos" Association="Self.FK_PH_Vehiculos">
+      <End Role="Vehiculos" EntitySet="Vehiculos" />
+      <End Role="PH" EntitySet="PH" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PhCilindroHistoricoEstado_ESTADOSPH" Association="Self.FK_PhCilindroHistoricoEstado_ESTADOSPH">
+      <End Role="ESTADOSPH" EntitySet="ESTADOSPH" />
+      <End Role="PhCilindroHistoricoEstado" EntitySet="PhCilindroHistoricoEstado" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PhCilindroHistoricoEstado_PHCilindros" Association="Self.FK_PhCilindroHistoricoEstado_PHCilindros">
+      <End Role="PHCilindros" EntitySet="PHCilindros" />
+      <End Role="PhCilindroHistoricoEstado" EntitySet="PhCilindroHistoricoEstado" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PhCilindroHistoricoEstado_Usuario" Association="Self.FK_PhCilindroHistoricoEstado_Usuario">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="PhCilindroHistoricoEstado" EntitySet="PhCilindroHistoricoEstado" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PHCilindros_CilindrosUnidad1" Association="Self.FK_PHCilindros_CilindrosUnidad1">
+      <End Role="CilindrosUnidad" EntitySet="CilindrosUnidad" />
+      <End Role="PHCilindros" EntitySet="PHCilindros" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PHCilindros_ESTADOSPH" Association="Self.FK_PHCilindros_ESTADOSPH">
+      <End Role="ESTADOSPH" EntitySet="ESTADOSPH" />
+      <End Role="PHCilindros" EntitySet="PHCilindros" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PHCilindros_PEC" Association="Self.FK_PHCilindros_PEC">
+      <End Role="PEC" EntitySet="PEC" />
+      <End Role="PHCilindros" EntitySet="PHCilindros" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PHCilindros_PH1" Association="Self.FK_PHCilindros_PH1">
+      <End Role="PH" EntitySet="PH" />
+      <End Role="PHCilindros" EntitySet="PHCilindros" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PHCilindros_Valvula_Unidad" Association="Self.FK_PHCilindros_Valvula_Unidad">
+      <End Role="Valvula_Unidad" EntitySet="Valvula_Unidad" />
+      <End Role="PHCilindros" EntitySet="PHCilindros" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Reguladores_MarcasRegulador" Association="Self.FK_Reguladores_MarcasRegulador">
+      <End Role="MarcasRegulador" EntitySet="MarcasRegulador" />
+      <End Role="Reguladores" EntitySet="Reguladores" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ReguladoresUnidad_Reguladores" Association="Self.FK_ReguladoresUnidad_Reguladores">
+      <End Role="Reguladores" EntitySet="Reguladores" />
+      <End Role="ReguladoresUnidad" EntitySet="ReguladoresUnidad" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RT_CRPC_CRPC" Association="Self.FK_RT_CRPC_CRPC">
+      <End Role="CRPC" EntitySet="CRPC" />
+      <End Role="RT_CRPC" EntitySet="RT_CRPC" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RT_CRPC_RT" Association="Self.FK_RT_CRPC_RT">
+      <End Role="RT" EntitySet="RT" />
+      <End Role="RT_CRPC" EntitySet="RT_CRPC" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RT_DocumentosClientes" Association="Self.FK_RT_DocumentosClientes">
+      <End Role="DocumentosClientes" EntitySet="DocumentosClientes" />
+      <End Role="RT" EntitySet="RT" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RT_PEC_PEC" Association="Self.FK_RT_PEC_PEC">
+      <End Role="PEC" EntitySet="PEC" />
+      <End Role="RT_PEC" EntitySet="RT_PEC" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RT_PEC_RT" Association="Self.FK_RT_PEC_RT">
+      <End Role="RT" EntitySet="RT" />
+      <End Role="RT_PEC" EntitySet="RT_PEC" />
+    </AssociationSet>
+    <AssociationSet Name="FK_S_ACCESOSCU_S_CASOSDEUSO1" Association="Self.FK_S_ACCESOSCU_S_CASOSDEUSO1">
+      <End Role="S_CASOSDEUSO" EntitySet="S_CASOSDEUSO" />
+      <End Role="S_ACCESOSCU" EntitySet="S_ACCESOSCU" />
+    </AssociationSet>
+    <AssociationSet Name="FK_S_ACCESOSCU_S_ROLES1" Association="Self.FK_S_ACCESOSCU_S_ROLES1">
+      <End Role="S_ROLES" EntitySet="S_ROLES" />
+      <End Role="S_ACCESOSCU" EntitySet="S_ACCESOSCU" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TalleresRT_RT" Association="Self.FK_TalleresRT_RT">
+      <End Role="RT" EntitySet="RT" />
+      <End Role="TalleresRT" EntitySet="TalleresRT" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TalleresRT_Talleres" Association="Self.FK_TalleresRT_Talleres">
+      <End Role="Talleres" EntitySet="Talleres" />
+      <End Role="TalleresRT" EntitySet="TalleresRT" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Usuario_DocumentosClientes" Association="Self.FK_Usuario_DocumentosClientes">
+      <End Role="DocumentosClientes" EntitySet="DocumentosClientes" />
+      <End Role="Usuario" EntitySet="Usuario" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Usuario_S_ROLES1" Association="Self.FK_Usuario_S_ROLES1">
+      <End Role="S_ROLES" EntitySet="S_ROLES" />
+      <End Role="Usuario" EntitySet="Usuario" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Usuario_Talleres" Association="Self.FK_Usuario_Talleres">
+      <End Role="Talleres" EntitySet="Talleres" />
+      <End Role="Usuario" EntitySet="Usuario" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Valvula_MarcasValvulas" Association="Self.FK_Valvula_MarcasValvulas">
+      <End Role="MarcasValvulas" EntitySet="MarcasValvulas" />
+      <End Role="Valvula" EntitySet="Valvula" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Valvula_Unidad_Valvula" Association="Self.FK_Valvula_Unidad_Valvula">
+      <End Role="Valvula" EntitySet="Valvula" />
+      <End Role="Valvula_Unidad" EntitySet="Valvula_Unidad" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,211 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5871B99A-DEDF-4B44-8157-F4F47A4670A5}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TalleresWeb.DataAccess</RootNamespace>
+    <AssemblyName>TalleresWeb.DataAccess</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\SharedAssemblies\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PL.Fwk.DataAccess, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\DLL_Shared\PL.Fwk.DataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="PL.Fwk.Entities, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\DLL_Shared\PL.Fwk.Entities.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CilindrosDataAccess.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CilindrosUnidadDataAccess.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ClientesDataAccess.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ConductoresDataAccess.cs" />
+    <Compile Include="DespachoDataAccess.cs" />
+    <Compile Include="DespachoDetalleDataAccess.cs" />
+    <Compile Include="PHCilindroHistoricoEstadoDataAccess.cs" />
+    <Compile Include="FleteDataAccess.cs" />
+    <Compile Include="InspeccionesPHDataAccess.cs" />
+    <Compile Include="InspeccionesDataAccess.cs" />
+    <Compile Include="ObleaErrorDataAccess.cs" />
+    <Compile Include="InformeDetalleDataAccess.cs" />
+    <Compile Include="InformeDataAccess.cs" />
+    <Compile Include="LotesDataAccess.cs" />
+    <Compile Include="DocumentosDataAccess.cs" />
+    <Compile Include="CRPCDataAccess.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="EstadosFichasDataAccess.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="LocalidadesDataAccess.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MarcasCilindrosDataAccess.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MarcasReguladoresDataAccess.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MarcasValvulasDataAccess.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ObleasCilindrosDataAccess.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ObleasDataAccess.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ObleasReguladoresDataAccess.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ObleasValvulasDataAccess.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PHCilindrosDataAccess.cs" />
+    <Compile Include="PHDataAccess.cs" />
+    <Compile Include="ProvinciasDataAccess.cs" />
+    <Compile Include="RT_PECDataAccess.cs" />
+    <Compile Include="RTDataAccess.cs" />
+    <Compile Include="PECDataAccess.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReguladoresDataAccess.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ReguladoresUnidadDataAccess.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="S_AccesosCUDataAccess.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="S_RolesDataAccess.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TalleresRTDataAccess.cs" />
+    <Compile Include="TalleresDataAccess.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TiposOperacionesDataAccess.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="UsoDataAccess.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="UsuariosDataAccess.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ValvulaDataAccess.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ValvulaUnidadDataAccess.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="VehiculosDataAccess.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\TalleresWeb.Web\TalleresWeb.Web.Cross.Configuracion\TalleresWeb.Web.Cross.Configuracion.csproj">
+      <Project>{6B0B928B-B9B7-4E03-AACD-482F8745EBF3}</Project>
+      <Name>TalleresWeb.Web.Cross.Configuracion</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TalleresWeb.Entities\TalleresWeb.Entities.csproj">
+      <Project>{4B4D1687-3D23-464E-BAFB-764C678892AB}</Project>
+      <Name>TalleresWeb.Entities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,221 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{EDCF8CFC-7C73-4727-B86B-92D5375C07EA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PL.Fwk.Presentation.Web</RootNamespace>
+    <AssemblyName>PL.Fwk.Presentation.Web</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\DLL_Shared\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=4.1.50731.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <HintPath>..\..\TalleresWeb\packages\AjaxControlToolkit.4.1.50731\lib\40\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.Edm, Version=5.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Data.Edm.5.2.0\lib\net40\Microsoft.Data.Edm.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.OData, Version=5.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Data.OData.5.2.0\lib\net40\Microsoft.Data.OData.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAzure.Storage">
+      <HintPath>..\packages\WindowsAzure.Storage.2.1.0.4\lib\net40\Microsoft.WindowsAzure.Storage.dll</HintPath>
+    </Reference>
+    <Reference Include="SanitizerProviders, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\TalleresWeb\packages\AjaxControlToolkit.4.1.50731\lib\40\SanitizerProviders\SanitizerProviders.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Data.Services.Client" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Spatial, Version=5.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\System.Spatial.5.2.0\lib\net40\System.Spatial.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controls\PLTextArea.cs" />
+    <Compile Include="Controls\PLTextDate.cs" />
+    <Compile Include="Controls\PLModalPopupExtender.cs" />
+    <Compile Include="Controls\PLHidden.cs" />
+    <Compile Include="Controls\PLTabPanel.cs" />
+    <Compile Include="Controls\PLTabContainer.cs" />
+    <Compile Include="Controls\PLTextBoxMasked.cs" />
+    <Compile Include="Controls\PLLabelLabel.cs" />
+    <Compile Include="Controls\PLAutocompleteExtender.cs" />
+    <Compile Include="Controls\PLGrid.cs" />
+    <Compile Include="Controls\PLAccordionPane.cs" />
+    <Compile Include="Controls\PLCheckBox.cs" />
+    <Compile Include="Controls\PLCalendar.cs" />
+    <Compile Include="Controls\PLRadioButton.cs" />
+    <Compile Include="Controls\PLLabel.cs" />
+    <Compile Include="Controls\PLImage.cs" />
+    <Compile Include="Controls\PLPanel.cs" />
+    <Compile Include="Controls\PLNumberBox.cs" />
+    <Compile Include="Controls\PLTextField.cs" />
+    <Compile Include="Controls\PLAccordion.cs" />
+    <Compile Include="Controls\PLImageButton.cs" />
+    <Compile Include="Controls\PLLinkButton.cs" />
+    <Compile Include="Controls\IControl.cs" />
+    <Compile Include="Controls\ControlBase.cs" />
+    <Compile Include="Controls\PLButton.cs" />
+    <Compile Include="Controls\PLComboBox.cs" />
+    <Compile Include="Controls\PLGridView.cs" />
+    <Compile Include="Controls\PLTextBox.cs" />
+    <Compile Include="Controls\Validators\PLCompareValidator.cs" />
+    <Compile Include="Controls\Validators\PLRequiredFieldValidator.cs" />
+    <Compile Include="MasterPages\PLMasterPageBase.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Manager\ManagerDetail.cs" />
+    <Compile Include="Pages\Manager\PageManager.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\PLPageBase.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PL.Fwk.BusinessLogic\PL.Fwk.BusinessLogic.csproj">
+      <Project>{6F6F1BE1-7DDE-4F83-99D1-CA45C63331F3}</Project>
+      <Name>PL.Fwk.BusinessLogic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PL.Fwk.DataAccess\PL.Fwk.DataAccess.csproj">
+      <Project>{969E44BB-0B12-403B-8FA7-86CAA628C46D}</Project>
+      <Name>PL.Fwk.DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PL.Fwk.Entities\PL.Fwk.Entities.csproj">
+      <Project>{DF7307AE-2C26-427B-B58D-C15D06010EE7}</Project>
+      <Name>PL.Fwk.Entities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="js\cycle.js" />
+    <Content Include="js\grid.addons.js" />
+    <Content Include="js\grid.base.js" />
+    <Content Include="js\grid.celledit.js" />
+    <Content Include="js\grid.common.js" />
+    <Content Include="js\grid.custom.js" />
+    <Content Include="js\grid.filter.js" />
+    <Content Include="js\grid.formedit.js" />
+    <Content Include="js\grid.grouping.js" />
+    <Content Include="js\grid.import.js" />
+    <Content Include="js\grid.inlinedit.js" />
+    <Content Include="js\grid.jqueryui.js" />
+    <Content Include="js\grid.loader.js" />
+    <Content Include="js\grid.locale-es.js" />
+    <Content Include="js\grid.postext.js" />
+    <Content Include="js\grid.setcolumns.js" />
+    <Content Include="js\grid.subgrid.js" />
+    <Content Include="js\grid.tbltogrid.js" />
+    <Content Include="js\grid.treegrid.js" />
+    <Content Include="js\jqDnR.js" />
+    <Content Include="js\jqModal.js" />
+    <Content Include="js\jquery-1.5.2.min.js" />
+    <Content Include="js\jquery.contextmenu.js" />
+    <Content Include="js\jquery.fmatter.js" />
+    <Content Include="js\jquery.jqGrid.min.js" />
+    <Content Include="js\jquery.jqGrid.src.js" />
+    <Content Include="js\jquery.searchFilter.js" />
+    <Content Include="js\jquery.tablednd.js" />
+    <Content Include="js\json.js" />
+    <Content Include="js\json2.js" />
+    <Content Include="js\JsonXml.js" />
+    <Content Include="js\json_parse.js" />
+    <Content Include="js\json_parse_state.js" />
+    <Content Include="js\ui.multiselect.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="PLReportCreator\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

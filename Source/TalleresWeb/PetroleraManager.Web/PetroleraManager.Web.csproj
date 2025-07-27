@@ -1,0 +1,576 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F704DA93-611C-42FA-A279-F35D35267ED4}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PetroleraManager.Web</RootNamespace>
+    <AssemblyName>PetroleraManager.Web</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+    <Use64BitIISExpress />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=4.1.50731.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\TalleresWeb.Web\TalleresWeb.Web.Cross.Configuracion\dll\AjaxControlsToolkit\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="CarlosAg.ExcelXmlWriter, Version=1.0.0.6, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\TalleresWeb.Web\TalleresWeb.Web.Cross.Configuracion\dll\CarlosAg.ExcelXmlWriter.dll</HintPath>
+    </Reference>
+    <Reference Include="Ionic.Zip">
+      <HintPath>..\..\TalleresWeb.Web\TalleresWeb.Web.Cross.Configuracion\dll\Ionic.Zip.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=4.0.5.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\TalleresWeb.Web\TalleresWeb.Web.Cross.Configuracion\dll\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="PL.Fwk.BusinessLogic">
+      <HintPath>..\..\PL.Fwk\PL.Fwk.BusinessLogic\bin\Release\PL.Fwk.BusinessLogic.dll</HintPath>
+    </Reference>
+    <Reference Include="PL.Fwk.DataAccess">
+      <HintPath>..\..\PL.Fwk\PL.Fwk.DataAccess\bin\Release\PL.Fwk.DataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="PL.Fwk.Entities">
+      <HintPath>..\..\PL.Fwk\PL.Fwk.Entities\bin\Release\PL.Fwk.Entities.dll</HintPath>
+    </Reference>
+    <Reference Include="PL.Fwk.Presentation.Web">
+      <HintPath>..\..\PL.Fwk\PL.Fwk.Presentation.Web\bin\Release\PL.Fwk.Presentation.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="SanitizerProviders, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\AjaxControlToolkit.4.1.50731\lib\40\SanitizerProviders\SanitizerProviders.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="01.Lotes\Lotes.aspx" />
+    <Content Include="02.Tramites\CargarResultadosEnte.aspx" />
+    <Content Include="02.Tramites\EliminarOblea.aspx" />
+    <Content Include="02.Tramites\Informes\InformesEstadosObleas.aspx" />
+    <Content Include="02.Tramites\Informes\InformesObleasRealizadas.aspx" />
+    <Content Include="02.Tramites\ObleasCorreccionErrores.aspx" />
+    <Content Include="02.Tramites\ObleasImprimirTarjetaVerde.aspx" />
+    <Content Include="02.Tramites\ObleasReimpresionTarjetaVerde.aspx" />
+    <Content Include="02.Tramites\ObleasConsultar.aspx" />
+    <Content Include="02.Tramites\ObleasImprimir.aspx" />
+    <Content Include="02.Tramites\ObleasInformar.aspx" />
+    <Content Include="02.Tramites\ObleasIngresar.aspx" />
+    <Content Include="02.Tramites\VerArchivos.aspx" />
+    <Content Include="02.Tramites\VerImagenes.aspx" />
+    <Content Include="About.aspx" />
+    <Content Include="Account\ChangePassword.aspx" />
+    <Content Include="Account\ChangePasswordSuccess.aspx" />
+    <Content Include="Account\Login.aspx" />
+    <Content Include="Account\Register.aspx" />
+    <Content Include="Default.aspx" />
+    <Content Include="favicon.ico" />
+    <Content Include="Imagenes\Iconos\agregar.png" />
+    <Content Include="Imagenes\Iconos\agregarError.png" />
+    <Content Include="Imagenes\Iconos\alerta.png" />
+    <Content Include="Imagenes\Iconos\bloqueada.png" />
+    <Content Include="Imagenes\Iconos\buscar.png" />
+    <Content Include="Imagenes\Iconos\calendario.png" />
+    <Content Include="Imagenes\Iconos\cambiar.png" />
+    <Content Include="Imagenes\Iconos\cancelar.png" />
+    <Content Include="Imagenes\Iconos\excel.png" />
+    <Content Include="Imagenes\Iconos\imgCommentaryFull.gif" />
+    <Content Include="Imagenes\Iconos\pdf.png" />
+    <Content Include="Imagenes\Iconos\reevaluar.png" />
+    <Content Include="Imagenes\Iconos\correcta.png" />
+    <Content Include="Imagenes\Iconos\eliminar.png" />
+    <Content Include="Imagenes\Iconos\imprimir.png" />
+    <Content Include="Imagenes\Iconos\info.png" />
+    <Content Include="Imagenes\Iconos\modificar.png" />
+    <Content Include="Imagenes\Iconos\observaciones.png" />
+    <Content Include="Imagenes\Iconos\pendienteRevision.png" />
+    <Content Include="Imagenes\Iconos\permisoDenegado.gif" />
+    <Content Include="Imagenes\Iconos\seleccionar.png" />
+    <Content Include="Imagenes\Iconos\volver.png" />
+    <Content Include="Imagenes\Iconos\warning.png" />
+    <Content Include="Imagenes\logo.png" />
+    <Content Include="Imagenes\Menu\bg_blue.gif" />
+    <Content Include="Imagenes\Menu\bg_gris - copia.gif" />
+    <Content Include="Imagenes\Menu\bg_gris.gif" />
+    <Content Include="Imagenes\Menu\bg_options.GIF" />
+    <Content Include="Imagenes\Menu\brillo.gif" />
+    <Content Include="Imagenes\Menu\downArrow.gif" />
+    <Content Include="Imagenes\Menu\dropdown_linkbg.gif" />
+    <Content Include="Imagenes\Menu\leftArrow.gif" />
+    <Content Include="Imagenes\Menu\subnav_btn.gif" />
+    <Content Include="Imagenes\Menu\_bg_blue.gif" />
+    <Content Include="Imagenes\Menu\_bg_gris.gif" />
+    <Content Include="packages.config" />
+    <None Include="Properties\PublishProfiles\Publish.pubxml" />
+    <None Include="Scripts\jquery-1.12.4.intellisense.js" />
+    <Content Include="Scripts\jquery-1.12.4.min.js" />
+    <Content Include="Scripts\jquery-1.7.2.js" />
+    <Content Include="Scripts\jquery.blockUI.js" />
+    <Content Include="Styles\menu.css" />
+    <Content Include="Styles\modal.css" />
+    <Content Include="Styles\Site.css" />
+    <Content Include="Global.asax" />
+    <Content Include="Tests\test.aspx" />
+    <Content Include="Tests\testPGrid.aspx" />
+    <Content Include="UserControls\BuscarTipoOperacion.ascx" />
+    <Content Include="UserControls\BuscarTaller.ascx" />
+    <Content Include="UserControls\FiltrosFechas.ascx" />
+    <Content Include="UserControls\MessageBoxCtrl.ascx" />
+    <Content Include="UserControls\PrintBoxCtrl.ascx" />
+    <Content Include="UserControls\uscCargarCilindrosValvulas.ascx" />
+    <Content Include="UserControls\uscCargarCliente.ascx" />
+    <Content Include="UserControls\uscCargarReguladores.ascx" />
+    <Content Include="UserControls\uscCargarVehiculo.ascx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="01.Lotes\Lotes.aspx.cs">
+      <DependentUpon>Lotes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="01.Lotes\Lotes.aspx.designer.cs">
+      <DependentUpon>Lotes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="02.Tramites\CargarResultadosEnte.aspx.cs">
+      <DependentUpon>CargarResultadosEnte.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="02.Tramites\CargarResultadosEnte.aspx.designer.cs">
+      <DependentUpon>CargarResultadosEnte.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="02.Tramites\EliminarOblea.aspx.cs">
+      <DependentUpon>EliminarOblea.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="02.Tramites\EliminarOblea.aspx.designer.cs">
+      <DependentUpon>EliminarOblea.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="02.Tramites\Informes\InformesEstadosObleas.aspx.cs">
+      <DependentUpon>InformesEstadosObleas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="02.Tramites\Informes\InformesEstadosObleas.aspx.designer.cs">
+      <DependentUpon>InformesEstadosObleas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="02.Tramites\Informes\InformesObleasRealizadas.aspx.cs">
+      <DependentUpon>InformesObleasRealizadas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="02.Tramites\Informes\InformesObleasRealizadas.aspx.designer.cs">
+      <DependentUpon>InformesObleasRealizadas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="02.Tramites\ObleasCorreccionErrores.aspx.cs">
+      <DependentUpon>ObleasCorreccionErrores.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="02.Tramites\ObleasCorreccionErrores.aspx.designer.cs">
+      <DependentUpon>ObleasCorreccionErrores.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="02.Tramites\ObleasImprimirTarjetaVerde.aspx.cs">
+      <DependentUpon>ObleasImprimirTarjetaVerde.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="02.Tramites\ObleasImprimirTarjetaVerde.aspx.designer.cs">
+      <DependentUpon>ObleasImprimirTarjetaVerde.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="02.Tramites\ObleasReimpresionTarjetaVerde.aspx.cs">
+      <DependentUpon>ObleasReimpresionTarjetaVerde.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="02.Tramites\ObleasReimpresionTarjetaVerde.aspx.designer.cs">
+      <DependentUpon>ObleasReimpresionTarjetaVerde.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="02.Tramites\ObleasConsultar.aspx.cs">
+      <DependentUpon>ObleasConsultar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="02.Tramites\ObleasConsultar.aspx.designer.cs">
+      <DependentUpon>ObleasConsultar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="02.Tramites\ObleasImprimir.aspx.cs">
+      <DependentUpon>ObleasImprimir.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="02.Tramites\ObleasImprimir.aspx.designer.cs">
+      <DependentUpon>ObleasImprimir.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="02.Tramites\ObleasInformar.aspx.cs">
+      <DependentUpon>ObleasInformar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="02.Tramites\ObleasInformar.aspx.designer.cs">
+      <DependentUpon>ObleasInformar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="02.Tramites\ObleasIngresar.aspx.cs">
+      <DependentUpon>ObleasIngresar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="02.Tramites\ObleasIngresar.aspx.designer.cs">
+      <DependentUpon>ObleasIngresar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="02.Tramites\VerArchivos.aspx.cs">
+      <DependentUpon>VerArchivos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="02.Tramites\VerArchivos.aspx.designer.cs">
+      <DependentUpon>VerArchivos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="02.Tramites\VerImagenes.aspx.cs">
+      <DependentUpon>VerImagenes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="02.Tramites\VerImagenes.aspx.designer.cs">
+      <DependentUpon>VerImagenes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Blank.Master.cs">
+      <DependentUpon>Blank.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Blank.Master.designer.cs">
+      <DependentUpon>Blank.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Buttons\BtnAceptar.cs" />
+    <Compile Include="Controls\Buttons\BtnCancelar.cs" />
+    <Compile Include="Controls\Buttons\BtnExcel.cs" />
+    <Compile Include="Controls\Buttons\BtnHidden.cs" />
+    <Compile Include="Controls\Buttons\BtnPdf.cs" />
+    <Compile Include="Controls\Buttons\ImgBtnAgregar.cs" />
+    <Compile Include="Controls\Buttons\ImgBtnAgregarAlternativo.cs" />
+    <Compile Include="Controls\Buttons\ImgBtnCambiar.cs" />
+    <Compile Include="Controls\Buttons\ImgBtnBuscar.cs" />
+    <Compile Include="Controls\Buttons\ImgBtnCancelar.cs" />
+    <Compile Include="Controls\Buttons\ImgBtnEliminar.cs" />
+    <Compile Include="Controls\Buttons\ImgBtnFacturar.cs" />
+    <Compile Include="Controls\Buttons\ImgBtnImprimir.cs" />
+    <Compile Include="Controls\Buttons\ImgBtnModificar.cs" />
+    <Compile Include="Controls\Buttons\ImgBtnSeleccionar.cs" />
+    <Compile Include="Controls\Buttons\ImgBtnVer.cs" />
+    <Compile Include="Controls\Combos\CboAnio.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controls\Combos\CboCRPC.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controls\Combos\CboEstadosFichas.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controls\Combos\CboLocalidades.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controls\Combos\CboMarcasReguladores.cs" />
+    <Compile Include="Controls\Combos\CboMes.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controls\Combos\CboMSDB.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controls\Combos\CboQuincenas.cs" />
+    <Compile Include="Controls\Combos\CboRT.cs" />
+    <Compile Include="Controls\Combos\CboPEC.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controls\Combos\CboProvincias.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controls\Combos\CboTalleres.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controls\Combos\CboTiposDocumentos.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Controls\Combos\CboTiposOperaciones.cs" />
+    <Compile Include="Controls\Combos\CboMarcasCilindros.cs" />
+    <Compile Include="Controls\Combos\CboMarcasValvulas.cs" />
+    <Compile Include="Genericos.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PageBase.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App_Code\Genericos.cs" />
+    <Compile Include="About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="About.aspx.designer.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\ChangePassword.aspx.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\ChangePassword.aspx.designer.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\ChangePasswordSuccess.aspx.cs">
+      <DependentUpon>ChangePasswordSuccess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\ChangePasswordSuccess.aspx.designer.cs">
+      <DependentUpon>ChangePasswordSuccess.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="App_Code\Report.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="SiteBlank.Master.cs">
+      <DependentUpon>SiteBlank.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SiteBlank.Master.designer.cs">
+      <DependentUpon>SiteBlank.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Tests\test.aspx.cs">
+      <DependentUpon>test.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tests\test.aspx.designer.cs">
+      <DependentUpon>test.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tests\testPGrid.aspx.cs">
+      <DependentUpon>testPGrid.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tests\testPGrid.aspx.designer.cs">
+      <DependentUpon>testPGrid.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\BuscarTipoOperacion.ascx.cs">
+      <DependentUpon>BuscarTipoOperacion.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\BuscarTipoOperacion.ascx.designer.cs">
+      <DependentUpon>BuscarTipoOperacion.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\BuscarTaller.ascx.cs">
+      <DependentUpon>BuscarTaller.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\BuscarTaller.ascx.designer.cs">
+      <DependentUpon>BuscarTaller.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\FiltrosFechas.ascx.cs">
+      <DependentUpon>FiltrosFechas.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\FiltrosFechas.ascx.designer.cs">
+      <DependentUpon>FiltrosFechas.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\MessageBoxCtrl.ascx.cs">
+      <DependentUpon>MessageBoxCtrl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\MessageBoxCtrl.ascx.designer.cs">
+      <DependentUpon>MessageBoxCtrl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\PrintBoxCtrl.ascx.cs">
+      <DependentUpon>PrintBoxCtrl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\PrintBoxCtrl.ascx.designer.cs">
+      <DependentUpon>PrintBoxCtrl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\uscCargarCilindrosValvulas.ascx.cs">
+      <DependentUpon>uscCargarCilindrosValvulas.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\uscCargarCilindrosValvulas.ascx.designer.cs">
+      <DependentUpon>uscCargarCilindrosValvulas.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\uscCargarCliente.ascx.cs">
+      <DependentUpon>uscCargarCliente.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\uscCargarCliente.ascx.designer.cs">
+      <DependentUpon>uscCargarCliente.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\uscCargarReguladores.ascx.cs">
+      <DependentUpon>uscCargarReguladores.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\uscCargarReguladores.ascx.designer.cs">
+      <DependentUpon>uscCargarReguladores.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\uscCargarVehiculo.ascx.cs">
+      <DependentUpon>uscCargarVehiculo.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\uscCargarVehiculo.ascx.designer.cs">
+      <DependentUpon>uscCargarVehiculo.ascx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="00.Sistema\" />
+    <Folder Include="App_Data\" />
+    <Folder Include="tmp\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Site.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\TalleresWeb.Web\TalleresWeb.Web.Cross.Configuracion\TalleresWeb.Web.Cross.Configuracion.csproj">
+      <Project>{6B0B928B-B9B7-4E03-AACD-482F8745EBF3}</Project>
+      <Name>TalleresWeb.Web.Cross.Configuracion</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TalleresWeb.DataAccess\TalleresWeb.DataAccess.csproj">
+      <Project>{5871b99a-dedf-4b44-8157-f4f47a4670a5}</Project>
+      <Name>TalleresWeb.DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TalleresWeb.Entities\TalleresWeb.Entities.csproj">
+      <Project>{4b4d1687-3d23-464e-bafb-764c678892ab}</Project>
+      <Name>TalleresWeb.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TalleresWeb.Logic\TalleresWeb.Logic.csproj">
+      <Project>{d50a2519-8838-40b1-ad05-40747cc16b7d}</Project>
+      <Name>TalleresWeb.Logic</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Web.sitemap">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SiteBlank.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Blank.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="settings.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Scripts\jquery-1.12.4.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>6996</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

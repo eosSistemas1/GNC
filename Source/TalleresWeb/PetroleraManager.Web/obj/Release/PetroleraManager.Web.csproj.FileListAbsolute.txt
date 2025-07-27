@@ -1,0 +1,2 @@
+C:\Source\petrolera\Source\TalleresWeb\PetroleraManager.Web\obj\Release\PetroleraManager.Web.csprojAssemblyReference.cache
+C:\Source\petrolera\Source\TalleresWeb\PetroleraManager.Web\obj\Release\PetroleraManager.Web.csproj.CoreCompileInputs.cache

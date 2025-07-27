@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns="http://schemas.microsoft.com/ado/2008/09/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="DataModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
+  <EntityContainer Name="ServicesContext" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="ROLES" EntityType="DataModel.ROLES" />
+    <EntitySet Name="T_MENU" EntityType="DataModel.T_MENU" />
+    <EntitySet Name="T_SERVICIOS" EntityType="DataModel.T_SERVICIOS" />
+    <EntitySet Name="USUARIOS" EntityType="DataModel.USUARIOS" />
+    <AssociationSet Name="FK_USUARIOS_ROLES" Association="DataModel.FK_USUARIOS_ROLES">
+      <End Role="ROLES" EntitySet="ROLES" />
+      <End Role="USUARIOS" EntitySet="USUARIOS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_t_fwk_Services_t_fwk_Menu" Association="DataModel.FK_t_fwk_Services_t_fwk_Menu">
+      <End Role="T_MENU" EntitySet="T_MENU" />
+      <End Role="T_SERVICIOS" EntitySet="T_SERVICIOS" />
+    </AssociationSet>
+    <AssociationSet Name="T_ROLESSERVICIOS" Association="DataModel.T_ROLESSERVICIOS">
+      <End Role="ROLES" EntitySet="ROLES" />
+      <End Role="T_SERVICIOS" EntitySet="T_SERVICIOS" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="ROLES">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Guid" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Activo" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Type="String" Name="Descripcion" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="USUARIOS" Relationship="DataModel.FK_USUARIOS_ROLES" FromRole="ROLES" ToRole="USUARIOS" />
+    <NavigationProperty Name="T_SERVICIOS" Relationship="DataModel.T_ROLESSERVICIOS" FromRole="ROLES" ToRole="T_SERVICIOS" />
+  </EntityType>
+  <EntityType Name="T_MENU">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Guid" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Descripcion" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Boolean" Name="Activo" />
+    <NavigationProperty Name="T_SERVICIOS" Relationship="DataModel.FK_t_fwk_Services_t_fwk_Menu" FromRole="T_MENU" ToRole="T_SERVICIOS" />
+  </EntityType>
+  <EntityType Name="T_SERVICIOS">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Guid" Name="ID" Nullable="false" />
+    <Property Type="Guid" Name="MenuID" />
+    <Property Type="String" Name="Descripcion" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Url" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Boolean" Name="Activo" />
+    <Property Type="String" Name="Texto" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="T_MENU" Relationship="DataModel.FK_t_fwk_Services_t_fwk_Menu" FromRole="T_SERVICIOS" ToRole="T_MENU" />
+    <NavigationProperty Name="ROLES" Relationship="DataModel.T_ROLESSERVICIOS" FromRole="T_SERVICIOS" ToRole="ROLES" />
+  </EntityType>
+  <EntityType Name="USUARIOS">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Guid" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Descripcion" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Password" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="NombreYApellido" MaxLength="70" FixedLength="false" Unicode="false" />
+    <Property Type="Guid" Name="TipoDocID" />
+    <Property Type="String" Name="NroDocumento" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Email" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Guid" Name="RolID" Nullable="false" />
+    <Property Type="Boolean" Name="Activo" Nullable="false" />
+    <NavigationProperty Name="ROLES" Relationship="DataModel.FK_USUARIOS_ROLES" FromRole="USUARIOS" ToRole="ROLES" />
+  </EntityType>
+  <Association Name="FK_USUARIOS_ROLES">
+    <End Type="DataModel.ROLES" Role="ROLES" Multiplicity="1" />
+    <End Type="DataModel.USUARIOS" Role="USUARIOS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ROLES">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="USUARIOS">
+        <PropertyRef Name="RolID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_t_fwk_Services_t_fwk_Menu">
+    <End Type="DataModel.T_MENU" Role="T_MENU" Multiplicity="0..1" />
+    <End Type="DataModel.T_SERVICIOS" Role="T_SERVICIOS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="T_MENU">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="T_SERVICIOS">
+        <PropertyRef Name="MenuID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="T_ROLESSERVICIOS">
+    <End Type="DataModel.ROLES" Role="ROLES" Multiplicity="*" />
+    <End Type="DataModel.T_SERVICIOS" Role="T_SERVICIOS" Multiplicity="*" />
+  </Association>
+</Schema>

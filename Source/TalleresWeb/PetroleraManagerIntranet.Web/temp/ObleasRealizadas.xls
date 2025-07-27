@@ -1,0 +1,765 @@
+﻿<?xml version='1.0'?>
+<?mso-application progid='Excel.Sheet'?>
+<s:Workbook xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:s="urn:schemas-microsoft-com:office:spreadsheet">
+  <o:DocumentProperties>
+    <o:Author>Petrolera Italo Argentina srl (Test)</o:Author>
+    <o:Created>2020-12-28T17:06:27</o:Created>
+    <o:Version>1</o:Version>
+  </o:DocumentProperties>
+  <s:Styles>
+    <s:Style s:ID="HEADER2">
+      <s:Alignment s:Horizontal="Center" />
+      <s:Font s:Bold="1" />
+    </s:Style>
+    <s:Style s:ID="HEADER1">
+      <s:Font s:Bold="1" />
+    </s:Style>
+  </s:Styles>
+  <s:Worksheet s:Name="Obleas Realizadas">
+    <s:Table>
+      <s:Column s:Width="200" />
+      <s:Column s:Width="120" />
+      <s:Row>
+        <s:Cell s:MergeAcross="9" s:StyleID="HEADER1">
+          <s:Data s:Type="String">Petrolera Italo Argentina srl (Test)</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:MergeAcross="9" s:StyleID="HEADER1">
+          <s:Data s:Type="String">Obleas Realizadas</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:MergeAcross="9" s:StyleID="HEADER1">
+          <s:Data s:Type="String">Fecha desde: 01/07/2018 hasta: 30/07/2018</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="String">Taller / Operación</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER2">
+          <s:Data s:Type="String">Conversión:</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER2">
+          <s:Data s:Type="String">Modificación:</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER2">
+          <s:Data s:Type="String">Reemplazo:</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER2">
+          <s:Data s:Type="String">Revisión Anual:</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER2">
+          <s:Data s:Type="String">Revisión CRPC:</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER2">
+          <s:Data s:Type="String">Baja:</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER2">
+          <s:Data s:Type="String">Total Realizadas:</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER2">
+          <s:Data s:Type="String">Total Entregadas:</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="String">IRT0131 - PERFETTO GNC DE SANTA CRUZ EVELIN NOELIA</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">3</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">1</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">19</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">13</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">36</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">36</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="String">HIT0456 - DELTA GNC DE LA SRA RIQUELME MIRIAN ALICIA</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">58</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">13</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">71</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">71</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="String">HIT0122 - MARCELO GNC DE MARCELO RAUL DIAB</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">22</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">5</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">91</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">20</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">3</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">141</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">138</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="String">IRT0135 - RENZI CRISTIAN J.L.</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">2</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">24</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">10</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">36</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">36</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="String">IRT0286 - SANCHO GNC DE OLGUIN NOEMI GLADIS</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">1</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">50</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">12</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">63</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">63</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="String">HIT0345 - MECANICA Y GNC BURATTI SRL  </s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">3</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">1</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">68</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">29</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">101</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">101</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="String">IRT0336 - AUTOMOTORES MIGUEL MOLINA S.A.</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">1</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">65</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">18</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">1</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">85</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">84</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="String">HIT0252 - AYACUCHO GNC DE PINARI FABIO DANIEL</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">6</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">5</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">11</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">11</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="String">HIT0135 - EBER DEVIS GNC DEL SR. EBER F. DEVIS</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">6</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">1</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">1</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">7</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">2</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">17</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">15</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="String">IRT0026 - DANIEL GNC CATTANEO HORACIO RUBEN</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">3</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">2</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">4</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">27</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">36</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">36</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="String">HIT0634 - FADUS LUCAS NAHUEL</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">2</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">2</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">2</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">8</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">1</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">15</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">14</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="String">IRT0027 - MOCCIARO GNC MOCCIARO RUBEN ALBERTO</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">10</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">4</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">126</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">31</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">1</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">172</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">171</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="String">IRT0373 - ECOCENTRO GNC DE BERTOLI NICOLAS AUGUSTO</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">6</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">3</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">58</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">33</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">2</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">102</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">100</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="String">HIT0134 - DEVIS WALTER LUIS</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">2</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">27</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">12</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">41</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">41</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="String">HIT0382 - DEVIS EZEQUIEL GERONIMO</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">5</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">2</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">61</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">15</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">1</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">84</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">83</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="String">IRT0082 - DANGELO SORIA DE DANIEL EDUARDO DÂ´ANGELO Y JOSE A</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">5</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">7</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">55</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">20</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">2</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">89</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">87</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="String">QUT0050 - CARLOS MANUEL LOREFICCE</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">9</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">49</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">7</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">65</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">65</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="String">HIT0340 - MECANICA LUCIANI DE LUCIANI MIGUEL A.</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">1</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">35</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">10</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">46</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">46</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="String">IRT0041 - VIRZI OSCAR</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">1</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">19</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">20</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">40</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">40</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="String">HIT0253 - AUTOGAS ROSARIO DEL SR. PERINO  ALFREDO R.</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">2</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">4</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">49</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">14</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">2</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">71</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">69</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="String">QUT0201 - HECTOR RICARDO BODO</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">1</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">66</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">25</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">1</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">93</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">92</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="String">IRT0569 - RIOS JORGE FABIAN</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">6</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">30</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">14</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">50</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">50</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="String">HIT0713 - TALLER VARELA</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">1</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">1</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="Number">1</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="String">TOTAL:</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="String">76</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="String">48</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="String">0</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="String">963</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="String">363</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="String">16</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="String">1466</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HEADER1">
+          <s:Data s:Type="String">1450</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row />
+    </s:Table>
+  </s:Worksheet>
+</s:Workbook>

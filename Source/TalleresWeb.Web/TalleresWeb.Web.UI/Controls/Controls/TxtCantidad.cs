@@ -1,0 +1,17 @@
+﻿using System;
+
+namespace TalleresWeb.Web.UI.Controls
+{
+    public class TxtCantidad : NumericControl
+    {
+        #region Methods
+
+        protected override void OnInit(EventArgs e)
+        {
+            this.Formato = Formatos.DosDecimales;
+            base.OnInit(e);
+        }
+
+        #endregion
+    }
+}

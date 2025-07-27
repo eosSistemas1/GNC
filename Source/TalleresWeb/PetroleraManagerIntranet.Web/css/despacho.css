@@ -1,0 +1,22 @@
+﻿body {
+
+}
+.tramiteSeleccionado {
+    width: 100%;
+    margin: 0px;
+    margin-bottom: 23px;
+}
+
+.borrarBordeRight {
+    border-right: hidden;
+}
+
+.borrarBordeBottom {
+    border-bottom: hidden;
+}
+.borrarBordeLeft {
+    border-left: hidden;
+}
+.margenTopPlus {
+    margin-top: 25px;
+}

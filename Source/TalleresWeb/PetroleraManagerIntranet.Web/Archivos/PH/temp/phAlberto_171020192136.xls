@@ -1,0 +1,438 @@
+﻿<?xml version='1.0'?>
+<?mso-application progid='Excel.Sheet'?>
+<s:Workbook xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:s="urn:schemas-microsoft-com:office:spreadsheet">
+  <s:Worksheet s:Name="revs">
+    <s:Table>
+      <s:Row>
+        <s:Cell>
+          <s:Data s:Type="String" />
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">RCRPCRT</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">RPECCOD</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">RTALCOD</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">RTALCUIT</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">RPROAPYN</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">RPROTDOC</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">RPRONDOC</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">RPRODMCL</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">RPROLCLD</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">RPROPRVN</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">RPROCDPT</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">RPROTLFN</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">RPRODMNO</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">RCILCODH</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">RCILNSER</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">RCILMESF</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">RCILANOF</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">RCILMTRL</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">RCILCPCD</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">RCILREV</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">RREVRSLT</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">RREVGLOB</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">RREVABOL</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">RREVABOE</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">RREVFISU</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">RREVLAMI</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">RREVPINC</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">RREVDEFR</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">RREVDESL</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">RREVCORR</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">RREVOVAL</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">RREVDFME</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">RREVEVSA</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">RREVPERM</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">RREVDPFC</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">RREVOTR1</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">RREVOTR2</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">RREVFREV</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">RREVFVEN</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">XRECTIPOPR</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">XRECFECMODE</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">XRECFECTRF</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell>
+          <s:Data s:Type="String">*</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell>
+          <s:Data s:Type="String">PEAR</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">2-0094-8</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">3154</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">QUT0201</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">20-08506255-8</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">CASTRO, ALEJANDRO</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">DNI</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">32248105</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">BRASIL 2660</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">ROSARIO           </s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">SANTA FE</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">2000      </s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">0</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">RKA377</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">PA04</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">319807                   </s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">12</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">0</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String" />
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">60</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">76538</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">0</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String" />
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String" />
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String" />
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String" />
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String" />
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String" />
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String" />
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String" />
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String" />
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String" />
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String" />
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String" />
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String" />
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String" />
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String" />
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String" />
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">17/10/2019</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">17/10/2019</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">PEAR76538</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">A</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">17/10/2019</s:Data>
+        </s:Cell>
+      </s:Row>
+    </s:Table>
+  </s:Worksheet>
+  <s:Worksheet s:Name="prbs">
+    <s:Table>
+      <s:Row>
+        <s:Cell>
+          <s:Data s:Type="String">Operación</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">Código</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">Serie</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">Mes fabr.</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">Año fabr.</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">Material</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">Esp. Adm.</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">Esp.mín.</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">Esp.máx.</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">Esp.fond.</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">Tipo fondo</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">Ctrl.esp.</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">Tara</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">P. vacío</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">Capac.</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">Ctrl.peso</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">Exp. perm.</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">Exp.elast.</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">P.hidr.</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">Anomalías</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">Conclus.</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">Mes Rev.</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">Ant.Año</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">Válvula marca</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">Válvula serie</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell>
+          <s:Data s:Type="String">*</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell>
+          <s:Data s:Type="String">76538</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">PA04</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">319807                   </s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">12</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">0</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">CMn</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String"> 7,04</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String" />
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String" />
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String" />
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String" />
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String" />
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String" />
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String" />
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String" />
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String" />
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String" />
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String" />
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String" />
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String" />
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String" />
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String" />
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String" />
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">VH01</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">FOL915</s:Data>
+        </s:Cell>
+      </s:Row>
+    </s:Table>
+  </s:Worksheet>
+</s:Workbook>

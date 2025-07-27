@@ -1,0 +1,123 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="TalleresWeb.Web.Site" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Petrolera ItaloArgentina S.R.L.</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="~/css/style.css" />
+    <!--[if IE 6]>
+<script src="js/DD_belatedPNG_0.0.8a-min.js"></script>
+<script>
+  DD_belatedPNG.fix('.nav-sidebar a, #content h2');
+</script>
+<![endif]-->
+</head>
+<body>
+    <form id="form1" runat="server">
+    <asp:ToolkitScriptManager ID="ToolkitScriptManager1" runat="server" enablepagemethods="true" enablepartialrendering="true"></asp:ToolkitScriptManager>
+
+    <div id="content-page">
+        <div id="page">
+            <div id="header" class="header-home">
+                <h1 class="left">
+                    <a href="index.aspx" title="Petrolera ItaloArgentina S.R.L.">Petrolera ItaloArgentina S.R.L.</a></h1>
+                <div class="right" id="access">
+                    <a href="http://200.61.31.94">
+                        <img src="/Images/acceso-talleristas.jpg" alt="Acceso Talleristas" /></a>
+                </div>
+                <div class="clear">
+                    &nbsp;</div>
+            </div>
+            <!--/header-->
+            <div class="splash-home">
+                <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,28,0" width="980" height="225">
+                  <param name="movie" value="swf/header-big.swf" />
+                  <param name="quality" value="high" />
+                  <embed src="swf/header-big.swf" quality="high" pluginspage="http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash" type="application/x-shockwave-flash" width="980" height="225"></embed>
+          	  </object>
+            </div>
+            <!--/splash-->
+            <div id="wrap">
+                <div id="sidebar">
+                    <ul class="nav-sidebar">
+                        <li><a href="#" class="nav-4">Quienes somos</a></li>
+                        <li><a href="sobre-el-gnc.aspx" class="nav-1">Sobre el GNC</a>
+                            <ul>
+                                <li><a href="sobre-el-gnc-ventajas.aspx">Ventajas</a></li>
+                                <li><a href="sobre-el-gnc-medidas-de-seguridad.aspx">Medidas de Seguridad</a></li>
+                                <li><a href="sobre-el-gnc-detalles-de-la-instalacion.aspx">Detalles de la Instalaci&oacute;n</a></li>
+                                <li><a href="#">Productos</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#" class="nav-2">Financiaci&oacute;n</a></li>
+                        <li><a href="#" class="nav-5">Solicitud de cotizaci&oacute;n</a></li>
+                        <li><a href="red-de-talleres.aspx" class="nav-3">Red de talleres</a></li>
+                        <li><a href="login.aspx" class="nav-6">Acceso restringido</a></li>
+                    </ul>
+                    <div class="promociones">
+                        <h3>
+                            Promociones</h3>
+                        <div class="promociones-content">
+                            <img src="borrar/borrar-1.jpg" alt="" />
+                            <p>
+                                Equipo de GNC Tomosatto c/ instalaci&oacute;n inlu&iacute;da <strong>$xxx</strong></p>
+                            <div class="clear">
+                                &nbsp;</div>
+                        </div>
+                        <div class="promociones-bottom">
+                            <a href="#">Click aqu&iacute; &raquo;</a>
+                        </div>
+                    </div>
+                    <!--/promociones-->
+                </div>
+                <!--/content-->
+                <div id="content">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+                <!--/wrap-->
+                <div id="bottom">
+                    <ul class="nav-naranja">
+                        <li><a href="#">
+                            <img src="images/icon-home.gif" alt="" />
+                            Home</a></li>
+                        <li><a href="#">
+                            <img src="images/icon-mapa.gif" alt="" />
+                            Mapa</a></li>
+                        <li><a href="#">
+                            <img src="images/icon-ayuda.gif" alt="" />
+                            Ayuda</a></li>
+                    </ul>
+                </div>
+                <!--/bottom-->
+            </div>
+            <!--/page-->
+            <div id="footer">
+                <p class="left">
+                    Copyright &copy; 2010 - <a href="#">Petrolera ItaloArgentina</a></p>
+                <p class="center">
+                    Ov. Lagos 4119 - Rosario - Santa Fe - +54 (0341) 5680285 - <a href="#">info@peargnc.com.ar</a></p>
+                <p class="right"></p>
+                <!--p class="right">
+                Desarrollado por <a href="http://www.asmultimedia.com.ar/">ASmultimedia</a></p-->
+                <div class="clear">&nbsp;</div>
+            </div>
+            <!--/footer-->
+        </div>
+        <!--/content-page-->
+    </div>
+
+   <script type="text/javascript">
+<!--
+       Sys.Application.initialize();
+// -->
+</script>
+
+
+    </form>
+</body>
+</html>

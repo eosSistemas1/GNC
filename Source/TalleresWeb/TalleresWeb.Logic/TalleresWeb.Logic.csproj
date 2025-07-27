@@ -1,0 +1,168 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D50A2519-8838-40B1-AD05-40747CC16B7D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TalleresWeb.Logic</RootNamespace>
+    <AssemblyName>TalleresWeb.Logic</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\SharedAssemblies\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PL.Fwk.BusinessLogic, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\DLL_Shared\PL.Fwk.BusinessLogic.dll</HintPath>
+    </Reference>
+    <Reference Include="PL.Fwk.DataAccess, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\DLL_Shared\PL.Fwk.DataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="PL.Fwk.Entities, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\DLL_Shared\PL.Fwk.Entities.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CilindrosLogic.cs" />
+    <Compile Include="CilindrosUnidadLogic.cs" />
+    <Compile Include="ClientesLogic.cs" />
+    <Compile Include="DespachoDetalleLogic.cs" />
+    <Compile Include="DespachoLogic.cs" />
+    <Compile Include="ConductoresLogic.cs" />
+    <Compile Include="FleteLogic.cs" />
+    <Compile Include="InspeccionesPHLogic.cs" />
+    <Compile Include="InspeccionesLogic.cs" />
+    <Compile Include="ObleaErrorLogic.cs" />
+    <Compile Include="CRPCLogic.cs" />
+    <Compile Include="InformeDetalleLogic.cs" />
+    <Compile Include="InformeLogic.cs" />
+    <Compile Include="LotesLogic.cs" />
+    <Compile Include="DocumentosLogic.cs" />
+    <Compile Include="EstadosFichasLogic.cs" />
+    <Compile Include="LocalidadesLogic.cs" />
+    <Compile Include="MarcasCilindrosLogic.cs" />
+    <Compile Include="MarcasReguladoresLogic.cs" />
+    <Compile Include="MarcasValvulasLogic.cs" />
+    <Compile Include="ObleasCilindrosLogic.cs" />
+    <Compile Include="ObleasLogic.cs" />
+    <Compile Include="ObleasReguladoresLogic.cs" />
+    <Compile Include="ObleasValvulasLogic.cs" />
+    <Compile Include="PHCilindroHistoricoEstadoLogic.cs" />
+    <Compile Include="PHCilindrosLogic.cs" />
+    <Compile Include="PHLogic.cs" />
+    <Compile Include="PHProcesoLogic.cs" />
+    <Compile Include="ProvinciasLogic.cs" />
+    <Compile Include="RT_PECLogic.cs" />
+    <Compile Include="RTLogic.cs" />
+    <Compile Include="PECLogic.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReguladoresLogic.cs" />
+    <Compile Include="ReguladoresUnidadLogic.cs" />
+    <Compile Include="S_AccesosCULogic.cs" />
+    <Compile Include="S_RolesLogic.cs" />
+    <Compile Include="TalleresRTLogic.cs" />
+    <Compile Include="TalleresLogic.cs" />
+    <Compile Include="TiposOperacionesLogic.cs" />
+    <Compile Include="UsoLogic.cs" />
+    <Compile Include="UsuariosLogic.cs" />
+    <Compile Include="ValvulasLogic.cs" />
+    <Compile Include="ValvulasUnidadLogic.cs" />
+    <Compile Include="VehiculosLogic.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\TalleresWeb.Web\TalleresWeb.Web.Cross.Configuracion\TalleresWeb.Web.Cross.Configuracion.csproj">
+      <Project>{6B0B928B-B9B7-4E03-AACD-482F8745EBF3}</Project>
+      <Name>TalleresWeb.Web.Cross.Configuracion</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TalleresWeb.DataAccess\TalleresWeb.DataAccess.csproj">
+      <Project>{5871B99A-DEDF-4B44-8157-F4F47A4670A5}</Project>
+      <Name>TalleresWeb.DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TalleresWeb.Entities\TalleresWeb.Entities.csproj">
+      <Project>{4B4D1687-3D23-464E-BAFB-764C678892AB}</Project>
+      <Name>TalleresWeb.Entities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

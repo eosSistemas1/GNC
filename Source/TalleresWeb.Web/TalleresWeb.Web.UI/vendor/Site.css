@@ -1,0 +1,29 @@
+﻿
+body
+{
+    background: #b6b7bc;    
+    font-family: Verdana, Helvetica, sans-serif;
+    font-size: 14px;
+    /*font-weight: normal;
+    margin: 0px;
+    padding: 0px;
+    color: #696969;*/
+}
+
+/*INICIO: modal*/
+.modalBackground
+{
+    background-color: #B1B3B4;
+    filter: alpha(opacity=70);
+    opacity: 0.7;
+}
+.CajaDialogo
+{
+    background-color: #FFF;
+    border-width: 3px;
+    border-style: outset;
+    width: 550px;
+    border-color: #003C67;
+    padding: 0px;
+}
+/*FIN: modal*/

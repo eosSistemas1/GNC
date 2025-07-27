@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs" Space="C-S">
+  <Alias Key="Model" Value="DataModel" />
+  <Alias Key="Target" Value="DataModel.Store" />
+  <EntityContainerMapping CdmEntityContainer="ServicesContext" StorageEntityContainer="DataModelStoreContainer">
+    <EntitySetMapping Name="ROLES">
+      <EntityTypeMapping TypeName="DataModel.ROLES">
+        <MappingFragment StoreEntitySet="ROLES">
+          <ScalarProperty Name="Descripcion" ColumnName="ROL_DESCRIPCION" />
+          <ScalarProperty Name="Activo" ColumnName="ROL_ACTIVO" />
+          <ScalarProperty Name="ID" ColumnName="ROL_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_MENU">
+      <EntityTypeMapping TypeName="DataModel.T_MENU">
+        <MappingFragment StoreEntitySet="T_MENU">
+          <ScalarProperty Name="Activo" ColumnName="ACTVO" />
+          <ScalarProperty Name="Descripcion" ColumnName="DESCRIPCION" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T_SERVICIOS">
+      <EntityTypeMapping TypeName="DataModel.T_SERVICIOS">
+        <MappingFragment StoreEntitySet="T_SERVICIOS">
+          <ScalarProperty Name="Texto" ColumnName="TEXTO" />
+          <ScalarProperty Name="Activo" ColumnName="ACTIVO" />
+          <ScalarProperty Name="Url" ColumnName="URL" />
+          <ScalarProperty Name="Descripcion" ColumnName="DESCRIPCION" />
+          <ScalarProperty Name="MenuID" ColumnName="MENUID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="USUARIOS">
+      <EntityTypeMapping TypeName="DataModel.USUARIOS">
+        <MappingFragment StoreEntitySet="USUARIOS">
+          <ScalarProperty Name="Activo" ColumnName="USUARIO_ACTIVO" />
+          <ScalarProperty Name="RolID" ColumnName="ROL_ID" />
+          <ScalarProperty Name="Email" ColumnName="USUARIO_EMAIL" />
+          <ScalarProperty Name="NroDocumento" ColumnName="USUARIO_NRODOC" />
+          <ScalarProperty Name="TipoDocID" ColumnName="TIPODOC_ID" />
+          <ScalarProperty Name="NombreYApellido" ColumnName="USUARIO_NOMAPE" />
+          <ScalarProperty Name="Password" ColumnName="USUARIO_CONTRASENIA" />
+          <ScalarProperty Name="Descripcion" ColumnName="USUARIO_DESCRIPCION" />
+          <ScalarProperty Name="ID" ColumnName="USUARIO_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="T_ROLESSERVICIOS" TypeName="DataModel.T_ROLESSERVICIOS" StoreEntitySet="T_ROLESSERVICIOS">
+      <EndProperty Name="T_SERVICIOS">
+        <ScalarProperty Name="ID" ColumnName="SERVICES_ID" />
+      </EndProperty>
+      <EndProperty Name="ROLES">
+        <ScalarProperty Name="ID" ColumnName="ROLE_ID" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>

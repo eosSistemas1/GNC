@@ -1,0 +1,623 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="TalleresWebModelStoreContainer" CdmEntityContainer="TalleresWebEntities">
+    <EntitySetMapping Name="Cilindros">
+      <EntityTypeMapping TypeName="TalleresWebModel.Cilindros">
+        <MappingFragment StoreEntitySet="Cilindros">
+          <ScalarProperty Name="Dureza" ColumnName="Dureza" />
+          <ScalarProperty Name="Fluencia" ColumnName="Fluencia" />
+          <ScalarProperty Name="Activo" ColumnName="Activo" />
+          <ScalarProperty Name="NormaFabCilindro" ColumnName="NormaFabCilindro" />
+          <ScalarProperty Name="MaterialCilindro" ColumnName="MaterialCilindro" />
+          <ScalarProperty Name="RoturaCilindro" ColumnName="RoturaCilindro" />
+          <ScalarProperty Name="LargoCilindro" ColumnName="LargoCilindro" />
+          <ScalarProperty Name="DiametroCilindro" ColumnName="DiametroCilindro" />
+          <ScalarProperty Name="EspesorAdmisibleCil" ColumnName="EspesorAdmisibleCil" />
+          <ScalarProperty Name="ModeloCilindro" ColumnName="ModeloCilindro" />
+          <ScalarProperty Name="MatriculaOCCil" ColumnName="MatriculaOCCil" />
+          <ScalarProperty Name="IdMarcaCilindro" ColumnName="IdMarcaCilindro" />
+          <ScalarProperty Name="CapacidadCil" ColumnName="CapacidadCil" />
+          <ScalarProperty Name="Descripcion" ColumnName="CodHomologacinCil" />
+          <ScalarProperty Name="ID" ColumnName="IdCilindro" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CilindrosUnidad">
+      <EntityTypeMapping TypeName="TalleresWebModel.CilindrosUnidad">
+        <MappingFragment StoreEntitySet="CilindrosUnidad">
+          <ScalarProperty Name="AnioFabCilindro" ColumnName="AnioFabCilindro" />
+          <ScalarProperty Name="MesFabCilindro" ColumnName="MesFabCilindro" />
+          <ScalarProperty Name="Descripcion" ColumnName="NroSerieCilindro" />
+          <ScalarProperty Name="IdCilindro" ColumnName="IdCilindro" />
+          <ScalarProperty Name="ID" ColumnName="IdCilindroUnidad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Clientes">
+      <EntityTypeMapping TypeName="TalleresWebModel.Clientes">
+        <MappingFragment StoreEntitySet="Clientes">
+          <ScalarProperty Name="MailCliente" ColumnName="MailCliente" />
+          <ScalarProperty Name="CelularCliente" ColumnName="CelularCliente" />
+          <ScalarProperty Name="IdLocalidad" ColumnName="IdLocalidad" />
+          <ScalarProperty Name="TelefonoCliente" ColumnName="TelefonoCliente" />
+          <ScalarProperty Name="NroDniCliente" ColumnName="NroDniCliente" />
+          <ScalarProperty Name="IdTipoDniCliente" ColumnName="IdTipoDniCliente" />
+          <ScalarProperty Name="PisoDptoCliente" ColumnName="PisoDptoCliente" />
+          <ScalarProperty Name="NroCalleCliente" ColumnName="NroCalleCliente" />
+          <ScalarProperty Name="CalleCliente" ColumnName="CalleCliente" />
+          <ScalarProperty Name="Descripcion" ColumnName="NombreApellidoCliente" />
+          <ScalarProperty Name="ID" ColumnName="IdCliente" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CRPC">
+      <EntityTypeMapping TypeName="TalleresWebModel.CRPC">
+        <MappingFragment StoreEntitySet="CRPC">
+          <ScalarProperty Name="CpaCRPC" ColumnName="CpaCRPC" />
+          <ScalarProperty Name="DomicilioCRPC" ColumnName="DomicilioCRPC" />
+          <ScalarProperty Name="MailBCRPC" ColumnName="MailBCRPC" />
+          <ScalarProperty Name="MailACRPC" ColumnName="MailACRPC" />
+          <ScalarProperty Name="TelefonoB_CRPC" ColumnName="TelefonoB_CRPC" />
+          <ScalarProperty Name="TelefonoACRPC" ColumnName="TelefonoACRPC" />
+          <ScalarProperty Name="RazonSocialCRPC" ColumnName="RazonSocialCRPC" />
+          <ScalarProperty Name="Descripcion" ColumnName="SiglasCRPC" />
+          <ScalarProperty Name="MatriculaCRPC" ColumnName="MatriculaCRPC" />
+          <ScalarProperty Name="ID" ColumnName="IdCRPC" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DocumentosClientes">
+      <EntityTypeMapping TypeName="TalleresWebModel.DocumentosClientes">
+        <MappingFragment StoreEntitySet="DocumentosClientes">
+          <ScalarProperty Name="Descripcion" ColumnName="DocumentosClientes" />
+          <ScalarProperty Name="ID" ColumnName="IdDocumentosClientes" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EstadosFichas">
+      <EntityTypeMapping TypeName="TalleresWebModel.EstadosFichas">
+        <MappingFragment StoreEntitySet="EstadosFichas">
+          <ScalarProperty Name="Descripcion" ColumnName="EstadoFicha" />
+          <ScalarProperty Name="ID" ColumnName="IdEstadoFicha" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Inspecciones">
+      <EntityTypeMapping TypeName="TalleresWebModel.Inspecciones">
+        <MappingFragment StoreEntitySet="Inspecciones">
+          <ScalarProperty Name="IdInspeccionTipo" ColumnName="IdInspeccionTipo" />
+          <ScalarProperty Name="Descripcion" ColumnName="Inspeccion" />
+          <ScalarProperty Name="ID" ColumnName="IdInspeccion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="InspeccionesPH">
+      <EntityTypeMapping TypeName="TalleresWebModel.InspeccionesPH">
+        <MappingFragment StoreEntitySet="InspeccionesPH">
+          <ScalarProperty Name="ValorInspeccion" ColumnName="ValorInspeccion" />
+          <ScalarProperty Name="ObservacionesInspeccion" ColumnName="ObservacionesInspeccion" />
+          <ScalarProperty Name="IdInspeccion" ColumnName="IdInspeccion" />
+          <ScalarProperty Name="IdPHCilndro" ColumnName="IdPHCilndro" />
+          <ScalarProperty Name="ID" ColumnName="IdInspeccionPH" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Localidades">
+      <EntityTypeMapping TypeName="TalleresWebModel.Localidades">
+        <MappingFragment StoreEntitySet="Localidades">
+          <ScalarProperty Name="IdProvincia" ColumnName="IdProvincia" />
+          <ScalarProperty Name="CodigoPostal" ColumnName="CodigoPostal" />
+          <ScalarProperty Name="Descripcion" ColumnName="Localidad" />
+          <ScalarProperty Name="ID" ColumnName="Idlocalidad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MarcasCilindros">
+      <EntityTypeMapping TypeName="TalleresWebModel.MarcasCilindros">
+        <MappingFragment StoreEntitySet="MarcasCilindros">
+          <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+          <ScalarProperty Name="Descripcion" ColumnName="MarcaCilindro" />
+          <ScalarProperty Name="ID" ColumnName="IdMarcaCilindro" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MarcasRegulador">
+      <EntityTypeMapping TypeName="TalleresWebModel.MarcasRegulador">
+        <MappingFragment StoreEntitySet="MarcasRegulador">
+          <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+          <ScalarProperty Name="Descripcion" ColumnName="MarcaRegulador" />
+          <ScalarProperty Name="ID" ColumnName="IdMarcaRegulador" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MarcasValvulas">
+      <EntityTypeMapping TypeName="TalleresWebModel.MarcasValvulas">
+        <MappingFragment StoreEntitySet="MarcasValvulas">
+          <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+          <ScalarProperty Name="Descripcion" ColumnName="MarcaValvula" />
+          <ScalarProperty Name="ID" ColumnName="IdMarcaValvula" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Obleas">
+      <EntityTypeMapping TypeName="TalleresWebModel.Obleas">
+        <MappingFragment StoreEntitySet="Obleas">
+          <ScalarProperty Name="IdRTPEC" ColumnName="IdRTPEC" />
+          <ScalarProperty Name="IdTallerRT" ColumnName="IdTallerRT" />
+          <ScalarProperty Name="FechaRealAlta" ColumnName="FechaRealAlta" />
+          <ScalarProperty Name="IdUsuarioAlta" ColumnName="IdUsuarioAlta" />
+          <ScalarProperty Name="IdTitular" ColumnName="IdTitular" />
+          <ScalarProperty Name="IdCliente" ColumnName="IdCliente" />
+          <ScalarProperty Name="IdNroFichaTecnica" ColumnName="IdNroFichaTecnica" />
+          <ScalarProperty Name="IdTaller" ColumnName="IdTaller" />
+          <ScalarProperty Name="MotivoBajaFicha" ColumnName="MotivoBajaFicha" />
+          <ScalarProperty Name="IdPEC" ColumnName="IdPEC" />
+          <ScalarProperty Name="NroIntOperacTP" ColumnName="NroIntOperacTP" />
+          <ScalarProperty Name="ObservacionesFicha" ColumnName="ObservacionesFicha" />
+          <ScalarProperty Name="IdEstadoFicha" ColumnName="IdEstadoFicha" />
+          <ScalarProperty Name="IdOperacion" ColumnName="IdOperacion" />
+          <ScalarProperty Name="IdUso" ColumnName="IdUso" />
+          <ScalarProperty Name="NroObleaNueva" ColumnName="NroObleaNueva" />
+          <ScalarProperty Name="Descripcion" ColumnName="NroObleaAnterior" />
+          <ScalarProperty Name="FechaVencimiento" ColumnName="FechaVencimiento" />
+          <ScalarProperty Name="FechaHabilitacion" ColumnName="FechaHabilitacion" />
+          <ScalarProperty Name="IdVehiculo" ColumnName="IdVehiculo" />
+          <ScalarProperty Name="ID" ColumnName="IdOblea" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ObleasCilindros">
+      <EntityTypeMapping TypeName="TalleresWebModel.ObleasCilindros">
+        <MappingFragment StoreEntitySet="ObleasCilindros">
+          <ScalarProperty Name="NroCertificadoPH" ColumnName="NroCertificadoPH" />
+          <ScalarProperty Name="IdOperacion" ColumnName="IdOperacion" />
+          <ScalarProperty Name="IdCRPC" ColumnName="IdCRPC" />
+          <ScalarProperty Name="AnioUltimaRevisionCil" ColumnName="AnioUltimaRevisionCil" />
+          <ScalarProperty Name="MesUltimaRevisionCil" ColumnName="MesUltimaRevisionCil" />
+          <ScalarProperty Name="IdCilindroUnidad" ColumnName="IdCilindroUnidad" />
+          <ScalarProperty Name="IdOblea" ColumnName="IdOblea" />
+          <ScalarProperty Name="ID" ColumnName="IdObleaCilindro" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ObleasReguladores">
+      <EntityTypeMapping TypeName="TalleresWebModel.ObleasReguladores">
+        <MappingFragment StoreEntitySet="ObleasReguladores">
+          <ScalarProperty Name="IdOperacion" ColumnName="IdOperacion" />
+          <ScalarProperty Name="IdReguladorUnidad" ColumnName="IdReguladorUnidad" />
+          <ScalarProperty Name="IdOblea" ColumnName="IdOblea" />
+          <ScalarProperty Name="ID" ColumnName="IdObleaRegulador" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ObleasValvulas">
+      <EntityTypeMapping TypeName="TalleresWebModel.ObleasValvulas">
+        <MappingFragment StoreEntitySet="ObleasValvulas">
+          <ScalarProperty Name="IdOperacion" ColumnName="IdOperacion" />
+          <ScalarProperty Name="IdValvulaUnidad" ColumnName="IdValvulaUnidad" />
+          <ScalarProperty Name="IdObleaCilindro" ColumnName="IdObleaCilindro" />
+          <ScalarProperty Name="ID" ColumnName="IdObleaValvula" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Operaciones">
+      <EntityTypeMapping TypeName="TalleresWebModel.Operaciones">
+        <MappingFragment StoreEntitySet="Operaciones">
+          <ScalarProperty Name="CodigoGestionEnte" ColumnName="CodigoGestionEnte" />
+          <ScalarProperty Name="Descripcion" ColumnName="Operacion" />
+          <ScalarProperty Name="ID" ColumnName="IdOperacion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PEC">
+      <EntityTypeMapping TypeName="TalleresWebModel.PEC">
+        <MappingFragment StoreEntitySet="PEC">
+          <ScalarProperty Name="IdLocalidad" ColumnName="IdLocalidad" />
+          <ScalarProperty Name="MailBPEC" ColumnName="MailBPEC" />
+          <ScalarProperty Name="MailAPEC" ColumnName="MailAPEC" />
+          <ScalarProperty Name="TelefonoBPEC" ColumnName="TelefonoBPEC" />
+          <ScalarProperty Name="TelefonoAPEC" ColumnName="TelefonoAPEC" />
+          <ScalarProperty Name="DomicilioPEC" ColumnName="DomicilioPEC" />
+          <ScalarProperty Name="RazonSocialPEC" ColumnName="RazonSocialPEC" />
+          <ScalarProperty Name="Descripcion" ColumnName="MatriculaPEC" />
+          <ScalarProperty Name="ID" ColumnName="IdPEC" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Provincias">
+      <EntityTypeMapping TypeName="TalleresWebModel.Provincias">
+        <MappingFragment StoreEntitySet="Provincias">
+          <ScalarProperty Name="Descripcion" ColumnName="Provincia" />
+          <ScalarProperty Name="ID" ColumnName="IdProvincia" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Reguladores">
+      <EntityTypeMapping TypeName="TalleresWebModel.Reguladores">
+        <MappingFragment StoreEntitySet="Reguladores">
+          <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+          <ScalarProperty Name="Etrapas" ColumnName="Etrapas" />
+          <ScalarProperty Name="Caudal" ColumnName="Caudal" />
+          <ScalarProperty Name="MatriculaOC" ColumnName="MatriculaOC" />
+          <ScalarProperty Name="Modelo" ColumnName="Modelo" />
+          <ScalarProperty Name="IdMarcaRegulador" ColumnName="IdMarcaRegulador" />
+          <ScalarProperty Name="Descripcion" ColumnName="CodigoHomologacionRegulador" />
+          <ScalarProperty Name="ID" ColumnName="IdRegulador" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ReguladoresUnidad">
+      <EntityTypeMapping TypeName="TalleresWebModel.ReguladoresUnidad">
+        <MappingFragment StoreEntitySet="ReguladoresUnidad">
+          <ScalarProperty Name="Descripcion" ColumnName="NroSerieRegulador" />
+          <ScalarProperty Name="IdRegulador" ColumnName="IdRegulador" />
+          <ScalarProperty Name="ID" ColumnName="IdReguladorUnidad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Talleres">
+      <EntityTypeMapping TypeName="TalleresWebModel.Talleres">
+        <MappingFragment StoreEntitySet="Talleres">
+          <ScalarProperty Name="UltimoNroIntOperacion" ColumnName="UltimoNroIntOperacion" />
+          <ScalarProperty Name="CPATaller" ColumnName="CPATaller" />
+          <ScalarProperty Name="HorarioDeAtencion" ColumnName="HorarioDeAtencion" />
+          <ScalarProperty Name="Zona" ColumnName="Zona" />
+          <ScalarProperty Name="ActivoTaller" ColumnName="ActivoTaller" />
+          <ScalarProperty Name="FechaVencContrato" ColumnName="FechaVencContrato" />
+          <ScalarProperty Name="ContactoTaller" ColumnName="ContactoTaller" />
+          <ScalarProperty Name="MailTaller" ColumnName="MailTaller" />
+          <ScalarProperty Name="FaxTaller" ColumnName="FaxTaller" />
+          <ScalarProperty Name="TelefonoTaller" ColumnName="TelefonoTaller" />
+          <ScalarProperty Name="IdCiudad" ColumnName="IdCiudad" />
+          <ScalarProperty Name="CuitTaller" ColumnName="CuitTaller" />
+          <ScalarProperty Name="DomicilioTaller" ColumnName="DomicilioTaller" />
+          <ScalarProperty Name="RazonSocialTaller" ColumnName="RazonSocialTaller" />
+          <ScalarProperty Name="Descripcion" ColumnName="MatriculaTaller" />
+          <ScalarProperty Name="ID" ColumnName="IdTaller" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Uso">
+      <EntityTypeMapping TypeName="TalleresWebModel.Uso">
+        <MappingFragment StoreEntitySet="Uso">
+          <ScalarProperty Name="CodigoUsoEnte" ColumnName="CodigoUsoEnte" />
+          <ScalarProperty Name="Descripcion" ColumnName="TipoUso" />
+          <ScalarProperty Name="ID" ColumnName="IdUso" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Usuario">
+      <EntityTypeMapping TypeName="TalleresWebModel.Usuario">
+        <MappingFragment StoreEntitySet="Usuario">
+          <ScalarProperty Name="Activo" ColumnName="Activo" />
+          <ScalarProperty Name="IdRol" ColumnName="IdRol" />
+          <ScalarProperty Name="EmailUsuario" ColumnName="EmailUsuario" />
+          <ScalarProperty Name="IdTaller" ColumnName="IdTaller" />
+          <ScalarProperty Name="NroDocumento" ColumnName="NroDocumento" />
+          <ScalarProperty Name="IdTipoDoc" ColumnName="IdTipoDoc" />
+          <ScalarProperty Name="NombreYApellidoUsuario" ColumnName="NombreYApellidoUsuario" />
+          <ScalarProperty Name="Contrasenia" ColumnName="Contrasenia" />
+          <ScalarProperty Name="Descripcion" ColumnName="Usuario" />
+          <ScalarProperty Name="ID" ColumnName="IdUsuario" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Valvula">
+      <EntityTypeMapping TypeName="TalleresWebModel.Valvula">
+        <MappingFragment StoreEntitySet="Valvula">
+          <ScalarProperty Name="Descripcion" ColumnName="CodHomologacionValvula" />
+          <ScalarProperty Name="IdMarcaValvula" ColumnName="IdMarcaValvula" />
+          <ScalarProperty Name="ID" ColumnName="IdValvula" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Valvula_Unidad">
+      <EntityTypeMapping TypeName="TalleresWebModel.Valvula_Unidad">
+        <MappingFragment StoreEntitySet="Valvula_Unidad">
+          <ScalarProperty Name="Descripcion" ColumnName="IdSerieValvula" />
+          <ScalarProperty Name="IdValvula" ColumnName="IdValvula" />
+          <ScalarProperty Name="ID" ColumnName="IdValvulaUnidad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Vehiculos">
+      <EntityTypeMapping TypeName="TalleresWebModel.Vehiculos">
+        <MappingFragment StoreEntitySet="Vehiculos">
+          <ScalarProperty Name="NumeroRA" ColumnName="NumeroRA" />
+          <ScalarProperty Name="RA" ColumnName="RA" />
+          <ScalarProperty Name="EsInyeccionVehiculo" ColumnName="EsInyeccionVehiculo" />
+          <ScalarProperty Name="IdDuenioVehiculo" ColumnName="IdDuenioVehiculo" />
+          <ScalarProperty Name="AnioVehiculo" ColumnName="AnioVehiculo" />
+          <ScalarProperty Name="Descripcion" ColumnName="DominioVehiculo" />
+          <ScalarProperty Name="ModeloVehiculo" ColumnName="ModeloVehiculo" />
+          <ScalarProperty Name="MarcaVehiculo" ColumnName="MarcaVehiculo" />
+          <ScalarProperty Name="ID" ColumnName="IdVehiculo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RT">
+      <EntityTypeMapping TypeName="TalleresWebModel.RT">
+        <MappingFragment StoreEntitySet="RT">
+          <ScalarProperty Name="ActivoRT" ColumnName="ActivoRT" />
+          <ScalarProperty Name="TituloRT" ColumnName="TituloRT" />
+          <ScalarProperty Name="MatriculaRT" ColumnName="MatriculaRT" />
+          <ScalarProperty Name="NombreApellidoRT" ColumnName="NombreApellidoRT" />
+          <ScalarProperty Name="NroDniRT" ColumnName="NroDniRT" />
+          <ScalarProperty Name="TipoDniID" ColumnName="IdTipoDniRT" />
+          <ScalarProperty Name="ID" ColumnName="IdRT" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RT_CRPC">
+      <EntityTypeMapping TypeName="TalleresWebModel.RT_CRPC">
+        <MappingFragment StoreEntitySet="RT_CRPC">
+          <ScalarProperty Name="FechaHastaRTCRPC" ColumnName="FechaHastaRTCRPC" />
+          <ScalarProperty Name="FechaDesde" ColumnName="FechaDesde" />
+          <ScalarProperty Name="CRPCID" ColumnName="IdCRPC" />
+          <ScalarProperty Name="RTID" ColumnName="IdRT" />
+          <ScalarProperty Name="ID" ColumnName="IdRTCRPC" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RT_PEC">
+      <EntityTypeMapping TypeName="TalleresWebModel.RT_PEC">
+        <MappingFragment StoreEntitySet="RT_PEC">
+          <ScalarProperty Name="FechaDesde" ColumnName="FechaDesde" />
+          <ScalarProperty Name="FechaHasta" ColumnName="FechaHasta" />
+          <ScalarProperty Name="PECID" ColumnName="IdPEC" />
+          <ScalarProperty Name="RTID" ColumnName="IdRT" />
+          <ScalarProperty Name="ID" ColumnName="IdRTPEC" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TalleresRT">
+      <EntityTypeMapping TypeName="TalleresWebModel.TalleresRT">
+        <MappingFragment StoreEntitySet="TalleresRT">
+          <ScalarProperty Name="EsRTPrincipal" ColumnName="RT_Principal" />
+          <ScalarProperty Name="FechaHastaRTT" ColumnName="FechaHastaRTT" />
+          <ScalarProperty Name="FechaDesdeRTT" ColumnName="FechaDesdeRTT" />
+          <ScalarProperty Name="RTID" ColumnName="IdRT" />
+          <ScalarProperty Name="TalleresID" ColumnName="IdTaller" />
+          <ScalarProperty Name="ID" ColumnName="IdTallerRT" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PH">
+      <EntityTypeMapping TypeName="TalleresWebModel.PH">
+        <MappingFragment StoreEntitySet="PH">
+          <ScalarProperty Name="IDCliente" ColumnName="IDCliente" />
+          <ScalarProperty Name="IDVehiculo" ColumnName="IDVehiculo" />
+          <ScalarProperty Name="IdCRPC" ColumnName="IdCRPC" />
+          <ScalarProperty Name="FechaOperacion" ColumnName="FechaOperacion" />
+          <ScalarProperty Name="NroObleaHabilitante" ColumnName="NroObleaHabilitante" />
+          <ScalarProperty Name="IdPEC" ColumnName="IdPEC" />
+          <ScalarProperty Name="IdNroCartaTaller" ColumnName="IdNroCartaTaller" />
+          <ScalarProperty Name="IdTaller" ColumnName="IdTaller" />
+          <ScalarProperty Name="ID" ColumnName="IdPH" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PHCilindros">
+      <EntityTypeMapping TypeName="TalleresWebModel.PHCilindros">
+        <MappingFragment StoreEntitySet="PHCilindros">
+          <ScalarProperty Name="IdEstadoPH" ColumnName="IdEstadoPH" />
+          <ScalarProperty Name="ObservacionPH" ColumnName="ObservacionPH" />
+          <ScalarProperty Name="LecturaMaxBureta" ColumnName="LecturaMaxBureta" />
+          <ScalarProperty Name="LecturaMinBureta" ColumnName="LecturaMinBureta" />
+          <ScalarProperty Name="TemperaturaAmbiente" ColumnName="TemperaturaAmbiente" />
+          <ScalarProperty Name="PesoCilinroLleno" ColumnName="PesoCilinroLleno" />
+          <ScalarProperty Name="NivelAguAPresionPruebaCilindro" ColumnName="NivelAguAPresionPruebaCilindro" />
+          <ScalarProperty Name="NroBureta" ColumnName="NroBureta" />
+          <ScalarProperty Name="PresionPruebaCilindro" ColumnName="PresionPruebaCilindro" />
+          <ScalarProperty Name="TipoFondoCilindro" ColumnName="TipoFondoCilindro" />
+          <ScalarProperty Name="LecturaBFondoCilindro" ColumnName="LecturaBFondoCilindro" />
+          <ScalarProperty Name="LecturaAFondoCilindro" ColumnName="LecturaAFondoCilindro" />
+          <ScalarProperty Name="LecturaCPaedCilindro" ColumnName="LecturaCPaedCilindro" />
+          <ScalarProperty Name="LecturaBParedCilindro" ColumnName="LecturaBParedCilindro" />
+          <ScalarProperty Name="LecturaAParedCiindrol" ColumnName="LecturaAParedCiindrol" />
+          <ScalarProperty Name="PesoAguaCilindro" ColumnName="PesoAguaCilindro" />
+          <ScalarProperty Name="PesoVacioCilindro" ColumnName="PesoVacioCilindro" />
+          <ScalarProperty Name="PesoMarcadoCilindro" ColumnName="PesoMarcadoCilindro" />
+          <ScalarProperty Name="ObservacionValvula" ColumnName="ObservacionValvula" />
+          <ScalarProperty Name="RoscaValvula" ColumnName="RoscaValvula" />
+          <ScalarProperty Name="FuncValvula" ColumnName="FuncValvula" />
+          <ScalarProperty Name="InspeccionVisualCorrecta" ColumnName="InspeccionVisualCorrecta" />
+          <ScalarProperty Name="Rechazado" ColumnName="Rechazado" />
+          <ScalarProperty Name="IdPEC" ColumnName="IdPEC" />
+          <ScalarProperty Name="NroCertificadoPH" ColumnName="NroCertificadoPH" />
+          <ScalarProperty Name="NroOperacionCRPC" ColumnName="NroOperacionCRPC" />
+          <ScalarProperty Name="ObservacionValvulaCiindrol" ColumnName="ObservacionValvulaCiindrol" />
+          <ScalarProperty Name="IdValvulaUnidad" ColumnName="IdValvulaUnidad" />
+          <ScalarProperty Name="IdCilindroUnidad" ColumnName="IdCilindroUnidad" />
+          <ScalarProperty Name="IdPH" ColumnName="IdPH" />
+          <ScalarProperty Name="ID" ColumnName="IdPHCilindro" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="S_ACCESOSCU">
+      <EntityTypeMapping TypeName="TalleresWebModel.S_ACCESOSCU">
+        <MappingFragment StoreEntitySet="S_ACCESOSCU">
+          <ScalarProperty Name="Permitido" ColumnName="Permitido" />
+          <ScalarProperty Name="IdRol" ColumnName="IdRol" />
+          <ScalarProperty Name="IdCU" ColumnName="IdCU" />
+          <ScalarProperty Name="IdAccesosCU" ColumnName="IdAccesosCU" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="S_CASOSDEUSO">
+      <EntityTypeMapping TypeName="TalleresWebModel.S_CASOSDEUSO">
+        <MappingFragment StoreEntitySet="S_CASOSDEUSO">
+          <ScalarProperty Name="AbrirEnVentanaNueva" ColumnName="AbrirEnVentanaNueva" />
+          <ScalarProperty Name="UrlImagen" ColumnName="UrlImagen" />
+          <ScalarProperty Name="Url" ColumnName="Url" />
+          <ScalarProperty Name="IdPadre" ColumnName="IdPadre" />
+          <ScalarProperty Name="CodigoCU" ColumnName="CodigoCU" />
+          <ScalarProperty Name="Descripcion" ColumnName="DescCU" />
+          <ScalarProperty Name="IdCU" ColumnName="IdCU" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="S_ROLES">
+      <EntityTypeMapping TypeName="TalleresWebModel.S_ROLES">
+        <MappingFragment StoreEntitySet="S_ROLES">
+          <ScalarProperty Name="HoraFinSabado" ColumnName="HoraFinSabado" />
+          <ScalarProperty Name="HoraInicioSabado" ColumnName="HoraInicioSabado" />
+          <ScalarProperty Name="HoraFinSemanaT" ColumnName="HoraFinSemanaT" />
+          <ScalarProperty Name="HoraInicioSemanaT" ColumnName="HoraInicioSemanaT" />
+          <ScalarProperty Name="HoraFinSemanaM" ColumnName="HoraFinSemanaM" />
+          <ScalarProperty Name="HoraInicioSemanaM" ColumnName="HoraInicioSemanaM" />
+          <ScalarProperty Name="CodigoRol" ColumnName="CodigoRol" />
+          <ScalarProperty Name="Descripcion" ColumnName="DescRol" />
+          <ScalarProperty Name="IdRol" ColumnName="IdRol" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ESTADOSPH">
+      <EntityTypeMapping TypeName="TalleresWebModel.ESTADOSPH">
+        <MappingFragment StoreEntitySet="ESTADOSPH">
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="ID" ColumnName="IDEstadoPH" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="INFORME">
+      <EntityTypeMapping TypeName="TalleresWebModel.INFORME">
+        <MappingFragment StoreEntitySet="INFORME">
+          <ScalarProperty Name="Activo" ColumnName="ActivoInforme" />
+          <ScalarProperty Name="Numero" ColumnName="NumeroInforme" />
+          <ScalarProperty Name="CantidadObleasRechazadas" ColumnName="CantidadObleasRechazadas" />
+          <ScalarProperty Name="CantidadObleasAsignadas" ColumnName="CantidadObleasAsignadas" />
+          <ScalarProperty Name="CantidadObleasEnviadas" ColumnName="CantidadObleasEnviadas" />
+          <ScalarProperty Name="Estado" ColumnName="EstadoInforme" />
+          <ScalarProperty Name="FechaHora" ColumnName="FechaHoraInforme" />
+          <ScalarProperty Name="ID" ColumnName="IdInforme" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="INFORMEOBLEAS">
+      <EntityTypeMapping TypeName="TalleresWebModel.INFORMEOBLEAS">
+        <MappingFragment StoreEntitySet="INFORMEOBLEAS">
+          <ScalarProperty Name="IdEstadoOblea" ColumnName="IdEstadoOblea" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="idOblea" ColumnName="idOblea" />
+          <ScalarProperty Name="IdInforme" ColumnName="IdInforme" />
+          <ScalarProperty Name="ID" ColumnName="IdInformeObleas" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LOTES">
+      <EntityTypeMapping TypeName="TalleresWebModel.LOTES">
+        <MappingFragment StoreEntitySet="LOTES">
+          <ScalarProperty Name="EnUso" ColumnName="ENUSO_LOTE" />
+          <ScalarProperty Name="AnioVencimiento" ColumnName="ANIOVENCIMIENTO_LOTE" />
+          <ScalarProperty Name="NumeroObleaHasta" ColumnName="NUMEROOBLEAHASTA_LOTE" />
+          <ScalarProperty Name="NumeroObleaDesde" ColumnName="NUMEROOBLEADESDE_LOTE" />
+          <ScalarProperty Name="FechaIngreso" ColumnName="FECHAINGRESO_LOTE" />
+          <ScalarProperty Name="ID" ColumnName="ID_LOTE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ObleaHistoricoEstado">
+      <EntityTypeMapping TypeName="TalleresWebModel.ObleaHistoricoEstado">
+        <MappingFragment StoreEntitySet="ObleaHistoricoEstado">
+          <ScalarProperty Name="IDUsuario" ColumnName="ID_Usuario" />
+          <ScalarProperty Name="FechaHora" ColumnName="FechaHoraEstado" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="IDEstadoOblea" ColumnName="ID_EstadoOblea" />
+          <ScalarProperty Name="IDOblea" ColumnName="ID_Oblea" />
+          <ScalarProperty Name="ID" ColumnName="ID_ObleaHistoricoEstado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ObleaErrorDetalle">
+      <EntityTypeMapping TypeName="TalleresWebModel.ObleaErrorDetalle">
+        <MappingFragment StoreEntitySet="ObleaErrorDetalle">
+          <ScalarProperty Name="Solucionado" ColumnName="Solucionado" />
+          <ScalarProperty Name="IDObjetoCorregido" ColumnName="ID_ObjetoCorregido" />
+          <ScalarProperty Name="Correccion" ColumnName="Correccion_ObleaErrorDetalle" />
+          <ScalarProperty Name="IDObleaErrorTipo" ColumnName="ID_ObleaErrorTipo" />
+          <ScalarProperty Name="IDObleaHistoricoEstado" ColumnName="ID_ObleaHistoricoEstado" />
+          <ScalarProperty Name="ID" ColumnName="ID_ObleaErrorDetalle" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ObleaErrorTipo">
+      <EntityTypeMapping TypeName="TalleresWebModel.ObleaErrorTipo">
+        <MappingFragment StoreEntitySet="ObleaErrorTipo">
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion_ObleaErrorTipo" />
+          <ScalarProperty Name="ID" ColumnName="ID_ObleaErrorTipo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Conductores">
+      <EntityTypeMapping TypeName="TalleresWebModel.Conductores">
+        <MappingFragment StoreEntitySet="Conductores">
+          <ScalarProperty Name="Activo" ColumnName="ActivoConductor" />
+          <ScalarProperty Name="Descripcion" ColumnName="DescripcionConductor" />
+          <ScalarProperty Name="ID" ColumnName="IdConductor" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DESPACHO">
+      <EntityTypeMapping TypeName="TalleresWebModel.DESPACHO">
+        <MappingFragment StoreEntitySet="DESPACHO">
+          <ScalarProperty Name="Activo" ColumnName="ActivoDespacho" />
+          <ScalarProperty Name="FechaHoraLlegada" ColumnName="FechaHoraLlegadaDespacho" />
+          <ScalarProperty Name="FechaHoraSalida" ColumnName="FechaHoraSalidaDespacho" />
+          <ScalarProperty Name="Numero" ColumnName="NumeroDespacho" />
+          <ScalarProperty Name="IdChofer" ColumnName="IdChofer" />
+          <ScalarProperty Name="IdFlete" ColumnName="IdFlete" />
+          <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
+          <ScalarProperty Name="Fecha" ColumnName="FechaDespacho" />
+          <ScalarProperty Name="ID" ColumnName="IdDespacho" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DESPACHODETALLE">
+      <EntityTypeMapping TypeName="TalleresWebModel.DESPACHODETALLE">
+        <MappingFragment StoreEntitySet="DESPACHODETALLE">
+          <ScalarProperty Name="IdPHCilindro" ColumnName="IdPHCilindro" />
+          <ScalarProperty Name="IdTaller" ColumnName="IdTaller" />
+          <ScalarProperty Name="IdPedido" ColumnName="IdPedido" />
+          <ScalarProperty Name="IdOblea" ColumnName="IdOblea" />
+          <ScalarProperty Name="IdDespacho" ColumnName="IdDespacho" />
+          <ScalarProperty Name="ID" ColumnName="IdDespachoDetalle" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FLETE">
+      <EntityTypeMapping TypeName="TalleresWebModel.FLETE">
+        <MappingFragment StoreEntitySet="FLETE">
+          <ScalarProperty Name="IdConductorHabitual" ColumnName="ConductorHabitualID" />
+          <ScalarProperty Name="ValorHora" ColumnName="ValorHora" />
+          <ScalarProperty Name="EsFletePropio" ColumnName="EsFletePropio" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="ID" ColumnName="IdFlete" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="InspeccionTipo">
+      <EntityTypeMapping TypeName="TalleresWebModel.InspeccionTipo">
+        <MappingFragment StoreEntitySet="InspeccionTipo">
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="ID" ColumnName="IdInspeccionTipo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PhCilindroHistoricoEstado">
+      <EntityTypeMapping TypeName="TalleresWebModel.PhCilindroHistoricoEstado">
+        <MappingFragment StoreEntitySet="PhCilindroHistoricoEstado">
+          <ScalarProperty Name="IDUsuario" ColumnName="ID_Usuario" />
+          <ScalarProperty Name="FechaHoraEstado" ColumnName="FechaHoraEstado" />
+          <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+          <ScalarProperty Name="IDEstado" ColumnName="ID_EstadoPHCilindro" />
+          <ScalarProperty Name="IDPHCilindro" ColumnName="ID_PHCilindro" />
+          <ScalarProperty Name="ID" ColumnName="ID_PHCilindroHistoricoEstado" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

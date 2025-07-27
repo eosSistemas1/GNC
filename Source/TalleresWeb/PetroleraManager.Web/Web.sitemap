@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+
+  <siteMapNode>
+    
+    <siteMapNode  title="Trámites Obleas" description="TramitesObleas">
+      <siteMapNode url="~/02.Tramites/ObleasIngresar.aspx" title="Ingresar ficha técnica" description="Ingresar ficha técnica" />
+      <siteMapNode url="~/02.Tramites/ObleasConsultar.aspx" title="Consultar fichas técnicas" description="Consultar fichas técnicas" />
+      <siteMapNode url="~/02.Tramites/ObleasInformar.aspx" title="Informar fichas técnicas" description="Informar fichas técnicas" />
+      <siteMapNode url="~/02.Tramites/CargarResultadosEnte.aspx" title="Cargar resultados ente" description="Cargar resultados ente" />
+      <siteMapNode url="~/02.Tramites/ResumenImportacion.aspx" title="Asignación obleas" description="Asignación obleas" />
+      <siteMapNode url="~/02.Tramites/ObleasCorreccionErrores.aspx" title="Obleas Corrección Errores" description="Obleas Corrección Errores" />
+    </siteMapNode>
+
+    <siteMapNode  title="Despacho" description="Despacho">
+      <siteMapNode url="~/03.Despacho/Despacho.aspx" title="Despacho" description="Despacho" />
+    </siteMapNode>
+    
+    <siteMapNode  title="Obleas" description="Obleas">
+      <siteMapNode url="~/01.Lotes/Lotes.aspx" title="Ingresar Lotes" description="Ingresar Lotes" />
+      <siteMapNode  title="Informes" description="Informes">
+        <siteMapNode url="~/02.Tramites/Informes/InformesEstadosObleas.aspx" title="Cosulta Obleas" description="Cosulta Obleas" />
+        <siteMapNode url="~/02.Tramites/Informes/InformesObleasRealizadas.aspx" title="Obleas Realizadas" description="Obleas Realizadas" />
+      </siteMapNode>
+    </siteMapNode>
+
+    <siteMapNode title="Sistema" description="Sistema" >
+      <siteMapNode url="~/00.Sistema/Talleres.aspx" title="Talleres" description="Talleres" />
+      <siteMapNode url="~/00.Sistema/Localidades.aspx" title="Localidades" description="Localidades" />
+      <siteMapNode url="~/00.Sistema/ResponsableTecnico.aspx" title="Responsable Técnico" description="Responsable Técnico" />
+      <siteMapNode url="~/00.Sistema/Cilindros.aspx" title="Cilindros" description="Cilindros" />
+      <siteMapNode url="~/00.Sistema/Reguladores.aspx" title="Reguladores" description="Reguladores" />
+      <siteMapNode url="~/00.Sistema/Valvulas.aspx" title="Valvulas" description="Valvulas" />
+    </siteMapNode>
+    
+  </siteMapNode>
+</siteMap>

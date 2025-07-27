@@ -1,0 +1,11 @@
+C:\Source\petrolera\Source\PL.Fwk\PL.Fwk.BusinessLogic\bin\Release\PL.Fwk.BusinessLogic.dll
+C:\Source\petrolera\Source\PL.Fwk\PL.Fwk.BusinessLogic\bin\Release\PL.Fwk.BusinessLogic.pdb
+C:\Source\petrolera\Source\PL.Fwk\PL.Fwk.BusinessLogic\bin\Release\PL.Fwk.DataAccess.dll
+C:\Source\petrolera\Source\PL.Fwk\PL.Fwk.BusinessLogic\bin\Release\PL.Fwk.Entities.dll
+C:\Source\petrolera\Source\PL.Fwk\PL.Fwk.BusinessLogic\bin\Release\PL.Fwk.DataAccess.pdb
+C:\Source\petrolera\Source\PL.Fwk\PL.Fwk.BusinessLogic\bin\Release\PL.Fwk.Entities.pdb
+C:\Source\petrolera\Source\PL.Fwk\PL.Fwk.BusinessLogic\obj\Release\PL.Fwk.BusinessLogic.csprojAssemblyReference.cache
+C:\Source\petrolera\Source\PL.Fwk\PL.Fwk.BusinessLogic\obj\Release\PL.Fwk.BusinessLogic.csproj.CoreCompileInputs.cache
+C:\Source\petrolera\Source\PL.Fwk\PL.Fwk.BusinessLogic\obj\Release\PL.Fwk.BusinessLogic.csproj.CopyComplete
+C:\Source\petrolera\Source\PL.Fwk\PL.Fwk.BusinessLogic\obj\Release\PL.Fwk.BusinessLogic.dll
+C:\Source\petrolera\Source\PL.Fwk\PL.Fwk.BusinessLogic\obj\Release\PL.Fwk.BusinessLogic.pdb

@@ -1,0 +1,15 @@
+﻿.modalBackground
+{
+    background-color: #B1B3B4;
+    filter: alpha(opacity=70);
+    opacity: 0.7;
+}
+.CajaDialogo
+{
+    background-color: #FFF;
+    border-width: 3px;
+    border-style: outset;
+    width: 550px;
+    border-color: #003C67;
+    padding: 0px;
+}

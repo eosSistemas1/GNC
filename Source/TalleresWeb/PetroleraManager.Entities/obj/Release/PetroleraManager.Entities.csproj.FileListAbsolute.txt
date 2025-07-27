@@ -1,0 +1,9 @@
+C:\Source\petrolera\Source\TalleresWeb\PetroleraManager.Entities\bin\Release\PetroleraManager.Entities.dll.config
+C:\Source\petrolera\Source\TalleresWeb\PetroleraManager.Entities\bin\Release\PetroleraManager.Entities.dll
+C:\Source\petrolera\Source\TalleresWeb\PetroleraManager.Entities\bin\Release\PetroleraManager.Entities.pdb
+C:\Source\petrolera\Source\TalleresWeb\PetroleraManager.Entities\bin\Release\PL.Fwk.Entities.dll
+C:\Source\petrolera\Source\TalleresWeb\PetroleraManager.Entities\bin\Release\PL.Fwk.Entities.pdb
+C:\Source\petrolera\Source\TalleresWeb\PetroleraManager.Entities\obj\Release\PetroleraManager.Entities.csproj.CoreCompileInputs.cache
+C:\Source\petrolera\Source\TalleresWeb\PetroleraManager.Entities\obj\Release\PetroleraManager.Entities.csproj.CopyComplete
+C:\Source\petrolera\Source\TalleresWeb\PetroleraManager.Entities\obj\Release\PetroleraManager.Entities.dll
+C:\Source\petrolera\Source\TalleresWeb\PetroleraManager.Entities\obj\Release\PetroleraManager.Entities.pdb

@@ -1,0 +1,256 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4B4D1687-3D23-464E-BAFB-764C678892AB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TalleresWeb.Entities</RootNamespace>
+    <AssemblyName>TalleresWeb.Entities</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\SharedAssemblies\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL" />
+    <Reference Include="PL.Fwk.Entities, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\PL.Fwk\PL.Fwk.Entities\bin\Release\PL.Fwk.Entities.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Cilindros\CilindrosErrorView.cs" />
+    <Compile Include="Clientes\ClientesExtendedView.cs" />
+    <Compile Include="Clientes\ClientesParameters.cs" />
+    <Compile Include="Cilindros\CilindrosExtendedView.cs" />
+    <Compile Include="Cilindros\CilindrosParameters.cs" />
+    <Compile Include="CilindrosUnidad\CilindrosUnidadExtendedView.cs" />
+    <Compile Include="CilindrosUnidad\CilindrosUnidadParameters.cs" />
+    <Compile Include="Clientes\ClientesView.cs" />
+    <Compile Include="Conductores\ConductoresExtendedView.cs" />
+    <Compile Include="Conductores\ConductoresParameters.cs" />
+    <Compile Include="DespachoDetalle\DespachoDetalleExtendedView.cs" />
+    <Compile Include="DespachoDetalle\DespachoDetalleParameters.cs" />
+    <Compile Include="Despacho\DespachoEnCursoView.cs" />
+    <Compile Include="Despacho\DetalleDespachoView.cs" />
+    <Compile Include="Despacho\TramiteDespachoView.cs" />
+    <Compile Include="Despacho\DespachoExtendedView.cs" />
+    <Compile Include="Despacho\DespachoParameters.cs" />
+    <Compile Include="Flete\FletesExtendedView.cs" />
+    <Compile Include="Flete\FleteParameters.cs" />
+    <Compile Include="Informe\InformesPendientesView.cs" />
+    <Compile Include="InspeccionesPH\InspeccionesPHExtendedView.cs" />
+    <Compile Include="InspeccionesPH\InspeccionesPHParameters.cs" />
+    <Compile Include="Inspecciones\InspeccionesExtendedView.cs" />
+    <Compile Include="Inspecciones\InspeccionesParameters.cs" />
+    <Compile Include="Inspecciones\InspeccionesView.cs" />
+    <Compile Include="ObleaError\ObleaErrorExtendedView.cs" />
+    <Compile Include="ObleaError\ObleaErrorParameters.cs" />
+    <Compile Include="DataModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Informe\InformeDetalleBasicView.cs" />
+    <Compile Include="Informe\InformeDetalleExtendedView.cs" />
+    <Compile Include="Informe\InformeDetalleParameters.cs" />
+    <Compile Include="Informe\InformeParameters.cs" />
+    <Compile Include="Lotes\LotesExtendedView.cs" />
+    <Compile Include="Lotes\LotesParameters.cs" />
+    <Compile Include="Informe\FilesExtendedView.cs" />
+    <Compile Include="Informe\InformeExtendedView.cs" />
+    <Compile Include="MarcasValvulas\MarcasValvulasExtendedView.cs" />
+    <Compile Include="MarcasValvulas\MarcasValvulasParameters.cs" />
+    <Compile Include="MarcasCilindros\MarcasCilindrosExtendedView.cs" />
+    <Compile Include="MarcasCilindros\MarcasCilindrosParameters.cs" />
+    <Compile Include="MarcasReguladores\MarcasReguladoresExtendedView.cs" />
+    <Compile Include="MarcasReguladores\MarcasReguladoresParameters.cs" />
+    <Compile Include="ObleasCilindros\DetalleCilindrosValvulasView.cs" />
+    <Compile Include="Obleas\InformeObleasRealizadasView.cs" />
+    <Compile Include="Obleas\ObleaCargaResultadosView.cs" />
+    <Compile Include="Obleas\Obleas.custom.cs" />
+    <Compile Include="Obleas\ObleasDespachoView.cs" />
+    <Compile Include="Obleas\ObleasParaCorregirDominioView.cs" />
+    <Compile Include="Obleas\WebApi\ImagenModel.cs" />
+    <Compile Include="Obleas\WebApi\EstadosTramitesView.cs" />
+    <Compile Include="Obleas\WebApi\ObleasConsultarView.cs" />
+    <Compile Include="Obleas\WebApi\ObleasParametersWebApi.cs" />
+    <Compile Include="Obleas\TarjetasImpresasBasicView.cs" />
+    <Compile Include="Obleas\WebApi\ObleasViewWebApi.cs" />
+    <Compile Include="PHCilindroHistoricoEstado\PHCilindroHistoricoEstadoExtendedView.cs" />
+    <Compile Include="PHCilindroHistoricoEstado\PHCilindroHistoricoEstadoParameters.cs" />
+    <Compile Include="PHCilindros\PHCilindrosInformarView.cs" />
+    <Compile Include="PHCilindros\PHCilindrosConsultaView.cs" />
+    <Compile Include="PHCilindros\PHCilindrosHojaRutaView.cs" />
+    <Compile Include="PHCilindros\PHCilindrosVerificarCodigosParameter.cs" />
+    <Compile Include="PHCilindros\PHCilindrosView.cs" />
+    <Compile Include="PHCilindros\PHCilindrosExtendedView.cs" />
+    <Compile Include="PHCilindros\PHCilindrosParameters.cs" />
+    <Compile Include="PH\Consulta\PHConsultaView.cs" />
+    <Compile Include="PH\FilesInformePH.cs" />
+    <Compile Include="PH\PHArchivosExcel.cs" />
+    <Compile Include="PH\PHErroresEnteView.cs" />
+    <Compile Include="PH\Proceso\PHCilindrosPendientesView.cs" />
+    <Compile Include="PH\Proceso\TipoFondoView.cs" />
+    <Compile Include="PH\WebApi\PHViewWebApi.cs" />
+    <Compile Include="PH\WebApi\PHPrintViewWebApi.cs" />
+    <Compile Include="PH\PHExtendedView.cs" />
+    <Compile Include="PH\PHParameters.cs" />
+    <Compile Include="Provincias\ProvinciasExtendedView.cs" />
+    <Compile Include="Provincias\ProvinciasParameters.cs" />
+    <Compile Include="RT_PEC\RT_PECExtendedView.cs" />
+    <Compile Include="RT_PEC\RT_PECParameters.cs" />
+    <Compile Include="RT\RTExtendedView.cs" />
+    <Compile Include="RT\RTParameters.cs" />
+    <Compile Include="Talleres\TalleresRTExtendedView.cs" />
+    <Compile Include="Talleres\TalleresRTParameters.cs" />
+    <Compile Include="Uso\UsoExtendedView.cs" />
+    <Compile Include="Uso\UsoParameters.cs" />
+    <Compile Include="TiposOperaciones\TiposOperacionesExtendedView.cs" />
+    <Compile Include="TiposOperaciones\TiposOperacionesParameters.cs" />
+    <Compile Include="DocumentosClientes\DocumentosExtendedView.cs" />
+    <Compile Include="DocumentosClientes\DocumentosParameters.cs" />
+    <Compile Include="Localidades\LocalidadesExtendedView.cs" />
+    <Compile Include="Localidades\LocalidadesParameters.cs" />
+    <Compile Include="S_AccesosCU\S_AccesosCUExtendedView.cs" />
+    <Compile Include="S_AccesosCU\S_AccesosCUParameters.cs" />
+    <Compile Include="S_CasosDeUso\S_CasosDeUsoExtendedView.cs" />
+    <Compile Include="S_CasosDeUso\S_CasosDeUsoParameters.cs" />
+    <Compile Include="S_Roles\S_RolesExtendedView.cs" />
+    <Compile Include="S_Roles\S_RolesParameters.cs" />
+    <Compile Include="Talleres\TalleresExtendedView.cs" />
+    <Compile Include="Talleres\TalleresParameters.cs" />
+    <Compile Include="PEC\PECExtendedView.cs" />
+    <Compile Include="PEC\PECParameters.cs" />
+    <Compile Include="ReguladoresUnidad\ReguladoresUnidadExtendedView.cs" />
+    <Compile Include="ReguladoresUnidad\ReguladoresUnidadParameters.cs" />
+    <Compile Include="Usuarios\UsuariosBasicView.cs" />
+    <Compile Include="Usuarios\UsuariosExtendedView.cs" />
+    <Compile Include="Usuarios\UsuariosParameters.cs" />
+    <Compile Include="ValvulaUnidad\ValvulaUnidadExtendedView.cs" />
+    <Compile Include="ValvulaUnidad\ValvulaUnidadParameters.cs" />
+    <Compile Include="Valvula\ValvulaErrorView.cs" />
+    <Compile Include="Valvula\ValvulaExtendedView.cs" />
+    <Compile Include="Valvula\ValvulaParameters.cs" />
+    <Compile Include="Reguladores\ReguladoresExtendedView.cs" />
+    <Compile Include="Reguladores\ReguladoresParameters.cs" />
+    <Compile Include="Vehiculos\VehiculosView.cs" />
+    <Compile Include="Vehiculos\VehiculosExtendedView.cs" />
+    <Compile Include="Vehiculos\VehiculosParameters.cs" />
+    <Compile Include="ObleasValvulas\ObleasValvulasExtendedView.cs" />
+    <Compile Include="ObleasValvulas\ObleasValvulasParameters.cs" />
+    <Compile Include="ObleasCilindros\ObleasCilindrosExtendedView.cs" />
+    <Compile Include="ObleasCilindros\ObleasCilindrosParameters.cs" />
+    <Compile Include="ObleasReguladores\ObleasReguladoresExtendedView.cs" />
+    <Compile Include="ObleasReguladores\ObleasReguladoresParameters.cs" />
+    <Compile Include="CRPC\CRPCExtendedView.cs" />
+    <Compile Include="CRPC\CRPCParameters.cs" />
+    <Compile Include="EstadosFichas\EstadosFichasExtendedView.cs" />
+    <Compile Include="EstadosFichas\EstadosFichasParameters.cs" />
+    <Compile Include="DataModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Obleas\ObleasExtendedView.cs" />
+    <Compile Include="Obleas\ObleasParameters.cs" />
+    <Compile Include="Zonas\ZonasTallerView.cs" />
+    <Compile Include="Zonas\ZonasView.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config">
+      <SubType>Designer</SubType>
+    </None>
+    <EntityDeploy Include="DataModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>DataModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\TalleresWeb.Web\TalleresWeb.Web.Cross.Configuracion\TalleresWeb.Web.Cross.Configuracion.csproj">
+      <Project>{6b0b928b-b9b7-4e03-aacd-482f8745ebf3}</Project>
+      <Name>TalleresWeb.Web.Cross.Configuracion</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

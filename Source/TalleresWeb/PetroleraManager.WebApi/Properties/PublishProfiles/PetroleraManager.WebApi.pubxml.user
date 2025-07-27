@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>C:\Source\Petrolera\Source\Publish\WebApi</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="bin/App_global.asax.compiled">
+      <publishTime>12/16/2020 14:08:57</publishTime>
+    </File>
+    <File Include="bin/App_global.asax.dll">
+      <publishTime>12/16/2020 14:08:57</publishTime>
+    </File>
+    <File Include="bin/es/System.Net.Http.Formatting.resources.dll">
+      <publishTime>11/28/2018 13:00:46</publishTime>
+    </File>
+    <File Include="bin/es/System.Web.Http.resources.dll">
+      <publishTime>11/28/2018 13:01:14</publishTime>
+    </File>
+    <File Include="bin/es/System.Web.Http.WebHost.resources.dll">
+      <publishTime>11/28/2018 13:03:04</publishTime>
+    </File>
+    <File Include="bin/FacturacionElectronica.DataAccess.dll">
+      <publishTime>03/25/2016 18:51:18</publishTime>
+    </File>
+    <File Include="bin/FacturacionElectronica.DataAccess.XmlSerializers.dll">
+      <publishTime>03/22/2016 11:08:05</publishTime>
+    </File>
+    <File Include="bin/GestionDrogueria.DataAccess.dll">
+      <publishTime>05/26/2016 19:47:29</publishTime>
+    </File>
+    <File Include="bin/GestionDrogueria.Entities.dll">
+      <publishTime>05/26/2016 19:47:27</publishTime>
+    </File>
+    <File Include="bin/GestionDrogueria.Logic.Abstractions.dll">
+      <publishTime>05/26/2016 19:47:29</publishTime>
+    </File>
+    <File Include="bin/GestionDrogueria.Logic.dll">
+      <publishTime>05/26/2016 19:47:29</publishTime>
+    </File>
+    <File Include="bin/GestionDrogueria.WebApi.dll">
+      <publishTime>05/26/2016 19:47:30</publishTime>
+    </File>
+    <File Include="bin/Ionic.Zip.dll">
+      <publishTime>04/23/2019 20:09:03</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.Infrastructure.dll">
+      <publishTime>07/25/2012 11:48:56</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>08/03/2014 20:33:56</publishTime>
+    </File>
+    <File Include="bin/PetroleraManager.DataAccess.dll">
+      <publishTime>09/05/2017 22:31:06</publishTime>
+    </File>
+    <File Include="bin/PetroleraManager.Entities.dll">
+      <publishTime>09/05/2017 22:31:06</publishTime>
+    </File>
+    <File Include="bin/PetroleraManager.Logic.dll">
+      <publishTime>09/05/2017 22:31:06</publishTime>
+    </File>
+    <File Include="bin/PetroleraManager.WebApi.dll">
+      <publishTime>12/16/2020 14:08:52</publishTime>
+    </File>
+    <File Include="bin/PetroleraManager.WebApi.pdb">
+      <publishTime>12/16/2020 14:08:52</publishTime>
+    </File>
+    <File Include="bin/PL.Fwk.BusinessLogic.dll">
+      <publishTime>12/15/2020 12:22:28</publishTime>
+    </File>
+    <File Include="bin/PL.Fwk.BusinessLogic.pdb">
+      <publishTime>12/15/2020 12:22:28</publishTime>
+    </File>
+    <File Include="bin/PL.Fwk.DataAccess.dll">
+      <publishTime>12/15/2020 12:22:27</publishTime>
+    </File>
+    <File Include="bin/PL.Fwk.DataAccess.pdb">
+      <publishTime>12/15/2020 12:22:27</publishTime>
+    </File>
+    <File Include="bin/PL.Fwk.Entities.dll">
+      <publishTime>12/15/2020 12:22:26</publishTime>
+    </File>
+    <File Include="bin/PL.Fwk.Entities.pdb">
+      <publishTime>12/15/2020 12:22:26</publishTime>
+    </File>
+    <File Include="bin/System.Net.Http.Formatting.dll">
+      <publishTime>11/28/2018 13:00:36</publishTime>
+    </File>
+    <File Include="bin/System.Web.Helpers.dll">
+      <publishTime>01/28/2015 04:04:30</publishTime>
+    </File>
+    <File Include="bin/System.Web.Http.dll">
+      <publishTime>11/28/2018 13:01:00</publishTime>
+    </File>
+    <File Include="bin/System.Web.Http.WebHost.dll">
+      <publishTime>11/28/2018 13:02:56</publishTime>
+    </File>
+    <File Include="bin/System.Web.Mvc.dll">
+      <publishTime>01/28/2015 04:02:18</publishTime>
+    </File>
+    <File Include="bin/System.Web.Razor.dll">
+      <publishTime>01/28/2015 04:02:32</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Deployment.dll">
+      <publishTime>01/28/2015 04:04:30</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.dll">
+      <publishTime>01/28/2015 04:04:30</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Razor.dll">
+      <publishTime>01/28/2015 04:04:30</publishTime>
+    </File>
+    <File Include="bin/TalleresWeb.DataAccess.dll">
+      <publishTime>12/16/2020 14:08:51</publishTime>
+    </File>
+    <File Include="bin/TalleresWeb.DataAccess.pdb">
+      <publishTime>12/16/2020 14:08:51</publishTime>
+    </File>
+    <File Include="bin/TalleresWeb.Entities.dll">
+      <publishTime>12/16/2020 14:08:50</publishTime>
+    </File>
+    <File Include="bin/TalleresWeb.Entities.dll.config">
+      <publishTime>06/18/2020 23:54:05</publishTime>
+    </File>
+    <File Include="bin/TalleresWeb.Entities.pdb">
+      <publishTime>12/16/2020 14:08:50</publishTime>
+    </File>
+    <File Include="bin/TalleresWeb.Logic.dll">
+      <publishTime>12/16/2020 14:08:51</publishTime>
+    </File>
+    <File Include="bin/TalleresWeb.Logic.pdb">
+      <publishTime>12/16/2020 14:08:51</publishTime>
+    </File>
+    <File Include="bin/TalleresWeb.Web.Cross.Configuracion.dll">
+      <publishTime>12/16/2020 14:08:49</publishTime>
+    </File>
+    <File Include="bin/TalleresWeb.Web.Cross.Configuracion.pdb">
+      <publishTime>12/16/2020 14:08:49</publishTime>
+    </File>
+    <File Include="bin/TC.ArchivosTXTAfip.dll">
+      <publishTime>05/12/2016 23:33:10</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>08/27/2019 19:55:37</publishTime>
+    </File>
+    <File Include="PrecompiledApp.config">
+      <publishTime>12/16/2020 14:08:54</publishTime>
+    </File>
+    <File Include="settings.config">
+      <publishTime>04/23/2019 20:01:59</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>12/16/2020 14:08:53</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

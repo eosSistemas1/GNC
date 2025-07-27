@@ -1,0 +1,1919 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TalleresWebModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="TalleresWebEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Cilindros" EntityType="TalleresWebModel.Cilindros" />
+    <EntitySet Name="CilindrosUnidad" EntityType="TalleresWebModel.CilindrosUnidad" />
+    <EntitySet Name="Clientes" EntityType="TalleresWebModel.Clientes" />
+    <EntitySet Name="CRPC" EntityType="TalleresWebModel.CRPC" />
+    <EntitySet Name="DocumentosClientes" EntityType="TalleresWebModel.DocumentosClientes" />
+    <EntitySet Name="EstadosFichas" EntityType="TalleresWebModel.EstadosFichas" />
+    <EntitySet Name="Inspecciones" EntityType="TalleresWebModel.Inspecciones" />
+    <EntitySet Name="InspeccionesPH" EntityType="TalleresWebModel.InspeccionesPH" />
+    <EntitySet Name="Localidades" EntityType="TalleresWebModel.Localidades" />
+    <EntitySet Name="MarcasCilindros" EntityType="TalleresWebModel.MarcasCilindros" />
+    <EntitySet Name="MarcasRegulador" EntityType="TalleresWebModel.MarcasRegulador" />
+    <EntitySet Name="MarcasValvulas" EntityType="TalleresWebModel.MarcasValvulas" />
+    <EntitySet Name="Obleas" EntityType="TalleresWebModel.Obleas" />
+    <EntitySet Name="ObleasCilindros" EntityType="TalleresWebModel.ObleasCilindros" />
+    <EntitySet Name="ObleasReguladores" EntityType="TalleresWebModel.ObleasReguladores" />
+    <EntitySet Name="ObleasValvulas" EntityType="TalleresWebModel.ObleasValvulas" />
+    <EntitySet Name="Operaciones" EntityType="TalleresWebModel.Operaciones" />
+    <EntitySet Name="PEC" EntityType="TalleresWebModel.PEC" />
+    <EntitySet Name="Provincias" EntityType="TalleresWebModel.Provincias" />
+    <EntitySet Name="Reguladores" EntityType="TalleresWebModel.Reguladores" />
+    <EntitySet Name="ReguladoresUnidad" EntityType="TalleresWebModel.ReguladoresUnidad" />
+    <EntitySet Name="Talleres" EntityType="TalleresWebModel.Talleres" />
+    <EntitySet Name="Uso" EntityType="TalleresWebModel.Uso" />
+    <EntitySet Name="Usuario" EntityType="TalleresWebModel.Usuario" />
+    <EntitySet Name="Valvula" EntityType="TalleresWebModel.Valvula" />
+    <EntitySet Name="Valvula_Unidad" EntityType="TalleresWebModel.Valvula_Unidad" />
+    <EntitySet Name="Vehiculos" EntityType="TalleresWebModel.Vehiculos" />
+    <AssociationSet Name="FK_CilindrosUnidad_Cilindros" Association="TalleresWebModel.FK_CilindrosUnidad_Cilindros">
+      <End Role="Cilindros" EntitySet="Cilindros" />
+      <End Role="CilindrosUnidad" EntitySet="CilindrosUnidad" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ObleasCilindros_CilindrosUnidad" Association="TalleresWebModel.FK_ObleasCilindros_CilindrosUnidad">
+      <End Role="CilindrosUnidad" EntitySet="CilindrosUnidad" />
+      <End Role="ObleasCilindros" EntitySet="ObleasCilindros" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Obleas_Clientes" Association="TalleresWebModel.FK_Obleas_Clientes">
+      <End Role="Clientes" EntitySet="Clientes" />
+      <End Role="Obleas" EntitySet="Obleas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Usuario_DocumentosClientes" Association="TalleresWebModel.FK_Usuario_DocumentosClientes">
+      <End Role="DocumentosClientes" EntitySet="DocumentosClientes" />
+      <End Role="Usuario" EntitySet="Usuario" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Obleas_EstadosFichas" Association="TalleresWebModel.FK_Obleas_EstadosFichas">
+      <End Role="EstadosFichas" EntitySet="EstadosFichas" />
+      <End Role="Obleas" EntitySet="Obleas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Reguladores_MarcasRegulador" Association="TalleresWebModel.FK_Reguladores_MarcasRegulador">
+      <End Role="MarcasRegulador" EntitySet="MarcasRegulador" />
+      <End Role="Reguladores" EntitySet="Reguladores" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Valvula_MarcasValvulas" Association="TalleresWebModel.FK_Valvula_MarcasValvulas">
+      <End Role="MarcasValvulas" EntitySet="MarcasValvulas" />
+      <End Role="Valvula" EntitySet="Valvula" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Obleas_Talleres" Association="TalleresWebModel.FK_Obleas_Talleres">
+      <End Role="Talleres" EntitySet="Talleres" />
+      <End Role="Obleas" EntitySet="Obleas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Obleas_Uso" Association="TalleresWebModel.FK_Obleas_Uso">
+      <End Role="Uso" EntitySet="Uso" />
+      <End Role="Obleas" EntitySet="Obleas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Obleas_Vehiculos" Association="TalleresWebModel.FK_Obleas_Vehiculos">
+      <End Role="Vehiculos" EntitySet="Vehiculos" />
+      <End Role="Obleas" EntitySet="Obleas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ObleasCilindros_Obleas" Association="TalleresWebModel.FK_ObleasCilindros_Obleas">
+      <End Role="Obleas" EntitySet="Obleas" />
+      <End Role="ObleasCilindros" EntitySet="ObleasCilindros" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ObleasReguladores_Obleas" Association="TalleresWebModel.FK_ObleasReguladores_Obleas">
+      <End Role="Obleas" EntitySet="Obleas" />
+      <End Role="ObleasReguladores" EntitySet="ObleasReguladores" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ObleasValvulas_ObleasCilindros" Association="TalleresWebModel.FK_ObleasValvulas_ObleasCilindros">
+      <End Role="ObleasCilindros" EntitySet="ObleasCilindros" />
+      <End Role="ObleasValvulas" EntitySet="ObleasValvulas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ObleasValvulas_Valvula_Unidad" Association="TalleresWebModel.FK_ObleasValvulas_Valvula_Unidad">
+      <End Role="Valvula_Unidad" EntitySet="Valvula_Unidad" />
+      <End Role="ObleasValvulas" EntitySet="ObleasValvulas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Usuario_Talleres" Association="TalleresWebModel.FK_Usuario_Talleres">
+      <End Role="Talleres" EntitySet="Talleres" />
+      <End Role="Usuario" EntitySet="Usuario" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Valvula_Unidad_Valvula" Association="TalleresWebModel.FK_Valvula_Unidad_Valvula">
+      <End Role="Valvula" EntitySet="Valvula" />
+      <End Role="Valvula_Unidad" EntitySet="Valvula_Unidad" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Clientes_Localidades1" Association="TalleresWebModel.FK_Clientes_Localidades1">
+      <End Role="Localidades" EntitySet="Localidades" />
+      <End Role="Clientes" EntitySet="Clientes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ObleasCilindros_CRPC" Association="TalleresWebModel.FK_ObleasCilindros_CRPC">
+      <End Role="CRPC" EntitySet="CRPC" />
+      <End Role="ObleasCilindros" EntitySet="ObleasCilindros" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Localidades_Provincias" Association="TalleresWebModel.FK_Localidades_Provincias">
+      <End Role="Provincias" EntitySet="Provincias" />
+      <End Role="Localidades" EntitySet="Localidades" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Obleas_PEC" Association="TalleresWebModel.FK_Obleas_PEC">
+      <End Role="PEC" EntitySet="PEC" />
+      <End Role="Obleas" EntitySet="Obleas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ObleasReguladores_ReguladoresUnidad" Association="TalleresWebModel.FK_ObleasReguladores_ReguladoresUnidad">
+      <End Role="ReguladoresUnidad" EntitySet="ReguladoresUnidad" />
+      <End Role="ObleasReguladores" EntitySet="ObleasReguladores" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Clientes_DocumentosClientes" Association="TalleresWebModel.FK_Clientes_DocumentosClientes">
+      <End Role="DocumentosClientes" EntitySet="DocumentosClientes" />
+      <End Role="Clientes" EntitySet="Clientes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ObleasReguladores_Operaciones" Association="TalleresWebModel.FK_ObleasReguladores_Operaciones">
+      <End Role="Operaciones" EntitySet="Operaciones" />
+      <End Role="ObleasReguladores" EntitySet="ObleasReguladores" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Obleas_Operaciones" Association="TalleresWebModel.FK_Obleas_Operaciones">
+      <End Role="Operaciones" EntitySet="Operaciones" />
+      <End Role="Obleas" EntitySet="Obleas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ObleasCilindros_Operaciones" Association="TalleresWebModel.FK_ObleasCilindros_Operaciones">
+      <End Role="Operaciones" EntitySet="Operaciones" />
+      <End Role="ObleasCilindros" EntitySet="ObleasCilindros" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ObleasValvulas_Operaciones" Association="TalleresWebModel.FK_ObleasValvulas_Operaciones">
+      <End Role="Operaciones" EntitySet="Operaciones" />
+      <End Role="ObleasValvulas" EntitySet="ObleasValvulas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Obleas_Usuario" Association="TalleresWebModel.FK_Obleas_Usuario">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="Obleas" EntitySet="Obleas" />
+    </AssociationSet>
+    <EntitySet Name="RT" EntityType="TalleresWebModel.RT" />
+    <EntitySet Name="RT_CRPC" EntityType="TalleresWebModel.RT_CRPC" />
+    <EntitySet Name="RT_PEC" EntityType="TalleresWebModel.RT_PEC" />
+    <EntitySet Name="TalleresRT" EntityType="TalleresWebModel.TalleresRT" />
+    <AssociationSet Name="FK_RT_CRPC_CRPC" Association="TalleresWebModel.FK_RT_CRPC_CRPC">
+      <End Role="CRPC" EntitySet="CRPC" />
+      <End Role="RT_CRPC" EntitySet="RT_CRPC" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RT_PEC_PEC" Association="TalleresWebModel.FK_RT_PEC_PEC">
+      <End Role="PEC" EntitySet="PEC" />
+      <End Role="RT_PEC" EntitySet="RT_PEC" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RT_CRPC_RT" Association="TalleresWebModel.FK_RT_CRPC_RT">
+      <End Role="RT" EntitySet="RT" />
+      <End Role="RT_CRPC" EntitySet="RT_CRPC" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RT_PEC_RT" Association="TalleresWebModel.FK_RT_PEC_RT">
+      <End Role="RT" EntitySet="RT" />
+      <End Role="RT_PEC" EntitySet="RT_PEC" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TalleresRT_RT" Association="TalleresWebModel.FK_TalleresRT_RT">
+      <End Role="RT" EntitySet="RT" />
+      <End Role="TalleresRT" EntitySet="TalleresRT" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TalleresRT_Talleres" Association="TalleresWebModel.FK_TalleresRT_Talleres">
+      <End Role="Talleres" EntitySet="Talleres" />
+      <End Role="TalleresRT" EntitySet="TalleresRT" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RT_DocumentosClientes" Association="TalleresWebModel.FK_RT_DocumentosClientes">
+      <End Role="DocumentosClientes" EntitySet="DocumentosClientes" />
+      <End Role="RT" EntitySet="RT" />
+    </AssociationSet>
+    <AssociationSet Name="FK_InspeccionesPH_Inspecciones" Association="TalleresWebModel.FK_InspeccionesPH_Inspecciones">
+      <End Role="Inspecciones" EntitySet="Inspecciones" />
+      <End Role="InspeccionesPH" EntitySet="InspeccionesPH" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PEC_Localidades" Association="TalleresWebModel.FK_PEC_Localidades">
+      <End Role="Localidades" EntitySet="Localidades" />
+      <End Role="PEC" EntitySet="PEC" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ReguladoresUnidad_Reguladores" Association="TalleresWebModel.FK_ReguladoresUnidad_Reguladores">
+      <End Role="Reguladores" EntitySet="Reguladores" />
+      <End Role="ReguladoresUnidad" EntitySet="ReguladoresUnidad" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Cilindros_MarcasCilindros" Association="TalleresWebModel.FK_Cilindros_MarcasCilindros">
+      <End Role="MarcasCilindros" EntitySet="MarcasCilindros" />
+      <End Role="Cilindros" EntitySet="Cilindros" />
+    </AssociationSet>
+    <EntitySet Name="PH" EntityType="TalleresWebModel.PH" />
+    <AssociationSet Name="FK_PH_CRPC" Association="TalleresWebModel.FK_PH_CRPC">
+      <End Role="CRPC" EntitySet="CRPC" />
+      <End Role="PH" EntitySet="PH" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PH_PEC" Association="TalleresWebModel.FK_PH_PEC">
+      <End Role="PEC" EntitySet="PEC" />
+      <End Role="PH" EntitySet="PH" />
+    </AssociationSet>
+    <EntitySet Name="PHCilindros" EntityType="TalleresWebModel.PHCilindros" />
+    <AssociationSet Name="FK_PHCilindros_CilindrosUnidad1" Association="TalleresWebModel.FK_PHCilindros_CilindrosUnidad1">
+      <End Role="CilindrosUnidad" EntitySet="CilindrosUnidad" />
+      <End Role="PHCilindros" EntitySet="PHCilindros" />
+    </AssociationSet>
+    <AssociationSet Name="FK_InspeccionesPH_PHCilindros" Association="TalleresWebModel.FK_InspeccionesPH_PHCilindros">
+      <End Role="PHCilindros" EntitySet="PHCilindros" />
+      <End Role="InspeccionesPH" EntitySet="InspeccionesPH" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PHCilindros_PEC" Association="TalleresWebModel.FK_PHCilindros_PEC">
+      <End Role="PEC" EntitySet="PEC" />
+      <End Role="PHCilindros" EntitySet="PHCilindros" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PHCilindros_PH1" Association="TalleresWebModel.FK_PHCilindros_PH1">
+      <End Role="PH" EntitySet="PH" />
+      <End Role="PHCilindros" EntitySet="PHCilindros" />
+    </AssociationSet>
+    <EntitySet Name="S_ACCESOSCU" EntityType="TalleresWebModel.S_ACCESOSCU" />
+    <EntitySet Name="S_CASOSDEUSO" EntityType="TalleresWebModel.S_CASOSDEUSO" />
+    <EntitySet Name="S_ROLES" EntityType="TalleresWebModel.S_ROLES" />
+    <AssociationSet Name="FK_S_ACCESOSCU_S_CASOSDEUSO1" Association="TalleresWebModel.FK_S_ACCESOSCU_S_CASOSDEUSO1">
+      <End Role="S_CASOSDEUSO" EntitySet="S_CASOSDEUSO" />
+      <End Role="S_ACCESOSCU" EntitySet="S_ACCESOSCU" />
+    </AssociationSet>
+    <AssociationSet Name="FK_S_ACCESOSCU_S_ROLES1" Association="TalleresWebModel.FK_S_ACCESOSCU_S_ROLES1">
+      <End Role="S_ROLES" EntitySet="S_ROLES" />
+      <End Role="S_ACCESOSCU" EntitySet="S_ACCESOSCU" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Usuario_S_ROLES1" Association="TalleresWebModel.FK_Usuario_S_ROLES1">
+      <End Role="S_ROLES" EntitySet="S_ROLES" />
+      <End Role="Usuario" EntitySet="Usuario" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PH_Clientes" Association="TalleresWebModel.FK_PH_Clientes">
+      <End Role="Clientes" EntitySet="Clientes" />
+      <End Role="PH" EntitySet="PH" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PH_Vehiculos" Association="TalleresWebModel.FK_PH_Vehiculos">
+      <End Role="Vehiculos" EntitySet="Vehiculos" />
+      <End Role="PH" EntitySet="PH" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PH_Talleres" Association="TalleresWebModel.FK_PH_Talleres">
+      <End Role="Talleres" EntitySet="Talleres" />
+      <End Role="PH" EntitySet="PH" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PHCilindros_Valvula_Unidad" Association="TalleresWebModel.FK_PHCilindros_Valvula_Unidad">
+      <End Role="Valvula_Unidad" EntitySet="Valvula_Unidad" />
+      <End Role="PHCilindros" EntitySet="PHCilindros" />
+    </AssociationSet>
+    <EntitySet Name="ESTADOSPH" EntityType="TalleresWebModel.ESTADOSPH" />
+    <AssociationSet Name="FK_PHCilindros_ESTADOSPH" Association="TalleresWebModel.FK_PHCilindros_ESTADOSPH">
+      <End Role="ESTADOSPH" EntitySet="ESTADOSPH" />
+      <End Role="PHCilindros" EntitySet="PHCilindros" />
+    </AssociationSet>
+    <EntitySet Name="INFORME" EntityType="TalleresWebModel.INFORME" />
+    <EntitySet Name="INFORMEOBLEAS" EntityType="TalleresWebModel.INFORMEOBLEAS" />
+    <AssociationSet Name="FK_INFORMEOBLEAS_INFORME" Association="TalleresWebModel.FK_INFORMEOBLEAS_INFORME">
+      <End Role="INFORME" EntitySet="INFORME" />
+      <End Role="INFORMEOBLEAS" EntitySet="INFORMEOBLEAS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_INFORMEOBLEAS_Obleas" Association="TalleresWebModel.FK_INFORMEOBLEAS_Obleas">
+      <End Role="Obleas" EntitySet="Obleas" />
+      <End Role="INFORMEOBLEAS" EntitySet="INFORMEOBLEAS" />
+    </AssociationSet>
+    <EntitySet Name="LOTES" EntityType="TalleresWebModel.LOTES" />
+    <EntitySet Name="ObleaHistoricoEstado" EntityType="TalleresWebModel.ObleaHistoricoEstado" />
+    <AssociationSet Name="FK_ObleaHistoricoEstado_EstadosFichas" Association="TalleresWebModel.FK_ObleaHistoricoEstado_EstadosFichas">
+      <End Role="EstadosFichas" EntitySet="EstadosFichas" />
+      <End Role="ObleaHistoricoEstado" EntitySet="ObleaHistoricoEstado" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ObleaHistoricoEstado_Obleas" Association="TalleresWebModel.FK_ObleaHistoricoEstado_Obleas">
+      <End Role="Obleas" EntitySet="Obleas" />
+      <End Role="ObleaHistoricoEstado" EntitySet="ObleaHistoricoEstado" />
+    </AssociationSet>
+    <EntitySet Name="ObleaErrorDetalle" EntityType="TalleresWebModel.ObleaErrorDetalle" />
+    <EntitySet Name="ObleaErrorTipo" EntityType="TalleresWebModel.ObleaErrorTipo" />
+    <AssociationSet Name="FK_ObleaErrorDetalle_ObleaErrorTipo" Association="TalleresWebModel.FK_ObleaErrorDetalle_ObleaErrorTipo">
+      <End Role="ObleaErrorTipo" EntitySet="ObleaErrorTipo" />
+      <End Role="ObleaErrorDetalle" EntitySet="ObleaErrorDetalle" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ObleaErrorDetalle_ObleaHistoricoEstado" Association="TalleresWebModel.FK_ObleaErrorDetalle_ObleaHistoricoEstado">
+      <End Role="ObleaHistoricoEstado" EntitySet="ObleaHistoricoEstado" />
+      <End Role="ObleaErrorDetalle" EntitySet="ObleaErrorDetalle" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Obleas_RT_PEC" Association="TalleresWebModel.FK_Obleas_RT_PEC">
+      <End Role="RT_PEC" EntitySet="RT_PEC" />
+      <End Role="Obleas" EntitySet="Obleas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Obleas_TalleresRT" Association="TalleresWebModel.FK_Obleas_TalleresRT">
+      <End Role="TalleresRT" EntitySet="TalleresRT" />
+      <End Role="Obleas" EntitySet="Obleas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ObleaHistoricoEstado_Usuarios" Association="TalleresWebModel.FK_ObleaHistoricoEstado_Usuarios">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="ObleaHistoricoEstado" EntitySet="ObleaHistoricoEstado" />
+    </AssociationSet>
+    <EntitySet Name="Conductores" EntityType="TalleresWebModel.Conductores" />
+    <EntitySet Name="DESPACHO" EntityType="TalleresWebModel.DESPACHO" />
+    <EntitySet Name="DESPACHODETALLE" EntityType="TalleresWebModel.DESPACHODETALLE" />
+    <EntitySet Name="FLETE" EntityType="TalleresWebModel.FLETE" />
+    <AssociationSet Name="FK_FLETE_Conductores" Association="TalleresWebModel.FK_FLETE_Conductores">
+      <End Role="Conductores" EntitySet="Conductores" />
+      <End Role="FLETE" EntitySet="FLETE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DESPACHO_FLETE" Association="TalleresWebModel.FK_DESPACHO_FLETE">
+      <End Role="FLETE" EntitySet="FLETE" />
+      <End Role="DESPACHO" EntitySet="DESPACHO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DESPACHO_Usuario" Association="TalleresWebModel.FK_DESPACHO_Usuario">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="DESPACHO" EntitySet="DESPACHO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DESPACHODETALLE_DESPACHO" Association="TalleresWebModel.FK_DESPACHODETALLE_DESPACHO">
+      <End Role="DESPACHO" EntitySet="DESPACHO" />
+      <End Role="DESPACHODETALLE" EntitySet="DESPACHODETALLE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DESPACHODETALLE_Obleas" Association="TalleresWebModel.FK_DESPACHODETALLE_Obleas">
+      <End Role="Obleas" EntitySet="Obleas" />
+      <End Role="DESPACHODETALLE" EntitySet="DESPACHODETALLE" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DESPACHODETALLE_Talleres" Association="TalleresWebModel.FK_DESPACHODETALLE_Talleres">
+      <End Role="Talleres" EntitySet="Talleres" />
+      <End Role="DESPACHODETALLE" EntitySet="DESPACHODETALLE" />
+    </AssociationSet>
+    <EntitySet Name="InspeccionTipo" EntityType="TalleresWebModel.InspeccionTipo" />
+    <AssociationSet Name="FK_Inspecciones_InspeccionTipo" Association="TalleresWebModel.FK_Inspecciones_InspeccionTipo">
+      <End Role="InspeccionTipo" EntitySet="InspeccionTipo" />
+      <End Role="Inspecciones" EntitySet="Inspecciones" />
+    </AssociationSet>
+    <EntitySet Name="PhCilindroHistoricoEstado" EntityType="TalleresWebModel.PhCilindroHistoricoEstado" />
+    <AssociationSet Name="FK_PhCilindroHistoricoEstado_ESTADOSPH" Association="TalleresWebModel.FK_PhCilindroHistoricoEstado_ESTADOSPH">
+      <End Role="ESTADOSPH" EntitySet="ESTADOSPH" />
+      <End Role="PhCilindroHistoricoEstado" EntitySet="PhCilindroHistoricoEstado" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PhCilindroHistoricoEstado_PHCilindros" Association="TalleresWebModel.FK_PhCilindroHistoricoEstado_PHCilindros">
+      <End Role="PHCilindros" EntitySet="PHCilindros" />
+      <End Role="PhCilindroHistoricoEstado" EntitySet="PhCilindroHistoricoEstado" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PhCilindroHistoricoEstado_Usuario" Association="TalleresWebModel.FK_PhCilindroHistoricoEstado_Usuario">
+      <End Role="Usuario" EntitySet="Usuario" />
+      <End Role="PhCilindroHistoricoEstado" EntitySet="PhCilindroHistoricoEstado" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DESPACHODETALLE_PHCilindros" Association="TalleresWebModel.FK_DESPACHODETALLE_PHCilindros">
+      <End Role="PHCilindros" EntitySet="PHCilindros" />
+      <End Role="DESPACHODETALLE" EntitySet="DESPACHODETALLE" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Cilindros">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Guid" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Descripcion" Nullable="false" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Type="Decimal" Name="CapacidadCil" Precision="18" Scale="0" />
+    <Property Type="Guid" Name="IdMarcaCilindro" />
+    <Property Type="String" Name="MatriculaOCCil" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ModeloCilindro" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Double" Name="EspesorAdmisibleCil" />
+    <Property Type="Double" Name="DiametroCilindro" />
+    <Property Type="Double" Name="LargoCilindro" />
+    <Property Type="String" Name="RoturaCilindro" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="MaterialCilindro" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="NormaFabCilindro" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="CilindrosUnidad" Relationship="TalleresWebModel.FK_CilindrosUnidad_Cilindros" FromRole="Cilindros" ToRole="CilindrosUnidad" />
+    <NavigationProperty Name="MarcasCilindros" Relationship="TalleresWebModel.FK_Cilindros_MarcasCilindros" FromRole="Cilindros" ToRole="MarcasCilindros" />
+    <Property Name="Activo" Type="Boolean" />
+    <Property Name="Fluencia" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="Dureza" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="CilindrosUnidad">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Guid" Name="ID" Nullable="false" />
+    <Property Type="Guid" Name="IdCilindro" />
+    <Property Type="String" Name="Descripcion" Nullable="false" MaxLength="25" FixedLength="true" Unicode="true" />
+    <Property Type="Int32" Name="MesFabCilindro" />
+    <Property Type="Int32" Name="AnioFabCilindro" />
+    <NavigationProperty Name="Cilindros" Relationship="TalleresWebModel.FK_CilindrosUnidad_Cilindros" FromRole="CilindrosUnidad" ToRole="Cilindros" />
+    <NavigationProperty Name="ObleasCilindros" Relationship="TalleresWebModel.FK_ObleasCilindros_CilindrosUnidad" FromRole="CilindrosUnidad" ToRole="ObleasCilindros" />
+    <NavigationProperty Name="PHCilindros" Relationship="TalleresWebModel.FK_PHCilindros_CilindrosUnidad1" FromRole="CilindrosUnidad" ToRole="PHCilindros" />
+  </EntityType>
+  <EntityType Name="Clientes">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Guid" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Descripcion" MaxLength="34" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="CalleCliente" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="NroCalleCliente" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="PisoDptoCliente" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Guid" Name="IdTipoDniCliente" Nullable="false" />
+    <Property Type="String" Name="NroDniCliente" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="TelefonoCliente" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Guid" Name="IdLocalidad" Nullable="false" />
+    <NavigationProperty Name="Obleas" Relationship="TalleresWebModel.FK_Obleas_Clientes" FromRole="Clientes" ToRole="Obleas" />
+    <NavigationProperty Name="Localidades" Relationship="TalleresWebModel.FK_Clientes_Localidades1" FromRole="Clientes" ToRole="Localidades" />
+    <NavigationProperty Name="DocumentosClientes" Relationship="TalleresWebModel.FK_Clientes_DocumentosClientes" FromRole="Clientes" ToRole="DocumentosClientes" />
+    <NavigationProperty Name="PH" Relationship="TalleresWebModel.FK_PH_Clientes" FromRole="Clientes" ToRole="PH" />
+    <Property Name="CelularCliente" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="MailCliente" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="CRPC">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Guid" Name="ID" Nullable="false" />
+    <Property Type="String" Name="MatriculaCRPC" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Descripcion" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Type="String" Name="RazonSocialCRPC" MaxLength="20" FixedLength="true" Unicode="true" />
+    <Property Type="String" Name="TelefonoACRPC" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="TelefonoB_CRPC" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="MailACRPC" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="MailBCRPC" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="DomicilioCRPC" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="Guid" Name="CpaCRPC" />
+    <NavigationProperty Name="ObleasCilindros" Relationship="TalleresWebModel.FK_ObleasCilindros_CRPC" FromRole="CRPC" ToRole="ObleasCilindros" />
+    <NavigationProperty Name="RT_CRPC" Relationship="TalleresWebModel.FK_RT_CRPC_CRPC" FromRole="CRPC" ToRole="RT_CRPC" />
+    <NavigationProperty Name="PH" Relationship="TalleresWebModel.FK_PH_CRPC" FromRole="CRPC" ToRole="PH" />
+  </EntityType>
+  <EntityType Name="DocumentosClientes">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Guid" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Descripcion" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Usuario" Relationship="TalleresWebModel.FK_Usuario_DocumentosClientes" FromRole="DocumentosClientes" ToRole="Usuario" />
+    <NavigationProperty Name="Clientes" Relationship="TalleresWebModel.FK_Clientes_DocumentosClientes" FromRole="DocumentosClientes" ToRole="Clientes" />
+    <NavigationProperty Name="RT" Relationship="TalleresWebModel.FK_RT_DocumentosClientes" FromRole="DocumentosClientes" ToRole="RT" />
+  </EntityType>
+  <EntityType Name="EstadosFichas">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Guid" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Descripcion" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Obleas" Relationship="TalleresWebModel.FK_Obleas_EstadosFichas" FromRole="EstadosFichas" ToRole="Obleas" />
+    <NavigationProperty Name="ObleaHistoricoEstado" Relationship="TalleresWebModel.FK_ObleaHistoricoEstado_EstadosFichas" FromRole="EstadosFichas" ToRole="ObleaHistoricoEstado" />
+  </EntityType>
+  <EntityType Name="Inspecciones">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Guid" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Descripcion" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="InspeccionesPH" Relationship="TalleresWebModel.FK_InspeccionesPH_Inspecciones" FromRole="Inspecciones" ToRole="InspeccionesPH" />
+    <Property Name="IdInspeccionTipo" Type="Guid" Nullable="false" />
+    <NavigationProperty Name="InspeccionTipo" Relationship="TalleresWebModel.FK_Inspecciones_InspeccionTipo" FromRole="Inspecciones" ToRole="InspeccionTipo" />
+  </EntityType>
+  <EntityType Name="InspeccionesPH">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Guid" Name="ID" Nullable="false" />
+    <Property Type="Guid" Name="IdPHCilndro" Nullable="false" />
+    <Property Type="Guid" Name="IdInspeccion" Nullable="false" />
+    <Property Type="String" Name="ObservacionesInspeccion" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="Boolean" Name="ValorInspeccion" />
+    <NavigationProperty Name="Inspecciones" Relationship="TalleresWebModel.FK_InspeccionesPH_Inspecciones" FromRole="InspeccionesPH" ToRole="Inspecciones" />
+    <NavigationProperty Name="PHCilindros" Relationship="TalleresWebModel.FK_InspeccionesPH_PHCilindros" FromRole="InspeccionesPH" ToRole="PHCilindros" />
+  </EntityType>
+  <EntityType Name="Localidades">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Guid" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Descripcion" Nullable="false" MaxLength="18" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="CodigoPostal" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Type="Guid" Name="IdProvincia" Nullable="false" />
+    <NavigationProperty Name="Clientes" Relationship="TalleresWebModel.FK_Clientes_Localidades1" FromRole="Localidades" ToRole="Clientes" />
+    <NavigationProperty Name="Provincias" Relationship="TalleresWebModel.FK_Localidades_Provincias" FromRole="Localidades" ToRole="Provincias" />
+    <NavigationProperty Name="PEC" Relationship="TalleresWebModel.FK_PEC_Localidades" FromRole="Localidades" ToRole="PEC" />
+  </EntityType>
+  <EntityType Name="MarcasCilindros">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Guid" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Descripcion" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Cilindros" Relationship="TalleresWebModel.FK_Cilindros_MarcasCilindros" FromRole="MarcasCilindros" ToRole="Cilindros" />
+    <Property Name="Codigo" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="MarcasRegulador">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Guid" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Descripcion" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Reguladores" Relationship="TalleresWebModel.FK_Reguladores_MarcasRegulador" FromRole="MarcasRegulador" ToRole="Reguladores" />
+    <Property Name="Codigo" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="MarcasValvulas">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Guid" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Descripcion" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Valvula" Relationship="TalleresWebModel.FK_Valvula_MarcasValvulas" FromRole="MarcasValvulas" ToRole="Valvula" />
+    <Property Name="Codigo" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Obleas">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Guid" Name="ID" Nullable="false" />
+    <Property Type="Guid" Name="IdVehiculo" Nullable="false" />
+    <Property Type="DateTime" Name="FechaHabilitacion" Precision="3" />
+    <Property Type="DateTime" Name="FechaVencimiento" Precision="3" />
+    <Property Type="String" Name="Descripcion" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="NroObleaNueva" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="Guid" Name="IdUso" Nullable="false" />
+    <Property Type="Guid" Name="IdOperacion" Nullable="false" />
+    <Property Type="Guid" Name="IdEstadoFicha" Nullable="false" />
+    <Property Type="String" Name="ObservacionesFicha" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="NroIntOperacTP" />
+    <Property Type="Guid" Name="IdPEC" Nullable="false" />
+    <Property Type="String" Name="MotivoBajaFicha" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="Guid" Name="IdTaller" Nullable="false" />
+    <Property Type="Int64" Name="IdNroFichaTecnica" Nullable="false" />
+    <Property Type="Guid" Name="IdCliente" Nullable="false" />
+    <Property Type="Guid" Name="IdTitular" Nullable="false" />
+    <NavigationProperty Name="Clientes" Relationship="TalleresWebModel.FK_Obleas_Clientes" FromRole="Obleas" ToRole="Clientes" />
+    <NavigationProperty Name="EstadosFichas" Relationship="TalleresWebModel.FK_Obleas_EstadosFichas" FromRole="Obleas" ToRole="EstadosFichas" />
+    <NavigationProperty Name="Talleres" Relationship="TalleresWebModel.FK_Obleas_Talleres" FromRole="Obleas" ToRole="Talleres" />
+    <NavigationProperty Name="Uso" Relationship="TalleresWebModel.FK_Obleas_Uso" FromRole="Obleas" ToRole="Uso" />
+    <NavigationProperty Name="Vehiculos" Relationship="TalleresWebModel.FK_Obleas_Vehiculos" FromRole="Obleas" ToRole="Vehiculos" />
+    <NavigationProperty Name="ObleasCilindros" Relationship="TalleresWebModel.FK_ObleasCilindros_Obleas" FromRole="Obleas" ToRole="ObleasCilindros" />
+    <NavigationProperty Name="ObleasReguladores" Relationship="TalleresWebModel.FK_ObleasReguladores_Obleas" FromRole="Obleas" ToRole="ObleasReguladores" />
+    <NavigationProperty Name="PEC" Relationship="TalleresWebModel.FK_Obleas_PEC" FromRole="Obleas" ToRole="PEC" />
+    <NavigationProperty Name="Operaciones" Relationship="TalleresWebModel.FK_Obleas_Operaciones" FromRole="Obleas" ToRole="Operaciones" />
+    <Property Type="Guid" Name="IdUsuarioAlta" />
+    <NavigationProperty Name="Usuario" Relationship="TalleresWebModel.FK_Obleas_Usuario" FromRole="Obleas" ToRole="Usuario" />
+    <Property Type="DateTime" Name="FechaRealAlta" Nullable="false" Precision="3" />
+    <NavigationProperty Name="INFORMEOBLEAS" Relationship="TalleresWebModel.FK_INFORMEOBLEAS_Obleas" FromRole="Obleas" ToRole="INFORMEOBLEAS" />
+    <NavigationProperty Name="ObleaHistoricoEstado" Relationship="TalleresWebModel.FK_ObleaHistoricoEstado_Obleas" FromRole="Obleas" ToRole="ObleaHistoricoEstado" />
+    <Property Name="IdTallerRT" Type="Guid" />
+    <Property Name="IdRTPEC" Type="Guid" />
+    <NavigationProperty Name="RT_PEC" Relationship="TalleresWebModel.FK_Obleas_RT_PEC" FromRole="Obleas" ToRole="RT_PEC" />
+    <NavigationProperty Name="TalleresRT" Relationship="TalleresWebModel.FK_Obleas_TalleresRT" FromRole="Obleas" ToRole="TalleresRT" />
+    <NavigationProperty Name="DESPACHODETALLE" Relationship="TalleresWebModel.FK_DESPACHODETALLE_Obleas" FromRole="Obleas" ToRole="DESPACHODETALLE" />
+  </EntityType>
+  <EntityType Name="ObleasCilindros">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Guid" Name="ID" Nullable="false" />
+    <Property Type="Guid" Name="IdOblea" Nullable="false" />
+    <Property Type="Guid" Name="IdCilindroUnidad" Nullable="false" />
+    <Property Type="Int32" Name="MesUltimaRevisionCil" Nullable="false" />
+    <Property Type="Int32" Name="AnioUltimaRevisionCil" Nullable="false" />
+    <Property Type="Guid" Name="IdCRPC" />
+    <Property Type="Guid" Name="IdOperacion" Nullable="false" />
+    <NavigationProperty Name="CilindrosUnidad" Relationship="TalleresWebModel.FK_ObleasCilindros_CilindrosUnidad" FromRole="ObleasCilindros" ToRole="CilindrosUnidad" />
+    <NavigationProperty Name="Obleas" Relationship="TalleresWebModel.FK_ObleasCilindros_Obleas" FromRole="ObleasCilindros" ToRole="Obleas" />
+    <NavigationProperty Name="ObleasValvulas" Relationship="TalleresWebModel.FK_ObleasValvulas_ObleasCilindros" FromRole="ObleasCilindros" ToRole="ObleasValvulas" />
+    <NavigationProperty Name="CRPC" Relationship="TalleresWebModel.FK_ObleasCilindros_CRPC" FromRole="ObleasCilindros" ToRole="CRPC" />
+    <NavigationProperty Name="Operaciones" Relationship="TalleresWebModel.FK_ObleasCilindros_Operaciones" FromRole="ObleasCilindros" ToRole="Operaciones" />
+    <Property Type="String" Name="NroCertificadoPH" MaxLength="50" FixedLength="false" Unicode="false" Nullable="true" />
+  </EntityType>
+  <EntityType Name="ObleasReguladores">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Guid" Name="ID" Nullable="false" />
+    <Property Type="Guid" Name="IdOblea" Nullable="false" />
+    <Property Type="Guid" Name="IdReguladorUnidad" Nullable="false" />
+    <Property Type="Guid" Name="IdOperacion" Nullable="false" />
+    <NavigationProperty Name="Obleas" Relationship="TalleresWebModel.FK_ObleasReguladores_Obleas" FromRole="ObleasReguladores" ToRole="Obleas" />
+    <NavigationProperty Name="ReguladoresUnidad" Relationship="TalleresWebModel.FK_ObleasReguladores_ReguladoresUnidad" FromRole="ObleasReguladores" ToRole="ReguladoresUnidad" />
+    <NavigationProperty Name="Operaciones" Relationship="TalleresWebModel.FK_ObleasReguladores_Operaciones" FromRole="ObleasReguladores" ToRole="Operaciones" />
+  </EntityType>
+  <EntityType Name="ObleasValvulas">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Guid" Name="ID" Nullable="false" />
+    <Property Type="Guid" Name="IdObleaCilindro" Nullable="false" />
+    <Property Type="Guid" Name="IdValvulaUnidad" Nullable="false" />
+    <Property Type="Guid" Name="IdOperacion" Nullable="false" />
+    <NavigationProperty Name="ObleasCilindros" Relationship="TalleresWebModel.FK_ObleasValvulas_ObleasCilindros" FromRole="ObleasValvulas" ToRole="ObleasCilindros" />
+    <NavigationProperty Name="Valvula_Unidad" Relationship="TalleresWebModel.FK_ObleasValvulas_Valvula_Unidad" FromRole="ObleasValvulas" ToRole="Valvula_Unidad" />
+    <NavigationProperty Name="Operaciones" Relationship="TalleresWebModel.FK_ObleasValvulas_Operaciones" FromRole="ObleasValvulas" ToRole="Operaciones" />
+  </EntityType>
+  <EntityType Name="Operaciones">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Guid" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Descripcion" MaxLength="15" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="CodigoGestionEnte" Nullable="false" MaxLength="2" FixedLength="true" Unicode="false" />
+    <NavigationProperty Name="ObleasReguladores" Relationship="TalleresWebModel.FK_ObleasReguladores_Operaciones" FromRole="Operaciones" ToRole="ObleasReguladores" />
+    <NavigationProperty Name="Obleas" Relationship="TalleresWebModel.FK_Obleas_Operaciones" FromRole="Operaciones" ToRole="Obleas" />
+    <NavigationProperty Name="ObleasCilindros" Relationship="TalleresWebModel.FK_ObleasCilindros_Operaciones" FromRole="Operaciones" ToRole="ObleasCilindros" />
+    <NavigationProperty Name="ObleasValvulas" Relationship="TalleresWebModel.FK_ObleasValvulas_Operaciones" FromRole="Operaciones" ToRole="ObleasValvulas" />
+  </EntityType>
+  <EntityType Name="PEC">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Guid" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Descripcion" Nullable="false" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="RazonSocialPEC" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="DomicilioPEC" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="TelefonoAPEC" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="TelefonoBPEC" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="MailAPEC" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="MailBPEC" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Guid" Name="IdLocalidad" />
+    <NavigationProperty Name="Obleas" Relationship="TalleresWebModel.FK_Obleas_PEC" FromRole="PEC" ToRole="Obleas" />
+    <NavigationProperty Name="RT_PEC" Relationship="TalleresWebModel.FK_RT_PEC_PEC" FromRole="PEC" ToRole="RT_PEC" />
+    <NavigationProperty Name="Localidades" Relationship="TalleresWebModel.FK_PEC_Localidades" FromRole="PEC" ToRole="Localidades" />
+    <NavigationProperty Name="PH" Relationship="TalleresWebModel.FK_PH_PEC" FromRole="PEC" ToRole="PH" />
+    <NavigationProperty Name="PHCilindros" Relationship="TalleresWebModel.FK_PHCilindros_PEC" FromRole="PEC" ToRole="PHCilindros" />
+  </EntityType>
+  <EntityType Name="Provincias">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Guid" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Descripcion" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Localidades" Relationship="TalleresWebModel.FK_Localidades_Provincias" FromRole="Provincias" ToRole="Localidades" />
+  </EntityType>
+  <EntityType Name="Reguladores">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Guid" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Descripcion" Nullable="false" MaxLength="4" FixedLength="true" Unicode="true" />
+    <Property Type="Guid" Name="IdMarcaRegulador" />
+    <Property Type="String" Name="Modelo" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Type="String" Name="MatriculaOC" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Type="Double" Name="Caudal" />
+    <Property Type="Int32" Name="Etrapas" />
+    <Property Type="String" Name="Tipo" MaxLength="10" FixedLength="true" Unicode="true" />
+    <NavigationProperty Name="MarcasRegulador" Relationship="TalleresWebModel.FK_Reguladores_MarcasRegulador" FromRole="Reguladores" ToRole="MarcasRegulador" />
+    <NavigationProperty Name="ReguladoresUnidad" Relationship="TalleresWebModel.FK_ReguladoresUnidad_Reguladores" FromRole="Reguladores" ToRole="ReguladoresUnidad" />
+  </EntityType>
+  <EntityType Name="ReguladoresUnidad">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Guid" Name="ID" Nullable="false" />
+    <Property Type="Guid" Name="IdRegulador" Nullable="false" />
+    <Property Type="String" Name="Descripcion" Nullable="false" MaxLength="25" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="ObleasReguladores" Relationship="TalleresWebModel.FK_ObleasReguladores_ReguladoresUnidad" FromRole="ReguladoresUnidad" ToRole="ObleasReguladores" />
+    <NavigationProperty Name="Reguladores" Relationship="TalleresWebModel.FK_ReguladoresUnidad_Reguladores" FromRole="ReguladoresUnidad" ToRole="Reguladores" />
+  </EntityType>
+  <EntityType Name="Talleres">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Guid" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Descripcion" Nullable="false" MaxLength="7" FixedLength="true" Unicode="true" />
+    <Property Type="String" Name="RazonSocialTaller" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="DomicilioTaller" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="CuitTaller" MaxLength="13" FixedLength="true" Unicode="false" />
+    <Property Type="Guid" Name="IdCiudad" />
+    <Property Type="String" Name="TelefonoTaller" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="FaxTaller" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="MailTaller" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ContactoTaller" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Type="DateTime" Name="FechaVencContrato" Precision="3" />
+    <Property Type="Boolean" Name="ActivoTaller" />
+    <Property Type="String" Name="Zona" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="HorarioDeAtencion" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Guid" Name="CPATaller" />
+    <NavigationProperty Name="Obleas" Relationship="TalleresWebModel.FK_Obleas_Talleres" FromRole="Talleres" ToRole="Obleas" />
+    <NavigationProperty Name="Usuario" Relationship="TalleresWebModel.FK_Usuario_Talleres" FromRole="Talleres" ToRole="Usuario" />
+    <Property Type="Int32" Name="UltimoNroIntOperacion" Nullable="false" />
+    <NavigationProperty Name="TalleresRT" Relationship="TalleresWebModel.FK_TalleresRT_Talleres" FromRole="Talleres" ToRole="TalleresRT" />
+    <NavigationProperty Name="PH" Relationship="TalleresWebModel.FK_PH_Talleres" FromRole="Talleres" ToRole="PH" />
+    <NavigationProperty Name="DESPACHODETALLE" Relationship="TalleresWebModel.FK_DESPACHODETALLE_Talleres" FromRole="Talleres" ToRole="DESPACHODETALLE" />
+  </EntityType>
+  <EntityType Name="Uso">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Guid" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Descripcion" Nullable="false" MaxLength="20" FixedLength="true" Unicode="false" />
+    <Property Type="String" Name="CodigoUsoEnte" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+    <NavigationProperty Name="Obleas" Relationship="TalleresWebModel.FK_Obleas_Uso" FromRole="Uso" ToRole="Obleas" />
+  </EntityType>
+  <EntityType Name="Usuario">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Guid" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Descripcion" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Contrasenia" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="NombreYApellidoUsuario" MaxLength="70" FixedLength="false" Unicode="false" />
+    <Property Type="Guid" Name="IdTipoDoc" />
+    <Property Type="String" Name="NroDocumento" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="Guid" Name="IdTaller" />
+    <Property Type="String" Name="EmailUsuario" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="IdRol" Nullable="false" />
+    <Property Type="Boolean" Name="Activo" Nullable="false" />
+    <NavigationProperty Name="DocumentosClientes" Relationship="TalleresWebModel.FK_Usuario_DocumentosClientes" FromRole="Usuario" ToRole="DocumentosClientes" />
+    <NavigationProperty Name="Talleres" Relationship="TalleresWebModel.FK_Usuario_Talleres" FromRole="Usuario" ToRole="Talleres" />
+    <NavigationProperty Name="Obleas" Relationship="TalleresWebModel.FK_Obleas_Usuario" FromRole="Usuario" ToRole="Obleas" />
+    <NavigationProperty Name="S_ROLES" Relationship="TalleresWebModel.FK_Usuario_S_ROLES1" FromRole="Usuario" ToRole="S_ROLES" />
+    <NavigationProperty Name="ObleaHistoricoEstado" Relationship="TalleresWebModel.FK_ObleaHistoricoEstado_Usuarios" FromRole="Usuario" ToRole="ObleaHistoricoEstado" />
+    <NavigationProperty Name="DESPACHO" Relationship="TalleresWebModel.FK_DESPACHO_Usuario" FromRole="Usuario" ToRole="DESPACHO" />
+    <NavigationProperty Name="PhCilindroHistoricoEstado" Relationship="TalleresWebModel.FK_PhCilindroHistoricoEstado_Usuario" FromRole="Usuario" ToRole="PhCilindroHistoricoEstado" />
+  </EntityType>
+  <EntityType Name="Valvula">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Guid" Name="ID" Nullable="false" />
+    <Property Type="Guid" Name="IdMarcaValvula" />
+    <Property Type="String" Name="Descripcion" Nullable="false" MaxLength="4" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="MarcasValvulas" Relationship="TalleresWebModel.FK_Valvula_MarcasValvulas" FromRole="Valvula" ToRole="MarcasValvulas" />
+    <NavigationProperty Name="Valvula_Unidad" Relationship="TalleresWebModel.FK_Valvula_Unidad_Valvula" FromRole="Valvula" ToRole="Valvula_Unidad" />
+  </EntityType>
+  <EntityType Name="Valvula_Unidad">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Guid" Name="ID" Nullable="false" />
+    <Property Type="Guid" Name="IdValvula" />
+    <Property Type="String" Name="Descripcion" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="ObleasValvulas" Relationship="TalleresWebModel.FK_ObleasValvulas_Valvula_Unidad" FromRole="Valvula_Unidad" ToRole="ObleasValvulas" />
+    <NavigationProperty Name="Valvula" Relationship="TalleresWebModel.FK_Valvula_Unidad_Valvula" FromRole="Valvula_Unidad" ToRole="Valvula" />
+    <NavigationProperty Name="PHCilindros" Relationship="TalleresWebModel.FK_PHCilindros_Valvula_Unidad" FromRole="Valvula_Unidad" ToRole="PHCilindros" />
+  </EntityType>
+  <EntityType Name="Vehiculos">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Guid" Name="ID" Nullable="false" />
+    <Property Type="String" Name="MarcaVehiculo" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="ModeloVehiculo" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Descripcion" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="AnioVehiculo" />
+    <Property Type="Guid" Name="IdDuenioVehiculo" />
+    <Property Type="Boolean" Name="EsInyeccionVehiculo" />
+    <NavigationProperty Name="Obleas" Relationship="TalleresWebModel.FK_Obleas_Vehiculos" FromRole="Vehiculos" ToRole="Obleas" />
+    <Property Type="Boolean" Name="RA" />
+    <NavigationProperty Name="PH" Relationship="TalleresWebModel.FK_PH_Vehiculos" FromRole="Vehiculos" ToRole="PH" />
+    <Property Type="String" Name="NumeroRA" MaxLength="20" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <Association Name="FK_CilindrosUnidad_Cilindros">
+    <End Type="TalleresWebModel.Cilindros" Role="Cilindros" Multiplicity="0..1" />
+    <End Type="TalleresWebModel.CilindrosUnidad" Role="CilindrosUnidad" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cilindros">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="CilindrosUnidad">
+        <PropertyRef Name="IdCilindro" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ObleasCilindros_CilindrosUnidad">
+    <End Type="TalleresWebModel.CilindrosUnidad" Role="CilindrosUnidad" Multiplicity="1" />
+    <End Type="TalleresWebModel.ObleasCilindros" Role="ObleasCilindros" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CilindrosUnidad">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ObleasCilindros">
+        <PropertyRef Name="IdCilindroUnidad" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Obleas_Clientes">
+    <End Type="TalleresWebModel.Clientes" Role="Clientes" Multiplicity="1" />
+    <End Type="TalleresWebModel.Obleas" Role="Obleas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Clientes">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Obleas">
+        <PropertyRef Name="IdCliente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Usuario_DocumentosClientes">
+    <End Type="TalleresWebModel.DocumentosClientes" Role="DocumentosClientes" Multiplicity="0..1" />
+    <End Type="TalleresWebModel.Usuario" Role="Usuario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DocumentosClientes">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Usuario">
+        <PropertyRef Name="IdTipoDoc" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Obleas_EstadosFichas">
+    <End Type="TalleresWebModel.EstadosFichas" Role="EstadosFichas" Multiplicity="1" />
+    <End Type="TalleresWebModel.Obleas" Role="Obleas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EstadosFichas">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Obleas">
+        <PropertyRef Name="IdEstadoFicha" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Reguladores_MarcasRegulador">
+    <End Type="TalleresWebModel.MarcasRegulador" Role="MarcasRegulador" Multiplicity="0..1" />
+    <End Type="TalleresWebModel.Reguladores" Role="Reguladores" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MarcasRegulador">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Reguladores">
+        <PropertyRef Name="IdMarcaRegulador" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Valvula_MarcasValvulas">
+    <End Type="TalleresWebModel.MarcasValvulas" Role="MarcasValvulas" Multiplicity="0..1" />
+    <End Type="TalleresWebModel.Valvula" Role="Valvula" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MarcasValvulas">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Valvula">
+        <PropertyRef Name="IdMarcaValvula" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Obleas_Talleres">
+    <End Type="TalleresWebModel.Talleres" Role="Talleres" Multiplicity="1" />
+    <End Type="TalleresWebModel.Obleas" Role="Obleas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Talleres">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Obleas">
+        <PropertyRef Name="IdTaller" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Obleas_Uso">
+    <End Type="TalleresWebModel.Uso" Role="Uso" Multiplicity="1" />
+    <End Type="TalleresWebModel.Obleas" Role="Obleas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Uso">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Obleas">
+        <PropertyRef Name="IdUso" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Obleas_Vehiculos">
+    <End Type="TalleresWebModel.Vehiculos" Role="Vehiculos" Multiplicity="1" />
+    <End Type="TalleresWebModel.Obleas" Role="Obleas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Vehiculos">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Obleas">
+        <PropertyRef Name="IdVehiculo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ObleasCilindros_Obleas">
+    <End Type="TalleresWebModel.Obleas" Role="Obleas" Multiplicity="1" />
+    <End Type="TalleresWebModel.ObleasCilindros" Role="ObleasCilindros" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Obleas">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ObleasCilindros">
+        <PropertyRef Name="IdOblea" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ObleasReguladores_Obleas">
+    <End Type="TalleresWebModel.Obleas" Role="Obleas" Multiplicity="1" />
+    <End Type="TalleresWebModel.ObleasReguladores" Role="ObleasReguladores" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Obleas">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ObleasReguladores">
+        <PropertyRef Name="IdOblea" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ObleasValvulas_ObleasCilindros">
+    <End Type="TalleresWebModel.ObleasCilindros" Role="ObleasCilindros" Multiplicity="1" />
+    <End Type="TalleresWebModel.ObleasValvulas" Role="ObleasValvulas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ObleasCilindros">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ObleasValvulas">
+        <PropertyRef Name="IdObleaCilindro" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ObleasValvulas_Valvula_Unidad">
+    <End Type="TalleresWebModel.Valvula_Unidad" Role="Valvula_Unidad" Multiplicity="1" />
+    <End Type="TalleresWebModel.ObleasValvulas" Role="ObleasValvulas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Valvula_Unidad">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ObleasValvulas">
+        <PropertyRef Name="IdValvulaUnidad" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Usuario_Talleres">
+    <End Type="TalleresWebModel.Talleres" Role="Talleres" Multiplicity="0..1" />
+    <End Type="TalleresWebModel.Usuario" Role="Usuario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Talleres">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Usuario">
+        <PropertyRef Name="IdTaller" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Valvula_Unidad_Valvula">
+    <End Type="TalleresWebModel.Valvula" Role="Valvula" Multiplicity="0..1" />
+    <End Type="TalleresWebModel.Valvula_Unidad" Role="Valvula_Unidad" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Valvula">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Valvula_Unidad">
+        <PropertyRef Name="IdValvula" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Clientes_Localidades1">
+    <End Type="TalleresWebModel.Localidades" Role="Localidades" Multiplicity="1" />
+    <End Type="TalleresWebModel.Clientes" Role="Clientes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Localidades">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Clientes">
+        <PropertyRef Name="IdLocalidad" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ObleasCilindros_CRPC">
+    <End Type="TalleresWebModel.CRPC" Role="CRPC" Multiplicity="0..1" />
+    <End Type="TalleresWebModel.ObleasCilindros" Role="ObleasCilindros" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CRPC">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ObleasCilindros">
+        <PropertyRef Name="IdCRPC" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Localidades_Provincias">
+    <End Type="TalleresWebModel.Provincias" Role="Provincias" Multiplicity="1" />
+    <End Type="TalleresWebModel.Localidades" Role="Localidades" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Provincias">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Localidades">
+        <PropertyRef Name="IdProvincia" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Obleas_PEC">
+    <End Type="TalleresWebModel.PEC" Role="PEC" Multiplicity="1" />
+    <End Type="TalleresWebModel.Obleas" Role="Obleas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PEC">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Obleas">
+        <PropertyRef Name="IdPEC" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ObleasReguladores_ReguladoresUnidad">
+    <End Type="TalleresWebModel.ReguladoresUnidad" Role="ReguladoresUnidad" Multiplicity="1" />
+    <End Type="TalleresWebModel.ObleasReguladores" Role="ObleasReguladores" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ReguladoresUnidad">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ObleasReguladores">
+        <PropertyRef Name="IdReguladorUnidad" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Clientes_DocumentosClientes">
+    <End Type="TalleresWebModel.DocumentosClientes" Role="DocumentosClientes" Multiplicity="1" />
+    <End Type="TalleresWebModel.Clientes" Role="Clientes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DocumentosClientes">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Clientes">
+        <PropertyRef Name="IdTipoDniCliente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ObleasReguladores_Operaciones">
+    <End Type="TalleresWebModel.Operaciones" Role="Operaciones" Multiplicity="1" />
+    <End Type="TalleresWebModel.ObleasReguladores" Role="ObleasReguladores" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Operaciones">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ObleasReguladores">
+        <PropertyRef Name="IdOperacion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Obleas_Operaciones">
+    <End Type="TalleresWebModel.Operaciones" Role="Operaciones" Multiplicity="1" />
+    <End Type="TalleresWebModel.Obleas" Role="Obleas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Operaciones">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Obleas">
+        <PropertyRef Name="IdOperacion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ObleasCilindros_Operaciones">
+    <End Type="TalleresWebModel.Operaciones" Role="Operaciones" Multiplicity="1" />
+    <End Type="TalleresWebModel.ObleasCilindros" Role="ObleasCilindros" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Operaciones">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ObleasCilindros">
+        <PropertyRef Name="IdOperacion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ObleasValvulas_Operaciones">
+    <End Type="TalleresWebModel.Operaciones" Role="Operaciones" Multiplicity="1" />
+    <End Type="TalleresWebModel.ObleasValvulas" Role="ObleasValvulas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Operaciones">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ObleasValvulas">
+        <PropertyRef Name="IdOperacion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Obleas_Usuario">
+    <End Type="TalleresWebModel.Usuario" Role="Usuario" Multiplicity="0..1" />
+    <End Type="TalleresWebModel.Obleas" Role="Obleas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Obleas">
+        <PropertyRef Name="IdUsuarioAlta" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="RT">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Guid" Name="ID" Nullable="false" />
+    <Property Type="Guid" Name="TipoDniID" Nullable="false" />
+    <Property Type="String" Name="NroDniRT" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="NombreApellidoRT" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="MatriculaRT" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="TituloRT" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Boolean" Name="ActivoRT" Nullable="false" />
+    <NavigationProperty Name="RT_CRPC" Relationship="TalleresWebModel.FK_RT_CRPC_RT" FromRole="RT" ToRole="RT_CRPC" />
+    <NavigationProperty Name="RT_PEC" Relationship="TalleresWebModel.FK_RT_PEC_RT" FromRole="RT" ToRole="RT_PEC" />
+    <NavigationProperty Name="TalleresRT" Relationship="TalleresWebModel.FK_TalleresRT_RT" FromRole="RT" ToRole="TalleresRT" />
+    <NavigationProperty Name="DocumentosClientes" Relationship="TalleresWebModel.FK_RT_DocumentosClientes" FromRole="RT" ToRole="DocumentosClientes" />
+  </EntityType>
+  <EntityType Name="RT_CRPC">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Guid" Name="ID" Nullable="false" />
+    <Property Type="Guid" Name="RTID" Nullable="false" />
+    <Property Type="Guid" Name="CRPCID" Nullable="false" />
+    <Property Type="DateTime" Name="FechaDesde" Precision="3" />
+    <Property Type="DateTime" Name="FechaHastaRTCRPC" Precision="3" />
+    <NavigationProperty Name="CRPC" Relationship="TalleresWebModel.FK_RT_CRPC_CRPC" FromRole="RT_CRPC" ToRole="CRPC" />
+    <NavigationProperty Name="RT" Relationship="TalleresWebModel.FK_RT_CRPC_RT" FromRole="RT_CRPC" ToRole="RT" />
+  </EntityType>
+  <EntityType Name="RT_PEC">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Guid" Name="ID" Nullable="false" />
+    <Property Type="Guid" Name="RTID" Nullable="false" />
+    <Property Type="Guid" Name="PECID" Nullable="false" />
+    <Property Type="DateTime" Name="FechaHasta" Precision="3" />
+    <Property Type="DateTime" Name="FechaDesde" Precision="3" />
+    <NavigationProperty Name="PEC" Relationship="TalleresWebModel.FK_RT_PEC_PEC" FromRole="RT_PEC" ToRole="PEC" />
+    <NavigationProperty Name="RT" Relationship="TalleresWebModel.FK_RT_PEC_RT" FromRole="RT_PEC" ToRole="RT" />
+    <NavigationProperty Name="Obleas" Relationship="TalleresWebModel.FK_Obleas_RT_PEC" FromRole="RT_PEC" ToRole="Obleas" />
+  </EntityType>
+  <EntityType Name="TalleresRT">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Guid" Name="ID" Nullable="false" />
+    <Property Type="Guid" Name="TalleresID" Nullable="false" />
+    <Property Type="Guid" Name="RTID" Nullable="false" />
+    <Property Type="DateTime" Name="FechaDesdeRTT" Nullable="false" Precision="3" />
+    <Property Type="DateTime" Name="FechaHastaRTT" Precision="3" />
+    <NavigationProperty Name="RT" Relationship="TalleresWebModel.FK_TalleresRT_RT" FromRole="TalleresRT" ToRole="RT" />
+    <NavigationProperty Name="Talleres" Relationship="TalleresWebModel.FK_TalleresRT_Talleres" FromRole="TalleresRT" ToRole="Talleres" />
+    <Property Name="EsRTPrincipal" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Obleas" Relationship="TalleresWebModel.FK_Obleas_TalleresRT" FromRole="TalleresRT" ToRole="Obleas" />
+  </EntityType>
+  <Association Name="FK_RT_CRPC_CRPC">
+    <End Type="TalleresWebModel.CRPC" Role="CRPC" Multiplicity="1" />
+    <End Type="TalleresWebModel.RT_CRPC" Role="RT_CRPC" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CRPC">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="RT_CRPC">
+        <PropertyRef Name="CRPCID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RT_PEC_PEC">
+    <End Type="TalleresWebModel.PEC" Role="PEC" Multiplicity="1" />
+    <End Type="TalleresWebModel.RT_PEC" Role="RT_PEC" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PEC">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="RT_PEC">
+        <PropertyRef Name="PECID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RT_CRPC_RT">
+    <End Type="TalleresWebModel.RT" Role="RT" Multiplicity="1" />
+    <End Type="TalleresWebModel.RT_CRPC" Role="RT_CRPC" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RT">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="RT_CRPC">
+        <PropertyRef Name="RTID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RT_PEC_RT">
+    <End Type="TalleresWebModel.RT" Role="RT" Multiplicity="1" />
+    <End Type="TalleresWebModel.RT_PEC" Role="RT_PEC" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RT">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="RT_PEC">
+        <PropertyRef Name="RTID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TalleresRT_RT">
+    <End Type="TalleresWebModel.RT" Role="RT" Multiplicity="1" />
+    <End Type="TalleresWebModel.TalleresRT" Role="TalleresRT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RT">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="TalleresRT">
+        <PropertyRef Name="RTID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TalleresRT_Talleres">
+    <End Type="TalleresWebModel.Talleres" Role="Talleres" Multiplicity="1" />
+    <End Type="TalleresWebModel.TalleresRT" Role="TalleresRT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Talleres">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="TalleresRT">
+        <PropertyRef Name="TalleresID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RT_DocumentosClientes">
+    <End Type="TalleresWebModel.DocumentosClientes" Role="DocumentosClientes" Multiplicity="1" />
+    <End Type="TalleresWebModel.RT" Role="RT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DocumentosClientes">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="RT">
+        <PropertyRef Name="TipoDniID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_InspeccionesPH_Inspecciones">
+    <End Type="TalleresWebModel.Inspecciones" Role="Inspecciones" Multiplicity="1" />
+    <End Type="TalleresWebModel.InspeccionesPH" Role="InspeccionesPH" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Inspecciones">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="InspeccionesPH">
+        <PropertyRef Name="IdInspeccion" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PEC_Localidades">
+    <End Type="TalleresWebModel.Localidades" Role="Localidades" Multiplicity="0..1" />
+    <End Type="TalleresWebModel.PEC" Role="PEC" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Localidades">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="PEC">
+        <PropertyRef Name="IdLocalidad" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ReguladoresUnidad_Reguladores">
+    <End Type="TalleresWebModel.Reguladores" Role="Reguladores" Multiplicity="1" />
+    <End Type="TalleresWebModel.ReguladoresUnidad" Role="ReguladoresUnidad" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Reguladores">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ReguladoresUnidad">
+        <PropertyRef Name="IdRegulador" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Cilindros_MarcasCilindros">
+    <End Type="TalleresWebModel.MarcasCilindros" Role="MarcasCilindros" Multiplicity="0..1" />
+    <End Type="TalleresWebModel.Cilindros" Role="Cilindros" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MarcasCilindros">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Cilindros">
+        <PropertyRef Name="IdMarcaCilindro" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="PH">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Guid" Name="ID" Nullable="false" />
+    <Property Type="Guid" Name="IdTaller" Nullable="false" />
+    <Property Type="Guid" Name="IdNroCartaTaller" />
+    <Property Type="Guid" Name="IdPEC" Nullable="false" />
+    <Property Type="String" Name="NroObleaHabilitante" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="DateTime" Name="FechaOperacion" Nullable="false" Precision="3" />
+    <Property Type="Guid" Name="IdCRPC" Nullable="false" />
+    <NavigationProperty Name="CRPC" Relationship="TalleresWebModel.FK_PH_CRPC" FromRole="PH" ToRole="CRPC" />
+    <NavigationProperty Name="PEC" Relationship="TalleresWebModel.FK_PH_PEC" FromRole="PH" ToRole="PEC" />
+    <NavigationProperty Name="PHCilindros" Relationship="TalleresWebModel.FK_PHCilindros_PH1" FromRole="PH" ToRole="PHCilindros" />
+    <Property Type="Guid" Name="IDVehiculo" />
+    <Property Type="Guid" Name="IDCliente" />
+    <NavigationProperty Name="Clientes" Relationship="TalleresWebModel.FK_PH_Clientes" FromRole="PH" ToRole="Clientes" />
+    <NavigationProperty Name="Vehiculos" Relationship="TalleresWebModel.FK_PH_Vehiculos" FromRole="PH" ToRole="Vehiculos" />
+    <NavigationProperty Name="Talleres" Relationship="TalleresWebModel.FK_PH_Talleres" FromRole="PH" ToRole="Talleres" />
+  </EntityType>
+  <Association Name="FK_PH_CRPC">
+    <End Type="TalleresWebModel.CRPC" Role="CRPC" Multiplicity="1" />
+    <End Type="TalleresWebModel.PH" Role="PH" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CRPC">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="PH">
+        <PropertyRef Name="IdCRPC" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PH_PEC">
+    <End Type="TalleresWebModel.PEC" Role="PEC" Multiplicity="1" />
+    <End Type="TalleresWebModel.PH" Role="PH" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PEC">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="PH">
+        <PropertyRef Name="IdPEC" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="PHCilindros">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Guid" Name="ID" Nullable="false" />
+    <Property Type="Guid" Name="IdPH" Nullable="false" />
+    <Property Type="Guid" Name="IdCilindroUnidad" Nullable="false" />
+    <Property Type="Guid" Name="IdValvulaUnidad" />
+    <Property Type="String" Name="ObservacionValvulaCiindrol" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="NroOperacionCRPC" />
+    <Property Type="String" Name="NroCertificadoPH" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Type="Guid" Name="IdPEC" />
+    <Property Type="Boolean" Name="InspeccionVisualCorrecta" Nullable="true" />
+    <Property Type="Boolean" Name="Rechazado" />
+    <Property Type="String" Name="FuncValvula" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Type="String" Name="RoscaValvula" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Type="String" Name="ObservacionValvula" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="Double" Name="PesoMarcadoCilindro" />
+    <Property Type="Double" Name="PesoVacioCilindro" />
+    <Property Type="Double" Name="PesoAguaCilindro" />
+    <Property Type="Double" Name="LecturaAParedCiindrol" />
+    <Property Type="Double" Name="LecturaBParedCilindro" />
+    <Property Type="Double" Name="LecturaCPaedCilindro" />
+    <Property Type="Double" Name="LecturaAFondoCilindro" />
+    <Property Type="Double" Name="LecturaBFondoCilindro" />
+    <Property Type="String" Name="TipoFondoCilindro" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Type="Double" Name="PresionPruebaCilindro" />
+    <Property Type="Int32" Name="NroBureta" />
+    <Property Type="Double" Name="LecturaMinBureta" />
+    <Property Type="Double" Name="LecturaMaxBureta" />
+    <Property Type="String" Name="ObservacionPH" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Type="Double" Name="TemperaturaAmbiente" />
+    <Property Type="Double" Name="PesoCilinroLleno" />
+    <Property Type="Double" Name="NivelAguAPresionPruebaCilindro" />
+    <NavigationProperty Name="CilindrosUnidad" Relationship="TalleresWebModel.FK_PHCilindros_CilindrosUnidad1" FromRole="PHCilindros" ToRole="CilindrosUnidad" />
+    <NavigationProperty Name="InspeccionesPH" Relationship="TalleresWebModel.FK_InspeccionesPH_PHCilindros" FromRole="PHCilindros" ToRole="InspeccionesPH" />
+    <NavigationProperty Name="PEC" Relationship="TalleresWebModel.FK_PHCilindros_PEC" FromRole="PHCilindros" ToRole="PEC" />
+    <NavigationProperty Name="PH" Relationship="TalleresWebModel.FK_PHCilindros_PH1" FromRole="PHCilindros" ToRole="PH" />
+    <NavigationProperty Name="Valvula_Unidad" Relationship="TalleresWebModel.FK_PHCilindros_Valvula_Unidad" FromRole="PHCilindros" ToRole="Valvula_Unidad" />
+    <Property Type="Guid" Name="IdEstadoPH" Nullable="false" />
+    <NavigationProperty Name="ESTADOSPH" Relationship="TalleresWebModel.FK_PHCilindros_ESTADOSPH" FromRole="PHCilindros" ToRole="ESTADOSPH" />
+    <NavigationProperty Name="PhCilindroHistoricoEstado" Relationship="TalleresWebModel.FK_PhCilindroHistoricoEstado_PHCilindros" FromRole="PHCilindros" ToRole="PhCilindroHistoricoEstado" />
+    <NavigationProperty Name="DESPACHODETALLE" Relationship="TalleresWebModel.FK_DESPACHODETALLE_PHCilindros" FromRole="PHCilindros" ToRole="DESPACHODETALLE" />
+  </EntityType>
+  <Association Name="FK_PHCilindros_CilindrosUnidad1">
+    <End Type="TalleresWebModel.CilindrosUnidad" Role="CilindrosUnidad" Multiplicity="1" />
+    <End Type="TalleresWebModel.PHCilindros" Role="PHCilindros" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CilindrosUnidad">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="PHCilindros">
+        <PropertyRef Name="IdCilindroUnidad" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_InspeccionesPH_PHCilindros">
+    <End Type="TalleresWebModel.PHCilindros" Role="PHCilindros" Multiplicity="1" />
+    <End Type="TalleresWebModel.InspeccionesPH" Role="InspeccionesPH" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PHCilindros">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="InspeccionesPH">
+        <PropertyRef Name="IdPHCilndro" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PHCilindros_PEC">
+    <End Type="TalleresWebModel.PEC" Role="PEC" Multiplicity="0..1" />
+    <End Type="TalleresWebModel.PHCilindros" Role="PHCilindros" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PEC">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="PHCilindros">
+        <PropertyRef Name="IdPEC" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PHCilindros_PH1">
+    <End Type="TalleresWebModel.PH" Role="PH" Multiplicity="1" />
+    <End Type="TalleresWebModel.PHCilindros" Role="PHCilindros" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PH">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="PHCilindros">
+        <PropertyRef Name="IdPH" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="S_ACCESOSCU">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Guid" Name="ID" Nullable="false" />
+    <Property Type="Int32" Name="IdAccesosCU" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="IdCU" />
+    <Property Type="Int32" Name="IdRol" />
+    <Property Type="Boolean" Name="Permitido" />
+    <NavigationProperty Name="S_CASOSDEUSO" Relationship="TalleresWebModel.FK_S_ACCESOSCU_S_CASOSDEUSO1" FromRole="S_ACCESOSCU" ToRole="S_CASOSDEUSO" />
+    <NavigationProperty Name="S_ROLES" Relationship="TalleresWebModel.FK_S_ACCESOSCU_S_ROLES1" FromRole="S_ACCESOSCU" ToRole="S_ROLES" />
+  </EntityType>
+  <EntityType Name="S_CASOSDEUSO">
+    <Key>
+      <PropertyRef Name="IdCU" />
+    </Key>
+    <Property Type="Guid" Name="ID" Nullable="false" />
+    <Property Type="Int32" Name="IdCU" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Descripcion" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CodigoCU" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="IdPadre" />
+    <Property Type="String" Name="Url" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="UrlImagen" MaxLength="200" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="S_ACCESOSCU" Relationship="TalleresWebModel.FK_S_ACCESOSCU_S_CASOSDEUSO1" FromRole="S_CASOSDEUSO" ToRole="S_ACCESOSCU" />
+    <Property Type="Boolean" Name="AbrirEnVentanaNueva" />
+  </EntityType>
+  <EntityType Name="S_ROLES">
+    <Key>
+      <PropertyRef Name="IdRol" />
+    </Key>
+    <Property Type="Guid" Name="ID" Nullable="false" />
+    <Property Type="Int32" Name="IdRol" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Descripcion" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="CodigoRol" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Type="Decimal" Name="HoraInicioSemanaM" Precision="18" Scale="0" />
+    <Property Type="Decimal" Name="HoraFinSemanaM" Precision="18" Scale="0" />
+    <Property Type="Decimal" Name="HoraInicioSemanaT" Precision="18" Scale="0" />
+    <Property Type="Decimal" Name="HoraFinSemanaT" Precision="18" Scale="0" />
+    <Property Type="Decimal" Name="HoraInicioSabado" Precision="18" Scale="0" />
+    <Property Type="Decimal" Name="HoraFinSabado" Precision="18" Scale="0" />
+    <NavigationProperty Name="S_ACCESOSCU" Relationship="TalleresWebModel.FK_S_ACCESOSCU_S_ROLES1" FromRole="S_ROLES" ToRole="S_ACCESOSCU" />
+    <NavigationProperty Name="Usuario" Relationship="TalleresWebModel.FK_Usuario_S_ROLES1" FromRole="S_ROLES" ToRole="Usuario" />
+  </EntityType>
+  <Association Name="FK_S_ACCESOSCU_S_CASOSDEUSO1">
+    <End Type="TalleresWebModel.S_CASOSDEUSO" Role="S_CASOSDEUSO" Multiplicity="0..1" />
+    <End Type="TalleresWebModel.S_ACCESOSCU" Role="S_ACCESOSCU" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="S_CASOSDEUSO">
+        <PropertyRef Name="IdCU" />
+      </Principal>
+      <Dependent Role="S_ACCESOSCU">
+        <PropertyRef Name="IdCU" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_S_ACCESOSCU_S_ROLES1">
+    <End Type="TalleresWebModel.S_ROLES" Role="S_ROLES" Multiplicity="0..1" />
+    <End Type="TalleresWebModel.S_ACCESOSCU" Role="S_ACCESOSCU" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="S_ROLES">
+        <PropertyRef Name="IdRol" />
+      </Principal>
+      <Dependent Role="S_ACCESOSCU">
+        <PropertyRef Name="IdRol" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Usuario_S_ROLES1">
+    <End Type="TalleresWebModel.S_ROLES" Role="S_ROLES" Multiplicity="1" />
+    <End Type="TalleresWebModel.Usuario" Role="Usuario" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="S_ROLES">
+        <PropertyRef Name="IdRol" />
+      </Principal>
+      <Dependent Role="Usuario">
+        <PropertyRef Name="IdRol" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PH_Clientes">
+    <End Type="TalleresWebModel.Clientes" Role="Clientes" Multiplicity="0..1" />
+    <End Type="TalleresWebModel.PH" Role="PH" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Clientes">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="PH">
+        <PropertyRef Name="IDCliente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PH_Vehiculos">
+    <End Type="TalleresWebModel.Vehiculos" Role="Vehiculos" Multiplicity="0..1" />
+    <End Type="TalleresWebModel.PH" Role="PH" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Vehiculos">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="PH">
+        <PropertyRef Name="IDVehiculo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PH_Talleres">
+    <End Type="TalleresWebModel.Talleres" Role="Talleres" Multiplicity="1" />
+    <End Type="TalleresWebModel.PH" Role="PH" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Talleres">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="PH">
+        <PropertyRef Name="IdTaller" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PHCilindros_Valvula_Unidad">
+    <End Type="TalleresWebModel.Valvula_Unidad" Role="Valvula_Unidad" Multiplicity="0..1" />
+    <End Type="TalleresWebModel.PHCilindros" Role="PHCilindros" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Valvula_Unidad">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="PHCilindros">
+        <PropertyRef Name="IdValvulaUnidad" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="ESTADOSPH">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Guid" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Descripcion" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="PHCilindros" Relationship="TalleresWebModel.FK_PHCilindros_ESTADOSPH" FromRole="ESTADOSPH" ToRole="PHCilindros" />
+    <NavigationProperty Name="PhCilindroHistoricoEstado" Relationship="TalleresWebModel.FK_PhCilindroHistoricoEstado_ESTADOSPH" FromRole="ESTADOSPH" ToRole="PhCilindroHistoricoEstado" />
+  </EntityType>
+  <Association Name="FK_PHCilindros_ESTADOSPH">
+    <End Type="TalleresWebModel.ESTADOSPH" Role="ESTADOSPH" Multiplicity="1" />
+    <End Type="TalleresWebModel.PHCilindros" Role="PHCilindros" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ESTADOSPH">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="PHCilindros">
+        <PropertyRef Name="IdEstadoPH" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="INFORME">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Guid" Nullable="false" />
+    <Property Name="FechaHora" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Estado" Type="Boolean" Nullable="false" />
+    <Property Name="CantidadObleasEnviadas" Type="Int32" Nullable="false" />
+    <Property Name="CantidadObleasAsignadas" Type="Int32" Nullable="false" />
+    <Property Name="CantidadObleasRechazadas" Type="Int32" Nullable="false" />
+    <Property Name="Numero" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="INFORMEOBLEAS" Relationship="TalleresWebModel.FK_INFORMEOBLEAS_INFORME" FromRole="INFORME" ToRole="INFORMEOBLEAS" />
+    <Property Name="Activo" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="INFORMEOBLEAS">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Guid" Nullable="false" />
+    <Property Name="IdInforme" Type="Guid" Nullable="false" />
+    <Property Name="idOblea" Type="Guid" />
+    <Property Name="Descripcion" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="INFORME" Relationship="TalleresWebModel.FK_INFORMEOBLEAS_INFORME" FromRole="INFORMEOBLEAS" ToRole="INFORME" />
+    <NavigationProperty Name="Obleas" Relationship="TalleresWebModel.FK_INFORMEOBLEAS_Obleas" FromRole="INFORMEOBLEAS" ToRole="Obleas" />
+    <Property Name="IdEstadoOblea" Type="Guid" />
+  </EntityType>
+  <Association Name="FK_INFORMEOBLEAS_INFORME">
+    <End Type="TalleresWebModel.INFORME" Role="INFORME" Multiplicity="1" />
+    <End Type="TalleresWebModel.INFORMEOBLEAS" Role="INFORMEOBLEAS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="INFORME">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="INFORMEOBLEAS">
+        <PropertyRef Name="IdInforme" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_INFORMEOBLEAS_Obleas">
+    <End Type="TalleresWebModel.Obleas" Role="Obleas" Multiplicity="0..1" />
+    <End Type="TalleresWebModel.INFORMEOBLEAS" Role="INFORMEOBLEAS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Obleas">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="INFORMEOBLEAS">
+        <PropertyRef Name="idOblea" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="LOTES">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Guid" Nullable="false" />
+    <Property Name="FechaIngreso" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="NumeroObleaDesde" Type="Int32" Nullable="false" />
+    <Property Name="NumeroObleaHasta" Type="Int32" Nullable="false" />
+    <Property Name="AnioVencimiento" Type="Int32" Nullable="false" />
+    <Property Name="EnUso" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ObleaHistoricoEstado">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Guid" Nullable="false" />
+    <Property Name="IDOblea" Type="Guid" Nullable="false" />
+    <Property Name="IDEstadoOblea" Type="Guid" Nullable="false" />
+    <Property Name="Descripcion" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="FechaHora" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="EstadosFichas" Relationship="TalleresWebModel.FK_ObleaHistoricoEstado_EstadosFichas" FromRole="ObleaHistoricoEstado" ToRole="EstadosFichas" />
+    <NavigationProperty Name="Obleas" Relationship="TalleresWebModel.FK_ObleaHistoricoEstado_Obleas" FromRole="ObleaHistoricoEstado" ToRole="Obleas" />
+    <Property Name="IDUsuario" Type="Guid" Nullable="false" />
+    <NavigationProperty Name="ObleaErrorDetalle" Relationship="TalleresWebModel.FK_ObleaErrorDetalle_ObleaHistoricoEstado" FromRole="ObleaHistoricoEstado" ToRole="ObleaErrorDetalle" />
+    <NavigationProperty Name="Usuario" Relationship="TalleresWebModel.FK_ObleaHistoricoEstado_Usuarios" FromRole="ObleaHistoricoEstado" ToRole="Usuario" />
+  </EntityType>
+  <Association Name="FK_ObleaHistoricoEstado_EstadosFichas">
+    <End Type="TalleresWebModel.EstadosFichas" Role="EstadosFichas" Multiplicity="1" />
+    <End Type="TalleresWebModel.ObleaHistoricoEstado" Role="ObleaHistoricoEstado" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EstadosFichas">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ObleaHistoricoEstado">
+        <PropertyRef Name="IDEstadoOblea" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ObleaHistoricoEstado_Obleas">
+    <End Type="TalleresWebModel.Obleas" Role="Obleas" Multiplicity="1" />
+    <End Type="TalleresWebModel.ObleaHistoricoEstado" Role="ObleaHistoricoEstado" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Obleas">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ObleaHistoricoEstado">
+        <PropertyRef Name="IDOblea" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="ObleaErrorDetalle">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Guid" Nullable="false" />
+    <Property Name="IDObleaHistoricoEstado" Type="Guid" Nullable="false" />
+    <Property Name="IDObleaErrorTipo" Type="Guid" Nullable="false" />
+    <Property Name="Correccion" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="IDObjetoCorregido" Type="Guid" Nullable="false" />
+    <Property Name="Solucionado" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="ObleaErrorTipo" Relationship="TalleresWebModel.FK_ObleaErrorDetalle_ObleaErrorTipo" FromRole="ObleaErrorDetalle" ToRole="ObleaErrorTipo" />
+    <NavigationProperty Name="ObleaHistoricoEstado" Relationship="TalleresWebModel.FK_ObleaErrorDetalle_ObleaHistoricoEstado" FromRole="ObleaErrorDetalle" ToRole="ObleaHistoricoEstado" />
+  </EntityType>
+  <EntityType Name="ObleaErrorTipo">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Guid" Nullable="false" />
+    <Property Name="Descripcion" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="ObleaErrorDetalle" Relationship="TalleresWebModel.FK_ObleaErrorDetalle_ObleaErrorTipo" FromRole="ObleaErrorTipo" ToRole="ObleaErrorDetalle" />
+  </EntityType>
+  <Association Name="FK_ObleaErrorDetalle_ObleaErrorTipo">
+    <End Type="TalleresWebModel.ObleaErrorTipo" Role="ObleaErrorTipo" Multiplicity="1" />
+    <End Type="TalleresWebModel.ObleaErrorDetalle" Role="ObleaErrorDetalle" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ObleaErrorTipo">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ObleaErrorDetalle">
+        <PropertyRef Name="IDObleaErrorTipo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ObleaErrorDetalle_ObleaHistoricoEstado">
+    <End Type="TalleresWebModel.ObleaHistoricoEstado" Role="ObleaHistoricoEstado" Multiplicity="1" />
+    <End Type="TalleresWebModel.ObleaErrorDetalle" Role="ObleaErrorDetalle" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ObleaHistoricoEstado">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ObleaErrorDetalle">
+        <PropertyRef Name="IDObleaHistoricoEstado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Obleas_RT_PEC">
+    <End Type="TalleresWebModel.RT_PEC" Role="RT_PEC" Multiplicity="0..1" />
+    <End Type="TalleresWebModel.Obleas" Role="Obleas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RT_PEC">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Obleas">
+        <PropertyRef Name="IdRTPEC" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Obleas_TalleresRT">
+    <End Type="TalleresWebModel.TalleresRT" Role="TalleresRT" Multiplicity="0..1" />
+    <End Type="TalleresWebModel.Obleas" Role="Obleas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TalleresRT">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Obleas">
+        <PropertyRef Name="IdTallerRT" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ObleaHistoricoEstado_Usuarios">
+    <End Type="TalleresWebModel.Usuario" Role="Usuario" Multiplicity="1" />
+    <End Type="TalleresWebModel.ObleaHistoricoEstado" Role="ObleaHistoricoEstado" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ObleaHistoricoEstado">
+        <PropertyRef Name="IDUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Conductores">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Guid" Nullable="false" />
+    <Property Name="Descripcion" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Activo" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="FLETE" Relationship="TalleresWebModel.FK_FLETE_Conductores" FromRole="Conductores" ToRole="FLETE" />
+  </EntityType>
+  <EntityType Name="DESPACHO">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Guid" Nullable="false" />
+    <Property Name="Fecha" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="IdUsuario" Type="Guid" Nullable="false" />
+    <Property Name="IdFlete" Type="Guid" Nullable="false" />
+    <Property Name="IdChofer" Type="Guid" />
+    <NavigationProperty Name="FLETE" Relationship="TalleresWebModel.FK_DESPACHO_FLETE" FromRole="DESPACHO" ToRole="FLETE" />
+    <NavigationProperty Name="Usuario" Relationship="TalleresWebModel.FK_DESPACHO_Usuario" FromRole="DESPACHO" ToRole="Usuario" />
+    <NavigationProperty Name="DESPACHODETALLE" Relationship="TalleresWebModel.FK_DESPACHODETALLE_DESPACHO" FromRole="DESPACHO" ToRole="DESPACHODETALLE" />
+    <Property Name="Numero" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FechaHoraSalida" Type="DateTime" Precision="3" />
+    <Property Name="FechaHoraLlegada" Type="DateTime" Precision="3" />
+    <Property Name="Activo" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DESPACHODETALLE">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Guid" Nullable="false" />
+    <Property Name="IdDespacho" Type="Guid" Nullable="false" />
+    <Property Name="IdOblea" Type="Guid" />
+    <Property Name="IdPedido" Type="Guid" />
+    <NavigationProperty Name="DESPACHO" Relationship="TalleresWebModel.FK_DESPACHODETALLE_DESPACHO" FromRole="DESPACHODETALLE" ToRole="DESPACHO" />
+    <NavigationProperty Name="Obleas" Relationship="TalleresWebModel.FK_DESPACHODETALLE_Obleas" FromRole="DESPACHODETALLE" ToRole="Obleas" />
+    <Property Name="IdTaller" Type="Guid" />
+    <NavigationProperty Name="Talleres" Relationship="TalleresWebModel.FK_DESPACHODETALLE_Talleres" FromRole="DESPACHODETALLE" ToRole="Talleres" />
+    <Property Name="IdPHCilindro" Type="Guid" />
+    <NavigationProperty Name="PHCilindros" Relationship="TalleresWebModel.FK_DESPACHODETALLE_PHCilindros" FromRole="DESPACHODETALLE" ToRole="PHCilindros" />
+  </EntityType>
+  <EntityType Name="FLETE">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Guid" Nullable="false" />
+    <Property Name="Descripcion" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="EsFletePropio" Type="Boolean" Nullable="false" />
+    <Property Name="ValorHora" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="IdConductorHabitual" Type="Guid" />
+    <NavigationProperty Name="Conductores" Relationship="TalleresWebModel.FK_FLETE_Conductores" FromRole="FLETE" ToRole="Conductores" />
+    <NavigationProperty Name="DESPACHO" Relationship="TalleresWebModel.FK_DESPACHO_FLETE" FromRole="FLETE" ToRole="DESPACHO" />
+  </EntityType>
+  <Association Name="FK_FLETE_Conductores">
+    <End Type="TalleresWebModel.Conductores" Role="Conductores" Multiplicity="0..1" />
+    <End Type="TalleresWebModel.FLETE" Role="FLETE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Conductores">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="FLETE">
+        <PropertyRef Name="IdConductorHabitual" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DESPACHO_FLETE">
+    <End Type="TalleresWebModel.FLETE" Role="FLETE" Multiplicity="1" />
+    <End Type="TalleresWebModel.DESPACHO" Role="DESPACHO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FLETE">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="DESPACHO">
+        <PropertyRef Name="IdFlete" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DESPACHO_Usuario">
+    <End Type="TalleresWebModel.Usuario" Role="Usuario" Multiplicity="1" />
+    <End Type="TalleresWebModel.DESPACHO" Role="DESPACHO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="DESPACHO">
+        <PropertyRef Name="IdUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DESPACHODETALLE_DESPACHO">
+    <End Type="TalleresWebModel.DESPACHO" Role="DESPACHO" Multiplicity="1" />
+    <End Type="TalleresWebModel.DESPACHODETALLE" Role="DESPACHODETALLE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DESPACHO">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="DESPACHODETALLE">
+        <PropertyRef Name="IdDespacho" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DESPACHODETALLE_Obleas">
+    <End Type="TalleresWebModel.Obleas" Role="Obleas" Multiplicity="0..1" />
+    <End Type="TalleresWebModel.DESPACHODETALLE" Role="DESPACHODETALLE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Obleas">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="DESPACHODETALLE">
+        <PropertyRef Name="IdOblea" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DESPACHODETALLE_Talleres">
+    <End Type="TalleresWebModel.Talleres" Role="Talleres" Multiplicity="0..1" />
+    <End Type="TalleresWebModel.DESPACHODETALLE" Role="DESPACHODETALLE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Talleres">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="DESPACHODETALLE">
+        <PropertyRef Name="IdTaller" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="InspeccionTipo">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Guid" Nullable="false" />
+    <Property Name="Descripcion" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Inspecciones" Relationship="TalleresWebModel.FK_Inspecciones_InspeccionTipo" FromRole="InspeccionTipo" ToRole="Inspecciones" />
+  </EntityType>
+  <Association Name="FK_Inspecciones_InspeccionTipo">
+    <End Type="TalleresWebModel.InspeccionTipo" Role="InspeccionTipo" Multiplicity="1" />
+    <End Type="TalleresWebModel.Inspecciones" Role="Inspecciones" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="InspeccionTipo">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Inspecciones">
+        <PropertyRef Name="IdInspeccionTipo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="PhCilindroHistoricoEstado">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Guid" Nullable="false" />
+    <Property Name="IDPHCilindro" Type="Guid" Nullable="false" />
+    <Property Name="IDEstado" Type="Guid" Nullable="false" />
+    <Property Name="Descripcion" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="FechaHoraEstado" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="IDUsuario" Type="Guid" Nullable="false" />
+    <NavigationProperty Name="ESTADOSPH" Relationship="TalleresWebModel.FK_PhCilindroHistoricoEstado_ESTADOSPH" FromRole="PhCilindroHistoricoEstado" ToRole="ESTADOSPH" />
+    <NavigationProperty Name="PHCilindros" Relationship="TalleresWebModel.FK_PhCilindroHistoricoEstado_PHCilindros" FromRole="PhCilindroHistoricoEstado" ToRole="PHCilindros" />
+    <NavigationProperty Name="Usuario" Relationship="TalleresWebModel.FK_PhCilindroHistoricoEstado_Usuario" FromRole="PhCilindroHistoricoEstado" ToRole="Usuario" />
+  </EntityType>
+  <Association Name="FK_PhCilindroHistoricoEstado_ESTADOSPH">
+    <End Type="TalleresWebModel.ESTADOSPH" Role="ESTADOSPH" Multiplicity="1" />
+    <End Type="TalleresWebModel.PhCilindroHistoricoEstado" Role="PhCilindroHistoricoEstado" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ESTADOSPH">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="PhCilindroHistoricoEstado">
+        <PropertyRef Name="IDEstado" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PhCilindroHistoricoEstado_PHCilindros">
+    <End Type="TalleresWebModel.PHCilindros" Role="PHCilindros" Multiplicity="1" />
+    <End Type="TalleresWebModel.PhCilindroHistoricoEstado" Role="PhCilindroHistoricoEstado" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PHCilindros">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="PhCilindroHistoricoEstado">
+        <PropertyRef Name="IDPHCilindro" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PhCilindroHistoricoEstado_Usuario">
+    <End Type="TalleresWebModel.Usuario" Role="Usuario" Multiplicity="1" />
+    <End Type="TalleresWebModel.PhCilindroHistoricoEstado" Role="PhCilindroHistoricoEstado" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Usuario">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="PhCilindroHistoricoEstado">
+        <PropertyRef Name="IDUsuario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DESPACHODETALLE_PHCilindros">
+    <End Type="TalleresWebModel.PHCilindros" Role="PHCilindros" Multiplicity="0..1" />
+    <End Type="TalleresWebModel.DESPACHODETALLE" Role="DESPACHODETALLE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PHCilindros">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="DESPACHODETALLE">
+        <PropertyRef Name="IdPHCilindro" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

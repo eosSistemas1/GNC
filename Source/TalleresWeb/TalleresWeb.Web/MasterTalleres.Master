@@ -1,0 +1,126 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterTalleres.master.cs"
+    Inherits="TalleresWeb.Web.MasterTalleres" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Petrolera ItaloArgentina S.R.L. | Talleres</title>
+    <link href="~/css/styleTalleres.css" rel="stylesheet" type="text/css" />
+    <link href="~/images/favicon.ico" rel="shortcut icon" />
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    <script type="text/javascript">
+
+        if (typeof window.event != 'undefined')
+            document.onkeydown = function () {
+                if ((event.srcElement.tagName.toUpperCase() != 'INPUT') && (event.srcElement.tagName.toUpperCase() != 'TEXTAREA'))
+                    return (event.keyCode != 8);
+            }
+        else
+            document.onkeypress = function (e) {
+                if ((e.target.nodeName.toUpperCase() != 'INPUT') && (e.target.nodeName.toUpperCase() != 'TEXTAREA'))
+                    return (e.keyCode != 8);
+            }
+
+    </script>
+    <!--[if IE 6]>
+<script src="js/DD_belatedPNG_0.0.8a-min.js"></script>
+<script>
+  DD_belatedPNG.fix('.nav-sidebar a, #content h2');
+</script>
+<![endif]-->
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <script type="text/javascript">
+        function beginRequest(sender, args) {
+            //alert("start"); 
+            window.status = "Please wait...";
+            document.body.style.cursor = "wait";
+        }
+
+        function pageLoaded(sender, args) {
+
+            window.status = "Done";
+            document.body.style.cursor = "default";
+        } 
+    </script>
+    <asp:ToolkitScriptManager ID="ToolkitScriptManager1" runat="server" EnablePageMethods="true" EnablePartialRendering="true">
+    </asp:ToolkitScriptManager>
+    <script type="text/javascript">
+        Sys.WebForms.PageRequestManager.getInstance().add_beginRequest(beginRequest);
+        Sys.WebForms.PageRequestManager.getInstance().add_pageLoaded(pageLoaded);        
+    </script>
+    <div>
+        <div id="content-page">
+            <div id="page">
+                <div id="header" class="header-home">
+                    <h1 class="left">
+                        <a href="index.aspx" title="Ir al inicio">Petrolera ItaloArgentina S.R.L.</a></h1>
+                    <div class="right" id="access">
+                        <div class="login">
+                            <asp:Panel ID="pMicuenta" runat="server" Visible="false">
+                                <p>
+                                    <asp:Label ID="NombreUsuario" runat="server" Text="nombre"></asp:Label><br />
+                                    <a href="~/MiCuenta/Usuario.aspx" id="miCuenta" runat="server">Mi Cuenta</a> <a href="~/Core/LogOff.aspx"
+                                        class="logout" title="Salir" id="logOff" runat="server" visible="true">Salir</a>
+                                </p>
+                            </asp:Panel>
+                        </div>
+                    </div>
+                    <div class="clear">&nbsp;</div>
+                </div>
+                <!--/header-->
+                <div class="splash-small">
+                  <%--  <asp:SiteMapPath ID="SiteMapPath1" runat="server" PathSeparator=" > " ParentLevelsDisplayed="2">
+                        <NodeStyle CssClass="Titulo" ForeColor="#8fb2b8" />
+                        <PathSeparatorStyle CssClass="Titulo" ForeColor="#8fb2b8" />
+                        <CurrentNodeStyle CssClass="Titulo" ForeColor="LightGray" />
+                    </asp:SiteMapPath>--%>
+                    <div class="clear">&nbsp;</div>
+                </div>
+                <!--/splash-->
+                <div id="wrap">
+                    <div id="sidebar">
+                        <asp:Accordion ID="Accordion1" runat="server" HeaderCssClass="accordionHeader"
+                            HeaderSelectedCssClass="accordionHeaderSelected" ContentCssClass="accordionContent"
+                            AutoSize="None" FadeTransitions="true" TransitionDuration="250" FramesPerSecond="70"
+                            RequireOpenedPane="false" SuppressHeaderPostbacks="true">
+                            <ContentTemplate>
+                            </ContentTemplate>
+                        </asp:Accordion>
+                    </div>
+                    <!--/content-->
+                    <div id="content">
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </div>
+                    <!--/content-->
+                    <div class="clear">
+                        &nbsp;</div>
+                </div>
+                <!--/wrap-->
+                <div id="bottom">
+                    <ul class="nav-naranja" style="height: 10px;">
+                    <%--<li><a href="index.html"><img src="~/Images/icon-home.gif" alt="" />Home</a></li>
+                        <li><a href="#"><img src="Images/icon-mapa.gif" alt="" />Mapa</a></li>
+                        <li><a href="#"><img src="Images/icon-ayuda.gif" alt=""/>Ayuda</a></li>--%>
+                    </ul>
+                </div>
+                <!--/bottom-->
+            </div>
+            <!--/page-->
+        </div>
+        <div id="footer">
+            <p class="center">Copyright &copy; 2010 - <a href="index.aspx">Petrolera ItaloArgentina</a></p>
+            <p class="center">Ov. Lagos 4119 - Rosario - Santa Fe - +54 (0341) 5680285 - <a href="mailto:info@peargnc.com.ar">info@peargnc.com.ar</a></p>
+            <p class="right"></p>
+            <!--p class="right">Desarrollado por <a href="http://www.eossistemas.com.ar/">eosSistemas</a></p-->
+            <div class="clear">&nbsp;</div>
+        </div>
+        <!--/footer-->
+    </div>
+    </form>
+</body>
+</html>

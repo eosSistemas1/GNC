@@ -1,0 +1,166 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01.Presentation", "01.Presentation", "{25865988-3C68-4354-995A-4F75C14E8E9C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02.BusinessLogic", "02.BusinessLogic", "{F2FC39F8-BA53-44BA-80EE-25DA4C31D79D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03.DataAccess", "03.DataAccess", "{1EAE4387-1D04-4C86-8697-B6561C6867D3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "04.Entities", "04.Entities", "{0CFA035B-0FB2-49B4-9F16-B4CFC87EB8B7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "06.Common", "06.Common", "{0B0FBD3D-9830-4423-B94C-F419584FDD6E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "05.Services", "05.Services", "{384D0D34-F5B7-4D22-8989-FAE6C665CEB0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01.ServicesWeb.Logic", "01.ServicesWeb.Logic", "{48CC9E48-2F49-4A97-AA08-A59E0F771E47}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02.ServicesWeb.Entities", "02.ServicesWeb.Entities", "{01D218CF-414A-48CC-8D81-7D83893BABA3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03.ServicesWeb.DataAccess", "03.ServicesWeb.DataAccess", "{3D9D5D37-EA28-4D3E-B287-51C320136AC5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PL.Fwk.Presentation.Web", "PL.Fwk.Presentation.Web\PL.Fwk.Presentation.Web.csproj", "{EDCF8CFC-7C73-4727-B86B-92D5375C07EA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PL.Fwk.BusinessLogic", "PL.Fwk.BusinessLogic\PL.Fwk.BusinessLogic.csproj", "{6F6F1BE1-7DDE-4F83-99D1-CA45C63331F3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PL.Fwk.DataAccess", "PL.Fwk.DataAccess\PL.Fwk.DataAccess.csproj", "{969E44BB-0B12-403B-8FA7-86CAA628C46D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PL.Fwk.Entities", "PL.Fwk.Entities\PL.Fwk.Entities.csproj", "{DF7307AE-2C26-427B-B58D-C15D06010EE7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PL.ServicesWeb.Logic", "PL.ServicesWeb.Logic\PL.ServicesWeb.Logic.csproj", "{84A10953-94C2-4565-BD71-E7C529D51328}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PL.ServicesWeb.Entities", "PL.ServicesWeb.Entities\PL.ServicesWeb.Entities.csproj", "{A17FAD13-8D6A-4F6A-9159-2EBDDEBE85F4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PL.ServicesWeb.DataAccess", "PL.ServicesWeb.DataAccess\PL.ServicesWeb.DataAccess.csproj", "{378C2832-F4D3-4AC3-BAC2-451D18165BF3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PL.Fwk.Caching", "PL.Fwk.Caching\PL.Fwk.Caching.csproj", "{DE7EA5B2-02B8-4C7F-B962-B4440DCAD474}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PL.Fwk.EnterpriseLibrary", "PL.Fwk.EnterpriseLibrary\PL.Fwk.EnterpriseLibrary.csproj", "{917863CA-3E67-4DF7-9880-A43F0C8F1B5B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PL.Fwk.Exceptions", "PL.Fwk.Exception\PL.Fwk.Exceptions.csproj", "{65C61AC1-F5C3-4104-9496-2824A58D48F7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PL.Fwk.Security", "PL.Fwk.Security\PL.Fwk.Security.csproj", "{9D8400C6-6D73-48DE-9E0D-53864957878E}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 12
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://federicomuller.visualstudio.com/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = PL.Fwk.BusinessLogic\\PL.Fwk.BusinessLogic.csproj
+		SccProjectTopLevelParentUniqueName1 = PL.Fwk.sln
+		SccProjectName1 = PL.Fwk.BusinessLogic
+		SccLocalPath1 = PL.Fwk.BusinessLogic
+		SccProjectUniqueName2 = PL.Fwk.Caching\\PL.Fwk.Caching.csproj
+		SccProjectTopLevelParentUniqueName2 = PL.Fwk.sln
+		SccProjectName2 = PL.Fwk.Caching
+		SccLocalPath2 = PL.Fwk.Caching
+		SccProjectUniqueName3 = PL.Fwk.DataAccess\\PL.Fwk.DataAccess.csproj
+		SccProjectTopLevelParentUniqueName3 = PL.Fwk.sln
+		SccProjectName3 = PL.Fwk.DataAccess
+		SccLocalPath3 = PL.Fwk.DataAccess
+		SccProjectUniqueName4 = PL.Fwk.EnterpriseLibrary\\PL.Fwk.EnterpriseLibrary.csproj
+		SccProjectTopLevelParentUniqueName4 = PL.Fwk.sln
+		SccProjectName4 = PL.Fwk.EnterpriseLibrary
+		SccLocalPath4 = PL.Fwk.EnterpriseLibrary
+		SccProjectUniqueName5 = PL.Fwk.Entities\\PL.Fwk.Entities.csproj
+		SccProjectTopLevelParentUniqueName5 = PL.Fwk.sln
+		SccProjectName5 = PL.Fwk.Entities
+		SccLocalPath5 = PL.Fwk.Entities
+		SccProjectUniqueName6 = PL.Fwk.Exception\\PL.Fwk.Exceptions.csproj
+		SccProjectTopLevelParentUniqueName6 = PL.Fwk.sln
+		SccProjectName6 = PL.Fwk.Exception
+		SccLocalPath6 = PL.Fwk.Exception
+		SccProjectUniqueName7 = PL.Fwk.Presentation.Web\\PL.Fwk.Presentation.Web.csproj
+		SccProjectTopLevelParentUniqueName7 = PL.Fwk.sln
+		SccProjectName7 = PL.Fwk.Presentation.Web
+		SccLocalPath7 = PL.Fwk.Presentation.Web
+		SccProjectUniqueName8 = PL.Fwk.Security\\PL.Fwk.Security.csproj
+		SccProjectTopLevelParentUniqueName8 = PL.Fwk.sln
+		SccProjectName8 = PL.Fwk.Security
+		SccLocalPath8 = PL.Fwk.Security
+		SccProjectUniqueName9 = PL.ServicesWeb.DataAccess\\PL.ServicesWeb.DataAccess.csproj
+		SccProjectTopLevelParentUniqueName9 = PL.Fwk.sln
+		SccProjectName9 = PL.ServicesWeb.DataAccess
+		SccLocalPath9 = PL.ServicesWeb.DataAccess
+		SccProjectUniqueName10 = PL.ServicesWeb.Entities\\PL.ServicesWeb.Entities.csproj
+		SccProjectTopLevelParentUniqueName10 = PL.Fwk.sln
+		SccProjectName10 = PL.ServicesWeb.Entities
+		SccLocalPath10 = PL.ServicesWeb.Entities
+		SccProjectUniqueName11 = PL.ServicesWeb.Logic\\PL.ServicesWeb.Logic.csproj
+		SccProjectTopLevelParentUniqueName11 = PL.Fwk.sln
+		SccProjectName11 = PL.ServicesWeb.Logic
+		SccLocalPath11 = PL.ServicesWeb.Logic
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EDCF8CFC-7C73-4727-B86B-92D5375C07EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EDCF8CFC-7C73-4727-B86B-92D5375C07EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EDCF8CFC-7C73-4727-B86B-92D5375C07EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EDCF8CFC-7C73-4727-B86B-92D5375C07EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6F6F1BE1-7DDE-4F83-99D1-CA45C63331F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F6F1BE1-7DDE-4F83-99D1-CA45C63331F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F6F1BE1-7DDE-4F83-99D1-CA45C63331F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F6F1BE1-7DDE-4F83-99D1-CA45C63331F3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{969E44BB-0B12-403B-8FA7-86CAA628C46D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{969E44BB-0B12-403B-8FA7-86CAA628C46D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{969E44BB-0B12-403B-8FA7-86CAA628C46D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{969E44BB-0B12-403B-8FA7-86CAA628C46D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DF7307AE-2C26-427B-B58D-C15D06010EE7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF7307AE-2C26-427B-B58D-C15D06010EE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF7307AE-2C26-427B-B58D-C15D06010EE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF7307AE-2C26-427B-B58D-C15D06010EE7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{84A10953-94C2-4565-BD71-E7C529D51328}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{84A10953-94C2-4565-BD71-E7C529D51328}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{84A10953-94C2-4565-BD71-E7C529D51328}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{84A10953-94C2-4565-BD71-E7C529D51328}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A17FAD13-8D6A-4F6A-9159-2EBDDEBE85F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A17FAD13-8D6A-4F6A-9159-2EBDDEBE85F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A17FAD13-8D6A-4F6A-9159-2EBDDEBE85F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A17FAD13-8D6A-4F6A-9159-2EBDDEBE85F4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{378C2832-F4D3-4AC3-BAC2-451D18165BF3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{378C2832-F4D3-4AC3-BAC2-451D18165BF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{378C2832-F4D3-4AC3-BAC2-451D18165BF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{378C2832-F4D3-4AC3-BAC2-451D18165BF3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE7EA5B2-02B8-4C7F-B962-B4440DCAD474}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE7EA5B2-02B8-4C7F-B962-B4440DCAD474}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE7EA5B2-02B8-4C7F-B962-B4440DCAD474}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE7EA5B2-02B8-4C7F-B962-B4440DCAD474}.Release|Any CPU.Build.0 = Release|Any CPU
+		{917863CA-3E67-4DF7-9880-A43F0C8F1B5B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{917863CA-3E67-4DF7-9880-A43F0C8F1B5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{917863CA-3E67-4DF7-9880-A43F0C8F1B5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{917863CA-3E67-4DF7-9880-A43F0C8F1B5B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{65C61AC1-F5C3-4104-9496-2824A58D48F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65C61AC1-F5C3-4104-9496-2824A58D48F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65C61AC1-F5C3-4104-9496-2824A58D48F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65C61AC1-F5C3-4104-9496-2824A58D48F7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9D8400C6-6D73-48DE-9E0D-53864957878E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D8400C6-6D73-48DE-9E0D-53864957878E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D8400C6-6D73-48DE-9E0D-53864957878E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D8400C6-6D73-48DE-9E0D-53864957878E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{EDCF8CFC-7C73-4727-B86B-92D5375C07EA} = {25865988-3C68-4354-995A-4F75C14E8E9C}
+		{6F6F1BE1-7DDE-4F83-99D1-CA45C63331F3} = {F2FC39F8-BA53-44BA-80EE-25DA4C31D79D}
+		{969E44BB-0B12-403B-8FA7-86CAA628C46D} = {1EAE4387-1D04-4C86-8697-B6561C6867D3}
+		{DF7307AE-2C26-427B-B58D-C15D06010EE7} = {0CFA035B-0FB2-49B4-9F16-B4CFC87EB8B7}
+		{DE7EA5B2-02B8-4C7F-B962-B4440DCAD474} = {0B0FBD3D-9830-4423-B94C-F419584FDD6E}
+		{917863CA-3E67-4DF7-9880-A43F0C8F1B5B} = {0B0FBD3D-9830-4423-B94C-F419584FDD6E}
+		{65C61AC1-F5C3-4104-9496-2824A58D48F7} = {0B0FBD3D-9830-4423-B94C-F419584FDD6E}
+		{9D8400C6-6D73-48DE-9E0D-53864957878E} = {0B0FBD3D-9830-4423-B94C-F419584FDD6E}
+		{48CC9E48-2F49-4A97-AA08-A59E0F771E47} = {384D0D34-F5B7-4D22-8989-FAE6C665CEB0}
+		{01D218CF-414A-48CC-8D81-7D83893BABA3} = {384D0D34-F5B7-4D22-8989-FAE6C665CEB0}
+		{3D9D5D37-EA28-4D3E-B287-51C320136AC5} = {384D0D34-F5B7-4D22-8989-FAE6C665CEB0}
+		{84A10953-94C2-4565-BD71-E7C529D51328} = {48CC9E48-2F49-4A97-AA08-A59E0F771E47}
+		{A17FAD13-8D6A-4F6A-9159-2EBDDEBE85F4} = {01D218CF-414A-48CC-8D81-7D83893BABA3}
+		{378C2832-F4D3-4AC3-BAC2-451D18165BF3} = {3D9D5D37-EA28-4D3E-B287-51C320136AC5}
+	EndGlobalSection
+EndGlobal

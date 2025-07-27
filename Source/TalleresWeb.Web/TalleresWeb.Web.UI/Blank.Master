@@ -1,0 +1,23 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Blank.master.cs" Inherits="TalleresWeb.Web.UI.Blank" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Petrolera ItaloArgentina S.R.L.</title>
+    <link href="Content/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="Content/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="vendor/Site.css" rel="stylesheet" type="text/css" />    
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <asp:ScriptManager runat="server"></asp:ScriptManager>
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>
