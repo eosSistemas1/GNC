@@ -3,3 +3,8 @@
 ################################################################################
 
 *.vsidx
+/Source/TalleresWeb/PetroleraManager.Web/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
+/Source/TalleresWeb/.vs/TalleresWeb/v17/.suo
+/Source/TalleresWeb/.vs/TalleresWeb/v17/DocumentLayout.json
+/Source/TalleresWeb/TalleresWeb.Entities/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
+/Source/TalleresWeb/PetroleraManagerIntranet.Web/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
