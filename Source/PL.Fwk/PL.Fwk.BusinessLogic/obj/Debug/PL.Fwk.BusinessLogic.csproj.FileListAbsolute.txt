@@ -1,7 +1,0 @@
-C:\Source\petrolera\Source\DLL_Shared\PL.Fwk.BusinessLogic.dll
-C:\Source\petrolera\Source\DLL_Shared\PL.Fwk.BusinessLogic.pdb
-C:\Source\petrolera\Source\PL.Fwk\PL.Fwk.BusinessLogic\obj\Debug\PL.Fwk.BusinessLogic.csproj.CoreCompileInputs.cache
-C:\Source\petrolera\Source\PL.Fwk\PL.Fwk.BusinessLogic\obj\Debug\PL.Fwk.BusinessLogic.dll
-C:\Source\petrolera\Source\PL.Fwk\PL.Fwk.BusinessLogic\obj\Debug\PL.Fwk.BusinessLogic.pdb
-C:\Source\petrolera\Source\PL.Fwk\PL.Fwk.BusinessLogic\obj\Debug\PL.Fwk.BusinessLogic.csproj.AssemblyReference.cache
-C:\Source\petrolera\Source\PL.Fwk\PL.Fwk.BusinessLogic\obj\Debug\PL.Fwk.B.7409C8A0.Up2Date

@@ -1,7 +1,0 @@
-C:\Source\petrolera\SharedAssemblies\TalleresWeb.Logic.dll
-C:\Source\petrolera\SharedAssemblies\TalleresWeb.Logic.pdb
-C:\Source\petrolera\Source\TalleresWeb\TalleresWeb.Logic\obj\Debug\TalleresWeb.Logic.csproj.CoreCompileInputs.cache
-C:\Source\petrolera\Source\TalleresWeb\TalleresWeb.Logic\obj\Debug\TalleresWeb.Logic.dll
-C:\Source\petrolera\Source\TalleresWeb\TalleresWeb.Logic\obj\Debug\TalleresWeb.Logic.pdb
-C:\Source\petrolera\Source\TalleresWeb\TalleresWeb.Logic\obj\Debug\TalleresWeb.Logic.csproj.AssemblyReference.cache
-C:\Source\petrolera\Source\TalleresWeb\TalleresWeb.Logic\obj\Debug\Talleres.5BB44CAD.Up2Date

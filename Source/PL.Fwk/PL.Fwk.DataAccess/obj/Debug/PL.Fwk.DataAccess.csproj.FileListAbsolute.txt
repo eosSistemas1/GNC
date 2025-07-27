@@ -1,7 +1,0 @@
-C:\Source\petrolera\Source\DLL_Shared\PL.Fwk.DataAccess.dll
-C:\Source\petrolera\Source\DLL_Shared\PL.Fwk.DataAccess.pdb
-C:\Source\petrolera\Source\PL.Fwk\PL.Fwk.DataAccess\obj\Debug\PL.Fwk.DataAccess.csproj.CoreCompileInputs.cache
-C:\Source\petrolera\Source\PL.Fwk\PL.Fwk.DataAccess\obj\Debug\PL.Fwk.DataAccess.dll
-C:\Source\petrolera\Source\PL.Fwk\PL.Fwk.DataAccess\obj\Debug\PL.Fwk.DataAccess.pdb
-C:\Source\petrolera\Source\PL.Fwk\PL.Fwk.DataAccess\obj\Debug\PL.Fwk.DataAccess.csproj.AssemblyReference.cache
-C:\Source\petrolera\Source\PL.Fwk\PL.Fwk.DataAccess\obj\Debug\PL.Fwk.D.84BC69A7.Up2Date

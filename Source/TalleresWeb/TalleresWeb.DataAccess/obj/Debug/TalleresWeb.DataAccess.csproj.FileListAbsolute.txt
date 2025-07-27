@@ -1,7 +1,0 @@
-C:\Source\petrolera\SharedAssemblies\TalleresWeb.DataAccess.dll
-C:\Source\petrolera\SharedAssemblies\TalleresWeb.DataAccess.pdb
-C:\Source\petrolera\Source\TalleresWeb\TalleresWeb.DataAccess\obj\Debug\TalleresWeb.DataAccess.csproj.CoreCompileInputs.cache
-C:\Source\petrolera\Source\TalleresWeb\TalleresWeb.DataAccess\obj\Debug\TalleresWeb.DataAccess.dll
-C:\Source\petrolera\Source\TalleresWeb\TalleresWeb.DataAccess\obj\Debug\TalleresWeb.DataAccess.pdb
-C:\Source\petrolera\Source\TalleresWeb\TalleresWeb.DataAccess\obj\Debug\TalleresWeb.DataAccess.csproj.AssemblyReference.cache
-C:\Source\petrolera\Source\TalleresWeb\TalleresWeb.DataAccess\obj\Debug\Talleres.FF76F466.Up2Date
