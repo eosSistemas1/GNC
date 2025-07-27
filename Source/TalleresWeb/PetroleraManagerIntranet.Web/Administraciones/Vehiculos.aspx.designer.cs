@@ -15,15 +15,6 @@ namespace PetroleraManagerIntranet.Web.Administraciones
     {
 
         /// <summary>
-        /// Control txtFiltro.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputHidden txtFiltro;
-
-        /// <summary>
         /// Control NuevoVehiculo.
         /// </summary>
         /// <remarks>
@@ -31,6 +22,15 @@ namespace PetroleraManagerIntranet.Web.Administraciones
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl NuevoVehiculo;
+
+        /// <summary>
+        /// Control txtFiltro.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlInputHidden txtFiltro;
 
         /// <summary>
         /// Control divBuscar.

@@ -5,18 +5,6 @@
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
 
-
-    <style>
-        #myTable_filter input {
-            border-radius: 5px;
-        }
-
-        .dataTables_filter {
-            margin-right: 84%;
-            width: 250px;
-        }
-    </style>
-
     <script>
         $(document).ready(function () {
             $('#myTable').DataTable(
@@ -102,14 +90,13 @@
 
     <div id="contenido">
         <div class="row">
-            <div class="col-sm-12">
+            <div class="col-sm-10">
                 <h4>CLIENTES</h4>
             </div>
+            <div class="col-sm-2 no-padding" style="float: right" id="NuevoCliente" runat="server">
+                <a href="Clientes.aspx?a=A" class="btn btn-primary btn-block nn"><i class="fa fa-plus" aria-hidden="true"></i>&nbsp Nuevo</a>
+            </div>
             <hr />
-        </div>
-
-        <div class="no-padding" style="float: right" id="NuevoCliente" runat="server">
-            <a href="Clientes.aspx?a=A" class="btn btn-primary btn-block nn"><i class="fa fa-plus" aria-hidden="true"></i>&nbsp Nuevo</a>
         </div>
 
         <div id="divBuscar" runat="server" class="col-sm-12 no-padding">
@@ -126,9 +113,9 @@
             </table>
         </div>
 
-        <div id="divDatos" runat="server">            
+        <div id="divDatos" runat="server">
 
-            <p style="font-weight: bold; font-size: 13px; margin-bottom: 0px; margin-top: 2px; padding-bottom: 0px; padding-top: 2px;" id="AccionUsuario" runat="server"></p>            
+            <p style="font-weight: bold; font-size: 13px; margin-bottom: 0px; margin-top: 2px; padding-bottom: 0px; padding-top: 2px;" id="AccionUsuario" runat="server"></p>
 
             <br />
 
