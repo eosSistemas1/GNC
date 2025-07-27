@@ -7,11 +7,13 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace PetroleraManagerIntranet.Web.Administraciones {
-    
-    
-    public partial class Reguladores {
-        
+namespace PetroleraManagerIntranet.Web.Administraciones
+{
+
+
+    public partial class Reguladores
+    {
+
         /// <summary>
         /// Control NuevoRegulador.
         /// </summary>
@@ -20,7 +22,7 @@ namespace PetroleraManagerIntranet.Web.Administraciones {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl NuevoRegulador;
-        
+
         /// <summary>
         /// Control divBuscar.
         /// </summary>
@@ -29,7 +31,7 @@ namespace PetroleraManagerIntranet.Web.Administraciones {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl divBuscar;
-        
+
         /// <summary>
         /// Control tablaDatos.
         /// </summary>
@@ -38,7 +40,7 @@ namespace PetroleraManagerIntranet.Web.Administraciones {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Repeater tablaDatos;
-        
+
         /// <summary>
         /// Control divDatos.
         /// </summary>
@@ -47,7 +49,7 @@ namespace PetroleraManagerIntranet.Web.Administraciones {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl divDatos;
-        
+
         /// <summary>
         /// Control AccionUsuario.
         /// </summary>
@@ -56,7 +58,7 @@ namespace PetroleraManagerIntranet.Web.Administraciones {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl AccionUsuario;
-        
+
         /// <summary>
         /// Control hddID.
         /// </summary>
@@ -65,7 +67,7 @@ namespace PetroleraManagerIntranet.Web.Administraciones {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.HiddenField hddID;
-        
+
         /// <summary>
         /// Control CodigoHomologacionRegulador.
         /// </summary>
@@ -74,7 +76,7 @@ namespace PetroleraManagerIntranet.Web.Administraciones {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlInputText CodigoHomologacionRegulador;
-        
+
         /// <summary>
         /// Control cboMarcasRegulador.
         /// </summary>
@@ -83,7 +85,7 @@ namespace PetroleraManagerIntranet.Web.Administraciones {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::PetroleraManagerIntranet.Web.Controls.CboMarcasRegulador cboMarcasRegulador;
-        
+
         /// <summary>
         /// Control Modelo.
         /// </summary>
@@ -92,7 +94,7 @@ namespace PetroleraManagerIntranet.Web.Administraciones {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlInputText Modelo;
-        
+
         /// <summary>
         /// Control MatriculaOC.
         /// </summary>
@@ -101,7 +103,7 @@ namespace PetroleraManagerIntranet.Web.Administraciones {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlInputText MatriculaOC;
-        
+
         /// <summary>
         /// Control txtCaudal.
         /// </summary>
@@ -110,7 +112,7 @@ namespace PetroleraManagerIntranet.Web.Administraciones {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlInputText txtCaudal;
-        
+
         /// <summary>
         /// Control Tipo.
         /// </summary>
@@ -119,7 +121,7 @@ namespace PetroleraManagerIntranet.Web.Administraciones {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlInputText Tipo;
-        
+
         /// <summary>
         /// Control txtEtrapas.
         /// </summary>
@@ -128,7 +130,7 @@ namespace PetroleraManagerIntranet.Web.Administraciones {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlInputText txtEtrapas;
-        
+
         /// <summary>
         /// Control btnAceptar.
         /// </summary>
@@ -137,7 +139,7 @@ namespace PetroleraManagerIntranet.Web.Administraciones {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlButton btnAceptar;
-        
+
         /// <summary>
         /// Control MessageBoxCtrl.
         /// </summary>
