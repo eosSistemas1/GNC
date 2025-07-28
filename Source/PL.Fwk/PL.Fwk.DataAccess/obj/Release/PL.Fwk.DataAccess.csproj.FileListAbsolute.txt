@@ -1,9 +1,0 @@
-C:\Source\petrolera\Source\PL.Fwk\PL.Fwk.DataAccess\bin\Release\PL.Fwk.DataAccess.dll
-C:\Source\petrolera\Source\PL.Fwk\PL.Fwk.DataAccess\bin\Release\PL.Fwk.DataAccess.pdb
-C:\Source\petrolera\Source\PL.Fwk\PL.Fwk.DataAccess\bin\Release\PL.Fwk.Entities.dll
-C:\Source\petrolera\Source\PL.Fwk\PL.Fwk.DataAccess\bin\Release\PL.Fwk.Entities.pdb
-C:\Source\petrolera\Source\PL.Fwk\PL.Fwk.DataAccess\obj\Release\PL.Fwk.DataAccess.csprojAssemblyReference.cache
-C:\Source\petrolera\Source\PL.Fwk\PL.Fwk.DataAccess\obj\Release\PL.Fwk.DataAccess.csproj.CoreCompileInputs.cache
-C:\Source\petrolera\Source\PL.Fwk\PL.Fwk.DataAccess\obj\Release\PL.Fwk.DataAccess.csproj.CopyComplete
-C:\Source\petrolera\Source\PL.Fwk\PL.Fwk.DataAccess\obj\Release\PL.Fwk.DataAccess.dll
-C:\Source\petrolera\Source\PL.Fwk\PL.Fwk.DataAccess\obj\Release\PL.Fwk.DataAccess.pdb
