@@ -45,3 +45,6 @@
 /Source/TalleresWeb/TalleresWeb.DataAccess/obj/Release
 /Source/TalleresWeb/TalleresWeb.Logic/obj/Release
 /Source/TalleresWeb/TalleresWeb.Logic/.vs
+/Source/DLL_Shared/Microsoft.Azure.KeyVault.Core.dll
+/Source/DLL_Shared/Microsoft.Data.Services.Client.xml
+*.Up2Date
