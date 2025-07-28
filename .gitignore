@@ -89,3 +89,10 @@
 /Source/TalleresWeb/TalleresWeb.Logic/obj/Debug
 /Source/TalleresWeb/.vs/TalleresWeb/v17/fileList.bin
 /Source/TalleresWeb/.vs/TalleresWeb/v17/HierarchyCache.v1.txt
+/Source/TalleresWeb/.vs/TalleresWeb/CopilotIndices/17.14.878.3237
+/Source/TalleresWeb/.vs/TalleresWeb/v17/DocumentLayout.backup.json
+*.force
+/Source/TalleresWeb/PetroleraManager.WebApi/obj/Release
+/Source/TalleresWeb/PetroleraManagerIntranet.Web/obj/Release
+/Source/TalleresWeb/TalleresWeb.DataAccess/obj/Release
+/Source/TalleresWeb/TalleresWeb.Logic/obj/Release
