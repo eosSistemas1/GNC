@@ -48,3 +48,16 @@
 /Source/DLL_Shared/Microsoft.Azure.KeyVault.Core.dll
 /Source/DLL_Shared/Microsoft.Data.Services.Client.xml
 *.Up2Date
+/Source/PL.Fwk/PL.Fwk.BusinessLogic/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
+/Source/TalleresWeb/.vs/TalleresWeb/config/applicationhost.config
+/Source/PL.Fwk/PL.Fwk.DataAccess/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
+/Source/PL.Fwk/PL.Fwk.Entities/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
+/Source/PL.Fwk/PL.Fwk.Presentation.Web/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
+/Source/TalleresWeb/PetroleraManager.WebApi/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
+/Source/TalleresWeb/TalleresWeb.DataAccess/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
+/Source/TalleresWeb/TalleresWeb.Logic/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
+/Source/TalleresWeb.Web/TalleresWeb.Web.Cross.Configuracion/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
+/Source/TalleresWeb/.github/copilot-instructions.md
+/Source/TalleresWeb/.vs/TalleresWeb/config/applicationhost.config
+/Source/TalleresWeb/.vs/TalleresWeb/CopilotIndices/17.14.1661.41761
+/Source/TalleresWeb/.vs/TalleresWeb/config/applicationhost.config
