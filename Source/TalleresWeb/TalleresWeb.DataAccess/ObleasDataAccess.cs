@@ -522,6 +522,84 @@ namespace TalleresWeb.DataAccess
             }
         }
 
+        public List<LibroDiarioView> ReadLibroDiario(DateTime fechaDesde, DateTime fechaHasta, string dominio, string nombreCliente)
+        {
+            using (var context = this.GetEntityContext())
+            {
+                context.ContextOptions.LazyLoadingEnabled = true;
+
+                var obleas = (from t in context.CreateQuery<Obleas>(this.EntityName)
+                              .Include("Operaciones")
+                              .Include("Vehiculos")
+                              .Include("Clientes")
+                              .Include("ObleasReguladores")
+                              .Include("ObleasReguladores.ReguladoresUnidad")
+                              .Include("ObleasReguladores.ReguladoresUnidad.Reguladores")
+                              .Include("ObleasCilindros")
+                              .Include("ObleasCilindros.CilindrosUnidad")
+                              .Include("ObleasCilindros.CilindrosUnidad.Cilindros")
+                              .Include("ObleasCilindros.ObleasValvulas")
+                              .Include("ObleasCilindros.ObleasValvulas.Valvula_Unidad")
+                              .Include("ObleasCilindros.ObleasValvulas.Valvula_Unidad.Valvula")
+                              .Where(x => x.FechaHabilitacion >= fechaDesde
+                                       && x.FechaHabilitacion <= fechaHasta
+                                       && (dominio == null || dominio == "" || x.Vehiculos.Descripcion == dominio)
+                                       && (nombreCliente == null || nombreCliente == "" || x.Clientes.Descripcion.Contains(nombreCliente)))
+                              orderby t.FechaHabilitacion
+                              select t).ToList();
+
+                var result = new List<LibroDiarioView>();
+                foreach (var o in obleas)
+                {
+                    var view = new LibroDiarioView();
+                    view.ID = o.ID;
+                    view.Fecha = o.FechaHabilitacion ?? GetDinamyc.MinDatetime;
+                    view.Operacion = o.Operaciones != null ? o.Operaciones.CodigoGestionEnte : string.Empty;
+                    view.NombreCliente = o.Clientes != null ? o.Clientes.Descripcion : string.Empty;
+                    view.Vehiculo = o.Vehiculos != null ? (o.Vehiculos.MarcaVehiculo + " " + o.Vehiculos.ModeloVehiculo).Trim() : string.Empty;
+                    view.Dominio = o.Vehiculos != null ? o.Vehiculos.Descripcion : string.Empty;
+                    view.NroObleaAnterior = o.Descripcion;
+                    view.NroObleaNueva = o.NroObleaNueva;
+
+                    var reg = o.ObleasReguladores.FirstOrDefault(r => r.IdOperacion == MSDB.Montaje || r.IdOperacion == MSDB.Sigue);
+                    if (reg != null && reg.ReguladoresUnidad != null && reg.ReguladoresUnidad.Reguladores != null)
+                    {
+                        view.CodigoRegulador = reg.ReguladoresUnidad.Reguladores.Descripcion;
+                        view.NroSerieRegulador = reg.ReguladoresUnidad.Descripcion;
+                    }
+                    else
+                    {
+                        view.CodigoRegulador = string.Empty;
+                        view.NroSerieRegulador = string.Empty;
+                    }
+
+                    var cilindros = o.ObleasCilindros
+                        .Where(c => c.IdOperacion == MSDB.Montaje || c.IdOperacion == MSDB.Sigue)
+                        .ToList();
+                    view.CodigosCilindros = string.Join(" / ", cilindros
+                        .Where(c => c.CilindrosUnidad != null && c.CilindrosUnidad.Cilindros != null)
+                        .Select(c => c.CilindrosUnidad.Cilindros.Descripcion));
+                    view.NrosSeriesCilindros = string.Join(" / ", cilindros
+                        .Where(c => c.CilindrosUnidad != null)
+                        .Select(c => c.CilindrosUnidad.Descripcion));
+
+                    var valvulas = cilindros
+                        .SelectMany(c => c.ObleasValvulas.Where(v => v.IdOperacion == MSDB.Montaje || v.IdOperacion == MSDB.Sigue))
+                        .ToList();
+                    view.CodigosValvulas = string.Join(" / ", valvulas
+                        .Where(v => v.Valvula_Unidad != null && v.Valvula_Unidad.Valvula != null)
+                        .Select(v => v.Valvula_Unidad.Valvula.Descripcion));
+                    view.NrosSeriasValvulas = string.Join(" / ", valvulas
+                        .Where(v => v.Valvula_Unidad != null)
+                        .Select(v => v.Valvula_Unidad.Descripcion));
+
+                    result.Add(view);
+                }
+
+                return result;
+            }
+        }
+
         #endregion
 
         #region Methods Web Api

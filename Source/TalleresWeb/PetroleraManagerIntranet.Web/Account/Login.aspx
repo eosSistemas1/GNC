@@ -16,7 +16,7 @@
     <meta name="keywords" content="gnc, gas, oblea, renovación, renovar, auto, taller, talleres, rosario, santa fe">
     <meta name="author" content="Hedra - Diseño y comunicación">
 
-    <title>Petrolera ItaloArgentina</title>
+    <title>Mocciaro GNC</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -46,7 +46,7 @@
     <nav id="mainNav" class="navbar navbar-default-login navbar-fixed-top">
         <div class="container-fluid">
             <div class="navbar-header">
-                <a class="navbar-brand page-scroll"><img src="../img/logo.png" alt="Petrolera ItaloArgentina" width="209" height="42"></a>
+                <a class="navbar-brand page-scroll"><img src="../img/logo.svg" alt="Mocciaro GNC" width="209" height="42"></a>
             </div>
         </div>
     </nav>

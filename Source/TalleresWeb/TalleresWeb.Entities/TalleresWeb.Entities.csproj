@@ -199,6 +199,7 @@
     <Compile Include="EstadosFichas\EstadosFichasParameters.cs" />
     <Compile Include="DataModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Obleas\LibroDiarioView.cs" />
     <Compile Include="Obleas\ObleasExtendedView.cs" />
     <Compile Include="Obleas\ObleasParameters.cs" />
     <Compile Include="Zonas\ZonasTallerView.cs" />

@@ -21,6 +21,7 @@
       <siteMapNode  title="Informes" description="Informes">
         <siteMapNode url="~/02.Tramites/Informes/InformesEstadosObleas.aspx" title="Cosulta Obleas" description="Cosulta Obleas" />
         <siteMapNode url="~/02.Tramites/Informes/InformesObleasRealizadas.aspx" title="Obleas Realizadas" description="Obleas Realizadas" />
+        <siteMapNode url="~/02.Tramites/Informes/InformesLibroDiario.aspx" title="Libro Diario" description="Libro Diario" />
       </siteMapNode>
     </siteMapNode>
 

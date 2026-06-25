@@ -241,6 +241,7 @@
     <Content Include="Obleas\Informes\InformesEstadosObleas.aspx" />
     <Content Include="Obleas\Informes\InformeObleasAVencer.aspx" />
     <Content Include="Obleas\Informes\InformesObleasRealizadas.aspx" />
+    <Content Include="Obleas\Informes\InformesLibroDiario.aspx" />
     <Content Include="Obleas\ObleasAsignar.aspx" />
     <Content Include="Obleas\ObleasImprimir.aspx" />
     <Content Include="Obleas\ObleasImprimirTarjetaVerde.aspx" />
@@ -569,6 +570,13 @@
     </Compile>
     <Compile Include="Obleas\Informes\InformesObleasRealizadas.aspx.designer.cs">
       <DependentUpon>InformesObleasRealizadas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Obleas\Informes\InformesLibroDiario.aspx.cs">
+      <DependentUpon>InformesLibroDiario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Obleas\Informes\InformesLibroDiario.aspx.designer.cs">
+      <DependentUpon>InformesLibroDiario.aspx</DependentUpon>
     </Compile>
     <Compile Include="Obleas\ObleasAsignar.aspx.cs">
       <DependentUpon>ObleasAsignar.aspx</DependentUpon>

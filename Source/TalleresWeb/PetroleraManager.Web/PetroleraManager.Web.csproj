@@ -105,6 +105,7 @@
     <Content Include="02.Tramites\CargarResultadosEnte.aspx" />
     <Content Include="02.Tramites\EliminarOblea.aspx" />
     <Content Include="02.Tramites\Informes\InformesEstadosObleas.aspx" />
+    <Content Include="02.Tramites\Informes\InformesLibroDiario.aspx" />
     <Content Include="02.Tramites\Informes\InformesObleasRealizadas.aspx" />
     <Content Include="02.Tramites\ObleasCorreccionErrores.aspx" />
     <Content Include="02.Tramites\ObleasImprimirTarjetaVerde.aspx" />
@@ -216,6 +217,13 @@
     </Compile>
     <Compile Include="02.Tramites\Informes\InformesEstadosObleas.aspx.designer.cs">
       <DependentUpon>InformesEstadosObleas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="02.Tramites\Informes\InformesLibroDiario.aspx.cs">
+      <DependentUpon>InformesLibroDiario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="02.Tramites\Informes\InformesLibroDiario.aspx.designer.cs">
+      <DependentUpon>InformesLibroDiario.aspx</DependentUpon>
     </Compile>
     <Compile Include="02.Tramites\Informes\InformesObleasRealizadas.aspx.cs">
       <DependentUpon>InformesObleasRealizadas.aspx</DependentUpon>

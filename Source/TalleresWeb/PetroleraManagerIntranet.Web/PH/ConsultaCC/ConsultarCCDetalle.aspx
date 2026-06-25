@@ -22,7 +22,7 @@
 
                 <div class="col-sm-12">
                     <br>
-                    <p>Señores de <strong>Petrolera ItaloArgentina</strong>.</p>
+                    <p>Señores de <strong>Mocciaro GNC</strong>.</p>
                     <p>Me dirijo a ustedes en relación con lo dispuesto en el procedimiento de implementación de la REVISIÓN PERIÓDICA DE CILINDROS PARA GNC, Anexo III, Norma NAG-E 444, que forman parte de las normas del ENTE NACIONAL REGULADOR DEL GAS. Al respecto, manifiesto mi conformidad, para el supuesto caso que el cilindro o válvula resultare condenado, con la consiguiente destrucción por la aplicación de la normativa mencionada. Referente a la válvula, eximo de responsabilidad al CENTRO DE REVISIÓN si la misma se dañara o rompiera como consecuencia del desarme. Dicha conformidad se refiere a los siguientes cilindros y válvulas de mi propiedad:</p>
                 </div>
 

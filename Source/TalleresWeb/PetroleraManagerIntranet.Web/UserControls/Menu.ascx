@@ -38,6 +38,7 @@
             <li><a href="/Obleas/Informes/InformeObleasAVencer.aspx"><i class="fa fa-calendar"></i>Obleas A Vencer</a></li>            
             <li><a href="/Obleas/Informes/InformesEstadosObleas.aspx"><i class="fa fa-search"></i>Consultar Obleas</a></li>
             <li><a href="/Obleas/Informes/InformesObleasRealizadas.aspx"><i class="fa fa-search-plus"></i>Obleas Realizadas</a></li>
+            <li><a href="/Obleas/Informes/InformesLibroDiario.aspx"><i class="fa fa-book"></i>Libro Diario Operaciones</a></li>
         </ul>
     </li>
     <li>

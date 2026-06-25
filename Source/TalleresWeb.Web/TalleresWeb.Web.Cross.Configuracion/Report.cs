@@ -1,4 +1,5 @@
 ﻿using iTextSharp.text;
+using iTextSharp.text.pdf;
 using System;
 using TalleresWeb.Web.Cross.Configuracion;
 
@@ -38,30 +39,40 @@ namespace TalleresWeb.Web.Cross
             pie.Alignment = HeaderFooter.ALIGN_CENTER;
             cabecera.Border = Rectangle.BOTTOM_BORDER;
 
-            // Abrimos el documento
             docPdf.Open();
 
-            // Titulo del listado con la imagen del programa
-            iTextSharp.text.Table tablaImagen = new iTextSharp.text.Table(2);
+            BaseFont bf = BaseFont.CreateFont(BaseFont.HELVETICA, BaseFont.WINANSI, BaseFont.NOT_EMBEDDED);
+
+            // Logo: badge GNC naranja + nombre empresa
+            iTextSharp.text.Table tablaImagen = new iTextSharp.text.Table(3);
             tablaImagen.WidthPercentage = 100;
             tablaImagen.BorderWidth = 0;
-            tablaImagen.Cellpadding = 2;
+            tablaImagen.Cellpadding = 3;
+            tablaImagen.SetWidths(new int[] { 6, 20, 74 });
 
-            iTextSharp.text.Image imgGif = iTextSharp.text.Image.GetInstance(RutaImagen);
-            imgGif.ScaleAbsolute(150, 35);
-            imgGif.Alignment = iTextSharp.text.Image.LEFT_ALIGN;
-            Cell celdaImagen = new Cell(imgGif);
-            celdaImagen.Rowspan = 2;
-            tablaImagen.AddCell(celdaImagen);
+            Cell celdaBadge = new Cell(new Phrase("GNC", new Font(bf, 13, Font.BOLD, new Color(255, 255, 255))));
+            celdaBadge.BackgroundColor = new Color(0xF0, 0x90, 0x30);
+            celdaBadge.HorizontalAlignment = Element.ALIGN_CENTER;
+            celdaBadge.VerticalAlignment = Element.ALIGN_MIDDLE;
+            celdaBadge.Border = Rectangle.NO_BORDER;
+            celdaBadge.Rowspan = 2;
+            tablaImagen.AddCell(celdaBadge);
 
-            Phrase fraseTituloListado = new Phrase(tituloListado, new Font(Font.HELVETICA, 12, Font.BOLD));
-            Cell celdaTexto = new Cell(fraseTituloListado);
+            Cell celdaEmpresa = new Cell(new Phrase("MOCCIARO", new Font(bf, 15, Font.BOLD, new Color(0x0D, 0x3A, 0x5C))));
+            celdaEmpresa.HorizontalAlignment = Element.ALIGN_LEFT;
+            celdaEmpresa.VerticalAlignment = Element.ALIGN_MIDDLE;
+            celdaEmpresa.Border = Rectangle.NO_BORDER;
+            celdaEmpresa.Rowspan = 2;
+            tablaImagen.AddCell(celdaEmpresa);
+
+            Cell celdaTexto = new Cell(new Phrase(tituloListado, new Font(bf, 12, Font.BOLD)));
             celdaTexto.HorizontalAlignment = Element.ALIGN_RIGHT;
+            celdaTexto.Border = Rectangle.NO_BORDER;
             tablaImagen.AddCell(celdaTexto);
 
-            Phrase fraseFecha = new Phrase("Fecha: " + DateTime.Now.ToShortDateString() + " " + DateTime.Now.ToShortTimeString(), new Font(Font.HELVETICA, 8, Font.BOLD));
-            Cell celdaFecha = new Cell(fraseFecha);
+            Cell celdaFecha = new Cell(new Phrase("Fecha: " + DateTime.Now.ToShortDateString() + " " + DateTime.Now.ToShortTimeString(), new Font(bf, 8, Font.BOLD)));
             celdaFecha.HorizontalAlignment = Element.ALIGN_RIGHT;
+            celdaFecha.Border = Rectangle.NO_BORDER;
             tablaImagen.AddCell(celdaFecha);
 
             docPdf.Add(tablaImagen);

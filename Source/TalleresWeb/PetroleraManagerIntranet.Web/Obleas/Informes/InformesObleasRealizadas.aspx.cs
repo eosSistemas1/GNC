@@ -142,7 +142,7 @@ namespace PetroleraManager.Web.Tramites.Informes
                 // Incluimos los elementos comunes
                 Report.IncluirElementosComunes(docPDF,
                                                "Obleas Realizadas",
-                                               "Petrolera ItaloArgentina");
+                                               GetDinamyc.RazonSocialEmpresa);
 
                 // Creamos las columnas
                 iTextSharp.text.Table tabla = new iTextSharp.text.Table(cantCols);

@@ -1,0 +1,32 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(Get-ChildItem -Path \"C:\\\\SourceEos\\\\GNC_Mocciaro\" -Recurse -File)",
+      "Bash(Select-Object -ExpandProperty FullName)",
+      "Bash(Sort-Object)",
+      "Bash(grep -i \"\\\\.aspx$\")",
+      "Bash(\"C:\\\\Windows\\\\Microsoft.NET\\\\Framework\\\\v4.0.30319\\\\MSBuild.exe\" \"PetroleraManager.Web\\\\PetroleraManager.Web.csproj\" /t:Build /p:Configuration=Debug /nologo /v:minimal)",
+      "Bash(\"C:\\\\Windows\\\\Microsoft.NET\\\\Framework\\\\v4.0.30319\\\\MSBuild.exe\" \"C:\\\\SourceEos\\\\GNC_Mocciaro\\\\Source\\\\TalleresWeb\\\\PetroleraManager.Web\\\\PetroleraManager.Web.csproj\" /p:Configuration=Debug /nologo /v:minimal)",
+      "PowerShell(& \"C:\\\\Windows\\\\Microsoft.NET\\\\Framework\\\\v4.0.30319\\\\MSBuild.exe\" \"C:\\\\SourceEos\\\\GNC_Mocciaro\\\\Source\\\\TalleresWeb\\\\PetroleraManager.Web\\\\PetroleraManager.Web.csproj\" /p:Configuration=Debug /nologo /v:minimal 2>&1 | Select-Object -Last 60)",
+      "PowerShell(& \"C:\\\\Program Files \\(x86\\)\\\\MSBuild\\\\14.0\\\\Bin\\\\MSBuild.exe\" \"C:\\\\SourceEos\\\\GNC_Mocciaro\\\\Source\\\\TalleresWeb\\\\TalleresWeb.Entities\\\\TalleresWeb.Entities.csproj\" /p:Configuration=Debug /nologo /v:minimal 2>&1 | Select-Object -Last 30)",
+      "PowerShell(& \"C:\\\\Program Files \\(x86\\)\\\\MSBuild\\\\14.0\\\\Bin\\\\MSBuild.exe\" \"C:\\\\SourceEos\\\\GNC_Mocciaro\\\\Source\\\\TalleresWeb\\\\TalleresWeb.DataAccess\\\\TalleresWeb.DataAccess.csproj\" /p:Configuration=Debug /nologo /v:minimal 2>&1 | Select-Object -Last 30)",
+      "PowerShell(& \"C:\\\\Program Files \\(x86\\)\\\\MSBuild\\\\14.0\\\\Bin\\\\MSBuild.exe\" \"C:\\\\SourceEos\\\\GNC_Mocciaro\\\\Source\\\\TalleresWeb.sln\" /p:Configuration=Debug /nologo /v:minimal 2>&1 | Select-Object -Last 40)",
+      "PowerShell(& \"C:\\\\Program Files \\(x86\\)\\\\MSBuild\\\\14.0\\\\Bin\\\\MSBuild.exe\" \"C:\\\\SourceEos\\\\GNC_Mocciaro\\\\TalleresWeb.sln\" /p:Configuration=Debug /nologo /v:minimal 2>&1 | Select-Object -Last 40)",
+      "PowerShell(& \"C:\\\\Program Files \\(x86\\)\\\\MSBuild\\\\14.0\\\\Bin\\\\MSBuild.exe\" \"C:\\\\SourceEos\\\\GNC_Mocciaro\\\\Source\\\\TalleresWeb\\\\TalleresWeb.sln\" /p:Configuration=Debug /nologo /v:minimal 2>&1 | Select-Object -Last 50)",
+      "Bash(git *)",
+      "PowerShell(& \"C:\\\\Program Files\\\\Microsoft Visual Studio\\\\2022\\\\Community\\\\MSBuild\\\\Current\\\\Bin\\\\MSBuild.exe\" \"C:\\\\SourceEos\\\\GNC_Mocciaro\\\\Source\\\\TalleresWeb\\\\TalleresWeb.sln\" /p:Configuration=Debug /nologo /v:minimal 2>&1 | Select-Object -Last 60)",
+      "PowerShell(& \"C:\\\\Program Files\\\\Microsoft Visual Studio\\\\2022\\\\Community\\\\MSBuild\\\\Current\\\\Bin\\\\MSBuild.exe\" \"C:\\\\SourceEos\\\\GNC_Mocciaro\\\\Source\\\\PL.Fwk\\\\PL.Fwk.sln\" /p:Configuration=Release /nologo /v:minimal 2>&1 | Select-Object -Last 20)",
+      "PowerShell(& \"C:\\\\Program Files\\\\Microsoft Visual Studio\\\\2022\\\\Community\\\\MSBuild\\\\Current\\\\Bin\\\\MSBuild.exe\" \"C:\\\\SourceEos\\\\GNC_Mocciaro\\\\Source\\\\TalleresWeb\\\\TalleresWeb.sln\" /p:Configuration=Debug /nologo /v:minimal 2>&1 | Select-Object -Last 50)",
+      "Bash(\"C:\\\\Program Files\\\\Microsoft Visual Studio\\\\2022\\\\Community\\\\MSBuild\\\\Current\\\\Bin\\\\MSBuild.exe\" \"C:\\\\SourceEos\\\\GNC_Mocciaro\\\\Source\\\\TalleresWeb\\\\PetroleraManager.Web\\\\PetroleraManager.Web.csproj\" /p:Configuration=Debug /nologo /v:minimal)",
+      "PowerShell(& \"C:\\\\Program Files\\\\Microsoft Visual Studio\\\\2022\\\\Community\\\\MSBuild\\\\Current\\\\Bin\\\\MSBuild.exe\" \"C:\\\\SourceEos\\\\GNC_Mocciaro\\\\Source\\\\TalleresWeb\\\\PetroleraManager.Web\\\\PetroleraManager.Web.csproj\" /p:Configuration=Debug /nologo /v:minimal 2>&1 | Select-Object -Last 30)",
+      "PowerShell(& \"C:\\\\Program Files\\\\Microsoft Visual Studio\\\\2022\\\\Community\\\\MSBuild\\\\Current\\\\Bin\\\\MSBuild.exe\" \"C:\\\\SourceEos\\\\GNC_Mocciaro\\\\Source\\\\TalleresWeb\\\\PetroleraManager.Web\\\\PetroleraManager.Web.csproj\" /p:Configuration=Debug /nologo /v:minimal 2>&1 | Select-Object -Last 15)",
+      "PowerShell(& \"C:\\\\Program Files\\\\Microsoft Visual Studio\\\\2022\\\\Community\\\\MSBuild\\\\Current\\\\Bin\\\\MSBuild.exe\" \"C:\\\\SourceEos\\\\GNC_Mocciaro\\\\Source\\\\TalleresWeb\\\\PetroleraManagerIntranet.Web\\\\PetroleraManagerIntranet.Web.csproj\" /p:Configuration=Debug /nologo /v:minimal 2>&1 | Select-Object -Last 15)",
+      "PowerShell(& \"C:\\\\Program Files\\\\Microsoft Visual Studio\\\\2022\\\\Community\\\\MSBuild\\\\Current\\\\Bin\\\\MSBuild.exe\" \"C:\\\\SourceEos\\\\GNC_Mocciaro\\\\Source\\\\TalleresWeb\\\\PetroleraManagerIntranet.Web\\\\PetroleraManagerIntranet.Web.csproj\" /p:Configuration=Debug /nologo /v:minimal 2>&1 | Select-Object -Last 10)",
+      "PowerShell(iisreset *)",
+      "PowerShell(& \"$env:windir\\\\system32\\\\inetsrv\\\\appcmd.exe\" list site)",
+      "PowerShell(& \"$env:windir\\\\system32\\\\inetsrv\\\\appcmd.exe\" list app)",
+      "PowerShell(& \"$env:windir\\\\system32\\\\inetsrv\\\\appcmd.exe\" list vdir)",
+      "PowerShell(& \"C:\\\\Program Files\\\\Microsoft Visual Studio\\\\2022\\\\Community\\\\MSBuild\\\\Current\\\\Bin\\\\MSBuild.exe\" \"C:\\\\SourceEos\\\\GNC_Mocciaro\\\\Source\\\\TalleresWeb\\\\PetroleraManagerIntranet.Web\\\\PetroleraManagerIntranet.Web.csproj\" /p:Configuration=Debug /nologo /v:minimal 2>&1 | Select-Object -Last 8)"
+    ]
+  }
+}
